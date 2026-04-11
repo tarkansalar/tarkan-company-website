@@ -114,11 +114,10 @@
         Here's what a Dubai real estate billionaire has to say about Tarkan.
       </h2>
 
-      <div class="bg-card-bg border-l-4 border-neon overflow-hidden mb-4 w-fit mx-auto">
+      <div class="bg-card-bg border-l-4 border-neon overflow-hidden mb-4 w-fit mx-auto relative">
         <video
           id="rafey-video"
           class="max-h-[80vh] w-auto block"
-          controls
           preload="metadata"
           playsinline
         >
@@ -128,21 +127,91 @@
           />
           Your browser does not support the video tag.
         </video>
+
+        <button
+          id="rafey-play-overlay"
+          class="absolute inset-0 flex items-center justify-center bg-black/40 hover:bg-black/25 transition-colors"
+          aria-label="Play video"
+        >
+          <svg width="96" height="96" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="11" fill="#000" stroke="#C8FF00" stroke-width="1.5"/>
+            <polygon points="10 8 16 12 10 16" fill="#C8FF00"/>
+          </svg>
+        </button>
+
+        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent px-4 pt-10 pb-4 pointer-events-none">
+          <div class="flex items-center gap-3 pointer-events-auto">
+            <button id="rafey-playpause" class="text-white hover:text-neon transition-colors shrink-0" aria-label="Play/Pause">
+              <svg id="rafey-play-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <polygon points="5 3 19 12 5 21 5 3"/>
+              </svg>
+              <svg id="rafey-pause-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="hidden">
+                <rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/>
+              </svg>
+            </button>
+            <div id="rafey-progress" class="flex-1 h-1 bg-white/25 rounded cursor-pointer relative">
+              <div id="rafey-progress-fill" class="h-full bg-neon rounded" style="width: 0%"></div>
+            </div>
+            <span id="rafey-time" class="text-[11px] text-white font-mono whitespace-nowrap">0:00 / 1:10</span>
+          </div>
+        </div>
       </div>
       <script>
         (function () {
           var v = document.getElementById('rafey-video');
           if (!v) return;
           var LIMIT = 70;
+          var overlay = document.getElementById('rafey-play-overlay');
+          var ppBtn = document.getElementById('rafey-playpause');
+          var playIcon = document.getElementById('rafey-play-icon');
+          var pauseIcon = document.getElementById('rafey-pause-icon');
+          var progress = document.getElementById('rafey-progress');
+          var fill = document.getElementById('rafey-progress-fill');
+          var timeEl = document.getElementById('rafey-time');
+
+          function fmt(s) {
+            s = Math.max(0, Math.floor(s));
+            return Math.floor(s / 60) + ':' + (s % 60 < 10 ? '0' : '') + (s % 60);
+          }
+          function updateUI() {
+            var t = Math.min(v.currentTime, LIMIT);
+            fill.style.width = (t / LIMIT * 100) + '%';
+            timeEl.textContent = fmt(t) + ' / ' + fmt(LIMIT);
+          }
+          function togglePlay() {
+            if (v.paused) v.play(); else v.pause();
+          }
+
+          v.addEventListener('play', function () {
+            overlay.classList.add('hidden');
+            playIcon.classList.add('hidden');
+            pauseIcon.classList.remove('hidden');
+          });
+          v.addEventListener('pause', function () {
+            playIcon.classList.remove('hidden');
+            pauseIcon.classList.add('hidden');
+          });
           v.addEventListener('timeupdate', function () {
             if (v.currentTime >= LIMIT) {
               v.pause();
               v.currentTime = LIMIT;
             }
+            updateUI();
           });
           v.addEventListener('seeking', function () {
             if (v.currentTime > LIMIT) v.currentTime = LIMIT;
           });
+
+          overlay.addEventListener('click', togglePlay);
+          ppBtn.addEventListener('click', togglePlay);
+          progress.addEventListener('click', function (e) {
+            var rect = progress.getBoundingClientRect();
+            var pct = (e.clientX - rect.left) / rect.width;
+            v.currentTime = Math.max(0, Math.min(LIMIT, pct * LIMIT));
+            updateUI();
+          });
+
+          updateUI();
         })();
       </script>
       <p class="font-inter text-sm text-white text-center">
