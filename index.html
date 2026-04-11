@@ -116,18 +116,35 @@
 
       <div class="bg-card-bg border-l-4 border-neon overflow-hidden mb-4 w-fit mx-auto">
         <video
+          id="rafey-video"
           class="max-h-[80vh] w-auto block"
           controls
           preload="metadata"
           playsinline
         >
           <source
-            src="https://wobiecnlwkpkjseambzd.supabase.co/storage/v1/object/public/tarkan-company-asset/rafey%20alam.mp4"
+            src="https://wobiecnlwkpkjseambzd.supabase.co/storage/v1/object/public/tarkan-company-asset/rafey%20alam.mp4#t=0,70"
             type="video/mp4"
           />
           Your browser does not support the video tag.
         </video>
       </div>
+      <script>
+        (function () {
+          var v = document.getElementById('rafey-video');
+          if (!v) return;
+          var LIMIT = 70;
+          v.addEventListener('timeupdate', function () {
+            if (v.currentTime >= LIMIT) {
+              v.pause();
+              v.currentTime = LIMIT;
+            }
+          });
+          v.addEventListener('seeking', function () {
+            if (v.currentTime > LIMIT) v.currentTime = LIMIT;
+          });
+        })();
+      </script>
       <p class="font-inter text-sm text-white text-center">
         Rafey Alam - Dubai Real Estate Billionaire
       </p>
