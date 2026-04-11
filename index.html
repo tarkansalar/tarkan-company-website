@@ -153,6 +153,13 @@
           Your browser does not support the video tag.
         </video>
 
+        <img
+          id="rafey-cover-overlay"
+          src="https://wobiecnlwkpkjseambzd.supabase.co/storage/v1/object/public/tarkan-company-asset/rafey%20alam%20cover.jpeg"
+          alt="Rafey Alam"
+          class="absolute inset-0 w-full h-full object-cover hidden"
+        />
+
         <button
           id="rafey-center-btn"
           class="absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/20 transition-opacity duration-300"
@@ -197,6 +204,7 @@
           var progress = document.getElementById('rafey-progress');
           var fill = document.getElementById('rafey-progress-fill');
           var timeEl = document.getElementById('rafey-time');
+          var coverOverlay = document.getElementById('rafey-cover-overlay');
           var ended = false;
 
           function fmt(s) {
@@ -216,6 +224,7 @@
           function handleCenterClick() {
             if (ended) {
               ended = false;
+              coverOverlay.classList.add('hidden');
               v.currentTime = 0;
               v.play();
               return;
@@ -226,6 +235,7 @@
           v.addEventListener('play', function () {
             container.classList.add('is-playing');
             container.classList.remove('is-idle');
+            coverOverlay.classList.add('hidden');
             showIcon('pause');
           });
           v.addEventListener('pause', function () {
@@ -238,6 +248,7 @@
               v.pause();
               v.currentTime = LIMIT;
               showIcon('restart');
+              coverOverlay.classList.remove('hidden');
               container.classList.remove('is-playing');
             }
             updateUI();
