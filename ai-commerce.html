@@ -286,16 +286,92 @@
 
     ::selection { background: var(--accent); color: #000; }
 
+    /* ═══ TABLET (≤1024px) ═══ */
+    @media (max-width: 1024px) {
+      .container { padding: 0 32px; }
+      section { padding: 110px 0; }
+      .cover { padding: 140px 0 110px; }
+    }
+
+    /* ═══ MOBILE LANDSCAPE / LARGE PHONE (≤768px) ═══ */
     @media (max-width: 768px) {
-      body { font-size: 16px; }
-      .container { padding: 0 24px; }
-      section { padding: 90px 0; }
-      .cover { padding: 120px 0 90px; }
-      section h2 { margin-bottom: 40px; }
-      section p { font-size: 16px; }
-      .objection { margin-bottom: 44px; }
-      thead th, tbody td { padding: 18px 14px; font-size: 14px; }
-      thead th { font-size: 10px; }
+      body { font-size: 16px; line-height: 1.7; }
+      .container { padding: 0 22px; }
+      section { padding: 72px 0; }
+      .cover { padding: 100px 0 72px; }
+      .cover h1 { margin-bottom: 28px; }
+      .cover .subtitle { font-size: 16px; line-height: 1.45; }
+
+      .eyebrow { font-size: 10px; margin-bottom: 24px; }
+
+      section h2 { margin-bottom: 32px; }
+      section h3 { margin-top: 40px; margin-bottom: 14px; }
+      section p { font-size: 15px; line-height: 1.75; margin-bottom: 20px; }
+
+      .hook-lead { margin-bottom: 36px !important; }
+      .projection { font-size: 12px; }
+
+      .objection { margin-bottom: 36px; }
+      .objection-a { font-size: 15px; }
+
+      .risk-list p { margin-bottom: 22px; }
+      .risk-label { display: block; margin-right: 0; margin-bottom: 4px; }
+
+      .big-number { margin-bottom: 24px; }
+      .big-number-caption { font-size: 15px; }
+
+      .closer-body { margin-top: 22px !important; font-size: 15px; }
+
+      /* Tables: responsive stacked cards on very narrow screens */
+      .table-wrap { margin-top: 16px; }
+      table { min-width: 0; }
+      thead { display: none; }
+      tbody tr {
+        display: block;
+        padding: 16px 0;
+        border-bottom: 1px solid var(--rule);
+      }
+      tbody tr:last-child { border-bottom: none; }
+      tbody td {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 12px;
+        padding: 8px 0;
+        border-bottom: none;
+        font-size: 15px;
+      }
+      tbody td::before {
+        content: attr(data-label);
+        font-family: 'Syne', sans-serif;
+        font-weight: 700;
+        font-size: 10px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--accent);
+        flex-shrink: 0;
+      }
+      tbody td.num { text-align: right; }
+      tbody tr.total {
+        border-top: 1px solid var(--accent);
+        border-bottom: 2px solid var(--accent);
+        padding-top: 18px;
+        padding-bottom: 18px;
+        margin-top: 8px;
+      }
+      tbody tr.total td { padding-top: 6px; padding-bottom: 6px; }
+
+      .doc-foot { padding: 40px 0 56px; }
+      .doc-foot p { font-size: 10px; }
+    }
+
+    /* ═══ SMALL PHONE (≤420px) ═══ */
+    @media (max-width: 420px) {
+      .container { padding: 0 18px; }
+      section { padding: 60px 0; }
+      .cover { padding: 88px 0 60px; }
+      section p { font-size: 14.5px; }
+      .big-number { letter-spacing: -0.06em; }
     }
   </style>
 </head>
@@ -434,16 +510,16 @@
           </thead>
           <tbody>
             <tr>
-              <td>Live Commerce (retainer + commission)</td>
-              <td class="num">70-80%</td>
+              <td data-label="Service">Live Commerce (retainer + commission)</td>
+              <td class="num" data-label="Margin">70-80%</td>
             </tr>
             <tr>
-              <td>AI Academy</td>
-              <td class="num">80-85%</td>
+              <td data-label="Service">AI Academy</td>
+              <td class="num" data-label="Margin">80-85%</td>
             </tr>
             <tr>
-              <td>Export Consulting</td>
-              <td class="num">85-90%</td>
+              <td data-label="Service">Export Consulting</td>
+              <td class="num" data-label="Margin">85-90%</td>
             </tr>
           </tbody>
         </table>
@@ -471,28 +547,28 @@
           </thead>
           <tbody>
             <tr>
-              <td>Live Commerce</td>
-              <td class="num">$360K</td>
-              <td class="num">$1.2M</td>
-              <td class="num">$3M</td>
+              <td data-label="Stream">Live Commerce</td>
+              <td class="num" data-label="Year 1">$360K</td>
+              <td class="num" data-label="Year 2">$1.2M</td>
+              <td class="num" data-label="Year 3">$3M</td>
             </tr>
             <tr>
-              <td>AI Academy</td>
-              <td class="num">$3M-7.5M</td>
-              <td class="num">$6M+</td>
-              <td class="num">$12M+</td>
+              <td data-label="Stream">AI Academy</td>
+              <td class="num" data-label="Year 1">$3M-7.5M</td>
+              <td class="num" data-label="Year 2">$6M+</td>
+              <td class="num" data-label="Year 3">$12M+</td>
             </tr>
             <tr>
-              <td>Export Consulting</td>
-              <td class="num">$150K</td>
-              <td class="num">$600K</td>
-              <td class="num">$1.5M</td>
+              <td data-label="Stream">Export Consulting</td>
+              <td class="num" data-label="Year 1">$150K</td>
+              <td class="num" data-label="Year 2">$600K</td>
+              <td class="num" data-label="Year 3">$1.5M</td>
             </tr>
             <tr class="total">
-              <td><strong>Total</strong></td>
-              <td class="num"><strong>$3.5M-$8M</strong></td>
-              <td class="num"><strong>$7.8M+</strong></td>
-              <td class="num"><strong>$16.5M+</strong></td>
+              <td data-label="Total"><strong>Total</strong></td>
+              <td class="num" data-label="Year 1"><strong>$3.5M-$8M</strong></td>
+              <td class="num" data-label="Year 2"><strong>$7.8M+</strong></td>
+              <td class="num" data-label="Year 3"><strong>$16.5M+</strong></td>
             </tr>
           </tbody>
         </table>
@@ -559,39 +635,39 @@
           </thead>
           <tbody>
             <tr>
-              <td>AI Core Team (5 specialists)</td>
-              <td class="num">$8,000-15,000</td>
-              <td class="num">-</td>
+              <td data-label="Cost Item">AI Core Team (5 specialists)</td>
+              <td class="num" data-label="Monthly">$8,000-15,000</td>
+              <td class="num" data-label="One-Time">-</td>
             </tr>
             <tr>
-              <td>Villa + Operations</td>
-              <td class="num">$7,000-10,000</td>
-              <td class="num">-</td>
+              <td data-label="Cost Item">Villa + Operations</td>
+              <td class="num" data-label="Monthly">$7,000-10,000</td>
+              <td class="num" data-label="One-Time">-</td>
             </tr>
             <tr>
-              <td>Set Build + Equipment</td>
-              <td class="num">-</td>
-              <td class="num">$50,000-70,000</td>
+              <td data-label="Cost Item">Set Build + Equipment</td>
+              <td class="num" data-label="Monthly">-</td>
+              <td class="num" data-label="One-Time">$50,000-70,000</td>
             </tr>
             <tr>
-              <td>Marketing (year 1)</td>
-              <td class="num">$2,000-4,000</td>
-              <td class="num">-</td>
+              <td data-label="Cost Item">Marketing (year 1)</td>
+              <td class="num" data-label="Monthly">$2,000-4,000</td>
+              <td class="num" data-label="One-Time">-</td>
             </tr>
             <tr class="total">
-              <td><strong>Total Monthly Burn</strong></td>
-              <td class="num"><strong>~$20,000-25,000</strong></td>
-              <td class="num">-</td>
+              <td data-label="Total"><strong>Total Monthly Burn</strong></td>
+              <td class="num" data-label="Monthly"><strong>~$20,000-25,000</strong></td>
+              <td class="num" data-label="One-Time">-</td>
             </tr>
             <tr class="total">
-              <td><strong>12-Month Runway</strong></td>
-              <td class="num"><strong>~$240,000-300,000</strong></td>
-              <td class="num">-</td>
+              <td data-label="Total"><strong>12-Month Runway</strong></td>
+              <td class="num" data-label="Monthly"><strong>~$240,000-300,000</strong></td>
+              <td class="num" data-label="One-Time">-</td>
             </tr>
             <tr class="total">
-              <td><strong>Total Capital Required</strong></td>
-              <td class="num">-</td>
-              <td class="num"><strong>$395,000</strong></td>
+              <td data-label="Total"><strong>Total Capital Required</strong></td>
+              <td class="num" data-label="Monthly">-</td>
+              <td class="num" data-label="One-Time"><strong>$395,000</strong></td>
             </tr>
           </tbody>
         </table>
