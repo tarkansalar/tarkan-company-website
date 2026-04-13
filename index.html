@@ -278,7 +278,7 @@
               v.play();
               return;
             }
-            if (v.paused) v.play();
+            if (v.paused) v.play(); else v.pause();
           }
 
           v.addEventListener('play', function () {
@@ -288,8 +288,6 @@
             centerBtn.classList.add('hidden');
             barPlay.classList.remove('hidden');
             barRestart.classList.add('hidden');
-            barBtn.style.opacity = '0.35';
-            barBtn.style.pointerEvents = 'none';
           });
           v.addEventListener('pause', function () {
             container.classList.remove('is-playing');
@@ -297,8 +295,6 @@
               barPlay.classList.remove('hidden');
               barRestart.classList.add('hidden');
             }
-            barBtn.style.opacity = '1';
-            barBtn.style.pointerEvents = 'auto';
           });
           v.addEventListener('timeupdate', function () {
             if (v.currentTime >= LIMIT) {
