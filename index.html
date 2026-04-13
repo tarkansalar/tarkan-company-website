@@ -218,6 +218,14 @@
 
         <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent px-4 pt-10 pb-4 pointer-events-none">
           <div class="flex items-center gap-3 pointer-events-auto">
+            <button id="rafey-bar-pp" class="text-white hover:text-neon transition-colors shrink-0" aria-label="Play/Pause">
+              <svg id="rafey-bar-play" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <polygon points="5 3 19 12 5 21 5 3"/>
+              </svg>
+              <svg id="rafey-bar-pause" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" class="hidden">
+                <rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/>
+              </svg>
+            </button>
             <div id="rafey-progress" class="flex-1 h-1 bg-white/25 rounded cursor-pointer relative">
               <div id="rafey-progress-fill" class="h-full bg-neon rounded" style="width: 0%"></div>
             </div>
@@ -245,6 +253,9 @@
           var fill = document.getElementById('rafey-progress-fill');
           var timeEl = document.getElementById('rafey-time');
           var coverOverlay = document.getElementById('rafey-cover-overlay');
+          var barPP = document.getElementById('rafey-bar-pp');
+          var barPlay = document.getElementById('rafey-bar-play');
+          var barPause = document.getElementById('rafey-bar-pause');
           var ended = false;
 
           function fmt(s) {
@@ -255,6 +266,8 @@
             iconPlay.classList.toggle('hidden', which !== 'play');
             iconPause.classList.toggle('hidden', which !== 'pause');
             iconRestart.classList.toggle('hidden', which !== 'restart');
+            barPlay.classList.toggle('hidden', which !== 'play' && which !== 'restart');
+            barPause.classList.toggle('hidden', which === 'play' || which === 'restart');
           }
           function updateUI() {
             var t = Math.min(v.currentTime, LIMIT);
@@ -298,6 +311,7 @@
           });
 
           centerBtn.addEventListener('click', handleCenterClick);
+          barPP.addEventListener('click', handleCenterClick);
           progress.addEventListener('click', function (e) {
             var rect = progress.getBoundingClientRect();
             var pct = (e.clientX - rect.left) / rect.width;
