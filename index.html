@@ -222,8 +222,10 @@
         </div>
       </div>
       <style>
-        #rafey-container.is-playing #rafey-center-btn { opacity: 0; background: transparent; }
-        #rafey-container.is-playing:hover #rafey-center-btn { opacity: 1; background: rgba(0,0,0,0.25); }
+        #rafey-container.is-playing #rafey-center-btn { opacity: 0; background: transparent; pointer-events: none; }
+        @media (hover: hover) {
+          #rafey-container.is-playing:hover #rafey-center-btn { opacity: 1; background: rgba(0,0,0,0.25); pointer-events: auto; }
+        }
       </style>
       <script>
         (function () {
