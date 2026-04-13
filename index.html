@@ -296,9 +296,12 @@
           });
           v.addEventListener('pause', function () {
             container.classList.remove('is-playing');
-            if (!ended) {
+            barPause.classList.add('hidden');
+            if (ended) {
+              barPlay.classList.add('hidden');
+              barRestart.classList.remove('hidden');
+            } else {
               barPlay.classList.remove('hidden');
-              barPause.classList.add('hidden');
               barRestart.classList.add('hidden');
             }
           });
