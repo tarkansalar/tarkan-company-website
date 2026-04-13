@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="6" fill="#C8FF00"/>
-  <text x="16" y="13" font-family="Arial Black, Impact, sans-serif" font-weight="900" font-size="7" text-anchor="middle" fill="#000" letter-spacing="0.5">BU</text>
-  <text x="16" y="25" font-family="Arial Black, Impact, sans-serif" font-weight="900" font-size="13" text-anchor="middle" fill="#000" letter-spacing="0.3">365</text>
+  <rect width="32" height="32" rx="4" fill="#000"/>
+  <text x="16" y="10" font-family="Arial Black, Impact, sans-serif" font-weight="900" font-size="6.5" text-anchor="middle" fill="#C8FF00">BE</text>
+  <text x="16" y="18.5" font-family="Arial Black, Impact, sans-serif" font-weight="900" font-size="3.6" text-anchor="middle" fill="#C8FF00" letter-spacing="-0.15">UNSTOPPABLE</text>
+  <text x="16" y="28.5" font-family="Arial Black, Impact, sans-serif" font-weight="900" font-size="9" text-anchor="middle" fill="#C8FF00">365</text>
 </svg>
