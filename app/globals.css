@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@theme {
+  --font-space: "Space Grotesk", sans-serif;
+  --font-inter: "Inter", sans-serif;
+  --font-syne: "Syne", sans-serif;
+
+  --color-neon: #c8ff00;
+  --color-supporting: #aaaaaa;
+  --color-dark-bg: #0d0d0d;
+  --color-darker-bg: #0a0a0a;
+  --color-card-bg: #111111;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--color-neon);
+  color: #000;
+}
+
+/* ═══ HEADER BRAND SCROLL ANIMATION ═══ */
+#brand-link .brand-logo-img {
+  transition: opacity 0.35s ease, max-width 0.35s ease,
+    margin-right 0.35s ease, transform 0.35s ease;
+}
+#brand-link .brand-text {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  opacity: 0;
+  max-width: 0;
+  transform: translateX(-6px);
+  transition: opacity 0.35s ease, max-width 0.35s ease, transform 0.35s ease;
+}
+#brand-link.is-scrolled .brand-logo-img {
+  opacity: 0;
+  max-width: 0;
+  margin-right: 0;
+  transform: scale(0.8);
+}
+#brand-link.is-scrolled .brand-text {
+  opacity: 1;
+  max-width: 280px;
+  transform: translateX(0);
+}
+
+/* ═══ RAFEY VIDEO ═══ */
+#rafey-container.is-playing #rafey-center-btn {
+  opacity: 0;
+  background: transparent;
+  pointer-events: none;
+}
