@@ -207,7 +207,7 @@ function ResultsScreen({
     <main className="min-h-screen bg-black flex items-start justify-center p-4 sm:p-8">
       <div className="w-full max-w-3xl my-8">
         <Link href="/" className="bg-neon text-black font-space font-bold px-6 py-3 text-sm hover:bg-white transition-colors mb-6 inline-block">
-          ← Back to Home
+          Back to Home
         </Link>
 
         <div className="bg-card-bg border-l-4 border-neon p-8 lg:p-10 mb-6">
