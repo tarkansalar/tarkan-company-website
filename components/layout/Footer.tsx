@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { LINKEDIN_URL, CONTACT_EMAIL } from "@/lib/constants";
 
 export default function Footer() {
   return (
@@ -32,7 +33,7 @@ export default function Footer() {
             </h4>
             <div className="flex flex-col sm:flex-row gap-3">
               <a
-                href="https://www.linkedin.com/in/tarkansalar?utm_source=share_via&utm_content=profile&utm_medium=member_ios"
+                href={LINKEDIN_URL}
                 target="_blank"
                 rel="noopener"
                 className="flex items-center gap-3 px-4 py-3 border border-white/10 bg-white/[0.02] hover:bg-card-bg hover:border-white/20 hover:-translate-y-0.5 transition-all"
@@ -51,7 +52,7 @@ export default function Footer() {
               </a>
 
               <a
-                href="mailto:tarkan@beunstoppable365.com"
+                href={`mailto:${CONTACT_EMAIL}`}
                 className="flex items-center gap-3 px-4 py-3 border border-white/10 bg-white/[0.02] hover:bg-card-bg hover:border-white/20 hover:-translate-y-0.5 transition-all"
               >
                 <div className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 bg-neon text-black">
@@ -64,7 +65,7 @@ export default function Footer() {
                     Email
                   </span>
                   <span className="font-inter text-xs text-white truncate">
-                    tarkan@beunstoppable365.com
+                    {CONTACT_EMAIL}
                   </span>
                 </span>
               </a>

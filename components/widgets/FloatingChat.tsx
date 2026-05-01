@@ -1,7 +1,9 @@
+import { WHATSAPP_URL } from "@/lib/constants";
+
 export default function FloatingChat() {
   return (
     <a
-      href="https://wa.me/message/7CMRK2EIMWYPJ1"
+      href={WHATSAPP_URL}
       target="_blank"
       rel="noopener"
       aria-label="Chat with us"

@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect } from "react";
-import { BOOKING_URL } from "@/lib/quiz-data";
+import { BOOKING_URL } from "@/lib/constants";
 
 export default function Header() {
   useEffect(() => {
