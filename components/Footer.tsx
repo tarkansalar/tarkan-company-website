@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -79,19 +80,19 @@ export default function Footer() {
               &copy; 2026 Be Unstoppable 365. All rights reserved.
             </p>
             <span className="text-supporting/30 text-xs hidden sm:inline">|</span>
-            <a
-              href="#"
+            <Link
+              href="/terms"
               className="font-inter text-xs text-supporting hover:text-white transition-colors"
             >
               Terms of Service
-            </a>
+            </Link>
             <span className="text-supporting/30 text-xs">|</span>
-            <a
-              href="#"
+            <Link
+              href="/privacy"
               className="font-inter text-xs text-supporting hover:text-white transition-colors"
             >
               Privacy Policy
-            </a>
+            </Link>
           </div>
           <p className="font-space text-[10px] tracking-[0.12em] text-supporting/60 uppercase">
             Simplicity · Speed · Results · Honesty · Loyalty
