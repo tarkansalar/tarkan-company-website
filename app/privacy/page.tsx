@@ -43,26 +43,24 @@ export default function PrivacyPage() {
                   Information you provide:
                 </span>{" "}
                 Name, email address, business details, and any other
-                information you submit when you book a call, complete the
-                diagnostic quiz, or contact us directly.
+                information you submit when you book a call or contact us
+                directly.
               </li>
               <li>
                 <span className="text-neon font-medium">
                   Quiz responses:
                 </span>{" "}
-                The answers you provide on our diagnostic quiz are processed to
-                generate your score and analysis. We do not associate quiz
-                answers with personally identifiable information unless you
-                proceed to book a call.
+                The answers you provide on our diagnostic quiz are processed
+                entirely in your browser to generate your score and analysis.
+                Quiz answers are not transmitted to or stored on our servers.
               </li>
               <li>
                 <span className="text-neon font-medium">
-                  Automatically collected:
+                  Server logs:
                 </span>{" "}
-                Browser type, device information, IP address, pages visited,
-                and time spent on the Service. This may be collected through
-                cookies and similar technologies used by our hosting and
-                analytics providers.
+                Our hosting provider (Vercel) may automatically log basic
+                technical information such as IP address, browser type, and
+                pages requested, for security and infrastructure purposes.
               </li>
             </ul>
           </Section>
@@ -103,10 +101,12 @@ export default function PrivacyPage() {
 
           <Section title="5. Cookies and Tracking">
             <p>
-              We use cookies and similar technologies to enhance your
-              experience, remember preferences, and analyze traffic. You can
-              control cookies through your browser settings. Disabling cookies
-              may limit some functionality of the Service.
+              This website does not set any first-party cookies and does not
+              use analytics, advertising, or behavioral tracking technologies.
+              External services that you may interact with from this site
+              (such as our booking provider or LinkedIn) may set their own
+              cookies on their respective domains, governed by their own
+              privacy policies.
             </p>
           </Section>
 
