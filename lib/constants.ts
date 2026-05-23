@@ -7,3 +7,7 @@ export const LINKEDIN_URL =
   "https://www.linkedin.com/in/tarkansalar?utm_source=share_via&utm_content=profile&utm_medium=member_ios";
 
 export const CONTACT_EMAIL = "tarkan@beunstoppable365.com";
+
+export const WEBINAR_REGISTRATION_URL = "#register";
+
+export const WEBINAR_EVENT_ISO = "";
