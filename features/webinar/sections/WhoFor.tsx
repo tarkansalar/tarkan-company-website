@@ -1,15 +1,17 @@
 const FOR_LIST = [
-  "You run a fashion, beauty, or lifestyle brand doing $500K to $50M+",
-  "You are the founder, CEO, or operator making strategy and supply decisions",
-  "You sell DTC, wholesale, or omnichannel",
-  "You have at least one paid acquisition channel and can feel margins compressing",
-  "You have already noticed your factory or supplier launching products that look suspiciously like yours",
+  "You run a fashion, beauty, or lifestyle brand doing $2M-$50M+",
+  "You're the founder, CEO, or operator making the calls on strategy and supply",
+  "DTC, wholesale, or omnichannel - doesn't matter",
+  "You run your own retail",
+  "You have at least one paid channel and can feel margins compressing",
+  "You've noticed your factory or supplier launching products that look suspiciously like yours",
 ];
 
 const NOT_FOR_LIST = [
-  "You are pre-revenue or pre-product",
-  "You believe your category is immune to commoditization",
-  "You are looking for tactics to scale ads, not strategy to survive a market shift",
+  "You're pre-revenue or pre-product",
+  "You believe your category is immune to commoditization (it isn't)",
+  "You want ad tactics, not survival strategy",
+  "You want a recording for next month - there's no replay",
 ];
 
 export default function WhoFor() {
@@ -35,7 +37,7 @@ export default function WhoFor() {
 
           <div>
             <div className="font-space font-bold text-[11px] tracking-[0.2em] uppercase text-supporting mb-6">
-              THIS IS NOT FOR YOU IF
+              NOT FOR YOU IF
             </div>
             <ul className="space-y-5">
               {NOT_FOR_LIST.map((t) => (

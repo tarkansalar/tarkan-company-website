@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import type { Chart as ChartType } from "chart.js";
 import { quizData } from "../data/questions";
 
 type Props = {
@@ -12,9 +13,13 @@ export default function RadarChart({ scores, color }: Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
-    let cleanup: (() => void) | undefined;
+    let cancelled = false;
+    let chart: ChartType | null = null;
+
     (async () => {
-      if (!canvasRef.current) return;
+      const canvas = canvasRef.current;
+      if (!canvas) return;
+
       const {
         Chart,
         RadarController,
@@ -25,6 +30,9 @@ export default function RadarChart({ scores, color }: Props) {
         Tooltip,
         Legend,
       } = await import("chart.js");
+
+      if (cancelled) return;
+
       Chart.register(
         RadarController,
         RadialLinearScale,
@@ -34,7 +42,11 @@ export default function RadarChart({ scores, color }: Props) {
         Tooltip,
         Legend
       );
-      const chart = new Chart(canvasRef.current, {
+
+      const existing = Chart.getChart(canvas);
+      if (existing) existing.destroy();
+
+      chart = new Chart(canvas, {
         type: "radar",
         data: {
           labels: quizData.map((q) => q.dim),
@@ -68,9 +80,12 @@ export default function RadarChart({ scores, color }: Props) {
           plugins: { legend: { display: false } },
         },
       });
-      cleanup = () => chart.destroy();
     })();
-    return () => cleanup?.();
+
+    return () => {
+      cancelled = true;
+      chart?.destroy();
+    };
   }, [color, scores]);
 
   return <canvas ref={canvasRef} />;

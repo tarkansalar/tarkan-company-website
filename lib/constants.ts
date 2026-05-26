@@ -10,4 +10,10 @@ export const CONTACT_EMAIL = "tarkan@beunstoppable365.com";
 
 export const WEBINAR_REGISTRATION_URL = "#register";
 
-export const WEBINAR_EVENT_ISO = "";
+export const WEBINAR_EVENT_ISO = "2026-06-17T11:00:00-04:00";
+
+export const WEBINAR_EVENT_LABEL = "Wednesday, June 17, 2026 · 11:00 AM EST";
+
+export const WEBINAR_SEAT_CAP = 40;
+
+export const WEBINAR_HOT_SEATS = 5;

@@ -5,17 +5,35 @@ import { BOOKING_URL } from "@/lib/constants";
 import { quizData } from "../data/questions";
 import { getStatus } from "../data/bands";
 import { getExposures } from "../data/exposures";
-import type { Band, QuizScore } from "../types";
+import type {
+  Band,
+  ProfileAnswer,
+  ProfileQuestion,
+  QuizScore,
+} from "../types";
 import RadarChart from "./RadarChart";
+
+type ProfileEntry = {
+  question: ProfileQuestion;
+  answer: ProfileAnswer;
+  text: string;
+};
 
 type Props = {
   total: number;
   band: Band;
   scores: number[];
   labels: string[];
+  profileAnswers: ProfileEntry[];
 };
 
-export default function ResultsScreen({ total, band, scores, labels }: Props) {
+export default function ResultsScreen({
+  total,
+  band,
+  scores,
+  labels,
+  profileAnswers,
+}: Props) {
   const exposures = getExposures(scores, total);
 
   return (
@@ -92,6 +110,36 @@ export default function ResultsScreen({ total, band, scores, labels }: Props) {
           })}
         </div>
 
+        {profileAnswers.length > 0 && (
+          <div className="bg-card-bg border-l-4 border-neon p-8 lg:p-10 mb-6">
+            <div className="font-space font-bold text-[11px] tracking-[0.15em] uppercase text-neon mb-6">
+              YOUR BRAND SNAPSHOT
+            </div>
+            <div className="space-y-5">
+              {profileAnswers.map(({ question, answer, text }, i) => {
+                const value = renderProfileValue(question, answer, text);
+                if (!value) return null;
+                return (
+                  <div
+                    key={i}
+                    className="border-l-2 border-neon/40 pl-4"
+                  >
+                    <div className="font-space font-bold text-[11px] tracking-wide uppercase text-neon mb-1">
+                      {question.dim}
+                    </div>
+                    <div className="font-inter text-xs text-supporting mb-1">
+                      {question.text}
+                    </div>
+                    <div className="font-inter text-[15px] text-white leading-[1.55]">
+                      {value}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        )}
+
         <div className="bg-card-bg border-2 border-neon p-8 lg:p-10">
           <h3 className="font-space font-bold text-2xl text-white mb-3">
             What This Means
@@ -137,4 +185,21 @@ export default function ResultsScreen({ total, band, scores, labels }: Props) {
       </div>
     </main>
   );
+}
+
+function renderProfileValue(
+  question: ProfileQuestion,
+  answer: ProfileAnswer,
+  text: string
+): string | null {
+  if (question.type === "text" || question.type === "textarea") {
+    return text.trim() || null;
+  }
+  if (!answer.label) return null;
+  if (question.type === "radio" && answer.label === "Other" && question.allowOther) {
+    return answer.otherText
+      ? `Other: ${answer.otherText}`
+      : "Other";
+  }
+  return answer.label;
 }

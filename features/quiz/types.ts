@@ -5,12 +5,41 @@ export type QuizOption = {
   score: QuizScore;
 };
 
-export type QuizQuestion = {
+export type ScoredQuestion = {
   num: number;
   dim: string;
   text: string;
   options: QuizOption[];
   interps: Record<QuizScore, string>;
+};
+
+export type QuizQuestion = ScoredQuestion;
+
+export type ProfileRadioQuestion = {
+  type: "radio";
+  num: number;
+  dim: string;
+  text: string;
+  options: string[];
+  allowOther?: boolean;
+};
+
+export type ProfileTextQuestion = {
+  type: "text" | "textarea";
+  num: number;
+  dim: string;
+  text: string;
+  placeholder?: string;
+  optional?: boolean;
+};
+
+export type ProfileQuestion = ProfileRadioQuestion | ProfileTextQuestion;
+
+export type AnyQuestion = ScoredQuestion | ProfileQuestion;
+
+export type ProfileAnswer = {
+  label: string;
+  otherText?: string;
 };
 
 export type Band = {
