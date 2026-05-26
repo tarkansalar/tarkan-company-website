@@ -1,3 +1,5 @@
+import { HOST_IMG } from "../data/images";
+
 const CREDENTIALS = [
   {
     h: "Built a $50M company with zero outside investment.",
@@ -38,14 +40,26 @@ const PERSPECTIVES = [
 export default function AboutHost() {
   return (
     <section className="py-24 lg:py-32 border-b border-neon/15">
-      <div className="max-w-3xl mx-auto px-6 lg:px-12">
-        <div className="font-space font-bold text-[11px] tracking-[0.2em] uppercase text-neon mb-6">
+      <div className="max-w-4xl mx-auto px-6 lg:px-12">
+        <div className="font-space font-bold text-[11px] tracking-[0.2em] uppercase text-neon mb-8">
           WHO&apos;S RUNNING THIS
         </div>
-        <h2 className="font-space font-extrabold text-3xl lg:text-5xl text-white leading-[1.1] tracking-[-0.02em] mb-6">
-          Tarkan Salar
-        </h2>
-        <p className="font-space font-bold text-lg lg:text-xl text-neon leading-[1.4] mb-12">
+
+        <div className="bg-card-bg border-l-4 border-neon overflow-hidden mx-auto w-full max-w-[260px] mb-8">
+          <img
+            src={HOST_IMG}
+            alt="Tarkan Salar"
+            className="w-full aspect-[4/5] object-cover"
+            style={{ objectPosition: "center 15%" }}
+          />
+          <div className="border-t border-white/10 bg-white/[0.03] px-4 py-2.5 text-center">
+            <p className="font-inter text-sm text-white font-medium tracking-wide">
+              Tarkan Salar
+            </p>
+          </div>
+        </div>
+
+        <p className="font-space font-bold text-base lg:text-lg text-neon text-center leading-[1.5] max-w-2xl mx-auto mb-16 lg:mb-20">
           Operator, not a marketer. 26 years inside global manufacturing,
           product development, and brand building.
         </p>

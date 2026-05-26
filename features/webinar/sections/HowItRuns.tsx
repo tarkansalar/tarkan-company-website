@@ -1,4 +1,5 @@
 import { WEBINAR_HOT_SEATS } from "@/lib/constants";
+import { WORKSHOP_IMG } from "../data/images";
 
 export default function HowItRuns() {
   return (
@@ -10,6 +11,20 @@ export default function HowItRuns() {
         <h2 className="font-space font-extrabold text-3xl lg:text-5xl text-white leading-[1.1] tracking-[-0.02em] mb-12">
           90 minutes. Live. No replay.
         </h2>
+
+        <div className="bg-card-bg border-l-4 border-neon overflow-hidden mb-12">
+          <img
+            src={WORKSHOP_IMG}
+            alt="Workshop with elite entrepreneurs - Dubai Harbour"
+            className="w-full object-cover aspect-[16/9]"
+            style={{ objectPosition: "center 40%" }}
+          />
+          <div className="border-t border-white/10 bg-white/[0.03] px-5 py-3 text-center">
+            <p className="font-inter text-sm text-white font-medium tracking-wide">
+              Workshop with elite entrepreneurs - Dubai Harbour
+            </p>
+          </div>
+        </div>
 
         <div className="grid md:grid-cols-2 gap-6 mb-12">
           <div className="bg-card-bg border-l-4 border-neon p-7 lg:p-8">
