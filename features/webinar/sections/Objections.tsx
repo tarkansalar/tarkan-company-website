@@ -34,9 +34,9 @@ export default function Objections() {
   return (
     <section className="bg-dark-bg py-24 lg:py-32 border-b border-neon/15">
       <div className="max-w-3xl mx-auto px-6 lg:px-12">
-        <div className="font-space font-bold text-[11px] tracking-[0.2em] uppercase text-neon mb-6">
-          THE OSTRICH EFFECT
-        </div>
+        <p className="font-space font-bold text-xl text-neon tracking-[0.02em] mb-6">
+          The ostrich effect.
+        </p>
         <h2 className="font-space font-extrabold text-3xl lg:text-5xl text-white leading-[1.1] tracking-[-0.02em] mb-6">
           &ldquo;But I think I&apos;m safe because…&rdquo;
         </h2>

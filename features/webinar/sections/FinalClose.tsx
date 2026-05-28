@@ -15,9 +15,9 @@ export default function FinalClose() {
   return (
     <section id="register" className="py-24 lg:py-32">
       <div className="max-w-3xl mx-auto px-6 lg:px-12">
-        <div className="font-space font-bold text-[11px] tracking-[0.2em] uppercase text-neon mb-6">
-          ONE LAST THING
-        </div>
+        <p className="font-space font-bold text-xl text-neon tracking-[0.02em] mb-6">
+          One last thing.
+        </p>
         <h2 className="font-space font-extrabold text-3xl lg:text-5xl text-white leading-[1.1] tracking-[-0.02em] mb-10">
           You can ignore this. A lot will.
         </h2>

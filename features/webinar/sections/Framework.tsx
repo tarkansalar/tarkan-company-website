@@ -55,9 +55,9 @@ export default function Framework() {
   return (
     <section className="py-24 lg:py-32 border-b border-neon/15">
       <div className="max-w-5xl mx-auto px-6 lg:px-12">
-        <div className="font-space font-bold text-[11px] tracking-[0.2em] uppercase text-neon mb-6">
-          WHAT THIS WEBINAR IS ACTUALLY ABOUT
-        </div>
+        <p className="font-space font-bold text-xl text-neon tracking-[0.02em] mb-6">
+          What this webinar is actually about.
+        </p>
         <h2 className="font-space font-extrabold text-3xl lg:text-5xl text-white leading-[1.1] tracking-[-0.02em] mb-8">
           You have two ends to defend.
         </h2>
@@ -68,9 +68,9 @@ export default function Framework() {
         </p>
 
         <div className="mb-12">
-          <div className="font-space font-bold text-[11px] tracking-[0.18em] uppercase text-neon mb-6">
-            THE PRODUCTION END
-          </div>
+          <p className="font-space font-bold text-xl text-neon tracking-[0.02em] mb-6">
+            The production end.
+          </p>
           <div className="grid lg:grid-cols-3 gap-5">
             {PRODUCTION.map((p) => (
               <Block key={p.num} point={p} />
@@ -79,9 +79,9 @@ export default function Framework() {
         </div>
 
         <div className="mb-16">
-          <div className="font-space font-bold text-[11px] tracking-[0.18em] uppercase text-neon mb-6">
-            THE CUSTOMER END
-          </div>
+          <p className="font-space font-bold text-xl text-neon tracking-[0.02em] mb-6">
+            The customer end.
+          </p>
           <div className="grid lg:grid-cols-1 gap-5">
             {CUSTOMER.map((p) => (
               <Block key={p.num} point={p} />

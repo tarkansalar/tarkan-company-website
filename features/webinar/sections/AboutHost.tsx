@@ -41,9 +41,9 @@ export default function AboutHost() {
   return (
     <section className="py-24 lg:py-32 border-b border-neon/15">
       <div className="max-w-4xl mx-auto px-6 lg:px-12">
-        <div className="font-space font-bold text-[11px] tracking-[0.2em] uppercase text-neon mb-8">
-          WHO&apos;S RUNNING THIS
-        </div>
+        <p className="font-space font-bold text-xl text-neon tracking-[0.02em] mb-8">
+          Who&apos;s running this.
+        </p>
 
         <div className="bg-card-bg border-l-4 border-neon overflow-hidden mx-auto w-full max-w-[260px] mb-8">
           <img
@@ -85,8 +85,9 @@ export default function AboutHost() {
           </div>
           <div className="font-inter text-[17px] lg:text-lg leading-[1.65] text-white space-y-3">
             <p>
-              I&apos;m an operator, not a marketer. I burn more on leads than I
-              should - my moat is real value, not slick acquisition.
+              I&apos;m an operator, not a marketer. I can&apos;t burn more
+              leads than I get, so my moat is real value, not slick
+              acquisition.
             </p>
             <p className="font-space font-bold text-neon">
               Simplicity. Speed. Results.

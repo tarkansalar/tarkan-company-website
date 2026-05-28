@@ -20,9 +20,9 @@ export default function WhoFor() {
       <div className="max-w-5xl mx-auto px-6 lg:px-12">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
           <div>
-            <div className="font-space font-bold text-[11px] tracking-[0.2em] uppercase text-neon mb-6">
-              THIS IS FOR YOU IF
-            </div>
+            <p className="font-space font-bold text-xl text-neon tracking-[0.02em] mb-6">
+              This is for you if:
+            </p>
             <ul className="space-y-5">
               {FOR_LIST.map((t) => (
                 <li
@@ -36,9 +36,9 @@ export default function WhoFor() {
           </div>
 
           <div>
-            <div className="font-space font-bold text-[11px] tracking-[0.2em] uppercase text-supporting mb-6">
-              NOT FOR YOU IF
-            </div>
+            <p className="font-space font-bold text-xl text-supporting tracking-[0.02em] mb-6">
+              Not for you if:
+            </p>
             <ul className="space-y-5">
               {NOT_FOR_LIST.map((t) => (
                 <li

@@ -27,9 +27,9 @@ export default function WhatYouGet() {
   return (
     <section className="py-24 lg:py-32 border-b border-neon/15">
       <div className="max-w-4xl mx-auto px-6 lg:px-12">
-        <div className="font-space font-bold text-[11px] tracking-[0.2em] uppercase text-neon mb-6">
-          WHAT YOU ALSO GET FOR SHOWING UP LIVE
-        </div>
+        <p className="font-space font-bold text-xl text-neon tracking-[0.02em] mb-6">
+          What you also get for showing up live.
+        </p>
         <h2 className="font-space font-extrabold text-3xl lg:text-5xl text-white leading-[1.1] tracking-[-0.02em] mb-10">
           Time-limited access to my 80/20 Profit AI context engine.
         </h2>
