@@ -96,6 +96,8 @@ export default function Framework() {
 
         <a
           href={WEBINAR_REGISTRATION_URL}
+          target="_blank"
+          rel="noopener"
           className="bg-neon text-black font-space font-bold px-8 py-4 text-lg hover:bg-white transition-colors inline-block"
         >
           CLAIM MY SPOT - {WEBINAR_SEAT_CAP} SEATS

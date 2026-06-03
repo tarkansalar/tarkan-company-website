@@ -71,6 +71,8 @@ export default function FinalClose() {
 
         <a
           href={WEBINAR_REGISTRATION_URL}
+          target="_blank"
+          rel="noopener"
           className="bg-neon text-black font-space font-bold px-10 py-5 text-lg lg:text-xl hover:bg-white transition-colors inline-block"
         >
           CLAIM MY SPOT BEFORE REGISTRATION CLOSES

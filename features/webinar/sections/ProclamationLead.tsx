@@ -79,6 +79,8 @@ export default function ProclamationLead() {
         <div className="pt-6">
           <a
             href={WEBINAR_REGISTRATION_URL}
+            target="_blank"
+            rel="noopener"
             className="bg-neon text-black font-space font-bold px-8 py-4 text-lg hover:bg-white transition-colors inline-block"
           >
             SECURE MY SEAT - {WEBINAR_SEAT_CAP} FOUNDERS ONLY
