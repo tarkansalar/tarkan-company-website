@@ -9,71 +9,62 @@ export default function ProclamationLead() {
         </p>
 
         <p>
-          There&apos;s a shift in consumer brands that most founders won&apos;t
-          say out loud - because once you see it, you have to act on it.
+          Most founders blame marketing.
         </p>
 
         <p>
-          In one sentence: the people who used to cut, sew, mold, and ship your
-          product are now your competitors. Their kids - with American
-          passports, German degrees, UK companies, and Dubai bank accounts -
-          are building the brands about to eat your lunch.
+          More ads. Better agencies. More channels. New creative.
+        </p>
+
+        <p className="font-space font-bold text-2xl text-neon">
+          Usually, that&apos;s not the problem.
         </p>
 
         <p>
-          You know the names.{" "}
-          <strong className="text-neon font-semibold">
-            Shein. Temu. Anker. Cider. Halara. Quince.
-          </strong>{" "}
-          And twenty more you haven&apos;t heard of, run by 27-year-olds in
-          Shenzhen, Yiwu, Istanbul, Ho Chi Minh City - factory behind them,
-          TikTok account in front of them.
-        </p>
-
-        <p>
-          The old deal -{" "}
-          <em className="text-white not-italic font-medium">
-            they make, we brand
-          </em>{" "}
-          - is over.
-        </p>
-
-        <p>
-          Their kids didn&apos;t want to inherit the factory. They wanted the
-          brand. The Delaware LLCs are incorporated. The New Jersey and
-          Rotterdam warehouses are leased. The Meta accounts are warmed up.
+          The problem is the machine behind the brand.
         </p>
 
         <div className="space-y-2 py-2">
           <p>
             <strong className="text-white">
-              They have the cost base you can&apos;t match.
+              Supply chains rewarding the wrong products.
             </strong>
           </p>
           <p>
             <strong className="text-white">
-              The speed you can&apos;t match.
+              Inventory tying up cash instead of generating it.
             </strong>
           </p>
           <p>
             <strong className="text-white">
-              The flexibility you can&apos;t match.
+              Channels competing instead of compounding.
+            </strong>
+          </p>
+          <p>
+            <strong className="text-white">
+              Product ranges where 20% of SKUs create profit and 80% consume
+              attention.
             </strong>
           </p>
         </div>
 
         <p>
-          And now, thanks to AI, the marketing parity you used to count on as
-          your last edge.
+          The business works harder. The numbers don&apos;t.
+        </p>
+
+        <p>
+          If the machine isn&apos;t aligned to one position, no amount of
+          marketing fixes it. It just gets more expensive to run.
         </p>
 
         <p className="font-space font-bold text-2xl lg:text-3xl text-neon leading-[1.3] pt-4">
-          If &ldquo;we run good ads and I have loyal fans&rdquo; is still your
-          moat in 2026, you&apos;re on borrowed time.
+          That&apos;s what this session is about. The BLUE OCEAN CODE - and
+          where your machine is quietly leaking margin, cash, and CAC right
+          now.
         </p>
 
         <p className="font-space font-bold text-xl text-white">
-          Your category is next.
+          Fix the machine. The rest compounds.
         </p>
 
         <div className="pt-6">

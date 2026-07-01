@@ -8,7 +8,7 @@ const STEPS = [
   {
     n: "2",
     h: "Get your personalized result.",
-    p: "Where you're weakest across both ends: production (Speed · Margins · Quality) and customer (Service · Convenience · Value).",
+    p: "Where the machine is likely leaking - product, supply chain, pricing, inventory, or channels - and how far it is from your BLUE OCEAN CODE.",
   },
   {
     n: "3",

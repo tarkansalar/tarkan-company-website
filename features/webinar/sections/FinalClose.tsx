@@ -4,11 +4,13 @@ import {
   WEBINAR_HOT_SEATS,
 } from "@/lib/constants";
 
-const MOATS = [
-  "Brand identity",
-  "Community",
-  "Vertical control",
-  "Speed",
+const OUTCOMES = [
+  "3x lower CAC",
+  "15-20% higher margins",
+  "Better cash flow",
+  "Less dead stock",
+  "Less firefighting",
+  "More value compounding",
 ];
 
 export default function FinalClose() {
@@ -24,39 +26,40 @@ export default function FinalClose() {
 
         <div className="font-inter text-[18px] lg:text-xl leading-[1.7] text-white space-y-6 mb-10">
           <p>
-            In 18 months, most brands will still be running the 2024 playbook.
+            In 18 months, most founders will still be blaming marketing.
           </p>
           <p className="text-supporting">
-            Better ads. Better creatives. Better landing pages.
+            More ads. Better agencies. New channels.
             <br />
-            Still wondering why CAC keeps climbing while their factory launches
-            competing brands.
+            Still wondering why CAC keeps climbing while margins slip and cash
+            gets tighter.
           </p>
           <p className="pt-2">
-            The ones who moved early will own assets that can&apos;t be cloned:
+            The ones who moved early will have built a different machine. One
+            aligned behind their BLUE OCEAN CODE. One that delivers:
           </p>
         </div>
 
         <ul className="space-y-3 mb-10">
-          {MOATS.map((m) => (
+          {OUTCOMES.map((o) => (
             <li
-              key={m}
+              key={o}
               className="border-l-4 border-neon pl-5 font-space font-bold text-xl lg:text-2xl text-white leading-[1.3]"
             >
-              {m}
+              {o}
             </li>
           ))}
         </ul>
 
         <div className="font-inter text-[18px] lg:text-xl leading-[1.7] text-white space-y-5 mb-12">
           <p className="text-supporting">
-            One optimized tactics.
+            One kept optimizing tactics.
             <br />
             The other built leverage.
           </p>
           <p className="font-space font-bold text-2xl lg:text-3xl text-neon leading-[1.3] pt-2">
-            In 18 months, you&apos;ll either be the founder who saw it coming -
-            or the one wishing they had.
+            In 18 months, you&apos;ll either be the founder whose machine
+            compounds - or the one still firefighting the same leaks.
           </p>
         </div>
 

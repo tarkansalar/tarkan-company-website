@@ -15,16 +15,22 @@ export default function Hero() {
         </div>
 
         <h1 className="font-space font-extrabold text-4xl sm:text-5xl lg:text-[64px] leading-[1.05] tracking-[-0.02em] text-white mb-10">
-          The Factory That Made Your Product Is Now Building The Brand That
-          Replaces You
+          Your Marketing Isn&apos;t The Problem. Your Machine Is.
         </h1>
 
         <p className="font-inter text-lg sm:text-xl lg:text-2xl text-supporting leading-[1.45] max-w-3xl mb-10">
-          A 90-minute live briefing for fashion, beauty, and lifestyle founders
+          A 90-minute live session for fashion, beauty, and lifestyle founders
           doing{" "}
-          <strong className="text-white font-semibold">$2M to $50M+</strong>{" "}
-          who can feel their margins compressing - and know something bigger is
-          coming.
+          <strong className="text-white font-semibold">$2M to $50M+</strong>.
+          The BLUE OCEAN CODE - how to align product, supply, pricing,
+          inventory, and channels behind one position so the business
+          compounds instead of firefights.
+        </p>
+
+        <p className="font-space font-bold text-base sm:text-lg text-neon leading-[1.4] max-w-3xl mb-10 tracking-[0.02em]">
+          3x lower CAC &nbsp;&middot;&nbsp; 15-20% higher margins
+          &nbsp;&middot;&nbsp; better cash flow &nbsp;&middot;&nbsp; less dead
+          stock &nbsp;&middot;&nbsp; less firefighting
         </p>
 
         <div className="mb-10">

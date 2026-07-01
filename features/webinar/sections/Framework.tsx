@@ -6,32 +6,32 @@ type Point = {
   body: string;
 };
 
-const PRODUCTION: Point[] = [
+const OWNERS: Array<[string, string]> = [
+  ["Amazon", "owns price and convenience."],
+  ["Apple", "owns technology and liberal arts."],
+  ["Alo Yoga", "owns community and status."],
+];
+
+const PILLARS: Point[] = [
   {
     num: "1",
-    title: "SPEED - Idea to store in 2 weeks. The Zara concept.",
-    body: "In this industry, speed reduces risk. Speed finds bestsellers faster. Find one, double down, multiply profits. The longer your idea-to-store cycle, the more you bet on each launch - and the more each miss costs you. I'll show you how to compress that cycle to 2 weeks. Even if you're certain you can't. Especially if you're certain you can't.",
+    title: "Your position.",
+    body: "What you actually own that no one can copy. Not what you think you own - what's true when you look at the machine. Where every decision either reinforces or drains that position.",
   },
   {
     num: "2",
-    title:
-      "MARGINS - How to negotiate better, and why your factory will actually give it to you.",
-    body: "Most founders negotiate margins like they're asking for a favor. They're not. There's a mechanic to this. I ran my own factory in Hong Kong and China for 15+ years - I sat on the other side of that table a thousand times. I'll show you exactly what makes a factory say yes, and what makes them quietly raise your price next quarter.",
+    title: "The machine.",
+    body: "How supply chain, inventory, pricing, and channels line up behind that position - or work against it. This is where 15-20% margin and better cash flow usually live, hidden in plain sight.",
   },
   {
     num: "3",
-    title:
-      "INNOVATION & QUALITY - How to increase both while reducing your cost price.",
-    body: "Sounds impossible. That's the whole point. The factories pulling away from the pack are doing this every day. I'll show you the operational sequence - not the theory, the sequence.",
+    title: "The 80/20 SKU truth.",
+    body: "Why 20% of your products carry the business and 80% quietly consume attention, cash, and CAC. What to kill, what to double, what to build the rest of the business around.",
   },
-];
-
-const CUSTOMER: Point[] = [
   {
     num: "4",
-    title:
-      "SERVICE · CONVENIENCE · VALUE - What the factory's kid still can't deliver.",
-    body: "This is where you out-execute them - if you build it before they figure it out. Once they do, the window closes. Most founders are spending 90% of their energy on the production side and zero on this. That's backwards in 2026.",
+    title: "The unlock.",
+    body: "Where margin, cash, and CAC are already leaking. The first three moves to move from firefighting to compounding - so the business builds equity, not dependency.",
   },
 ];
 
@@ -59,34 +59,48 @@ export default function Framework() {
           What this webinar is actually about.
         </p>
         <h2 className="font-space font-extrabold text-3xl lg:text-5xl text-white leading-[1.1] tracking-[-0.02em] mb-8">
-          You have two ends to defend.
+          The BLUE OCEAN CODE.
         </h2>
-        <p className="font-inter text-[18px] lg:text-xl leading-[1.6] text-white max-w-3xl mb-16">
-          The production end. The customer end. The factory&apos;s kid is
-          coming at you from one side. Your customer is the only thing standing
-          on the other. We cover both.
+        <p className="font-inter text-[18px] lg:text-xl leading-[1.6] text-white max-w-3xl mb-10">
+          Every brand that compounds owns one position. Every decision -
+          product, supply, pricing, inventory, channels, team - reinforces it.
         </p>
 
-        <div className="mb-12">
-          <p className="font-space font-bold text-xl text-neon tracking-[0.02em] mb-6">
-            The production end.
-          </p>
-          <div className="grid lg:grid-cols-3 gap-5">
-            {PRODUCTION.map((p) => (
-              <Block key={p.num} point={p} />
-            ))}
-          </div>
+        <div className="grid sm:grid-cols-3 gap-4 mb-12">
+          {OWNERS.map(([brand, claim]) => (
+            <div
+              key={brand}
+              className="bg-card-bg border-l-4 border-neon p-5"
+            >
+              <div className="font-space font-bold text-lg text-neon mb-1">
+                {brand}
+              </div>
+              <div className="font-inter text-[15px] text-supporting leading-[1.5]">
+                {claim}
+              </div>
+            </div>
+          ))}
         </div>
 
-        <div className="mb-16">
-          <p className="font-space font-bold text-xl text-neon tracking-[0.02em] mb-6">
-            The customer end.
+        <div className="font-inter text-[18px] lg:text-xl leading-[1.65] text-white space-y-5 max-w-3xl mb-14">
+          <p>
+            Most founders know what they stand for. Their business isn&apos;t
+            built around it.
           </p>
-          <div className="grid lg:grid-cols-1 gap-5">
-            {CUSTOMER.map((p) => (
-              <Block key={p.num} point={p} />
-            ))}
-          </div>
+          <p>
+            That&apos;s where margins disappear, founders become firefighters,
+            and the machine builds dependency instead of equity.
+          </p>
+          <p className="font-space font-bold text-xl lg:text-2xl text-neon leading-[1.35]">
+            A business built around the BLUE OCEAN CODE aligns everything
+            behind one position. It compounds instead of getting more complex.
+          </p>
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-5 mb-12">
+          {PILLARS.map((p) => (
+            <Block key={p.num} point={p} />
+          ))}
         </div>
 
         <p className="font-space font-bold text-xl lg:text-2xl text-white leading-[1.35] mb-10">

@@ -2,39 +2,42 @@ import { HOST_IMG } from "../data/images";
 
 const CREDENTIALS = [
   {
-    h: "Built a $50M company with zero outside investment.",
-    p: "Started at 18.",
-  },
-  {
-    h: "Invented the world's first double-dye and triple-dye process.",
-    p: "Industry-changing, not a side project.",
-  },
-  {
-    h: "Ran B2B private label, DTC, and my own retail - at the same time.",
-    p: "Three sides of the same business, simultaneously. Most operators run one. I ran all three.",
-  },
-  {
-    h: "Supplied brands like Louis Vuitton, Zara, Arcadia Group - and many more at that level.",
-    p: "I know what those buying offices look for, how they negotiate, and why they quietly switch suppliers.",
-  },
-  {
-    h: "Founded my own brand - One Green Elephant.",
-    p: "Built it, ran it, lived it.",
+    h: "30 years across every layer of a product business.",
+    p: "Louis Vuitton. Adidas. Zara. H&M - supplied and produced.",
   },
   {
     h: "Ran my own factory in Hong Kong and China for 15+ years.",
-    p: "I sat on the supplier side of the table thousands of times. I know exactly what factories see when they look at your business.",
+    p: "Sat on the supplier side of the table thousands of times. I know exactly what factories see when they look at your business - and how they think about your margin.",
   },
   {
-    h: "Took factories directly to market as a consultant.",
-    p: "I've literally done what we're talking about on this call - from the inside. I know what they want, what they're afraid of, and what they're already planning.",
+    h: "Founded my own brand. Built a world-first denim technology.",
+    p: "Grew it from €0 to €40M in two years.",
+  },
+  {
+    h: "50M+ products developed and sold.",
+    p: "Across categories, channels, and countries. I have seen where the machine breaks and where it compounds.",
+  },
+  {
+    h: "Received a €50M acquisition offer. Declined.",
+    p: "It was the wrong decision. That lesson taught me more than any success ever could.",
+  },
+];
+
+const RESULTS = [
+  {
+    h: "€12M yoga brand. Revenue down 25%.",
+    p: "Found their BLUE OCEAN CODE. Redesigned the hero product. Rebuilt the supply chain. Implemented an 80/20 product strategy. Result: +81.6% growth. €6M recovered.",
+  },
+  {
+    h: "Another founder. €1.2M unlocked.",
+    p: "Already sitting inside the business. No new customers. No miracle tactic. Just fixing the machine.",
   },
 ];
 
 const PERSPECTIVES = [
   "The founder who got cloned by his own factory.",
   "The supplier who could have cloned the founder (and chose not to).",
-  "The consultant who walked factories into direct-to-consumer.",
+  "The operator who has run every layer of a product business - and fixed the machine from the inside.",
 ];
 
 export default function AboutHost() {
@@ -60,8 +63,7 @@ export default function AboutHost() {
         </div>
 
         <p className="font-space font-bold text-base lg:text-lg text-neon text-center leading-[1.5] max-w-2xl mx-auto mb-16 lg:mb-20">
-          Operator, not a marketer. 26 years inside global manufacturing,
-          product development, and brand building.
+          30-year growth operator. Not a marketer. Not a coach. Operator.
         </p>
 
         <div className="font-space font-bold text-[11px] tracking-[0.18em] uppercase text-supporting mb-6">
@@ -75,6 +77,21 @@ export default function AboutHost() {
             >
               <div className="text-white font-semibold mb-1">{c.h}</div>
               <div className="text-supporting">{c.p}</div>
+            </li>
+          ))}
+        </ul>
+
+        <div className="font-space font-bold text-[11px] tracking-[0.18em] uppercase text-supporting mb-6">
+          WHAT THE MACHINE HAS DELIVERED FOR REAL CLIENTS
+        </div>
+        <ul className="space-y-5 mb-14">
+          {RESULTS.map((r) => (
+            <li
+              key={r.h}
+              className="bg-card-bg border-l-4 border-neon p-6 lg:p-7 font-inter text-[17px] leading-[1.55]"
+            >
+              <div className="text-white font-semibold mb-2">{r.h}</div>
+              <div className="text-supporting">{r.p}</div>
             </li>
           ))}
         </ul>
@@ -93,9 +110,8 @@ export default function AboutHost() {
               Simplicity. Speed. Results.
             </p>
             <p>
-              No BS. No posturing. No teardowns of other people&apos;s work.
-              You&apos;ve seen enough of that. This is real operator-to-founder
-              talk.
+              No BS. No posturing. No theatre. Real operator-to-founder
+              conversation.
             </p>
           </div>
         </div>
@@ -117,9 +133,8 @@ export default function AboutHost() {
         </div>
 
         <p className="font-space font-bold text-xl lg:text-2xl text-neon leading-[1.4]">
-          Find one other person teaching this who&apos;s done all three. If you
-          can, go to their webinar. If you can&apos;t, you&apos;re in the right
-          place.
+          I find the leak. I fix it. I leave the business stronger and more
+          profitable.
         </p>
       </div>
     </section>

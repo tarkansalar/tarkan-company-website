@@ -35,8 +35,9 @@ export default function HowItRuns() {
               The full map.
             </div>
             <p className="font-inter text-[17px] leading-[1.65] text-supporting">
-              No fluff. The shift, both ends to defend (production + customer),
-              the order to build them in, what to stop doing immediately.
+              No fluff. The BLUE OCEAN CODE, the machine underneath, the 80/20
+              SKU truth, and the order to fix it - so the business compounds
+              instead of firefights.
             </p>
           </div>
 
