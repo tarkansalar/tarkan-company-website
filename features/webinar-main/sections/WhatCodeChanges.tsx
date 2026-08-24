@@ -1,4 +1,5 @@
 import { WEBINAR_REGISTRATION_URL } from "@/lib/constants";
+import { WORKSHOP_IMG } from "../data/images";
 
 export default function WhatCodeChanges() {
   const outcomes = [
@@ -15,7 +16,23 @@ export default function WhatCodeChanges() {
         <h2 className="font-space font-extrabold text-3xl lg:text-5xl text-white leading-[1.1] tracking-[-0.02em] mb-6">
           Let Me Be Blunt About What a Code Actually Changes.
         </h2>
-        <p className="font-inter text-[18px] lg:text-xl leading-[1.6] text-supporting mb-10">Not "alignment." Not "clarity" as a feel-good word. This:</p>
+
+        {/* Workshop photo */}
+        <div className="bg-card-bg border-l-4 border-neon overflow-hidden mb-10">
+          <img
+            src={WORKSHOP_IMG}
+            alt="Workshop with elite entrepreneurs - Dubai Harbour"
+            className="w-full object-cover aspect-[16/9]"
+            style={{ objectPosition: "center 40%" }}
+          />
+          <div className="border-t border-white/10 bg-white/[0.03] px-5 py-3 text-center">
+            <p className="font-inter text-sm text-white font-medium tracking-wide">
+              Workshop with elite entrepreneurs - Dubai Harbour
+            </p>
+          </div>
+        </div>
+
+        <p className="font-inter text-[18px] lg:text-xl leading-[1.6] text-supporting mb-10">Not &ldquo;alignment.&rdquo; Not &ldquo;clarity&rdquo; as a feel-good word. This:</p>
         <div className="space-y-6 font-inter text-[16px] lg:text-lg leading-[1.6]">
           {outcomes.map((item, idx) => (
             <div key={idx}>
@@ -24,7 +41,7 @@ export default function WhatCodeChanges() {
             </div>
           ))}
         </div>
-        <p className="font-inter text-[18px] lg:text-xl leading-[1.6] text-supporting mt-12">That's the outcome side. The event shows you the way in.</p>
+        <p className="font-inter text-[18px] lg:text-xl leading-[1.6] text-supporting mt-12">That&apos;s the outcome side. The event shows you the way in.</p>
         <div className="mt-10">
           <a
             href={WEBINAR_REGISTRATION_URL}

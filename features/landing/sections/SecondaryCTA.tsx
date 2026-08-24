@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ARCHIVE_QUIZ_URL } from "@/lib/constants";
 
 export default function SecondaryCTA() {
   return (
@@ -8,7 +9,7 @@ export default function SecondaryCTA() {
           Not ready to book a call?
         </h2>
         <Link
-          href="/quiz"
+          href={ARCHIVE_QUIZ_URL}
           className="border-2 border-neon text-neon font-space font-bold px-8 py-4 text-lg hover:bg-neon hover:text-black transition-colors inline-block"
         >
           TAKE MY FREE PROFIT CHECK

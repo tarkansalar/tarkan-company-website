@@ -1,4 +1,4 @@
-import { WEBINAR_REGISTRATION_URL, WEBINAR_EVENT_LABEL, WEBINAR_SEAT_CAP } from "@/lib/constants";
+import { WEBINAR_REGISTRATION_URL, WEBINAR_EVENT_LABEL } from "@/lib/constants";
 
 export default function FinalClose() {
   return (
@@ -14,13 +14,13 @@ export default function FinalClose() {
               Everything is changing right now. AI is rewriting how customers buy and how companies operate. Chasing every change is a losing game.
             </p>
             <p>
-              There's exactly one winning move: <strong className="text-white">find what won't change for your customer — and build your company on it.</strong>
+              There&apos;s exactly one winning move: <strong className="text-white">find what won&apos;t change for your customer - and build your company on it.</strong>
             </p>
             <p>
-              That's what this hour is. The simplest, fastest, most important move you can make in an AI-driven world.
+              That&apos;s what this hour is. The simplest, fastest, most important move you can make in an AI-driven world.
             </p>
             <p className="italic mt-8">
-              You'll spend this hour anyway — in meetings, firefighting, explaining. Spend it finding your Code instead.
+              You&apos;ll spend this hour anyway - in meetings, firefighting, explaining. Spend it finding your Code instead.
             </p>
           </div>
         </div>
@@ -34,7 +34,7 @@ export default function FinalClose() {
               LIVE - {WEBINAR_EVENT_LABEL}
             </div>
             <div className="font-inter text-sm text-supporting mt-1">
-              Capped at {WEBINAR_SEAT_CAP} founders. No replay guaranteed.
+              Live only &middot; Free &middot; 3 Hot Seats
             </div>
           </div>
 
@@ -46,6 +46,12 @@ export default function FinalClose() {
           >
             CLAIM MY FREE SEAT
           </a>
+
+          {/* Remove this line unless the platform seat cap is genuinely true. */}
+          <p className="font-inter text-sm italic text-supporting mt-6">
+            Seats are capped by the platform. When it&apos;s full, it&apos;s
+            full.
+          </p>
         </div>
       </section>
     </>

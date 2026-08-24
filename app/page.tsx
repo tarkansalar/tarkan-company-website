@@ -1,43 +1,37 @@
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import FloatingChat from "@/components/widgets/FloatingChat";
-import Hero from "@/features/landing/sections/Hero";
-import Credibility from "@/features/landing/sections/Credibility";
-import Problem from "@/features/landing/sections/Problem";
-import CaseStudyStreetwear from "@/features/landing/sections/CaseStudyStreetwear";
-import CaseStudySupplements from "@/features/landing/sections/CaseStudySupplements";
-import Mechanism from "@/features/landing/sections/Mechanism";
-import Multiplier from "@/features/landing/sections/Multiplier";
-import HowItWorks from "@/features/landing/sections/HowItWorks";
-import Guarantee from "@/features/landing/sections/Guarantee";
-import WhatYouGet from "@/features/landing/sections/WhatYouGet";
-import Objections from "@/features/landing/sections/Objections";
-import WhoFor from "@/features/landing/sections/WhoFor";
-import Future from "@/features/landing/sections/Future";
-import FinalClose from "@/features/landing/sections/FinalClose";
-import Bio from "@/features/landing/sections/Bio";
-import SecondaryCTA from "@/features/landing/sections/SecondaryCTA";
+import Hero from "@/features/blue-ocean-code/sections/Hero";
+import Credibility from "@/features/blue-ocean-code/sections/Credibility";
+import BezosQuestion from "@/features/blue-ocean-code/sections/BezosQuestion";
+import NeedsACode from "@/features/blue-ocean-code/sections/NeedsACode";
+import WithWithoutCode from "@/features/blue-ocean-code/sections/WithWithoutCode";
+import MissionVision from "@/features/blue-ocean-code/sections/MissionVision";
+import WhyIBuiltThis from "@/features/blue-ocean-code/sections/WhyIBuiltThis";
+import WhatYouGet from "@/features/blue-ocean-code/sections/WhatYouGet";
+import HowItWorks from "@/features/blue-ocean-code/sections/HowItWorks";
+import FinalClose from "@/features/blue-ocean-code/sections/FinalClose";
 
-export default function Home() {
+export const metadata = {
+  title: "The Blue Ocean Code™ · Why Customers Choose Your Brand In 3 Seconds",
+  description:
+    "For consumer brands that want to stop competing on price, ads and discounts. 30-minute session, your Blue Ocean Code™ and a 30-day activation plan. $499, one time, guaranteed.",
+};
+
+export default function BlueOceanCodePage() {
   return (
     <>
       <Header />
       <Hero />
       <Credibility />
-      <Problem />
-      <CaseStudyStreetwear />
-      <CaseStudySupplements />
-      <Mechanism />
-      <Multiplier />
-      <HowItWorks />
-      <Guarantee />
+      <BezosQuestion />
+      <NeedsACode />
+      <WithWithoutCode />
+      <MissionVision />
+      <WhyIBuiltThis />
       <WhatYouGet />
-      <Objections />
-      <WhoFor />
-      <Future />
+      <HowItWorks />
       <FinalClose />
-      <Bio />
-      <SecondaryCTA />
       <Footer />
       <FloatingChat />
     </>
