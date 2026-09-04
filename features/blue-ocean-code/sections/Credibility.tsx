@@ -1,23 +1,23 @@
-import CaseStudyBlock, {
-  STREETWEAR,
-} from "../components/CaseStudyBlock";
 import { HERO_IMG } from "../data/images";
 
-const STATS: Array<[string, string]> = [
-  ["Louis Vuitton · Zara · Diesel", "Companies I've worked with"],
-  ["50M+", "Products produced"],
-  ["2", "World-first inventions"],
-  ["Multiple", "Eight-figure businesses"],
-  ["Own factory", "Operated, not outsourced"],
+const FACTS = [
+  "30 years building and advising consumer brands.",
+  "50M+ products produced.",
+  "Experience across brands including Louis Vuitton · Zara · Adidas · Diesel",
+  "Built and operated 8-figure businesses.",
+  "Worked across product, sourcing, manufacturing, retail and DTC.",
 ];
 
 export default function Credibility() {
   return (
-    <section className="bg-dark-bg py-24">
-      <div className="max-w-5xl mx-auto px-6 lg:px-12">
-        <h2 className="font-space font-bold text-3xl lg:text-4xl text-white mb-12 leading-[1.2]">
+    <section className="py-24">
+      <div className="max-w-4xl mx-auto px-6 lg:px-12">
+        <h2 className="font-space font-bold text-3xl lg:text-4xl text-white mb-3 leading-[1.2]">
           Built on 30 years in consumer goods.
         </h2>
+        <p className="font-inter text-[17px] lg:text-lg text-neon mb-12">
+          Operated. Not theorized.
+        </p>
 
         <div className="bg-card-bg border-l-4 border-neon overflow-hidden w-full max-w-[360px] mx-auto mb-12">
           <img
@@ -33,29 +33,24 @@ export default function Credibility() {
           </div>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {STATS.map(([value, label]) => (
-            <div
-              key={label}
-              className="bg-card-bg border-l-4 border-neon p-6"
+        <ul className="space-y-5 mb-12">
+          {FACTS.map((f) => (
+            <li
+              key={f}
+              className="border-l-4 border-neon pl-5 font-inter text-[17px] lg:text-lg leading-[1.6] text-white"
             >
-              <div className="font-space font-extrabold text-2xl text-neon leading-[1.2]">
-                {value}
-              </div>
-              <div className="font-inter text-sm text-supporting mt-2">
-                {label}
-              </div>
-            </div>
+              {f}
+            </li>
           ))}
-        </div>
+        </ul>
 
-        {/*
-          Proof slot 1 (copy: "[REAL CLIENT TESTIMONIAL - one line, specific
-          result]"). Filled with the streetwear case study. If a real one-line
-          client quote arrives, it can sit above this block.
-        */}
-        <div className="pt-4">
-          <CaseStudyBlock study={STREETWEAR} />
+        <div className="font-space font-bold text-2xl lg:text-3xl leading-[1.3]">
+          <p className="text-supporting">
+            I&apos;m not a consultant who&apos;s studied brands.
+          </p>
+          <p className="text-white mt-2">
+            I&apos;m an operator who&apos;s built them.
+          </p>
         </div>
       </div>
     </section>

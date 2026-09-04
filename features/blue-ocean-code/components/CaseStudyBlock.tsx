@@ -1,131 +1,147 @@
-type Metric = {
-  label: string;
-  value: string;
-  sub?: string;
-  span?: string;
-};
-
 export type CaseStudy = {
-  heading: string;
+  brand: string;
+  subhead: string;
   quoteLabel: string;
   quote: string;
-  metrics: Metric[];
-  lines: string[];
+  /** What was actually going on underneath. */
+  findings: string[];
+  /** The framing line before the diagnosis. */
+  tension: string[];
+  diagnosisLead: string;
+  diagnosis: string;
+  changesLead: string;
   changes: string[];
   result: string;
+  closing: string[];
 };
 
 export const STREETWEAR: CaseStudy = {
-  heading: "$25M STREETWEAR BRAND - 48 HOURS AFTER USING 80/20 PROFIT AI",
-  quoteLabel: "WHAT SOFIA THOUGHT",
+  brand: "$25M streetwear brand",
+  subhead: "When one standard made the hard decisions obvious.",
+  quoteLabel: "SOFIA THOUGHT",
   quote: "We're growing. Ads are working.",
-  metrics: [
-    { label: "LTV:CAC", value: "1.66 : 1" },
-    { label: "ROAS", value: "2.65x", sub: "(unhealthy)" },
-    { label: "DEAD INVENTORY", value: "$840K", sub: "(30%)" },
-    { label: "SKU COUNT", value: "95", sub: "(too complex)" },
+  tension: ["But underneath the growth:"],
+  findings: [
+    "LTV:CAC was unhealthy.",
+    "30% of inventory was effectively dead.",
+    "And the SKU count had become too complex for the team to execute properly.",
   ],
-  lines: [
-    "They were acquiring customers that barely paid back",
-    "While sitting on nearly $1M in dead stock",
-  ],
+  diagnosisLead:
+    "They were acquiring customers that barely paid back - while sitting on nearly $1M in dead stock.",
+  diagnosis:
+    "The real problem wasn't a lack of data. It was a lack of a standard for deciding what deserved more capital - and what didn't.",
+  changesLead: "Once that standard was clear:",
   changes: [
-    "Killed 22 SKUs",
-    "Identified 15 real profit drivers",
-    "Liquidated trapped inventory",
-    "Refocused spend",
+    "22 SKUs killed",
+    "15 real profit drivers identified",
+    "Trapped inventory liquidated",
+    "Spend refocused",
   ],
-  result: "Result: $1.2M+ liquidity unlocked in 90 days",
+  result: "Result: $1.2M+ in liquidity unlocked in 90 days.",
+  closing: [
+    "No new agency.",
+    "No new hire.",
+    "Better decisions from one clear standard.",
+  ],
 };
 
 export const SUPPLEMENTS: CaseStudy = {
-  heading: "$15M SUPPLEMENTS BRAND - 48 HOURS AFTER USING 80/20 PROFIT AI",
-  quoteLabel: "WHAT JAMES THOUGHT",
-  quote: "I feel like I'm guessing which products are actually making me money.",
-  metrics: [
-    { label: "LTV:CAC", value: "1.59 : 1" },
-    { label: "CONTRIBUTION MARGIN", value: "18%" },
-    { label: "DEAD INVENTORY", value: "$215,600", sub: "(22%)" },
-    { label: "INVENTORY TURNOVER", value: "2.9x/yr", sub: "(healthy: >8x)" },
-    {
-      label: "SUPPLIER RISK",
-      value: "78%",
-      sub: "from one factory in China",
-      span: "sm:col-span-2 lg:col-span-1",
-    },
+  brand: "$15M supplements brand",
+  subhead: "When the numbers finally told one clear story.",
+  quoteLabel: "JAMES THOUGHT",
+  quote: "I feel like I'm guessing which products actually make me money.",
+  tension: ["47 SKUs were on the shelf."],
+  findings: [
+    "Only 3 were making meaningful money.",
+    "The other 44 were trapping cash and compressing margins.",
   ],
-  lines: [
-    "47 SKUs on the shelf. 3 making real money.",
-    "The other 44 trapping cash and compressing every margin in the business.",
-  ],
+  diagnosisLead: "The business didn't need another report.",
+  diagnosis:
+    "It needed a clear standard for deciding: what deserves capital - and what doesn't?",
+  changesLead: "Once that standard was applied:",
   changes: [
-    "Ranked all 47 SKUs by actual profit contribution",
-    "Kill List: 3 SKUs → $134,000 to unlock",
-    "Found cannibal product competing with #1 seller",
+    "All 47 SKUs ranked by real profit contribution",
+    "Kill List actioned → $134,000 unlocked",
+    "Cannibal product found competing with the #1 seller",
     "Subscription retention fix mapped",
-    "US supplier activated as testing engine",
   ],
   result:
-    "Result: $215,600 trapped cash identified. Kill List actioned. 30-day plan locked - in one session.",
+    "Result: $215,600 in trapped cash identified. Kill List executed. 30-day plan locked.",
+  closing: [
+    "The answers were already in the business.",
+    "The standard made them impossible to ignore.",
+  ],
 };
 
-export default function CaseStudyBlock({ study }: { study: CaseStudy }) {
+export default function CaseStudyBlock({
+  study,
+  dark,
+}: {
+  study: CaseStudy;
+  dark?: boolean;
+}) {
   return (
-    <div>
-      <h3 className="font-space font-bold text-xl lg:text-2xl text-white mb-8 leading-[1.2]">
-        {study.heading}
-      </h3>
-
-      <div className="bg-card-bg border-l-4 border-neon p-6 lg:p-8 mb-6">
-        <div className="font-space font-bold text-[11px] tracking-wide uppercase text-neon mb-3">
-          {study.quoteLabel}
-        </div>
-        <p className="font-inter text-lg text-white italic leading-[1.5]">
-          &ldquo;{study.quote}&rdquo;
+    <section className={dark ? "bg-dark-bg py-24" : "py-24"}>
+      <div className="max-w-4xl mx-auto px-6 lg:px-12">
+        <h2 className="font-space font-bold text-3xl lg:text-4xl text-white leading-[1.2]">
+          {study.brand}
+        </h2>
+        <p className="font-inter text-[17px] lg:text-lg leading-[1.6] text-neon mt-3 mb-10">
+          {study.subhead}
         </p>
-      </div>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
-        {study.metrics.map((m) => (
-          <div
-            key={m.label}
-            className={`bg-card-bg border-l-4 border-neon p-5 ${m.span ?? ""}`}
-          >
-            <div className="font-space font-bold text-[11px] tracking-wide uppercase text-supporting mb-2">
-              {m.label}
-            </div>
-            <div className="font-space font-extrabold text-2xl text-neon">
-              {m.value}
-            </div>
-            {m.sub && (
-              <div className="font-inter text-xs text-supporting mt-1">
-                {m.sub}
-              </div>
-            )}
+        <div className="bg-card-bg border-l-4 border-neon p-8 mb-10">
+          <div className="font-space font-bold text-[11px] tracking-wide uppercase text-neon mb-3">
+            {study.quoteLabel}
           </div>
-        ))}
-      </div>
-
-      <div className="font-inter text-[16px] leading-[1.6] text-supporting space-y-2 mb-6">
-        {study.lines.map((l) => (
-          <p key={l}>{l}</p>
-        ))}
-      </div>
-
-      <div className="bg-card-bg border-l-4 border-neon p-6 lg:p-8 mb-6">
-        <div className="font-space font-bold text-[11px] tracking-wide uppercase text-neon mb-4">
-          WHAT CHANGED
+          <p className="font-inter text-lg text-white italic leading-[1.5]">
+            &ldquo;{study.quote}&rdquo;
+          </p>
         </div>
-        <ul className="font-inter text-base text-white leading-[1.7] space-y-2">
-          {study.changes.map((c) => (
-            <li key={c}>- {c}</li>
+
+        <div className="font-inter text-[17px] leading-[1.6] text-supporting space-y-4 mb-8">
+          {study.tension.map((t) => (
+            <p key={t}>{t}</p>
+          ))}
+        </div>
+
+        <ul className="space-y-4 mb-10">
+          {study.findings.map((f) => (
+            <li
+              key={f}
+              className="border-l-4 border-neon pl-5 font-inter text-[17px] leading-[1.6] text-white"
+            >
+              {f}
+            </li>
           ))}
         </ul>
-      </div>
 
-      <p className="font-space font-bold text-xl lg:text-2xl text-white leading-[1.3]">
-        {study.result}
-      </p>
-    </div>
+        <div className="font-inter text-[17px] leading-[1.6] text-supporting space-y-5 mb-10">
+          <p>{study.diagnosisLead}</p>
+          <p className="text-white">{study.diagnosis}</p>
+        </div>
+
+        <div className="bg-card-bg border-l-4 border-neon p-8 mb-10">
+          <div className="font-space font-bold text-[11px] tracking-wide uppercase text-neon mb-4">
+            {study.changesLead}
+          </div>
+          <ul className="font-inter text-base text-white leading-[1.7] space-y-2">
+            {study.changes.map((c) => (
+              <li key={c}>&bull; {c}</li>
+            ))}
+          </ul>
+        </div>
+
+        <p className="font-space font-bold text-2xl lg:text-3xl text-white leading-[1.3] mb-8">
+          {study.result}
+        </p>
+
+        <div className="font-inter text-[17px] leading-[1.6] text-supporting space-y-1">
+          {study.closing.map((c) => (
+            <p key={c}>{c}</p>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }

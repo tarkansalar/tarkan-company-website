@@ -10,8 +10,9 @@ export default function Hero() {
             <div className="font-space font-extrabold text-[13px] sm:text-sm tracking-[0.1em] uppercase text-neon">
               THE BLUE OCEAN CODE&trade;
             </div>
+
             <h1 className="font-space font-bold text-4xl sm:text-5xl lg:text-[56px] leading-[1.1] text-white">
-              Why customers choose your brand in 3 seconds - or never.
+              The one standard your whole company runs on.
             </h1>
 
             <div className="lg:hidden py-4">
@@ -26,29 +27,48 @@ export default function Hero() {
 
             <div className="font-inter text-[17px] leading-[1.6] space-y-4">
               <p>
-                Rising CAC. Copycat brands. Retailers squeezing margins.
+                In one 30-minute 1-on-1 session, we find the one thing your
+                customers will always want from you.
               </p>
               <p>
-                Marketing says one thing, sales another, operations a third - and
-                the customer feels none of it.
-              </p>
-              <p>
-                For consumer brands that want to stop competing on price, ads and
-                discounts and start being{" "}
-                <strong className="text-white">the obvious choice.</strong>
-              </p>
-              <p className="text-supporting">
-                Beauty. Health &amp; wellness. Apparel. Food &amp; beverage.
-                Lifestyle. And more.
+                Then I turn it into your 1-page Blue Ocean Code&trade; - the
+                standard your entire company can use to make better decisions.
               </p>
             </div>
 
-            <p className="font-space font-bold text-xl lg:text-2xl leading-[1.3] text-white">
-              30-minute session. Your Blue Ocean Code&trade;. 30-day activation
-              plan. $499 - one time.
+            <div className="font-inter text-[17px] leading-[1.6] space-y-1 border-l-4 border-neon pl-5">
+              <p>Your people measure themselves against it.</p>
+              <p>Marketing, sales, and operations measure decisions against it.</p>
+              <p>You measure everything against it.</p>
+            </div>
+
+            <div className="font-inter text-[17px] leading-[1.6] space-y-1">
+              <p>
+                First your team <strong className="text-white">reads</strong> it
+                - in 10 seconds.
+              </p>
+              <p>
+                Then they <strong className="text-white">feel</strong> it - in
+                the first week.
+              </p>
+              <p>
+                Then they <strong className="text-white">live</strong> it -
+                without being told.
+              </p>
+            </div>
+
+            <div className="font-space font-bold text-xl lg:text-2xl leading-[1.35] text-white">
+              <p>Your Blue Ocean Code&trade; - delivered in 48 hours</p>
+              <p className="text-neon">+ your 30-Day Activation Plan</p>
+            </div>
+
+            <p className="font-inter text-[17px] leading-[1.6] text-supporting">
+              <strong className="text-white">$499. One time.</strong> If you
+              don&apos;t walk away with a Code you&apos;d bet your business on,
+              you get a full refund.
             </p>
 
-            <div className="space-y-3 pt-4">
+            <div className="space-y-3 pt-2">
               <a
                 href={BLUE_OCEAN_CODE_URL}
                 target="_blank"
@@ -58,7 +78,8 @@ export default function Hero() {
                 FIND MY BLUE OCEAN CODE&trade; - $499
               </a>
               <p className="font-inter text-sm text-supporting">
-                Delivered within 48 hours. Full refund guarantee.
+                For consumer brands - beauty, health &amp; wellness, apparel,
+                food &amp; beverage, lifestyle.
               </p>
             </div>
           </div>

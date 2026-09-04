@@ -7,7 +7,7 @@ export default function WhyIBuiltThis() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="space-y-8">
             <h2 className="font-space font-bold text-4xl lg:text-5xl text-white leading-[1.2]">
-              I know what happens without it.
+              I know what happens without one.
             </h2>
 
             <div className="lg:hidden bg-card-bg border-l-4 border-neon overflow-hidden">
@@ -24,23 +24,35 @@ export default function WhyIBuiltThis() {
               </div>
             </div>
 
-            <div className="font-inter text-[17px] leading-[1.6] space-y-6">
-              <p>
-                I&apos;ve been there. Too many decisions. Too many directions.
-                Too much noise.
-              </p>
-              <p>
-                I was so burned out by decisions that I once passed on a{" "}
-                <strong className="text-white">$50M offer</strong>.
-              </p>
-              <p>
-                Looking back, I wish I had something simple that told me:{" "}
-                <em className="text-white">
-                  This matters. This doesn&apos;t. Focus here.
-                </em>
-              </p>
-              <p className="font-space font-bold text-xl text-white pt-2">
-                That&apos;s what I want to give you.
+            <p className="font-inter text-[17px] lg:text-lg leading-[1.6]">
+              I&apos;ve been there.
+            </p>
+
+            <div className="font-inter text-[17px] lg:text-lg leading-[1.6] space-y-1 text-supporting">
+              <p>Too many decisions.</p>
+              <p>Too many directions.</p>
+              <p>Too much noise.</p>
+            </div>
+
+            <p className="font-inter text-[17px] lg:text-lg leading-[1.6] text-white">
+              I was so burned out by decisions that I once passed on a{" "}
+              <strong>$50M offer</strong>.
+            </p>
+
+            <p className="font-inter text-[17px] lg:text-lg leading-[1.6] text-supporting">
+              Looking back, I wish I&apos;d had something simple that said:
+            </p>
+
+            <div className="border-l-4 border-neon pl-6 font-space font-bold text-xl lg:text-2xl text-white leading-[1.35] space-y-1">
+              <p>This matters.</p>
+              <p>This doesn&apos;t.</p>
+              <p>Focus here.</p>
+            </div>
+
+            <div className="font-inter text-[17px] lg:text-lg leading-[1.6] space-y-2">
+              <p>That&apos;s what I built for myself.</p>
+              <p className="font-space font-bold text-xl text-white">
+                That&apos;s what you get in 30 minutes.
               </p>
             </div>
           </div>

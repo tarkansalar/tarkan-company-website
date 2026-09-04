@@ -10,8 +10,8 @@ export default function IntroScreen({ onStart }: { onStart: () => void }) {
       </h1>
 
       <p className="font-inter text-lg lg:text-xl text-supporting leading-[1.6] mb-10">
-        7 questions. 2 minutes. Find out where it&apos;s bleeding your margins -
-        and what to do about it.
+        10 questions. 2 minutes. Find out where it&apos;s bleeding your margins
+        - and what to do about it.
       </p>
 
       <button

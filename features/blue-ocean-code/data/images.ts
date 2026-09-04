@@ -7,6 +7,6 @@ export const PORTRAIT_IMG =
 export const WORKSHOP_IMG =
   "https://wobiecnlwkpkjseambzd.supabase.co/storage/v1/object/public/tarkan-company-asset/img%203.jpg";
 
-// Teaser: 720x1280 (portrait 9:16), 94s, 6.5 MB. Cover frame at t=1s.
+// Teaser: portrait 9:16, cover frame at t=1s.
 export const TEASER_VIDEO =
-  "https://wobiecnlwkpkjseambzd.supabase.co/storage/v1/object/public/tarkan-company-asset/Teaser.MP4";
+  "https://wobiecnlwkpkjseambzd.supabase.co/storage/v1/object/public/tarkan-company-asset/Teaser.mp4";

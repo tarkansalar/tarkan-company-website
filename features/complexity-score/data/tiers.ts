@@ -68,30 +68,20 @@ export function getTier(score: number): Tier {
 }
 
 /** Shown below the tier copy on every result page. */
-export const BRIDGE = {
-  lead: "You just answered why a Code pays for itself.",
-  intro:
-    "When your brand has one clear standard - one reason customers choose you that everyone in the company knows and every touchpoint delivers - three things change:",
-  benefits: [
-    {
-      title: "Lower customer acquisition cost.",
-      body: "Customers understand the value before you explain it. The sale is easier.",
-    },
-    {
-      title: "Higher customer lifetime value.",
-      body: "Customers who chose you on purpose come back. Customers who bought on discount don't.",
-    },
-    {
-      title: "Pricing power.",
-      body: "You stop competing on price the moment customers can articulate why you're worth more.",
-    },
+export const NEXT_STEP = {
+  heading: "Your next step",
+  lead: "You've seen the score. Now find out what it's costing you - and the one fix to make first.",
+  callLead: "Book a free 15-minute Discovery Call. On the call:",
+  points: [
+    "I'll decode your score - which answer is leaking the most margin right now",
+    "You'll get the one thing to fix first, whatever you decide next",
+    "If I can't help you, I'll tell you in the first 5 minutes",
   ],
-  close: [
-    "The Blue Ocean Code™ is the standard. Built in one session. One document. One reason to choose you - clear enough that your team can use it, your agencies can use it, and your customers can feel it.",
-    "$499. One session. Yours to keep and deploy forever.",
+  ctaLabel: "BOOK MY FREE DISCOVERY CALL",
+  reassurance:
+    "15 minutes. Free. You'll leave with one clear action - even if we never speak again.",
+  offer: [
+    "Want it fixed for good? The Blue Ocean Code™. One session. One document. One reason customers choose you. $499 - yours to keep forever.",
+    "If you don't walk away with a clear Code, I refund you. We talk about it on the call.",
   ],
-  question: "The only question: what's yours?",
-  ctaLabel: "FIND MY BLUE OCEAN CODE™ - $499",
-  riskReversal:
-    "If you go through the session and don't walk away with a clear Code - I'll refund you. No process. Just say so.",
 };

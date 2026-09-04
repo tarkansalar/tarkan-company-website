@@ -1,3 +1,11 @@
+/**
+ * The single booking calendar for the whole site: header, /, /quiz, /webinar,
+ * /ai-audit and the archived pages all point here.
+ *
+ * Note: the pages around it promise different session lengths - /ai-audit
+ * says 30 minutes, the quiz result says 15. Whatever this calendar is set to
+ * in GoHighLevel applies to all of them.
+ */
 export const BOOKING_URL =
   "https://api.leadconnectorhq.com/widget/booking/xUweCx6YHqA8hHMQvUiz";
 
