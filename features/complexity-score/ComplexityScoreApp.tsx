@@ -4,8 +4,9 @@ import { useEffect, useRef, useState } from "react";
 import IntroScreen from "./components/IntroScreen";
 import QuestionCard from "./components/QuestionCard";
 import TransitionScreen from "./components/TransitionScreen";
+import LeadGate, { type Lead } from "./components/LeadGate";
 import ResultScreen from "./components/ResultScreen";
-import { allQuestions, SCORED_COUNT } from "./data/questions";
+import { allQuestions, MAX_SCORE, SCORED_COUNT } from "./data/questions";
 import { getTier } from "./data/tiers";
 import { AUTO_ADVANCE_MS } from "./config";
 import type { Answer, Phase } from "./types";
@@ -40,7 +41,7 @@ export default function ComplexityScoreApp() {
       return;
     }
     if (position === allQuestions.length - 1) {
-      setPhase("result");
+      setPhase("gate");
       return;
     }
     setIdx(position + 1);
@@ -67,6 +68,30 @@ export default function ComplexityScoreApp() {
     timer.current = setTimeout(() => advanceFrom(position), AUTO_ADVANCE_MS);
   }
 
+  async function sendLead(lead: Lead) {
+    const tier = getTier(score);
+    try {
+      await fetch("/api/lead", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ...lead,
+          score,
+          maxScore: MAX_SCORE,
+          tier: tier.label,
+          answers: allQuestions.map(
+            (q, i) => `Q${q.num}: ${answers[i].label || "(no answer)"}`
+          ),
+        }),
+      });
+    } catch (err) {
+      // A failed webhook must never cost the visitor their result. Log it and
+      // move on - the lead is lost, but the person still sees their score.
+      console.error("[quiz] lead submission failed:", err);
+    }
+    setPhase("result");
+  }
+
   function handleBack() {
     if (timer.current) clearTimeout(timer.current);
     if (idx === SCORED_COUNT) {
@@ -89,6 +114,10 @@ export default function ComplexityScoreApp() {
         }}
       />
     );
+  }
+
+  if (phase === "gate") {
+    return <LeadGate onSubmit={sendLead} />;
   }
 
   if (phase === "result") {

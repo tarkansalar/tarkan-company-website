@@ -29,7 +29,7 @@ export const metadata = {
 export default function Home() {
   return (
     <>
-      <Header />
+      <Header ctaLabel="Find My Blue Ocean Code" />
       <Hero />
       <Problem />
       <WhatIsACode />

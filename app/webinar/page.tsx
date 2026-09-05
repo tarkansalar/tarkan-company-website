@@ -20,7 +20,7 @@ export const metadata = {
 export default function WebinarMainPage() {
   return (
     <>
-      <Header />
+      <Header ctaLabel="Find My Blue Ocean Code" />
       <HeroMain />
       <CodeExplainer />
       <Credibility />

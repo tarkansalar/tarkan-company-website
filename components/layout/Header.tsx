@@ -5,7 +5,16 @@ import Link from "next/link";
 import { useEffect } from "react";
 import { BOOKING_URL } from "@/lib/constants";
 
-export default function Header() {
+type Props = {
+  /**
+   * Label for the header CTA. Defaults to the 80/20 wording, which is what
+   * /ai-audit and the archived pages still run on. The Blue Ocean Code pages
+   * pass their own so the header matches the offer on the page.
+   */
+  ctaLabel?: string;
+};
+
+export default function Header({ ctaLabel = "Find My Trapped Cash" }: Props) {
   useEffect(() => {
     const brand = document.getElementById("brand-link");
     if (!brand) return;
@@ -45,7 +54,7 @@ export default function Header() {
           rel="noopener"
           className="bg-neon text-black font-space font-bold px-3 py-2 text-[11px] sm:px-4 sm:py-2.5 sm:text-xs lg:px-6 lg:py-3 lg:text-sm hover:bg-neon/90 transition-colors inline-block whitespace-nowrap"
         >
-          Find My Trapped Cash
+          {ctaLabel}
         </a>
       </div>
     </header>

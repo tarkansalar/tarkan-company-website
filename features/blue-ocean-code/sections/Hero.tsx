@@ -15,6 +15,10 @@ export default function Hero() {
               The one standard your whole company runs on.
             </h1>
 
+            <p className="font-space font-bold text-xl lg:text-2xl text-neon leading-[1.35]">
+              A tagline gets printed, a Code gets operated.
+            </p>
+
             <div className="lg:hidden py-4">
               <video
                 src={`${TEASER_VIDEO}#t=1`}

@@ -3,7 +3,7 @@ export default function WhyLive() {
     <section className="py-24 lg:py-32 border-b border-neon/15">
       <div className="max-w-4xl mx-auto px-6 lg:px-12">
         <h2 className="font-space font-extrabold text-3xl lg:text-5xl text-white leading-[1.1] tracking-[-0.02em] mb-6">
-          Let Me Be Blunt About Why You Should Show Up Live.
+          Let Me Be Clear About Why You Should Show Up Live.
         </h2>
         <div className="space-y-6 font-inter text-[18px] lg:text-xl leading-[1.6] text-supporting">
           <p>

@@ -40,4 +40,5 @@ export type Phase =
   | "questions"
   | "transition"
   | "momentum"
+  | "gate"
   | "result";
