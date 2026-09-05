@@ -10,3 +10,7 @@ export const WORKSHOP_IMG =
 // Teaser: portrait 9:16, cover frame at t=1s.
 export const TEASER_VIDEO =
   "https://wobiecnlwkpkjseambzd.supabase.co/storage/v1/object/public/tarkan-company-asset/Teaser.mp4";
+
+// Sales VSL: 1920x1080 (16:9), 7m54s, 59.5 MB. Cover frame at t=1s.
+export const VSL_VIDEO =
+  "https://wobiecnlwkpkjseambzd.supabase.co/storage/v1/object/public/tarkan-company-asset/VSL_SALES.mp4";

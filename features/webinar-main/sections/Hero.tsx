@@ -4,7 +4,7 @@ import {
   WEBINAR_EVENT_LABEL,
 } from "@/lib/constants";
 import CountdownTimer from "../components/CountdownTimer";
-import { TEASER_VIDEO } from "../data/images";
+import { TEASER_VIDEO, VSL_VIDEO } from "../data/images";
 
 export default function HeroMain() {
   return (
@@ -23,6 +23,15 @@ export default function HeroMain() {
             Lifestyle. And more.
           </strong>
         </p>
+
+        {/* Webinar VSL - landscape 16:9, cover frame at 1s */}
+        <video
+          src={`${VSL_VIDEO}#t=1`}
+          controls
+          playsInline
+          preload="metadata"
+          className="w-full aspect-video bg-card-bg border-l-4 border-neon object-cover mb-12"
+        />
 
         {/* Pain Questions */}
         <div className="mb-12 space-y-4">
