@@ -1,4 +1,5 @@
 import { BLUE_OCEAN_CODE_URL } from "@/lib/constants";
+import BrandLockup from "@/components/widgets/BrandLockup";
 import { TEASER_VIDEO } from "../data/images";
 
 export default function Hero() {
@@ -7,17 +8,13 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12 w-full">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="space-y-8">
-            <div className="font-space font-extrabold text-[13px] sm:text-sm tracking-[0.1em] uppercase text-neon">
-              THE BLUE OCEAN CODE&trade;
-            </div>
+            <BrandLockup align="left" />
 
-            <h1 className="font-space font-bold text-4xl sm:text-5xl lg:text-[56px] leading-[1.1] text-white">
-              The one standard your whole company runs on.
-            </h1>
-
-            <p className="font-space font-bold text-xl lg:text-2xl text-neon leading-[1.35]">
+            {/* Carries the h1 now that the old headline is gone - a page
+                without one is bad for search and for screen readers. */}
+            <h1 className="font-space font-bold text-xl lg:text-2xl text-neon leading-[1.35]">
               A tagline gets printed, a Code gets operated.
-            </p>
+            </h1>
 
             <div className="lg:hidden py-4">
               <video

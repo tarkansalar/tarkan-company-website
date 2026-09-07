@@ -2,16 +2,25 @@
 
 import Link from "next/link";
 import { BOOKING_URL } from "@/lib/constants";
-import { NEXT_STEP } from "../data/tiers";
-import { MAX_SCORE } from "../data/questions";
-import type { Tier } from "../types";
+import { DIAGNOSIS, NEXT_STEP } from "../data/tiers";
+import { MAX_SCORE, scoredQuestions } from "../data/questions";
+import type { Answer, Tier } from "../types";
 
 type Props = {
   score: number;
   tier: Tier;
+  answers: Answer[];
 };
 
-export default function ResultScreen({ score, tier }: Props) {
+export default function ResultScreen({ score, tier, answers }: Props) {
+  // The three scored answers that cost the most. Ties resolve by question
+  // order, so the same answers always produce the same three.
+  const worst = scoredQuestions
+    .map((q, i) => ({ q, answer: answers[i] }))
+    .filter((x) => x.answer?.points != null)
+    .sort((a, b) => (b.answer.points ?? 0) - (a.answer.points ?? 0))
+    .slice(0, 3);
+
   return (
     <main className="min-h-screen bg-black flex items-start justify-center p-4 sm:p-8">
       <div className="w-full max-w-3xl my-8">
@@ -42,10 +51,43 @@ export default function ResultScreen({ score, tier }: Props) {
           </p>
         </div>
 
+        {/* The three worst answers - their own diagnosis */}
+        {worst.length === 3 && (
+          <div className="bg-card-bg border-l-4 border-neon p-8 lg:p-10 mb-6">
+            <h3 className="font-space font-bold text-xl lg:text-2xl text-white leading-[1.3] mb-3">
+              {DIAGNOSIS.heading}
+            </h3>
+            <p className="font-inter text-[16px] leading-[1.6] text-supporting mb-8">
+              {DIAGNOSIS.lead}
+            </p>
+
+            <ol className="space-y-6">
+              {worst.map(({ q, answer }) => (
+                <li key={q.num} className="border-l-4 border-neon pl-5">
+                  <div className="flex items-baseline justify-between gap-4 mb-2">
+                    <span className="font-space font-bold text-[11px] tracking-[0.14em] uppercase text-neon">
+                      Q{q.num}
+                    </span>
+                    <span className="font-space font-bold text-sm text-neon flex-shrink-0">
+                      {answer.points}/4
+                    </span>
+                  </div>
+                  <p className="font-inter text-[15px] leading-[1.5] text-supporting mb-2">
+                    {q.text}
+                  </p>
+                  <p className="font-inter text-[16px] leading-[1.5] text-white">
+                    &ldquo;{answer.label}&rdquo;
+                  </p>
+                </li>
+              ))}
+            </ol>
+          </div>
+        )}
+
         {/* Rest of the tier copy */}
         <div className="bg-card-bg border-l-4 border-neon p-8 lg:p-10 mb-6">
           <div className="font-space font-bold text-[11px] tracking-[0.15em] uppercase text-neon mb-6">
-            WHAT THIS SCORE MEANS
+            {DIAGNOSIS.rootCauseLabel}
           </div>
           <div className="font-inter text-[17px] leading-[1.6] text-white space-y-5">
             {tier.body.slice(1).map((p, i) => (

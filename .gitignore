@@ -27,3 +27,6 @@ yarn-error.log*
 
 # TypeScript
 *.tsbuildinfo
+
+# Marketing working docs - kept local, not part of the site
+docs/

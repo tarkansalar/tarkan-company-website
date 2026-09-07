@@ -67,6 +67,16 @@ export function getTier(score: number): Tier {
   return found ?? (score < TIERS[0].min ? TIERS[0] : TIERS[TIERS.length - 1]);
 }
 
+/**
+ * Framing for the three worst-scoring answers, computed per person from
+ * Q1-Q7 - so "these 3 places" is their own diagnosis, not a generic claim.
+ */
+export const DIAGNOSIS = {
+  heading: "Your brand's complexity is bleeding you in these 3 places",
+  lead: "These are the three answers you scored highest on - the places it is costing you most right now.",
+  rootCauseLabel: "AND HERE'S THE ROOT CAUSE",
+};
+
 /** Shown below the tier copy on every result page. */
 export const NEXT_STEP = {
   heading: "Your next step",
@@ -81,7 +91,8 @@ export const NEXT_STEP = {
   reassurance:
     "15 minutes. Free. You'll leave with one clear action - even if we never speak again.",
   offer: [
-    "Want it fixed for good? The Blue Ocean Code™. One session. One document. One reason customers choose you. $499 - yours to keep forever.",
+    "Want it fixed for good? The Blue Ocean Code™ is one standard that kills both the confusion outside and the complexity inside.",
+    "One session. One document. One reason customers choose you. $499 - yours to keep forever.",
     "If you don't walk away with a clear Code, I refund you. We talk about it on the call.",
   ],
 };

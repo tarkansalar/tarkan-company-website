@@ -121,7 +121,9 @@ export default function ComplexityScoreApp() {
   }
 
   if (phase === "result") {
-    return <ResultScreen score={score} tier={getTier(score)} />;
+    return (
+      <ResultScreen score={score} tier={getTier(score)} answers={answers} />
+    );
   }
 
   return (

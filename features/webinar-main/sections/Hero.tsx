@@ -3,6 +3,7 @@ import {
   WEBINAR_EVENT_ISO,
   WEBINAR_EVENT_LABEL,
 } from "@/lib/constants";
+import BrandLockup from "@/components/widgets/BrandLockup";
 import CountdownTimer from "../components/CountdownTimer";
 import { TEASER_VIDEO, VSL_VIDEO } from "../data/images";
 
@@ -10,9 +11,9 @@ export default function HeroMain() {
   return (
     <section className="pt-32 pb-20 lg:pt-40 lg:pb-28 border-b border-neon/15">
       <div className="max-w-5xl mx-auto px-6 lg:px-12">
-        {/* Eyebrow */}
-        <div className="font-space font-extrabold text-[12px] sm:text-sm tracking-[0.18em] uppercase text-neon mb-6">
-          THE BLUE OCEAN CODE™ LIVE EVENT
+        {/* Brand lockup */}
+        <div className="mb-10">
+          <BrandLockup align="left" />
         </div>
 
         {/* Audience */}
