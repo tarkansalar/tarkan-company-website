@@ -13,7 +13,8 @@ export default function Hero() {
             {/* Carries the h1 now that the old headline is gone - a page
                 without one is bad for search and for screen readers. */}
             <h1 className="font-space font-bold text-xl lg:text-2xl text-neon leading-[1.35]">
-              A tagline gets printed, a Code gets operated.
+              What&apos;s NOT going to change in the next 10 years for your
+              customers?
             </h1>
 
             <div className="lg:hidden py-4">
