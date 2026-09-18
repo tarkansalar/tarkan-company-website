@@ -19,9 +19,9 @@ export const CONTACT_EMAIL = "tarkan@beunstoppable365.com";
 export const WEBINAR_REGISTRATION_URL =
   "https://link.apisystem.tech/widget/form/S0RKZvlvKNlykkYuxFRU";
 
-export const WEBINAR_EVENT_ISO = "2026-09-02T11:00:00-04:00";
+export const WEBINAR_EVENT_ISO = "2026-09-25T11:00:00-04:00";
 
-export const WEBINAR_EVENT_LABEL = "Wednesday, September 2, 2026 · 11:00 AM EDT";
+export const WEBINAR_EVENT_LABEL = "Friday, September 25, 2026 · 11:00 AM EDT";
 
 export const WEBINAR_SEAT_CAP = 40;
 
