@@ -21,6 +21,13 @@ export const metadata: Metadata = {
     "Your customers already buy supplements. Build your own supplement brand with products that stand apart, backed by direct factory relationships, manufacturing experience and product development designed around your customers.",
   // noindex until Tuan approves the page
   robots: { index: false, follow: false },
+  // Canggus favicon for this route only. app/canggus/icon.png alone is not
+  // enough: Next skips file-based icons when the root layout sets
+  // metadata.icons, so the page metadata overrides them explicitly here.
+  icons: {
+    icon: [{ url: "/canggus/icon.png", sizes: "64x64", type: "image/png" }],
+    apple: [{ url: "/canggus/icon.png", sizes: "64x64", type: "image/png" }],
+  },
 };
 
 export default function CanggusPage() {

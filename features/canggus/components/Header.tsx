@@ -1,15 +1,24 @@
+import Image from "next/image";
+import { CANGGUS_LOGO_SRC } from "../data/assets";
 import { CANGGUS_BOOKING_HREF, CTA_LABEL } from "../data/content";
 
 export default function Header() {
   return (
     <header className="absolute inset-x-0 top-0 z-20">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
-        {/* [ASET] Canggus logo - script wordmark until the logo file is supplied */}
         <a
           href="#top"
-          className="font-[family-name:var(--font-cg-script)] text-[36px] leading-none text-[#282828] rounded focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#fb6ba8]"
+          className="inline-flex items-center rounded transition-opacity hover:opacity-85 active:opacity-70 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#fb6ba8]"
         >
-          Canggus
+          <Image
+            src={CANGGUS_LOGO_SRC}
+            alt="Canggus Community"
+            width={1024}
+            height={243}
+            priority
+            sizes="(min-width: 1024px) 160px, 135px"
+            className="h-8 w-auto lg:h-9"
+          />
         </a>
         {/* [TUAN ISI link booking] */}
         <a
