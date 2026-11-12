@@ -1,54 +1,82 @@
-# CLAUDE.md — Frontend Website Rules
+# CLAUDE.md — Tarkan Company Website
 
-## Always Do First
-- **Invoke the `frontend-design` skill** before writing any frontend code, every session, no exceptions.
+Marketing site for Be Unstoppable 365 / Tarkan Salar.
+Production: https://tarkan-company-website.vercel.app (Vercel, deployed from `main`).
 
-## Reference Images
-- If a reference image is provided: match layout, spacing, typography, and color exactly. Swap in placeholder content (images via `https://placehold.co/`, generic copy). Do not improve or add to the design.
-- If no reference image: design from scratch with high craft (see guardrails below).
-- Screenshot your output, compare against reference, fix mismatches, re-screenshot. Do at least 2 comparison rounds. Stop only when no visible differences remain or user says so.
+## Stack
+- Next.js 15 (App Router, `app/`) + React 19 + TypeScript 5
+- Tailwind CSS 4 via `@tailwindcss/postcss` (`postcss.config.mjs`). There is no `tailwind.config.js`:
+  theme tokens live in the `@theme` block of `app/globals.css`
+  (fonts `font-space` / `font-inter` / `font-syne`; colors `neon`, `supporting`, `dark-bg`, `darker-bg`, `card-bg`).
+- Fonts: Google Fonts (Space Grotesk, Inter, Syne) loaded in `app/layout.tsx`.
+- `chart.js` for the quiz/score charts.
+- Path alias `@/*` -> repo root (`@/components/...`, `@/features/...`, `@/lib/...`).
 
-## Local Server
-- **Always serve on localhost** — never screenshot a `file:///` URL.
-- Start the dev server: `node serve.mjs` (serves the project root at `http://localhost:3000`)
-- `serve.mjs` lives in the project root. Start it in the background before taking any screenshots.
-- If the server is already running, do not start a second instance.
+## Commands (npm)
+```
+npm install          # first time / after package.json changes
+npm run dev          # http://localhost:3000
+npm run build        # must pass before every push
+npm run start        # serve the production build on :3000
+npm run lint
+```
+Local env: copy `.env.local.example` to `.env.local` (gitignored) only if you need the lead webhook locally.
 
-## Screenshot Workflow
-- Puppeteer is installed at `C:/Users/Asus/AppData/Local/Temp/puppeteer-test/`. Chrome cache is at `C:/Users/Asus/.cache/puppeteer/`.
-- **Always screenshot from localhost:** `node screenshot.mjs http://localhost:3000`
-- Screenshots are saved automatically to `./temporary screenshots/screenshot-N.png` (auto-incremented, never overwritten).
-- Optional label suffix: `node screenshot.mjs http://localhost:3000 label` → saves as `screenshot-N-label.png`
-- `screenshot.mjs` lives in the project root. Use it as-is.
-- After screenshotting, read the PNG from `temporary screenshots/` with the Read tool — Claude can see and analyze the image directly.
-- When comparing, be specific: "heading is 32px but reference shows ~24px", "card gap is 16px but should be 24px"
-- Check: spacing/padding, font size/weight/line-height, colors (exact hex), alignment, border-radius, shadows, image sizing
+Screenshots (optional): `node screenshot.mjs http://localhost:3000/<path> [label]` uses the
+`puppeteer` devDependency and writes to `temporary screenshots/` (gitignored).
+Always screenshot localhost or a Preview URL, never `file:///`. Check mobile (375px) and desktop.
 
-## Output Defaults
-- Single `index.html` file, all styles inline, unless user says otherwise
-- Tailwind CSS via CDN: `<script src="https://cdn.tailwindcss.com"></script>`
-- Placeholder images: `https://placehold.co/WIDTHxHEIGHT`
-- Mobile-first responsive
+## Folder structure
+```
+app/                    routes only - thin page.tsx files that compose feature sections
+  page.tsx              /            main landing ($499 Blue Ocean Code) -> features/blue-ocean-code
+  offer/                /offer       -> features/offer
+  webinar/              /webinar     -> features/webinar-main
+  quiz/                 /quiz        Complexity Score quiz -> features/complexity-score
+  audit-quiz/           /audit-quiz  -> features/audit-quiz
+  ai-audit/             /ai-audit    -> features/ai-audit
+  privacy/, terms/      legal pages  -> features/legal
+  archive/              superseded pages, still reachable, not linked in nav
+    80-20/ -> features/landing · quiz/ -> features/quiz · webinar/ -> features/webinar
+  api/lead/route.ts     POST: forwards quiz leads to GoHighLevel (server-side)
+  layout.tsx, globals.css
+features/<page>/        one folder per page
+  sections/             page sections (Hero, Problem, ...)
+  components/           components used only by that page
+  data/                 copy, lists, image/video URLs (data/images.ts)
+  *App.tsx, types.ts, config.ts   entry + types for the quiz-style apps
+components/
+  layout/               Header, Footer (shared)
+  widgets/              BrandLockup, FloatingChat, RafeyVideo (shared)
+lib/constants.ts        shared URLs and values: booking calendar, WhatsApp, webinar date/seats,
+                        checkout URL, route paths. Change them here, not inline.
+public/                 favicon + static fallbacks only
+```
+New page = new `features/<name>/` folder + a thin `app/<route>/page.tsx`. Anything used by
+two or more pages goes in `components/`, not copied between features.
 
-## Brand Assets
-- Always check the `brand_assets/` folder before designing. It may contain logos, color guides, style guides, or images.
-- If assets exist there, use them. Do not use placeholders where real assets are available.
-- If a logo is present, use it. If a color palette is defined, use those exact values — do not invent brand colors.
+## Rules
+- Assets (images, logo, video) come from the Supabase Storage bucket `tarkan-company-asset`
+  through its public URL:
+  `https://wobiecnlwkpkjseambzd.supabase.co/storage/v1/object/public/tarkan-company-asset/<file>`
+  - Keep the URLs in the feature's `data/images.ts` (or a shared constant), not scattered through JSX.
+  - Use `/object/public/` URLs. Do not add `/object/sign/...?token=` URLs; they expire.
+  - Never put Supabase keys (anon or service_role) in frontend code. Uploading new assets is a Backend task.
+  - Any new external image host must be added to `images.remotePatterns` in `next.config.ts`.
+- Quiz leads: the browser POSTs to `/api/lead`, and the route forwards them to `process.env.GHL_WEBHOOK_URL`.
+  - `GHL_WEBHOOK_URL` is set in the Vercel project env (and in `.env.local` locally). Never hardcode it,
+    never expose it to the client (no `NEXT_PUBLIC_` prefix), never commit `.env*` files.
+  - If it is unset, the route returns 501 and the quiz must still show the score.
+- Workflow: branch from `main` -> commit -> push -> Vercel builds a Preview URL -> review on the Preview.
+  Never push directly to `main`. Merging to `main` (= production deploy) is done by the reviewer.
+- Before committing: `npm run build` passes, and `git diff --cached` contains no secrets.
+- Do not invent business claims, prices, testimonials or stats. Leave a visible `[TUAN ISI]`
+  placeholder and flag it instead.
 
-## Anti-Generic Guardrails
-- **Colors:** Never use default Tailwind palette (indigo-500, blue-600, etc.). Pick a custom brand color and derive from it.
-- **Shadows:** Never use flat `shadow-md`. Use layered, color-tinted shadows with low opacity.
-- **Typography:** Never use the same font for headings and body. Pair a display/serif with a clean sans. Apply tight tracking (`-0.03em`) on large headings, generous line-height (`1.7`) on body.
-- **Gradients:** Layer multiple radial gradients. Add grain/texture via SVG noise filter for depth.
-- **Animations:** Only animate `transform` and `opacity`. Never `transition-all`. Use spring-style easing.
-- **Interactive states:** Every clickable element needs hover, focus-visible, and active states. No exceptions.
-- **Images:** Add a gradient overlay (`bg-gradient-to-t from-black/60`) and a color treatment layer with `mix-blend-multiply`.
-- **Spacing:** Use intentional, consistent spacing tokens — not random Tailwind steps.
-- **Depth:** Surfaces should have a layering system (base → elevated → floating), not all sit at the same z-plane.
-
-## Hard Rules
-- Do not add sections, features, or content not in the reference
-- Do not "improve" a reference design — match it
-- Do not stop after one screenshot pass
-- Do not use `transition-all`
-- Do not use default Tailwind blue/indigo as primary color
+## Design conventions
+- Dark site: black / `dark-bg` surfaces, `neon` (#c8ff00) accent, `supporting` grey for secondary copy.
+  Use the theme tokens. Do not use default Tailwind blue/indigo as a primary color.
+- Headings in Space Grotesk / Syne, body text in Inter.
+- Mobile-first; every page must work at 375px.
+- Animate only `transform` and `opacity`. No `transition-all`.
+- Every clickable element needs hover, focus-visible and active states.
