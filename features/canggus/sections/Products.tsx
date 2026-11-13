@@ -66,9 +66,15 @@ export default function Products() {
           <h3 className="text-xs font-semibold uppercase tracking-[0.22em] text-[#fb6ba8]">
             Current high-potential categories
           </h3>
-          <ul className="mt-6 grid md:grid-cols-2 lg:grid-cols-5 gap-4">
+          {/* 1 -> 2 (md, last odd card full width) -> 3 (lg) -> 5 (xl) columns.
+              5 columns only from 1280px: at 1024px a 5th of the row is too
+              narrow for "longevity/wellness". */}
+          <ul className="mt-6 grid md:grid-cols-2 lg:grid-cols-6 xl:grid-cols-5 gap-4">
             {CATEGORIES.map((c) => (
-              <li key={c.title}>
+              <li
+                key={c.title}
+                className="md:last:odd:col-span-2 lg:col-span-2 lg:[&:nth-child(n+4)]:col-span-3 xl:col-span-1 xl:[&:nth-child(n+4)]:col-span-1"
+              >
                 <div
                   data-tilt="7"
                   className="cg-tilt group h-full overflow-hidden rounded-3xl bg-white ring-1 ring-[#282828]/8 cg-card-shadow"

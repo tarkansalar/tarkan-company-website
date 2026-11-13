@@ -29,12 +29,12 @@ export default function ManufacturingNetwork() {
         </div>
 
         {/* Combined figures */}
-        <dl className="mt-12 grid grid-cols-2 lg:grid-cols-4 gap-px overflow-hidden rounded-3xl bg-white/10 ring-1 ring-white/10">
+        <dl className="mt-12 grid grid-cols-1 min-[360px]:grid-cols-2 lg:grid-cols-4 gap-px overflow-hidden rounded-3xl bg-white/10 ring-1 ring-white/10">
           {NETWORK_STATS.map((s) => (
-            <div key={s.label} className="bg-[#1f1f1f] p-6 sm:p-8">
+            <div key={s.label} className="min-w-0 bg-[#1f1f1f] p-5 sm:p-8">
               <dt className="sr-only">{s.label}</dt>
               <dd>
-                <span className="block text-4xl sm:text-5xl font-extrabold tracking-[-0.03em] text-[#fb6ba8]">
+                <span className="block text-[clamp(2rem,1.3rem+2.4vw,3rem)] font-extrabold tracking-[-0.03em] text-[#fb6ba8]">
                   {s.value}
                 </span>
                 <span className="mt-2 block text-sm sm:text-[15px] font-semibold text-white">{s.label}</span>
@@ -46,14 +46,20 @@ export default function ManufacturingNetwork() {
 
         {/* One card per facility */}
         <ul className="mt-14 grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {FACILITIES.map((f) => (
+          {FACILITIES.map((f, i) => {
+            // Odd count: on tablets (md, 2 columns) the last card spans both
+            // columns, photo left / facts right, instead of sitting alone.
+            const wide = FACILITIES.length % 2 === 1 && i === FACILITIES.length - 1;
+            return (
             <li
               key={f.id}
               data-reveal=""
               data-tilt="5"
-              className="cg-tilt flex flex-col overflow-hidden rounded-3xl bg-[linear-gradient(160deg,rgba(255,255,255,0.09),rgba(255,255,255,0.02))] ring-1 ring-white/12 cg-card-shadow-dark"
+              className={`cg-tilt flex flex-col overflow-hidden rounded-3xl bg-[linear-gradient(160deg,rgba(255,255,255,0.09),rgba(255,255,255,0.02))] ring-1 ring-white/12 cg-card-shadow-dark ${wide ? "md:col-span-2 md:flex-row lg:col-span-1 lg:flex-col" : ""}`}
             >
-              <div className="relative aspect-[16/10] overflow-hidden">
+              <div
+                className={`relative aspect-[16/10] overflow-hidden ${wide ? "md:aspect-auto md:min-h-[280px] md:w-1/2 md:shrink-0 lg:aspect-[16/10] lg:min-h-0 lg:w-auto" : ""}`}
+              >
                 <Image
                   src={`${CANGGUS_ASSET_BASE}${f.photo.src}`}
                   alt={f.photo.alt}
@@ -77,7 +83,8 @@ export default function ManufacturingNetwork() {
                 ))}
               </ul>
             </li>
-          ))}
+            );
+          })}
         </ul>
 
         {/* Production & lab gallery */}

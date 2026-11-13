@@ -36,7 +36,7 @@ export default function CanggusLegalLayout({ title, lastUpdated, intro, children
           <div className="max-w-3xl mx-auto px-6 lg:px-10">
             <Link
               href={HOME}
-              className="group/back inline-flex items-center gap-2 rounded-full border border-[#282828]/15 bg-white px-4 py-2 text-xs font-semibold text-[#282828] transition-[background-color,border-color,transform] duration-200 hover:border-[#fb6ba8] hover:bg-[#fff1f7] hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#fb6ba8]"
+              className="group/back inline-flex min-h-11 items-center gap-2 rounded-full border border-[#282828]/15 bg-white px-4 py-2 text-xs font-semibold text-[#282828] transition-[background-color,border-color,transform] duration-200 hover:border-[#fb6ba8] hover:bg-[#fff1f7] hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#fb6ba8]"
             >
               <Icon
                 name="arrowRight"

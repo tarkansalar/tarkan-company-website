@@ -16,7 +16,7 @@ export default function SectionIntro({ eyebrow, title, align = "left", invert = 
         {eyebrow}
       </p>
       <h2
-        className={`text-[28px] sm:text-4xl lg:text-[46px] font-bold leading-[1.15] tracking-[-0.02em] ${invert ? "text-white" : "text-[#282828]"}`}
+        className={`text-[clamp(1.625rem,1.1rem+2.4vw,2.875rem)] font-bold leading-[1.15] tracking-[-0.02em] ${invert ? "text-white" : "text-[#282828]"}`}
       >
         {title}
       </h2>

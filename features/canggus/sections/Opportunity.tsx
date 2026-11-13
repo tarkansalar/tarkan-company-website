@@ -50,7 +50,7 @@ export default function Opportunity() {
             <li
               key={b.text}
               data-tilt="7"
-              className="cg-tilt rounded-3xl bg-[linear-gradient(160deg,rgba(255,255,255,0.10),rgba(255,255,255,0.03))] ring-1 ring-white/12 p-6 cg-card-shadow-dark"
+              className="cg-tilt rounded-3xl sm:last:odd:col-span-2 lg:last:odd:col-span-1 bg-[linear-gradient(160deg,rgba(255,255,255,0.10),rgba(255,255,255,0.03))] ring-1 ring-white/12 p-6 cg-card-shadow-dark"
             >
               <IconTile name={b.icon} dark className="mb-5" />
               <span className="block text-[16px] leading-[1.5] font-medium">{b.text}</span>

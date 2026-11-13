@@ -60,7 +60,7 @@ const variantLoader: ImageLoader = ({ src, width }) =>
   `${CANGGUS_ASSET_BASE}${src}-${width <= 400 ? "sm" : "md"}.webp`;
 
 const SIZES =
-  "(min-width: 1280px) 280px, (min-width: 1024px) 22vw, (min-width: 768px) 30vw, (min-width: 480px) 45vw, 70vw";
+  "(min-width: 1280px) 280px, (min-width: 1024px) 22vw, (min-width: 768px) 30vw, (min-width: 390px) 46vw, 84vw";
 
 // Cards are mounted in batches: the first BATCH on load, then STEP more cards
 // whenever the end of the track comes within ~1.5 screens. Images inside the
@@ -72,7 +72,9 @@ const Card = memo(function Card({ p, index, total }: { p: CatalogProduct; index:
   return (
     <li
       aria-label={`${index + 1} of ${total}: ${p.name}`}
-      className="group snap-start shrink-0 w-[70%] min-[480px]:w-[46%] md:w-[31%] lg:w-[calc((100%-48px)/4)] [contain:layout_paint]"
+      // Cards per screen: ~1.2 on small phones, 2 on large phones (>= 390px),
+      // 3 on tablets (md), 4 on desktop (lg). The 16px terms are the gaps.
+      className="group snap-start shrink-0 w-[84%] min-[390px]:w-[calc((100%-16px)/2)] md:w-[calc((100%-32px)/3)] lg:w-[calc((100%-48px)/4)] [contain:layout_paint]"
     >
       <div className="relative aspect-[4/5] overflow-hidden rounded-3xl bg-[radial-gradient(80%_60%_at_50%_30%,#ffffff_0%,#fdf0f6_70%,#fbe4ef_100%)] ring-1 ring-[#fb6ba8]/10 shadow-[0_24px_48px_-32px_rgba(251,107,168,0.55),0_2px_6px_-2px_rgba(40,40,40,0.06)]">
         {p.lowRes ? (
@@ -369,29 +371,10 @@ export default function ProductCarousel() {
           ))}
           {mounted < items.length && <li ref={sentinelRef} aria-hidden="true" className="shrink-0 w-px" />}
         </ul>
-
-        {/* Arrows: desktop only (phones swipe) */}
-        <button
-          type="button"
-          onClick={() => scrollByPage(-1)}
-          disabled={atStart}
-          aria-label="Previous products"
-          className="hidden md:flex absolute -left-5 top-[calc(50%-48px)] -translate-y-1/2 h-12 w-12 items-center justify-center rounded-full bg-white text-[#282828] ring-1 ring-[#282828]/10 shadow-[0_12px_30px_-12px_rgba(40,40,40,0.35)] transition-[opacity,transform,color] duration-200 hover:text-[#fb6ba8] hover:scale-105 active:scale-95 disabled:pointer-events-none disabled:opacity-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#fb6ba8]"
-        >
-          <Icon name="chevronLeft" className="h-5 w-5" />
-        </button>
-        <button
-          type="button"
-          onClick={() => scrollByPage(1)}
-          disabled={atEnd && mounted >= items.length && items.length >= total}
-          aria-label="Next products"
-          className="hidden md:flex absolute -right-5 top-[calc(50%-48px)] -translate-y-1/2 h-12 w-12 items-center justify-center rounded-full bg-white text-[#282828] ring-1 ring-[#282828]/10 shadow-[0_12px_30px_-12px_rgba(40,40,40,0.35)] transition-[opacity,transform,color] duration-200 hover:text-[#fb6ba8] hover:scale-105 active:scale-95 disabled:pointer-events-none disabled:opacity-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#fb6ba8]"
-        >
-          <Icon name="chevronRight" className="h-5 w-5" />
-        </button>
       </div>
 
-      {/* Progress: position in the filtered list */}
+      {/* Progress + arrows. Arrows sit in this row (tablet/desktop; phones
+          swipe) so they never cover a card at any width. */}
       <div className="mt-4 flex items-center gap-4">
         <div className="h-1 flex-1 rounded-full bg-[#282828]/8 overflow-hidden" aria-hidden="true">
           <div
@@ -402,6 +385,26 @@ export default function ProductCarousel() {
         <p className="shrink-0 text-[13px] font-semibold tabular-nums text-[#282828]/70">
           {total ? `${from}-${to} of ${total}` : "0 of 0"}
         </p>
+        <div className="hidden md:flex shrink-0 items-center gap-3">
+          <button
+            type="button"
+            onClick={() => scrollByPage(-1)}
+            disabled={atStart}
+            aria-label="Previous products"
+            className="flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#282828] ring-1 ring-[#282828]/10 shadow-[0_12px_30px_-12px_rgba(40,40,40,0.35)] transition-[opacity,transform,color] duration-200 hover:text-[#fb6ba8] hover:scale-105 active:scale-95 disabled:pointer-events-none disabled:opacity-35 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#fb6ba8]"
+          >
+            <Icon name="chevronLeft" className="h-5 w-5" />
+          </button>
+          <button
+            type="button"
+            onClick={() => scrollByPage(1)}
+            disabled={atEnd && mounted >= items.length && items.length >= total}
+            aria-label="Next products"
+            className="flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#282828] ring-1 ring-[#282828]/10 shadow-[0_12px_30px_-12px_rgba(40,40,40,0.35)] transition-[opacity,transform,color] duration-200 hover:text-[#fb6ba8] hover:scale-105 active:scale-95 disabled:pointer-events-none disabled:opacity-35 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#fb6ba8]"
+          >
+            <Icon name="chevronRight" className="h-5 w-5" />
+          </button>
+        </div>
       </div>
     </div>
   );

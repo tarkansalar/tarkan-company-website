@@ -30,7 +30,7 @@ export default function Footer({
           <div className="space-y-4 max-w-sm">
             <a
               href={homeHref}
-              className="inline-flex items-center rounded transition-opacity duration-200 hover:opacity-85 active:opacity-70 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#fb6ba8]"
+              className="inline-flex min-h-11 items-center rounded transition-opacity duration-200 hover:opacity-85 active:opacity-70 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#fb6ba8]"
             >
               <Image
                 src={CANGGUS_LOGO_SRC}
@@ -82,14 +82,14 @@ export default function Footer({
             <span className="text-[#aaaaaa]/30 text-xs hidden sm:inline">|</span>
             <Link
               href="/canggus/terms"
-              className="text-xs text-[#aaaaaa] transition-colors duration-200 hover:text-white focus-visible:outline-2 focus-visible:outline-[#fb6ba8]"
+              className="inline-flex min-h-11 items-center text-xs text-[#aaaaaa] transition-colors duration-200 hover:text-white focus-visible:outline-2 focus-visible:outline-[#fb6ba8]"
             >
               Terms of Service
             </Link>
             <span className="text-[#aaaaaa]/30 text-xs">|</span>
             <Link
               href="/canggus/privacy"
-              className="text-xs text-[#aaaaaa] transition-colors duration-200 hover:text-white focus-visible:outline-2 focus-visible:outline-[#fb6ba8]"
+              className="inline-flex min-h-11 items-center text-xs text-[#aaaaaa] transition-colors duration-200 hover:text-white focus-visible:outline-2 focus-visible:outline-[#fb6ba8]"
             >
               Privacy Policy
             </Link>

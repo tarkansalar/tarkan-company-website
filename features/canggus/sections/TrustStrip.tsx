@@ -13,14 +13,14 @@ export default function TrustStrip() {
   return (
     <section aria-label="Experience" className="relative border-y border-[#282828]/10 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 py-10 grid lg:grid-cols-[1fr_320px] gap-10 lg:gap-14 items-center">
-        <ul className="grid grid-cols-1 min-[360px]:grid-cols-2 gap-x-5 gap-y-6">
+        <ul className="grid grid-cols-1 min-[440px]:grid-cols-2 xl:grid-cols-4 gap-x-5 gap-y-6">
           {ITEMS.map((t) => (
             <li
               key={t.text}
               className="flex items-center gap-3 text-sm sm:text-[15px] font-semibold leading-[1.4] text-[#282828]"
             >
               <IconTile name={t.icon} />
-              {t.text}
+              <span className="min-w-0">{t.text}</span>
             </li>
           ))}
         </ul>

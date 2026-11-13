@@ -43,7 +43,7 @@ export default function Audience() {
               className="flex items-center gap-4 rounded-2xl bg-white/85 px-5 py-4 text-[15px] font-medium leading-[1.4] text-[#282828] ring-1 ring-white shadow-[0_1px_2px_rgba(40,40,40,0.05),0_16px_32px_-20px_rgba(40,40,40,0.32)]"
             >
               <IconTile name={a.icon} />
-              {a.text}
+              <span className="min-w-0">{a.text}</span>
             </li>
           ))}
         </ul>

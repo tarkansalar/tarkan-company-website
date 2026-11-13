@@ -15,7 +15,7 @@ export default function Hero() {
             <p className="text-[11px] sm:text-xs font-semibold uppercase tracking-[0.22em] text-[#fb6ba8] mb-6">
               Private Label Supplement Partnership
             </p>
-            <h1 className="text-[32px] sm:text-5xl lg:text-[50px] xl:text-[54px] font-extrabold uppercase leading-[1.06] tracking-[-0.02em] text-[#282828]">
+            <h1 className="text-[clamp(1.875rem,1rem+4.5vw,3rem)] lg:text-[clamp(2.875rem,1.2rem+2.6vw,3.375rem)] font-extrabold uppercase leading-[1.06] tracking-[-0.02em] text-[#282828]">
               Your customers already buy supplements.{" "}
               <span className="text-[#fb6ba8]">Why are they buying someone else’s brand?</span>
             </h1>
@@ -55,7 +55,7 @@ export default function Hero() {
             {/* [ASET] Founder VSL - video slot placeholder, framed as a 3D glass card */}
             <div data-tilt="5" className="cg-tilt relative">
               <div className="rounded-[30px] bg-white/70 p-2 ring-1 ring-white cg-card-shadow">
-                <AssetPlaceholder label="Founder VSL - video slot" className="aspect-video lg:aspect-[4/5] w-full" />
+                <AssetPlaceholder label="Founder VSL - video slot" className="aspect-video w-full" />
               </div>
             </div>
             {/* Real products from the catalog, floating in front of the slot */}

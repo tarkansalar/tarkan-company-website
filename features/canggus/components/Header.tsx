@@ -56,7 +56,7 @@ export default function Header({
         {/* [TUAN ISI link booking] */}
         <a
           href={bookingHref}
-          className="inline-flex items-center gap-2 whitespace-nowrap bg-[#fb6ba8] text-white font-bold px-3 py-2 text-[11px] sm:px-4 sm:py-2.5 sm:text-xs lg:px-6 lg:py-3 lg:text-sm transition-colors duration-200 hover:bg-[#f466a2] active:bg-[#e85a96] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+          className="inline-flex min-h-11 items-center gap-2 whitespace-nowrap bg-[#fb6ba8] text-white font-bold px-3 py-2 text-[11px] sm:px-4 sm:py-2.5 sm:text-xs lg:px-6 lg:py-3 lg:text-sm transition-colors duration-200 hover:bg-[#f466a2] active:bg-[#e85a96] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
         >
           <Icon name="calendar" className="h-3.5 w-3.5 lg:h-4 lg:w-4" />
           <span className="sm:hidden">{CTA_LABEL_SHORT}</span>

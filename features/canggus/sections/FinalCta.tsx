@@ -22,7 +22,7 @@ export default function FinalCta() {
           <p className="font-[family-name:var(--font-cg-script)] text-[#fb6ba8] text-[40px] sm:text-5xl leading-none">
             Your next step
           </p>
-          <h2 className="mt-5 text-[28px] sm:text-4xl lg:text-[50px] font-bold leading-[1.12] tracking-[-0.02em]">
+          <h2 className="mt-5 text-[clamp(1.625rem,1rem+2.8vw,3.125rem)] font-bold leading-[1.12] tracking-[-0.02em]">
             You built the business. You built the trust. Now decide whether that trust should also
             sell your own products - with real distinction.
           </h2>
