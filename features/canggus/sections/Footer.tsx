@@ -3,28 +3,24 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import { CANGGUS_LOGO_SRC } from "../data/assets";
 import {
-  CANGGUS_BOOKING_HREF,
   CANGGUS_EMAIL,
   CANGGUS_INSTAGRAM,
   CANGGUS_LINKEDIN,
   CANGGUS_OPERATOR,
-  CTA_LABEL,
 } from "../data/content";
-import Icon from "../components/Icon";
 
 // Copy of components/layout/Footer.tsx (main landing page) for /canggus:
 // same black footer, 2-column top (brand + blurb | connect block), gradient
 // divider, bottom row with copyright + legal links + values line. Logo and
 // accent colour swapped to Canggus. Connect block: email, LinkedIn and
-// Instagram from Tuan (13 Nov 2026), same inline SVG tiles as the main LP,
-// plus the booking CTA. Legal links go to the Canggus-specific
+// Instagram from Tuan (13 Nov 2026), same inline SVG tiles as the main LP.
+// The footer booking CTA was removed on Tuan's request (13 Nov 2026); the
+// booking CTAs in the hero, sections and final CTA remain. Legal links go to the Canggus-specific
 // /canggus/terms and /canggus/privacy (the old /terms and /privacy belong to
 // Be Unstoppable 365 and are left untouched).
 type Props = {
   // Logo target. "#top" on /canggus; "/canggus" on the legal sub-pages.
   homeHref?: string;
-  // Booking CTA target (real booking page, opens in a new tab).
-  bookingHref?: string;
 };
 
 const TILE =
@@ -52,7 +48,7 @@ function ConnectTile({
       href={href}
       aria-label={ariaLabel}
       {...(external ? { target: "_blank", rel: "noopener" } : {})}
-      className={TILE}
+      className={`w-full ${TILE}`}
     >
       <span
         aria-hidden="true"
@@ -70,14 +66,13 @@ function ConnectTile({
   );
 }
 
-export default function Footer({
-  homeHref = "#top",
-  bookingHref = CANGGUS_BOOKING_HREF,
-}: Props = {}) {
+export default function Footer({ homeHref = "#top" }: Props = {}) {
   return (
     <footer className="bg-black relative border-t border-[#fb6ba8]/15 text-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 pt-14 pb-8">
-        <div className="grid md:grid-cols-2 gap-10 lg:gap-16 mb-10">
+        {/* Brand + connect stack until lg so tablets get a full-width,
+            tidy 2-column tile grid; side by side from lg (desktop as before). */}
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 mb-10">
           <div className="space-y-4 max-w-sm">
             <a
               href={homeHref}
@@ -103,7 +98,8 @@ export default function Footer({
             <p className="font-bold text-[11px] tracking-[0.18em] uppercase text-[#fb6ba8] mb-6">
               Connect with us
             </p>
-            {/* Email gets its own full row so the address is never truncated. */}
+            {/* Phones: one full-width column. sm+: 2 columns, email spans the
+                full row so the address is never truncated. */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 [&>a:first-child]:sm:col-span-2">
               <ConnectTile
                 href={`mailto:${CANGGUS_EMAIL}`}
@@ -141,55 +137,44 @@ export default function Footer({
                 </svg>
               </ConnectTile>
             </div>
-
-            <a
-              href={bookingHref}
-              target="_blank"
-              rel="noopener"
-              className={`mt-3 inline-flex ${TILE}`}
-            >
-              <span className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 bg-[#fb6ba8] text-white">
-                <Icon name="calendar" className="h-4 w-4" />
-              </span>
-              <span className="flex flex-col leading-tight">
-                <span className="font-semibold text-[10px] tracking-wide uppercase text-[#aaaaaa]">
-                  Free call
-                </span>
-                <span className="text-xs text-white">{CTA_LABEL}</span>
-              </span>
-              <Icon name="arrowRight" className="h-4 w-4 text-[#fb6ba8]" />
-            </a>
-            <p className="mt-4 text-xs text-[#aaaaaa] leading-[1.6] max-w-sm">
-              No obligation. We&rsquo;ll tell you honestly if this makes sense for your business.
-            </p>
           </div>
         </div>
 
         <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent mb-6" />
 
-        <div className="flex flex-col sm:flex-row justify-between items-center gap-3">
-          <div className="flex flex-wrap justify-center sm:justify-start items-center gap-x-4 gap-y-1">
-            <p className="text-xs text-[#aaaaaa]">&copy; 2026 Canggus. All rights reserved.</p>
-            <span className="text-[#aaaaaa]/30 text-xs hidden sm:inline">|</span>
-            <Link
-              href="/canggus/terms"
-              className="inline-flex min-h-11 items-center text-xs text-[#aaaaaa] transition-colors duration-200 hover:text-white focus-visible:outline-2 focus-visible:outline-[#fb6ba8]"
-            >
-              Terms of Service
-            </Link>
-            <span className="text-[#aaaaaa]/30 text-xs">|</span>
-            <Link
-              href="/canggus/privacy"
-              className="inline-flex min-h-11 items-center text-xs text-[#aaaaaa] transition-colors duration-200 hover:text-white focus-visible:outline-2 focus-visible:outline-[#fb6ba8]"
-            >
-              Privacy Policy
-            </Link>
+        {/* Bottom row. Phones/tablets: centred stack (copyright, then Terms +
+            Privacy side by side, then the values line). Desktop (lg+):
+            copyright + links left, values line right. No "|" characters:
+            spacing comes from flex gaps, so nothing dangles when it wraps. */}
+        <div className="flex flex-col items-center gap-3 lg:flex-row lg:justify-between lg:gap-6">
+          <div className="flex flex-col items-center sm:flex-row sm:gap-x-6">
+            <p className="text-xs text-[#aaaaaa] text-center">&copy; 2026 Canggus. All rights reserved.</p>
+            <nav aria-label="Legal" className="flex items-center gap-x-6">
+              <Link
+                href="/canggus/terms"
+                className="inline-flex min-h-11 items-center px-1 text-xs text-[#aaaaaa] transition-colors duration-200 hover:text-white active:text-white/70 focus-visible:outline-2 focus-visible:outline-[#fb6ba8]"
+              >
+                Terms of Service
+              </Link>
+              <Link
+                href="/canggus/privacy"
+                className="inline-flex min-h-11 items-center px-1 text-xs text-[#aaaaaa] transition-colors duration-200 hover:text-white active:text-white/70 focus-visible:outline-2 focus-visible:outline-[#fb6ba8]"
+              >
+                Privacy Policy
+              </Link>
+            </nav>
           </div>
-          <p className="text-center sm:text-right text-[10px] tracking-[0.12em] text-[#aaaaaa] uppercase">
-            Your brand · Your formulations · Your positioning
+          {/* One phrase per line on phones, one line with dots from sm up.
+              Each phrase is nowrap so it never breaks mid-phrase. */}
+          <p className="flex flex-col items-center gap-1 text-center text-[10px] tracking-[0.12em] text-[#aaaaaa] uppercase sm:flex-row sm:gap-2">
+            <span className="whitespace-nowrap">Your brand</span>
+            <span aria-hidden="true" className="hidden sm:inline">&middot;</span>
+            <span className="whitespace-nowrap">Your formulations</span>
+            <span aria-hidden="true" className="hidden sm:inline">&middot;</span>
+            <span className="whitespace-nowrap">Your positioning</span>
           </p>
         </div>
-        <p className="mt-4 text-center sm:text-left text-[11px] leading-[1.6] text-[#aaaaaa]/80">
+        <p className="mt-6 mx-auto max-w-2xl text-center text-[11px] leading-[1.6] text-[#aaaaaa]/80 lg:mx-0 lg:max-w-none lg:text-left">
           {CANGGUS_OPERATOR}.
         </p>
       </div>
