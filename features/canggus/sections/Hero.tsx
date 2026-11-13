@@ -63,11 +63,13 @@ export default function Hero() {
               eager
               disc={false}
               sizes="(min-width: 1024px) 130px, (min-width: 640px) 120px, 26vw"
-              className="pointer-events-none absolute inset-x-0 bottom-0 h-[52%] lg:h-[40%]"
+              // Same proportions at every width: the slot is 16:9 everywhere,
+              // so the products keep to the corners and leave the label clear.
+              className="pointer-events-none absolute inset-x-0 bottom-0 h-[52%]"
               items={[
-                { p: VP.collagenGummy, pos: "left-[2%] bottom-[2%] w-[15%] sm:w-[17%] lg:left-[-2%] lg:w-[24%]", d: 0, r: -6, z: 2 },
-                { p: VP.magnesiumDrops, pos: "left-[18%] bottom-[0%] w-[8%] sm:w-[9%] lg:left-[19%] lg:w-[13%]", d: 1.2, r: 3, z: 3 },
-                { p: VP.electrolyte, pos: "right-[2%] bottom-[4%] w-[18%] sm:w-[20%] lg:right-0 lg:w-[28%]", d: 2.1, r: 5, z: 2 },
+                { p: VP.collagenGummy, pos: "left-[2%] bottom-[2%] w-[15%] sm:w-[17%] lg:left-[-2%]", d: 0, r: -6, z: 2 },
+                { p: VP.magnesiumDrops, pos: "left-[18%] bottom-[0%] w-[8%] sm:w-[9%] lg:left-[14%]", d: 1.2, r: 3, z: 3 },
+                { p: VP.electrolyte, pos: "right-[2%] bottom-[4%] w-[18%] sm:w-[20%] lg:right-[-2%]", d: 2.1, r: 5, z: 2 },
               ]}
             />
           </div>
