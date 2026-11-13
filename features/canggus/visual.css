@@ -86,7 +86,7 @@
 }
 
 /* Anchor offset: the fixed header is ~81px tall, so every in-page jump
-   (#book, #products, #manufacturing, ...) lands below it, not under it. */
+   (book, products, manufacturing, ...) lands below it, not under it. */
 html:has([data-cg-root]) {
   scroll-padding-top: 96px;
 }

@@ -65,3 +65,8 @@ export const FOUNDER_PHOTO = {
   h: 500,
   alt: "Portrait of the Canggus founder in a dark navy shirt",
 };
+
+// Founder VSL supplied by Tuan (13 Nov 2026). Public bucket URL, original file
+// (not re-encoded): 1080x1920 portrait, about 89 s, about 10 MB.
+export const FOUNDER_VSL_SRC =
+  "https://wobiecnlwkpkjseambzd.supabase.co/storage/v1/object/public/tarkan-company-asset/Teaser.mp4";

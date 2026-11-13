@@ -1,7 +1,10 @@
 import CtaButton from "../components/CtaButton";
-import AssetPlaceholder from "../components/AssetPlaceholder";
 import { Blob, FloatingProducts } from "../components/Visuals";
-import { VP } from "../data/visuals";
+import { FOUNDER_PHOTO, FOUNDER_VSL_SRC, VP } from "../data/visuals";
+
+// Poster: founder photo resized + converted by the Next image optimizer
+// (same remotePatterns host as every other image), not the 500px PNG.
+const FOUNDER_POSTER = `/_next/image?url=${encodeURIComponent(FOUNDER_PHOTO.src)}&w=640&q=70`;
 
 export default function Hero() {
   return (
@@ -52,24 +55,38 @@ export default function Hero() {
 
           <div className="relative mx-auto w-full max-w-[560px] lg:max-w-none pb-10 sm:pb-16 lg:pb-16">
             <Blob strong className="-right-24 -top-24 h-[420px] w-[420px]" />
-            {/* [ASET] Founder VSL - video slot placeholder, framed as a 3D glass card */}
-            <div data-tilt="5" className="cg-tilt relative">
+            {/* Founder VSL (Teaser.mp4 from Tuan, public bucket URL, 1080x1920 = 9:16)
+                in a 3D glass card. No autoplay, preload="none" so the 10 MB file only
+                loads when the visitor presses play; the poster is the founder photo
+                through the Next image optimizer (small webp). */}
+            <div data-tilt="5" className="cg-tilt relative mx-auto w-[64%] max-w-[300px]">
               <div className="rounded-[30px] bg-white/70 p-2 ring-1 ring-white cg-card-shadow">
-                <AssetPlaceholder label="Founder VSL - video slot" className="aspect-video w-full" />
+                <video
+                  controls
+                  playsInline
+                  preload="none"
+                  poster={FOUNDER_POSTER}
+                  aria-label="Founder video: Tarkan Salar introduces the Canggus private label partnership"
+                  className="block aspect-[9/16] w-full rounded-[24px] bg-[radial-gradient(70%_80%_at_50%_30%,#ffffff_0%,#fde3ef_55%,#f9c6dc_100%)] object-cover"
+                >
+                  <source src={FOUNDER_VSL_SRC} type="video/mp4" />
+                </video>
               </div>
             </div>
-            {/* Real products from the catalog, floating in front of the slot */}
+            {/* Real products from the catalog, floating beside the card */}
             <FloatingProducts
               eager
               disc={false}
               sizes="(min-width: 1024px) 130px, (min-width: 640px) 120px, 26vw"
-              // Same proportions at every width: the slot is 16:9 everywhere,
-              // so the products keep to the corners and leave the label clear.
-              className="pointer-events-none absolute inset-x-0 bottom-0 h-[52%]"
+              // The card is a narrow 9:16 column in the middle, so the products
+              // keep to the outer corners and stay clear of the video controls.
+              className="pointer-events-none absolute inset-x-0 bottom-0 h-[40%]"
               items={[
-                { p: VP.collagenGummy, pos: "left-[2%] bottom-[2%] w-[15%] sm:w-[17%] lg:left-[-2%]", d: 0, r: -6, z: 2 },
-                { p: VP.magnesiumDrops, pos: "left-[18%] bottom-[0%] w-[8%] sm:w-[9%] lg:left-[14%]", d: 1.2, r: 3, z: 3 },
-                { p: VP.electrolyte, pos: "right-[2%] bottom-[4%] w-[18%] sm:w-[20%] lg:right-[-2%]", d: 2.1, r: 5, z: 2 },
+                // The card takes the middle 64% (max 300px), so every product
+                // stays inside the outer 18% on each side, off the video controls.
+                { p: VP.collagenGummy, pos: "left-[0%] bottom-[2%] w-[14%]", d: 0, r: -6, z: 2 },
+                { p: VP.magnesiumDrops, pos: "left-[10%] bottom-[0%] w-[6%]", d: 1.2, r: 3, z: 3 },
+                { p: VP.electrolyte, pos: "right-[0%] bottom-[4%] w-[15%]", d: 2.1, r: 5, z: 2 },
               ]}
             />
           </div>

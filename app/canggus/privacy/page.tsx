@@ -1,14 +1,22 @@
 import type { Metadata } from "next";
 import CanggusLegalLayout, {
+  BookingLink,
+  LegalLink,
   LegalList,
   LegalSection,
   Term,
-  TuanIsi,
 } from "@/features/canggus/legal/LegalLayout";
+import {
+  CANGGUS_ADDRESS,
+  CANGGUS_COMPANY,
+  CANGGUS_EMAIL,
+  CANGGUS_ID_ENTITY,
+} from "@/features/canggus/data/content";
 
 // Canggus-specific Privacy Policy. Structure follows the old /privacy
-// (Be Unstoppable 365, untouched). Legal facts that are not confirmed are
-// shown as [TUAN ISI: ...] on the page.
+// (Be Unstoppable 365, untouched). Operator, address and contact are from
+// Tuan (13 Nov 2026). Not stated on purpose (unknown): managing director,
+// commercial register number, VAT ID, phone.
 export const metadata: Metadata = {
   title: "Privacy Policy · Canggus",
   description:
@@ -25,7 +33,7 @@ export default function CanggusPrivacyPage() {
   return (
     <CanggusLegalLayout
       title="Privacy Policy"
-      lastUpdated={<TuanIsi>effective date</TuanIsi>}
+      lastUpdated="13 November 2026"
       intro={
         <p>
           This policy explains what information we collect when you visit the Canggus private
@@ -35,11 +43,16 @@ export default function CanggusPrivacyPage() {
     >
       <LegalSection title="1. Introduction">
         <p>
-          Canggus (<TuanIsi>legal entity name</TuanIsi>, &ldquo;we,&rdquo; &ldquo;us,&rdquo; or
-          &ldquo;our&rdquo;) respects your privacy. This Privacy Policy explains how we collect,
-          use, and protect your information when you visit our private label supplement
-          partnership page at <TuanIsi>website address</TuanIsi>, book a call, or otherwise
-          contact us about a partnership (collectively, the &ldquo;Service&rdquo;).
+          Canggus is a brand operated by {CANGGUS_COMPANY}, {CANGGUS_ADDRESS} (in Indonesia:{" "}
+          {CANGGUS_ID_ENTITY}) (&ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;). We
+          respect your privacy. This Privacy Policy explains how we collect, use, and protect your
+          information when you visit our private label supplement partnership page at
+          tarkansalar.com/canggus, book a call, or otherwise contact us about a partnership
+          (collectively, the &ldquo;Service&rdquo;).
+        </p>
+        <p>
+          We process personal data in line with the EU General Data Protection Regulation (GDPR)
+          and other applicable data protection laws.
         </p>
       </LegalSection>
 
@@ -88,14 +101,13 @@ export default function CanggusPrivacyPage() {
         <LegalList>
           <li>
             <Term>Service providers</Term> that help us operate the Service, bound by appropriate
-            confidentiality obligations. These include our hosting provider (Vercel), our file
-            storage provider for website images (Supabase), and our booking, form, and email
-            providers (<TuanIsi>booking / CRM / email providers actually used</TuanIsi>).
+            confidentiality obligations. These include our hosting provider (Vercel), our image
+            storage provider (Supabase), and the third-party booking and communication tools we
+            use to schedule and follow up on calls.
           </li>
           <li>
-            <Term>Manufacturing partners</Term>, only when you decide to move forward with a
-            partnership and only the business details needed to quote, develop, or produce your
-            products (<TuanIsi>confirm whether and how this is shared</TuanIsi>).
+            <Term>Manufacturing partners</Term>: only the product and business details needed to
+            quote, sample or produce your order, and only after you ask us to proceed.
           </li>
           <li>
             <Term>Legal authorities</Term> when required by law or to protect our rights.
@@ -106,27 +118,27 @@ export default function CanggusPrivacyPage() {
       <LegalSection title="5. Cookies and Tracking">
         <p>
           This page does not set any first-party cookies and does not use analytics, advertising,
-          or behavioral tracking technologies (<TuanIsi>confirm; update if a pixel or analytics
-          is added</TuanIsi>). External services that you may interact with from this page (such
-          as our booking provider) may set their own cookies on their respective domains,
-          governed by their own privacy policies.
+          or behavioral tracking technologies. If that changes, we will update this policy first.
+          External services that you may interact with from this page (such as our booking
+          provider) may set their own cookies on their respective domains, governed by their own
+          privacy policies.
         </p>
       </LegalSection>
 
       <LegalSection title="6. Data Retention">
         <p>
-          We retain personal information for as long as necessary to provide the Service, follow
-          up on a potential partnership, comply with our legal obligations, resolve disputes, and
-          enforce our agreements (<TuanIsi>retention period, if any</TuanIsi>).
+          We keep personal information only as long as needed for the purposes above or as
+          required by law.
         </p>
       </LegalSection>
 
       <LegalSection title="7. Your Rights">
         <p>
-          Depending on your location, you may have the right to access, correct, delete, or
-          restrict the use of your personal information. To exercise any of these rights, please
-          contact us at the address below. We will respond within a reasonable timeframe in
-          accordance with applicable law.
+          Under the GDPR you have the right to access the personal data we hold about you, to
+          have it corrected, and to have it deleted. You may also have the right to restrict or
+          object to its use, and to receive a copy of it. To exercise any of these rights, email
+          us at <LegalLink href={`mailto:${CANGGUS_EMAIL}`}>{CANGGUS_EMAIL}</LegalLink>. We will
+          respond within the time required by applicable law.
         </p>
       </LegalSection>
 
@@ -165,10 +177,16 @@ export default function CanggusPrivacyPage() {
       <LegalSection title="12. Contact">
         <p>
           If you have any questions about this Privacy Policy or our handling of your
-          information, please contact us at <TuanIsi>contact email</TuanIsi>.
+          information, email us at{" "}
+          <LegalLink href={`mailto:${CANGGUS_EMAIL}`}>{CANGGUS_EMAIL}</LegalLink> or contact us
+          through the <BookingLink>booking call</BookingLink> on this page.
         </p>
         <p>
-          <TuanIsi>registered business address</TuanIsi>
+          {CANGGUS_COMPANY}
+          <br />
+          {CANGGUS_ADDRESS}
+          <br />
+          In Indonesia: {CANGGUS_ID_ENTITY}
         </p>
       </LegalSection>
     </CanggusLegalLayout>

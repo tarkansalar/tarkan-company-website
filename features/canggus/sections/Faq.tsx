@@ -4,10 +4,9 @@ import Icon from "../components/Icon";
 import { Blob, FloatingProducts, PhotoCard } from "../components/Visuals";
 import { PH, VP } from "../data/visuals";
 
-// Answers only reuse sentences from copy-lp.md / revisi-instruksi.md.
-// Everything the copy does not cover is marked [TUAN ISI].
-const TuanIsi = () => <span className="font-semibold text-[#f466a2]">[TUAN ISI]</span>;
-
+// Answers reuse sentences from copy-lp.md / revisi-instruksi.md. The extra
+// sentences (13 Nov 2026) add no new numbers, prices or medical claims: they
+// only point to the call, the Certifications section and the production steps.
 const FAQS: { q: string; a: ReactNode }[] = [
   {
     q: "What are realistic minimums?",
@@ -19,7 +18,8 @@ const FAQS: { q: string; a: ReactNode }[] = [
         </p>
         <p className="mt-4">Start with a realistic first order and expand from there.</p>
         <p className="mt-4">
-          <TuanIsi />
+          Minimums depend on the format and the packaging you choose. We discuss concrete numbers
+          on the call, once we know which products you have in mind.
         </p>
       </>
     ),
@@ -36,26 +36,41 @@ const FAQS: { q: string; a: ReactNode }[] = [
           combinations, packaging and positioning. The goal is to help you launch products that
           members cannot easily replace with a cheaper alternative.
         </p>
-        <p className="mt-4">
-          <TuanIsi />
-        </p>
       </>
     ),
   },
   {
     q: "What are the liability realities?",
     a: (
-      <p>
-        <TuanIsi />
-      </p>
+      <>
+        <p>
+          As the brand owner, you are responsible for your labels, your marketing claims and
+          regulatory compliance in the markets where you sell.
+        </p>
+        <p className="mt-4">
+          Production takes place in our partner manufacturing facilities, which hold the standards
+          shown in the Certifications section on this page.
+        </p>
+        <p className="mt-4">
+          We help you find your way through these questions, but this is not legal advice. Please
+          check your labels and claims with a regulatory advisor in your own market.
+        </p>
+      </>
     ),
   },
   {
     q: "What are typical timelines?",
     a: (
-      <p>
-        <TuanIsi />
-      </p>
+      <>
+        <p>
+          Timelines depend on the format, on whether you start from an existing formula or a
+          custom one, on sampling and on your packaging.
+        </p>
+        <p className="mt-4">
+          The steps are shown in How Production Works on this page. We confirm your timeline once
+          your samples are approved.
+        </p>
+      </>
     ),
   },
   {
@@ -67,7 +82,9 @@ const FAQS: { q: string; a: ReactNode }[] = [
           Then expand.
         </p>
         <p className="mt-4">
-          <TuanIsi />
+          In practice that means choosing the right products, approving samples, finalising your
+          packaging, running your first production, launching to your members, and then reviewing
+          what works before you add new products.
         </p>
       </>
     ),

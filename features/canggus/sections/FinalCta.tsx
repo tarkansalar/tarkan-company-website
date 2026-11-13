@@ -64,7 +64,6 @@ export default function FinalCta() {
 
           <div className="mt-12 flex flex-col items-start gap-5">
             <p className="text-xl font-semibold">No pitch deck. No pressure. Just a practical conversation.</p>
-            {/* [TUAN ISI link booking] */}
             <CtaButton />
             <p className="text-sm text-white/60">
               No obligation. We’ll tell you honestly if this makes sense for your business.

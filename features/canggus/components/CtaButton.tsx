@@ -3,7 +3,7 @@ import Icon from "./Icon";
 
 type Props = { variant?: "pink" | "light"; className?: string };
 
-// [TUAN ISI link booking] - href is a temporary anchor (#book).
+// Opens the real booking page in a new tab.
 export default function CtaButton({ variant = "pink", className = "" }: Props) {
   const tone =
     variant === "pink"
@@ -12,6 +12,8 @@ export default function CtaButton({ variant = "pink", className = "" }: Props) {
   return (
     <a
       href={CANGGUS_BOOKING_HREF}
+      target="_blank"
+      rel="noopener"
       className={`group/cta inline-flex items-center justify-center gap-2.5 sm:gap-3 rounded-full px-6 sm:px-8 py-4 text-[15px] sm:text-base font-semibold tracking-[0.01em] transition-[background-color,transform] duration-200 hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#fb6ba8] ${tone} ${className}`}
     >
       <Icon name="calendar" className="h-5 w-5" />

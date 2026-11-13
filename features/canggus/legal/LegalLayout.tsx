@@ -4,30 +4,30 @@ import { greatVibes, montserrat } from "../fonts";
 import Header from "../components/Header";
 import Footer from "../sections/Footer";
 import Icon from "../components/Icon";
+import { CANGGUS_BOOKING_HREF } from "../data/content";
 
 // Canggus version of features/legal/components/LegalLayout.tsx (the old
 // /privacy and /terms belong to Be Unstoppable 365 and are not touched).
 // Same wrapper as app/canggus/page.tsx: Montserrat + script accent, white
-// page, pink #fb6ba8, and the Canggus header/footer. Logo + booking links
-// point back to /canggus because there is no #top / #book on these pages.
+// page, pink #fb6ba8, and the Canggus header/footer. The logo points back to
+// /canggus (there is no top anchor here); booking opens the real booking page.
 
 type Props = {
   title: string;
-  // Rendered after "Last updated:". Pass <TuanIsi> until Tuan sets the date.
+  // Rendered after "Last updated:".
   lastUpdated: ReactNode;
   intro?: ReactNode;
   children: ReactNode;
 };
 
 const HOME = "/canggus";
-const BOOKING = "/canggus#book";
 
 export default function CanggusLegalLayout({ title, lastUpdated, intro, children }: Props) {
   return (
     <div
       className={`${montserrat.variable} ${greatVibes.variable} relative min-h-screen bg-white text-[#282828] font-[family-name:var(--font-cg-sans)] antialiased selection:bg-[#fb6ba8] selection:text-white`}
     >
-      <Header homeHref={HOME} bookingHref={BOOKING} />
+      <Header homeHref={HOME} />
       <main>
         <section
           id="top"
@@ -66,7 +66,7 @@ export default function CanggusLegalLayout({ title, lastUpdated, intro, children
           </div>
         </section>
       </main>
-      <Footer homeHref={HOME} bookingHref={BOOKING} />
+      <Footer homeHref={HOME} />
     </div>
   );
 }
@@ -92,13 +92,32 @@ export function Term({ children }: { children: ReactNode }) {
   return <span className="font-semibold text-[#282828]">{children}</span>;
 }
 
-// Visible placeholder for legal facts only Tuan can confirm (entity name,
-// address, jurisdiction, contact, dates, providers). Kept as plain text so
-// it is easy to grep: grep -rn "TUAN ISI" features/canggus/legal
-export function TuanIsi({ children }: { children: ReactNode }) {
+// Inline link in legal copy (email, booking page). External links open in a new tab.
+export function LegalLink({
+  href,
+  external = false,
+  children,
+}: {
+  href: string;
+  external?: boolean;
+  children: ReactNode;
+}) {
   return (
-    <mark className="rounded bg-[#fff1f7] px-1.5 py-0.5 font-semibold text-[#c2185b] [box-decoration-break:clone]">
-      [TUAN ISI: {children}]
-    </mark>
+    <a
+      href={href}
+      {...(external ? { target: "_blank", rel: "noopener" } : {})}
+      className="font-semibold text-[#c2185b] underline decoration-[#fb6ba8]/40 underline-offset-4 break-words transition-colors duration-200 hover:text-[#fb6ba8] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#fb6ba8]"
+    >
+      {children}
+    </a>
+  );
+}
+
+// Booking call link used in the Contact sections.
+export function BookingLink({ children }: { children: ReactNode }) {
+  return (
+    <LegalLink href={CANGGUS_BOOKING_HREF} external>
+      {children}
+    </LegalLink>
   );
 }

@@ -1,13 +1,21 @@
 import type { Metadata } from "next";
 import CanggusLegalLayout, {
+  BookingLink,
+  LegalLink,
   LegalList,
   LegalSection,
-  TuanIsi,
 } from "@/features/canggus/legal/LegalLayout";
+import {
+  CANGGUS_ADDRESS,
+  CANGGUS_COMPANY,
+  CANGGUS_EMAIL,
+  CANGGUS_ID_ENTITY,
+} from "@/features/canggus/data/content";
 
 // Canggus-specific Terms of Service. Structure follows the old /terms
-// (Be Unstoppable 365, untouched). Legal facts that are not confirmed are
-// shown as [TUAN ISI: ...] on the page.
+// (Be Unstoppable 365, untouched). Operator, address, governing law and
+// contact are from Tuan (13 Nov 2026). Not stated on purpose (unknown):
+// managing director, commercial register number, VAT ID, phone.
 export const metadata: Metadata = {
   title: "Terms of Service · Canggus",
   description:
@@ -24,7 +32,7 @@ export default function CanggusTermsPage() {
   return (
     <CanggusLegalLayout
       title="Terms of Service"
-      lastUpdated={<TuanIsi>effective date</TuanIsi>}
+      lastUpdated="13 November 2026"
       intro={
         <p>
           These terms apply to the Canggus private label supplement partnership page and to
@@ -35,9 +43,9 @@ export default function CanggusTermsPage() {
     >
       <LegalSection title="1. Agreement to Terms">
         <p>
-          By accessing or using the website operated by Canggus (
-          <TuanIsi>legal entity name</TuanIsi>, &ldquo;we,&rdquo; &ldquo;us,&rdquo; or
-          &ldquo;our&rdquo;) at <TuanIsi>website address</TuanIsi> and any associated services
+          Canggus is a brand operated by {CANGGUS_COMPANY}, {CANGGUS_ADDRESS} (in Indonesia:{" "}
+          {CANGGUS_ID_ENTITY}) (&ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;). By
+          accessing or using our website at tarkansalar.com/canggus and any associated services
           (collectively, the &ldquo;Service&rdquo;), you agree to be bound by these Terms of
           Service. If you do not agree to these terms, please do not use the Service.
         </p>
@@ -88,10 +96,16 @@ export default function CanggusTermsPage() {
         </p>
         <p>
           Nothing on the Service is medical or health advice, and nothing on it is a claim that
-          any product diagnoses, treats, cures, or prevents any condition. Responsibilities for
-          product labelling, claims, and regulatory compliance in the markets where you sell are
-          set out in the written partnership agreement (
-          <TuanIsi>confirm how responsibilities are split</TuanIsi>).
+          any product diagnoses, treats, cures, or prevents any condition.
+        </p>
+        <p>
+          As the brand owner, you are responsible for your product labels, your marketing claims
+          and regulatory compliance in the markets where you sell. Production takes place in our
+          partner manufacturing facilities, which hold the standards shown in the Certifications
+          section of this page. We help you find your way through these questions, but we do not
+          give legal advice. Please check your labels and claims with a regulatory advisor in
+          your own market. Any further split of responsibilities is set out in the written
+          partnership agreement.
         </p>
       </LegalSection>
 
@@ -141,10 +155,10 @@ export default function CanggusTermsPage() {
 
       <LegalSection title="11. Governing Law">
         <p>
-          These Terms shall be governed by and construed in accordance with the laws of{" "}
-          <TuanIsi>country / jurisdiction</TuanIsi>, without regard to its conflict of law
-          provisions. Any disputes arising under these Terms shall be resolved in the courts of
-          that jurisdiction.
+          These Terms shall be governed by and construed in accordance with the laws of Germany,
+          without regard to its conflict of law provisions. Any disputes arising under these
+          Terms shall be resolved in the competent courts of Germany, unless mandatory law
+          provides otherwise.
         </p>
       </LegalSection>
 
@@ -159,11 +173,16 @@ export default function CanggusTermsPage() {
 
       <LegalSection title="13. Contact">
         <p>
-          If you have any questions about these Terms, please contact us at{" "}
-          <TuanIsi>contact email</TuanIsi>.
+          If you have any questions about these Terms, email us at{" "}
+          <LegalLink href={`mailto:${CANGGUS_EMAIL}`}>{CANGGUS_EMAIL}</LegalLink> or contact us
+          through the <BookingLink>booking call</BookingLink> on this page.
         </p>
         <p>
-          <TuanIsi>registered business address</TuanIsi>
+          {CANGGUS_COMPANY}
+          <br />
+          {CANGGUS_ADDRESS}
+          <br />
+          In Indonesia: {CANGGUS_ID_ENTITY}
         </p>
       </LegalSection>
     </CanggusLegalLayout>
