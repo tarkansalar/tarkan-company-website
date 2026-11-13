@@ -12,7 +12,17 @@ import Icon from "./Icon";
 // #fb6ba8) differ. The main LP swaps its logo for the brand name on scroll;
 // the Canggus logo is already a wordmark, so it just tightens instead.
 // The shared component is not imported, so the main page is untouched.
-export default function Header() {
+type Props = {
+  // Logo target. "#top" on /canggus; "/canggus" on the legal sub-pages.
+  homeHref?: string;
+  // Booking CTA target. Legal sub-pages pass "/canggus#book".
+  bookingHref?: string;
+};
+
+export default function Header({
+  homeHref = "#top",
+  bookingHref = CANGGUS_BOOKING_HREF,
+}: Props = {}) {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -29,7 +39,7 @@ export default function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-sm border-b border-[#fb6ba8]/20">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 py-4 flex justify-between items-center gap-4">
         <a
-          href="#top"
+          href={homeHref}
           className="flex h-12 items-center rounded transition-opacity duration-200 hover:opacity-85 active:opacity-70 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#fb6ba8]"
         >
           <Image
@@ -44,7 +54,7 @@ export default function Header() {
         </a>
         {/* [TUAN ISI link booking] */}
         <a
-          href={CANGGUS_BOOKING_HREF}
+          href={bookingHref}
           className="inline-flex items-center gap-2 whitespace-nowrap bg-[#fb6ba8] text-white font-bold px-3 py-2 text-[11px] sm:px-4 sm:py-2.5 sm:text-xs lg:px-6 lg:py-3 lg:text-sm transition-colors duration-200 hover:bg-[#f466a2] active:bg-[#e85a96] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
         >
           <Icon name="calendar" className="h-3.5 w-3.5 lg:h-4 lg:w-4" />

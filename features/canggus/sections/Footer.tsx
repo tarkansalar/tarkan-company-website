@@ -9,16 +9,27 @@ import Icon from "../components/Icon";
 // divider, bottom row with copyright + legal links + values line. Logo and
 // accent colour swapped to Canggus. Contact details for Canggus are not
 // known yet, so the connect block uses the booking CTA instead of LinkedIn /
-// email ([TUAN ISI] contact). Legal links stay on the existing /terms and
-// /privacy until /canggus/privacy and /canggus/terms ship (card t_b800d86c).
-export default function Footer() {
+// email ([TUAN ISI] contact). Legal links go to the Canggus-specific
+// /canggus/terms and /canggus/privacy (the old /terms and /privacy belong to
+// Be Unstoppable 365 and are left untouched).
+type Props = {
+  // Logo target. "#top" on /canggus; "/canggus" on the legal sub-pages.
+  homeHref?: string;
+  // Booking CTA target. Legal sub-pages pass "/canggus#book".
+  bookingHref?: string;
+};
+
+export default function Footer({
+  homeHref = "#top",
+  bookingHref = CANGGUS_BOOKING_HREF,
+}: Props = {}) {
   return (
     <footer className="bg-black relative border-t border-[#fb6ba8]/15 text-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 pt-14 pb-8">
         <div className="grid md:grid-cols-2 gap-10 lg:gap-16 mb-10">
           <div className="space-y-4 max-w-sm">
             <a
-              href="#top"
+              href={homeHref}
               className="inline-flex items-center rounded transition-opacity duration-200 hover:opacity-85 active:opacity-70 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#fb6ba8]"
             >
               <Image
@@ -43,7 +54,7 @@ export default function Footer() {
             </p>
             {/* [TUAN ISI link booking] [TUAN ISI contact: email / LinkedIn for Canggus] */}
             <a
-              href={CANGGUS_BOOKING_HREF}
+              href={bookingHref}
               className="inline-flex items-center gap-3 px-4 py-3 border border-white/10 bg-white/[0.02] transition-[background-color,border-color,transform] duration-200 hover:bg-[#111111] hover:border-white/20 hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#fb6ba8]"
             >
               <span className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 bg-[#fb6ba8] text-white">
@@ -70,14 +81,14 @@ export default function Footer() {
             <p className="text-xs text-[#aaaaaa]">&copy; 2026 Canggus. All rights reserved.</p>
             <span className="text-[#aaaaaa]/30 text-xs hidden sm:inline">|</span>
             <Link
-              href="/terms"
+              href="/canggus/terms"
               className="text-xs text-[#aaaaaa] transition-colors duration-200 hover:text-white focus-visible:outline-2 focus-visible:outline-[#fb6ba8]"
             >
               Terms of Service
             </Link>
             <span className="text-[#aaaaaa]/30 text-xs">|</span>
             <Link
-              href="/privacy"
+              href="/canggus/privacy"
               className="text-xs text-[#aaaaaa] transition-colors duration-200 hover:text-white focus-visible:outline-2 focus-visible:outline-[#fb6ba8]"
             >
               Privacy Policy
