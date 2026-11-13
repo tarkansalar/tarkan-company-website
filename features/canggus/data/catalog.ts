@@ -1,10 +1,11 @@
-// GENERATED from canggus/manifest.json v2 (Supabase public bucket, generated 2026-11-13).
+// GENERATED from canggus/manifest.json v6 (Supabase public bucket, generated 2026-11-13).
 // ALL products with sensitive_claim=false and ai_generated=false (172 items:
 // A 122, B 21, C 29 by facility).
 // Do not add items flagged sensitive_claim. Image variants: <stem>-sm.webp
 // (max 400 px wide) and <stem>-md.webp (max 800 px wide); w/h = md size.
 // Server only (served as /canggus/catalog.json); client code imports catalog-meta.ts.
-// Generator: tarkan-web scratch tools0f/gen_v2.py
+// benefits/moq/spec/specDetail/description from manifest v4+ product details.
+// Generator: tarkan-web scratch t_bb/gen_v6.py
 import type { CatalogProduct } from "./catalog-meta";
 
 export { CANGGUS_ASSET_BASE, PRODUCT_CATEGORIES, PRODUCT_FORMATS, type CatalogProduct } from "./catalog-meta";
@@ -22,7 +23,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 800,
     "h": 1443,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRqwAAABXRUJQVlA4WAoAAAAQAAAACAAADwAAQUxQSD8AAAABYBvZtpIGGRq0KrSOH+Lu8P8nv++hGQVExARYol72pRau4vdjAIgImCQTMxPL/9i/JEBEgJT8Ls0oW+QcewYAVlA4IEYAAACwAQCdASoJABAAA4BaJQAAVWOU2TkAAP70fR4N0A6ih2QGHv/VAu0TTI21Z87+Ln1pp3IKYYQ9fAAX78Nl8jItRCm6HEAA"
+    "blur": "data:image/webp;base64,UklGRqwAAABXRUJQVlA4WAoAAAAQAAAACAAADwAAQUxQSD8AAAABYBvZtpIGGRq0KrSOH+Lu8P8nv++hGQVExARYol72pRau4vdjAIgImCQTMxPL/9i/JEBEgJT8Ls0oW+QcewYAVlA4IEYAAACwAQCdASoJABAAA4BaJQAAVWOU2TkAAP70fR4N0A6ih2QGHv/VAoJ++r8OZ7rlFXYWkYS1li4k9ABLPw2XyMi1EKbocQAA",
+    "benefits": [
+      "Muscle strength",
+      "Exercise performance",
+      "Strength & power"
+    ],
+    "moq": "",
+    "spec": "300 g",
+    "specDetail": "Unflavored creatine monohydrate",
+    "description": ""
   },
   {
     "id": "p-creatine-powder-powder",
@@ -36,7 +46,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 625,
     "h": 1063,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRroAAABXRUJQVlA4WAoAAAAQAAAACAAADwAAQUxQSD4AAAABYFTbtpKwLKKwqPatAO4y+wS49z10RoCImIAsFOMyFj43+m4MISKgjyqqKnp8xR8hRYSMi76viWvXfWlsClZQOCBWAAAA0AEAnQEqCQAQAAOAWiWUAALmM7Z9VwAA/uDbQiCSa7jBqRucT4zOm3ly+WPt2B1N1isxowd/DhecKx4UKdGdzyNE6hsZvKh+ciaxILqLqtbcAIEAAAA="
+    "blur": "data:image/webp;base64,UklGRroAAABXRUJQVlA4WAoAAAAQAAAACAAADwAAQUxQSD4AAAABYFTbtpKwLKKwqPatAO4y+wS49z10RoCImIAsFOMyFj43+m4MISKgjyqqKnp8xR8hRYSMi76viWvXfWlsClZQOCBWAAAA0AEAnQEqCQAQAAOAWiWUAALmM7Z9VwAA/uDbQiCSa7jBqRucT4zOm3ly+WPt2B1N1isxowd/DhecKx4UKdGdzyNE6hsZvKh+ciaxILqLqtbcAIEAAAA=",
+    "benefits": [
+      "Boost Recovery",
+      "Increase Strength",
+      "Build Muscle"
+    ],
+    "moq": "2000 bottles",
+    "spec": "300g/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-creatine-monohydrate-capsule",
@@ -50,7 +69,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 554,
     "h": 1061,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRsoAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFQAAAABYFpr25L//FtikQGof6TTWcQGse7u8T/fh+sEETEBRAmiKFQJNZZlWUxKNOQcGWEVLAvUerPgsuAy13jArloOS38xlL8pABAB2mQ5bQTLiyPfFQFWUDggUAAAAPABAJ0BKggAEAADgFoliAJ0APPbiRvMIAD8EyIXLIz+JO7LdJ+TkEHm5z36fFggmn5GafVFdtbUoqN/cyfa4iEbON2afoJSMm+BbkYj5MAA"
+    "blur": "data:image/webp;base64,UklGRsoAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFQAAAABYFpr25L//FtikQGof6TTWcQGse7u8T/fh+sEETEBRAmiKFQJNZZlWUxKNOQcGWEVLAvUerPgsuAy13jArloOS38xlL8pABAB2mQ5bQTLiyPfFQFWUDggUAAAAPABAJ0BKggAEAADgFoliAJ0APPbiRvMIAD8EyIXLIz+JO7LdJ+TkEHm5z36fFggmn5GafVFdtbUoqN/cyfa4iEbON2afoJSMm+BbkYj5MAA",
+    "benefits": [
+      "Endurance Enhance",
+      "Support Muscle Building",
+      "Support Strength And Performance"
+    ],
+    "moq": "2000 bottles",
+    "spec": "120 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-creatine-gummies-gummy",
@@ -64,7 +92,12 @@ export const CATALOG: CatalogProduct[] = [
     "w": 679,
     "h": 724,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRsoAAABXRUJQVlA4WAoAAAAQAAAADgAADwAAQUxQSD0AAAABuTJE9D/AJrJtJ/f8RDKCfyUMCrCRb/V+SR0xAROwXRgkNBxWAokhODWGyHCB/FOzHoiMBB0iza4yRBADAFZQOCBmAAAAEAIAnQEqDwAQAAOAWiWwAnQA9FSqL5IDuAD8CJArEc5ctl4IeAoBL2VcfiZX0adw4qBOOATRvxvNwv5TNI16HzDVhKrjIyvTPAPLOUNj0Ss38mVZADyCDhfvynh/Tv/x/A3n04AA"
+    "blur": "data:image/webp;base64,UklGRsoAAABXRUJQVlA4WAoAAAAQAAAADgAADwAAQUxQSD0AAAABuTJE9D/AJrJtJ/f8RDKCfyUMCrCRb/V+SR0xAROwXRgkNBxWAokhODWGyHCB/FOzHoiMBB0iza4yRBADAFZQOCBmAAAAEAIAnQEqDwAQAAOAWiWwAnQA9FSqL5IDuAD8CJArEc5ctl4IeAoBL2VcfiZX0adw4qBOOATRvxvNwv5TNI16HzDVhKrjIyvTPAPLOUNj0Ss38mVZADyCDhfvynh/Tv/x/A3n04AA",
+    "benefits": [],
+    "moq": "",
+    "spec": "120 count/bottle",
+    "specDetail": "",
+    "description": "Contains 5g pure creatine monohydrate per serving combined with L-Taurine, Vitamin B12 for Maximum Benefits."
   },
   {
     "id": "p-magnesium-glycinate-gummy",
@@ -78,7 +111,15 @@ export const CATALOG: CatalogProduct[] = [
     "w": 571,
     "h": 1050,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRtwAAABXRUJQVlA4WAoAAAAQAAAACAAADwAAQUxQSF8AAAABcFpr29qEaRVcBaeKyhJRcT3VOACpKuaq+jbvF8YJImIC+Gh7uB43IaN9s+pHZBL86YeYsVeEDDTT9xmyLEO2/oCyLCM8nllNdn013MaGlIhS3N5Z/T2Y7o6383biAABWUDggVgAAABACAJ0BKgkAEAADgFolsAJ0ARAS7Bl8GSAA/vAaOuwcgL8KLIX79a8h+Bnkj5/zmlrINRvub/cU+KpeVV1d4zO1wGO+0wdyC3mozsJIP8uTM0EkAAAA"
+    "blur": "data:image/webp;base64,UklGRtwAAABXRUJQVlA4WAoAAAAQAAAACAAADwAAQUxQSF8AAAABcFpr29qEaRVcBaeKyhJRcT3VOACpKuaq+jbvF8YJImIC+Gh7uB43IaN9s+pHZBL86YeYsVeEDDTT9xmyLEO2/oCyLCM8nllNdn013MaGlIhS3N5Z/T2Y7o6383biAABWUDggVgAAABACAJ0BKgkAEAADgFolsAJ0ARAS7Bl8GSAA/vAaOuwcgL8KLIX79a8h+Bnkj5/zmlrINRvub/cU+KpeVV1d4zO1wGO+0wdyC3mozsJIP8uTM0EkAAAA",
+    "benefits": [
+      "Support Nervous System",
+      "Help Brain Health"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-magnesium-glycinate-liquid-drops",
@@ -92,7 +133,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 353,
     "h": 1074,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRrQAAABXRUJQVlA4WAoAAAAQAAAABAAADwAAQUxQSEcAAAAJcFvbthIdXFKvAiKLKI0OaMQrgDZoQmcid2shIiaAoM9GXNsFDx89p7AOC9PelMAoo0vYpUjEAsCbyJ/3G3fuAgLCMM3zAABWUDggRgAAALABAJ0BKgUAEAADgFolmAACmmVJzwAA/vFCxnGlb+Cs2+UrxypQr39kc8jlC13qZoo/iItqFrVvg537+v5VFIvTMhxAAAA="
+    "blur": "data:image/webp;base64,UklGRrQAAABXRUJQVlA4WAoAAAAQAAAABAAADwAAQUxQSEcAAAAJcFvbthIdXFKvAiKLKI0OaMQrgDZoQmcid2shIiaAoM9GXNsFDx89p7AOC9PelMAoo0vYpUjEAsCbyJ/3G3fuAgLCMM3zAABWUDggRgAAALABAJ0BKgUAEAADgFolmAACmmVJzwAA/vFCxnGlb+Cs2+UrxypQr39kc8jlC13qZoo/iItqFrVvg537+v5VFIvTMhxAAAA=",
+    "benefits": [
+      "Good Sleep & Relax",
+      "Muscles Support",
+      "Heart Health Support"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60ml/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-magnesium-citrate-gummy",
@@ -106,7 +156,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 761,
     "h": 1075,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRtAAAABXRUJQVlA4WAoAAAAQAAAACgAADwAAQUxQSFMAAAABcBvbtlI1hlRJC5RARkQBRO7uHl/BvlYQEROglk3btk1dZsrAr72IkO5AZsHEd2TLYHyh5UwPxNH+xri80f3X/Ea7I9IdcUz5tSPrQV41be7qAgBWUDggVgAAADACAJ0BKgsAEAADgFolsAJ0fwAYEO454JgAAP704o7kGlEFG3FSdRvKbQJ5Jv8b6mzIETFuDzH8d/Imrtz4kWCVR2YqNFr5EkeiRS/PYF6bXWr0ZCwA"
+    "blur": "data:image/webp;base64,UklGRtAAAABXRUJQVlA4WAoAAAAQAAAACgAADwAAQUxQSFMAAAABcBvbtlI1hlRJC5RARkQBRO7uHl/BvlYQEROglk3btk1dZsrAr72IkO5AZsHEd2TLYHyh5UwPxNH+xri80f3X/Ea7I9IdcUz5tSPrQV41be7qAgBWUDggVgAAADACAJ0BKgsAEAADgFolsAJ0fwAYEO454JgAAP704o7kGlEFG3FSdRvKbQJ5Jv8b6mzIETFuDzH8d/Imrtz4kWCVR2YqNFr5EkeiRS/PYF6bXWr0ZCwA",
+    "benefits": [
+      "Stress Relief",
+      "Supports Healthy Bones",
+      "Supports Muscle & Nerve Health"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-magnesium-glycinate-500-mg-capsules-capsule",
@@ -120,7 +179,15 @@ export const CATALOG: CatalogProduct[] = [
     "w": 800,
     "h": 1552,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRsQAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFkAAAABcFzbttIsKMIdZlTJiDYYOXXERlnpwd099+HQQkRMADdYHvbLiWznjY66JIC2FuPn/38essEfeQ5kt5zynPL3pum4azq3nHqd+20AIuB4zxs/7nR+OCxmHgBWUDggRAAAAJABAJ0BKggAEAADgFoljAAC5oMeUAD+9ODOHqRBRyfsxNeXaefA7Nz9ueHxveZYuqoFn34Yix1+/uFZzOwdzm0zx+AA"
+    "blur": "data:image/webp;base64,UklGRsQAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFkAAAABcFzbttIsKMIdZlTJiDYYOXXERlnpwd099+HQQkRMADdYHvbLiWznjY66JIC2FuPn/38essEfeQ5kt5zynPL3pum4azq3nHqd+20AIuB4zxs/7nR+OCxmHgBWUDggRAAAAJABAJ0BKggAEAADgFoljAAC5oMeUAD+9ODOHqRBRyfsxNeXaefA7Nz9ueHxveZYuqoFn34Yix1+/uFZzOwdzm0zx+AA",
+    "benefits": [
+      "Sleep support",
+      "Relaxation support"
+    ],
+    "moq": "",
+    "spec": "60 capsules, 500 mg",
+    "specDetail": "Magnesium glycinate formula",
+    "description": ""
   },
   {
     "id": "p-magnesium-capsule",
@@ -134,7 +201,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 554,
     "h": 1061,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRsQAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFQAAAABYFpr25L//FtikQGof6TTWcQGse7u8T/fh+sEETEBRAmiKFQJNZZlWUxKNOQcGWEVLAvUerPgsuAy13jArloOS38xlL8pABAB2mQ5bQTLiyPfFQFWUDggSgAAAPABAJ0BKggAEAADgFollAJ0ARSkRdjsmAD8EyIXLIz+i+dRQc9jBKsTD8orLi41xjLsVev5DAW0fikE+NyTDWZ3pvTmUz3s74AA"
+    "blur": "data:image/webp;base64,UklGRsQAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFQAAAABYFpr25L//FtikQGof6TTWcQGse7u8T/fh+sEETEBRAmiKFQJNZZlWUxKNOQcGWEVLAvUerPgsuAy13jArloOS38xlL8pABAB2mQ5bQTLiyPfFQFWUDggSgAAAPABAJ0BKggAEAADgFollAJ0ARSkRdjsmAD8EyIXLIz+i+dRQc9jBKsTD8orLi41xjLsVev5DAW0fikE+NyTDWZ3pvTmUz3s74AA",
+    "benefits": [
+      "Supports Healthy Nerve Function",
+      "Vital to Cellular Energy Production",
+      "Supports Bone Strength & Density"
+    ],
+    "moq": "2000 bottles",
+    "spec": "90 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-calcium-magnesium-zinc-gummy-2",
@@ -148,7 +224,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 761,
     "h": 1075,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRtYAAABXRUJQVlA4WAoAAAAQAAAACgAADwAAQUxQSFIAAAABcBvbtlJVhlRJC5RARkZO5O6u8RX8SwURMQFqUTdt2zRlqgz87EWEdAUyCya+IlsG44OWMd0Qh9uLYX7R/tf0otkQ6Yo4pPzsyHqQVU2bO7oAVlA4IF4AAAAQAgCdASoLABAAA4BaJbACdH8AGZLtDubwAP708aJlHJHSqsycX428H4snn0OIbsfA5ayWfDuTqBzSuCnekA/jyy4GUYsF6LIe+Kat6Q6C3c+EiwL2sPsn+qWimgAA"
+    "blur": "data:image/webp;base64,UklGRtYAAABXRUJQVlA4WAoAAAAQAAAACgAADwAAQUxQSFIAAAABcBvbtlJVhlRJC5RARkZO5O6u8RX8SwURMQFqUTdt2zRlqgz87EWEdAUyCya+IlsG44OWMd0Qh9uLYX7R/tf0otkQ6Yo4pPzsyHqQVU2bO7oAVlA4IF4AAAAQAgCdASoLABAAA4BaJbACdH8AGZLtDubwAP708aJlHJHSqsycX428H4snn0OIbsfA5ayWfDuTqBzSuCnekA/jyy4GUYsF6LIe+Kat6Q6C3c+EiwL2sPsn+qWimgAA",
+    "benefits": [
+      "Bone Health",
+      "Energy Boost & Immune Health",
+      "High Absorption Supplement"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-zma-capsule-capsule",
@@ -162,7 +247,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 554,
     "h": 1061,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRsQAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFQAAAABYFpr25L//FtikQGof6TTWcQGse7u8T/fh+sEETEBRAmiKFQJNZZlWUxKNOQcGWEVLAvUerPgsuAy13jArloOS38xlL8pABAB2mQ5bQTLiyPfFQFWUDggSgAAABACAJ0BKggAEAADgFoljAJ0APSW/gASMgAA/BMiFyyM/iTuy3Sfk4geb0LhEWNRsa9K7AsAsVbbmPYEFa3rForoXfk+nNrmLgAA"
+    "blur": "data:image/webp;base64,UklGRsQAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFQAAAABYFpr25L//FtikQGof6TTWcQGse7u8T/fh+sEETEBRAmiKFQJNZZlWUxKNOQcGWEVLAvUerPgsuAy13jArloOS38xlL8pABAB2mQ5bQTLiyPfFQFWUDggSgAAABACAJ0BKggAEAADgFoljAJ0APSW/gASMgAA/BMiFyyM/iTuy3Sfk4geb0LhEWNRsa9K7AsAsVbbmPYEFa3rForoXfk+nNrmLgAA",
+    "benefits": [
+      "Zinc Magnesium B-6",
+      "Muscle Strength",
+      "Enhanced Absorption"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-ashwagandha-magnesium-capsule",
@@ -176,7 +270,15 @@ export const CATALOG: CatalogProduct[] = [
     "w": 549,
     "h": 1058,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRsYAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFIAAAABcBvbtqq8/7v8kf8eLEQ6sEagEQ+Zl+Ku924cSoiICTDp2NpRZJw2QMM1pV6vmpn6TECmlSOActgpgG73vN38SVn/byeiKrJa8Xbud3p20ut6VlA4IE4AAAAwAgCdASoIABAAA4BaJYwC7AEfblnbt1DbAAD2vmnByV4cypci6zvCo61kZ7t5h2ahpREW5iJ85Goq983Ce7YKREDn6wI6MIqqYomwAAA="
+    "blur": "data:image/webp;base64,UklGRsYAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFIAAAABcBvbtqq8/7v8kf8eLEQ6sEagEQ+Zl+Ku924cSoiICTDp2NpRZJw2QMM1pV6vmpn6TECmlSOActgpgG73vN38SVn/byeiKrJa8Xbud3p20ut6VlA4IE4AAAAwAgCdASoIABAAA4BaJYwC7AEfblnbt1DbAAD2vmnByV4cypci6zvCo61kZ7t5h2ahpREW5iJ85Goq983Ce7YKREDn6wI6MIqqYomwAAA=",
+    "benefits": [
+      "Quality Sleep",
+      "Memory And Cognition"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-collagen-powder",
@@ -190,7 +292,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 625,
     "h": 1062,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRr4AAABXRUJQVlA4WAoAAAAQAAAACAAADwAAQUxQSEAAAAABcBXJthppDSlhY5wIYGaOgAtZ+lsBETEBahS3Q5tEls3ffQeBiACjnYmZie9f1/84EIkI8Wr5+yQE5TgPpa8AVlA4IFgAAADwAQCdASoJABAAA4BaJYwBTAA9EHGdpUgA/uH0aUpIbWmrbKEW7CXg3Uyj1I5os3Kdn1kFCIoE9xDP1LcBWslXi+PLQpye+VWQLMq4fGYeHRcZhDiCSAAA"
+    "blur": "data:image/webp;base64,UklGRr4AAABXRUJQVlA4WAoAAAAQAAAACAAADwAAQUxQSEAAAAABcBXJthppDSlhY5wIYGaOgAtZ+lsBETEBahS3Q5tEls3ffQeBiACjnYmZie9f1/84EIkI8Wr5+yQE5TgPpa8AVlA4IFgAAADwAQCdASoJABAAA4BaJYwBTAA9EHGdpUgA/uH0aUpIbWmrbKEW7CXg3Uyj1I5os3Kdn1kFCIoE9xDP1LcBWslXi+PLQpye+VWQLMq4fGYeHRcZhDiCSAAA",
+    "benefits": [
+      "Promotes Strong Bones And Joints",
+      "Promote Healthy Digestive System",
+      "Promotes Healthy Skin, Hair And Nails"
+    ],
+    "moq": "2000 bottles",
+    "spec": "453.6g/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-hydrolyzed-collagen-powder-sachets-sachet",
@@ -204,7 +315,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 775,
     "h": 872,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRhgBAABXRUJQVlA4WAoAAAAQAAAADQAADwAAQUxQSIAAAAABgFrb1vIoVVAXWVEMjnRWPHqOZPDMihkVg0I1zGinhXzvC79pISImwB7OVXqT5c3rc8/FYfztsRvmB9kRAgCUErLnfe3p/jrwP1B78SdO/oahe/UjBvaaF5zuCUP25n/4n/aASTzgmo90R84BgMDieY/+5Sq0JmcoWRmM+i/bPFZQOCByAAAAEAIAnQEqDgAQAAOAWiWwAnQBCutC8hlpgAD+2CLvYvxo09DTgQkcN+r0+00U6uZnK0Xbe4i4a5BOtX5W+UvEfuyVU19oAs9RrY8NPwsm/tSEM58nkomMDTOI4jZjh4VSZnvkAvh2LVsuZ7eBFOVPQAAA"
+    "blur": "data:image/webp;base64,UklGRhgBAABXRUJQVlA4WAoAAAAQAAAADQAADwAAQUxQSIAAAAABgFrb1vIoVVAXWVEMjnRWPHqOZPDMihkVg0I1zGinhXzvC79pISImwB7OVXqT5c3rc8/FYfztsRvmB9kRAgCUErLnfe3p/jrwP1B78SdO/oahe/UjBvaaF5zuCUP25n/4n/aASTzgmo90R84BgMDieY/+5Sq0JmcoWRmM+i/bPFZQOCByAAAAEAIAnQEqDgAQAAOAWiWwAnQBCutC8hlpgAD+2CLvYvxo09DTgQkcN+r0+00U6uZnK0Xbe4i4a5BOtX5W+UvEfuyVU19oAs9RrY8NPwsm/tSEM58nkomMDTOI4jZjh4VSZnvkAvh2LVsuZ7eBFOVPQAAA",
+    "benefits": [
+      "Skin elasticity & hydration",
+      "Healthy hair & nails",
+      "Joint & bone health"
+    ],
+    "moq": "",
+    "spec": "30 packets / 300 g, 10 g",
+    "specDetail": "Mixed berry fish collagen",
+    "description": ""
   },
   {
     "id": "p-collagen-vitamin-c-effervescent-tablets-tablet",
@@ -218,7 +338,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 490,
     "h": 1841,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRpYAAABXRUJQVlA4WAoAAAAQAAAAAwAADwAAQUxQSDIAAAABZ6CobSM21958LYR3ERFvS6Nb+lVAMQCgkUdMIYSSyY3R+xrbECL6HyWPG4d+GocSAFZQOCA+AAAA8AEAnQEqBAAQAAOAWiWwAuxH/4HofypwAP7WFzbol5lDlO37TxPqV6WtHOA1Od8fk3Jdn3NKpmTb7RYQAAA="
+    "blur": "data:image/webp;base64,UklGRpYAAABXRUJQVlA4WAoAAAAQAAAAAwAADwAAQUxQSDIAAAABZ6CobSM21958LYR3ERFvS6Nb+lVAMQCgkUdMIYSSyY3R+xrbECL6HyWPG4d+GocSAFZQOCA+AAAA8AEAnQEqBAAQAAOAWiWwAuxH/4HofypwAP7WFzbol5lDlO37TxPqV6WtHOA1Od8fk3Jdn3NKpmTb7RYQAAA=",
+    "benefits": [
+      "Skin health",
+      "Skin radiance",
+      "Collagen formation"
+    ],
+    "moq": "",
+    "spec": "20 tablets, 500 mg",
+    "specDetail": "Strawberry flavor",
+    "description": ""
   },
   {
     "id": "p-collagen-gummy",
@@ -232,7 +361,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 551,
     "h": 1075,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRtoAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFsAAAABcFzbtprESkiTPk1THpwWPiW4+wxmue8ijx4iYgKswBwOs9R2diR59qwBug5Ty88FYOEPCBJsLhBScNryh4eddjxo55N2PWu365+b9rgDIsDjSfWVmcV+PzcZAFZQOCBYAAAAsAEAnQEqCAAQAAOAWiWwAnQBDl/FAAD2v3R8qOT17l4fOhKuGwbFYE8hUWhJvQdetpDsS5qwpr2yMrd7qn26RPhM+88lSQmAhIfPkvWe9urdZ6Iq0I8AAA=="
+    "blur": "data:image/webp;base64,UklGRtoAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFsAAAABcFzbtprESkiTPk1THpwWPiW4+wxmue8ijx4iYgKswBwOs9R2diR59qwBug5Ty88FYOEPCBJsLhBScNryh4eddjxo55N2PWu365+b9rgDIsDjSfWVmcV+PzcZAFZQOCBYAAAAsAEAnQEqCAAQAAOAWiWwAnQBDl/FAAD2v3R8qOT17l4fOhKuGwbFYE8hUWhJvQdetpDsS5qwpr2yMrd7qn26RPhM+88lSQmAhIfPkvWe9urdZ6Iq0I8AAA==",
+    "benefits": [
+      "Support Healthy Skin",
+      "Support Hair Growth",
+      "Strong Nail Support"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-collagen-capsule",
@@ -246,7 +384,15 @@ export const CATALOG: CatalogProduct[] = [
     "w": 554,
     "h": 1061,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRsIAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFQAAAABYFpr25L//FtikQGof6TTWcQGse7u8T/fh+sEETEBRAmiKFQJNZZlWUxKNOQcGWEVLAvUerPgsuAy13jArloOS38xlL8pABAB2mQ5bQTLiyPfFQFWUDggSAAAAJABAJ0BKggAEAADgFolACmABtks4AD8EyIXLJA1DEGX01pFZvtqivq+dFbOIVc6Ft/TeZZuUTXD3UDg9mew5jXH5mADY07gAA=="
+    "blur": "data:image/webp;base64,UklGRsIAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFQAAAABYFpr25L//FtikQGof6TTWcQGse7u8T/fh+sEETEBRAmiKFQJNZZlWUxKNOQcGWEVLAvUerPgsuAy13jArloOS38xlL8pABAB2mQ5bQTLiyPfFQFWUDggSAAAAJABAJ0BKggAEAADgFolACmABtks4AD8EyIXLJA1DEGX01pFZvtqivq+dFbOIVc6Ft/TeZZuUTXD3UDg9mew5jXH5mADY07gAA==",
+    "benefits": [
+      "Hair, Skin, Nails & Joint Support",
+      "Support Healthy Skin"
+    ],
+    "moq": "2000 bottles",
+    "spec": "120 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-biotin-collagen-capsules-capsule",
@@ -260,7 +406,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 800,
     "h": 1467,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRsYAAABXRUJQVlA4WAoAAAAQAAAACAAADwAAQUxQSE8AAAABcFvbthJVgudaIx2x6IIIUpmJcM3G7r3JeAURMQFe2c7r1BZ2rOe+WRMEKyPKCIFpOIiSqO7AE2ybnmjZX6x/tgIkgfmm55ckP4/reM4TAFZQOCBQAAAAEAIAnQEqCQAQAAOAWiWUAuwGLpWbm2jxAAD+73BEhFJ90kxbS+yPq2lZjesgzI4lAGZrT56hOBQdGvWwkrYwF9K5yo0g4eqcqrnBUOmpXAA="
+    "blur": "data:image/webp;base64,UklGRsYAAABXRUJQVlA4WAoAAAAQAAAACAAADwAAQUxQSE8AAAABcFvbthJVgudaIx2x6IIIUpmJcM3G7r3JeAURMQFe2c7r1BZ2rOe+WRMEKyPKCIFpOIiSqO7AE2ybnmjZX6x/tgIkgfmm55ckP4/reM4TAFZQOCBQAAAAEAIAnQEqCQAQAAOAWiWUAuwGLpWbm2jxAAD+73BEhFJ90kxbS+yPq2lZjesgzI4lAGZrT56hOBQdGvWwkrYwF9K5yo0g4eqcqrnBUOmpXAA=",
+    "benefits": [
+      "Healthy hair & nails",
+      "Skin health",
+      "Collagen formation"
+    ],
+    "moq": "",
+    "spec": "60 capsules, 3,000 mcg",
+    "specDetail": "With fish collagen",
+    "description": ""
   },
   {
     "id": "p-collagen-biotin-liquid-drops",
@@ -274,7 +429,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 353,
     "h": 1074,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRq4AAABXRUJQVlA4WAoAAAAQAAAABAAADwAAQUxQSEcAAAAJcFvbthIdXFKvAiKLKI0OaMQrgDZoQmcid2shIiaAoM9GXNsFDx89p7AOC9PelMAoo0vYpUjEAsCbyJ/3G3fuAgLCMM3zAABWUDggQAAAALABAJ0BKgUAEAADgFolAABTS/6/XAAA/vFCxnGlb+Cs2+UrxypQr3+0f41XFcWxHcBzIZGl6Ln8TWMbpsPAAAA="
+    "blur": "data:image/webp;base64,UklGRq4AAABXRUJQVlA4WAoAAAAQAAAABAAADwAAQUxQSEcAAAAJcFvbthIdXFKvAiKLKI0OaMQrgDZoQmcid2shIiaAoM9GXNsFDx89p7AOC9PelMAoo0vYpUjEAsCbyJ/3G3fuAgLCMM3zAABWUDggQAAAALABAJ0BKgUAEAADgFolAABTS/6/XAAA/vFCxnGlb+Cs2+UrxypQr3+0f41XFcWxHcBzIZGl6Ln8TWMbpsPAAAA=",
+    "benefits": [
+      "Healthy Hair",
+      "Radiant Skin",
+      "Strong Nails"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60ml/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-electrolyte-powder",
@@ -288,7 +452,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 625,
     "h": 1062,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRsQAAABXRUJQVlA4WAoAAAAQAAAACAAADwAAQUxQSEAAAAABcBXJthppDSlhY5wIYGaOgAtZ+lsBETEBahS3Q5tEls3ffQeBiACjnYmZie9f1/84EIkI8Wr5+yQE5TgPpa8AVlA4IF4AAADQAQCdASoJABAAA4BaJYgAAuden1pkgAD+4fRpSkhtaatsoV8eNFSx1SIy1pUjVPUOIc63Nf5MqPogSnkxmk7K/X/fFQQh8FI422AnfLz8KqcMX3JQUvkhfOLyFAAA"
+    "blur": "data:image/webp;base64,UklGRsQAAABXRUJQVlA4WAoAAAAQAAAACAAADwAAQUxQSEAAAAABcBXJthppDSlhY5wIYGaOgAtZ+lsBETEBahS3Q5tEls3ffQeBiACjnYmZie9f1/84EIkI8Wr5+yQE5TgPpa8AVlA4IF4AAADQAQCdASoJABAAA4BaJYgAAuden1pkgAD+4fRpSkhtaatsoV8eNFSx1SIy1pUjVPUOIc63Nf5MqPogSnkxmk7K/X/fFQQh8FI422AnfLz8KqcMX3JQUvkhfOLyFAAA",
+    "benefits": [
+      "Immune Support",
+      "Energy Boost",
+      "General Wellness"
+    ],
+    "moq": "2000 bottles",
+    "spec": "360g/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-electrolyte-drink-mix-sachets-sachet",
@@ -302,7 +475,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 800,
     "h": 935,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRhQBAABXRUJQVlA4WAoAAAAQAAAADQAADwAAQUxQSH8AAAABcFtb06LQgBdAARRABRwaIHdJtwLc3cm3BTwldGJ3KiCCnfkHHVqIiAlQ6fyD1WLYkishyW5VZ4h7rcMDBSIAgILbJgH9FLRL8LZh3i7A24cIkJP8o0AKZ1cn4OxlAsHYtQnoJ4rtSMAnoiCiy5mY99tssNyVMhHJZbOYTUYDAFZQOCBuAAAAMAIAnQEqDgAQAAOAWiWwAuzlAAYvRiRUpPAA/tOhVQ5i8NEhP5dgzg3f+7/DJGbaY/NXMMQfS7keFVnd98/mUcpYMk3RuoF0ls56JZtkSsjHuRaGHEuGjfjFs9W5bWjXd+DEhXujAPEXaogAAAA="
+    "blur": "data:image/webp;base64,UklGRhQBAABXRUJQVlA4WAoAAAAQAAAADQAADwAAQUxQSH8AAAABcFtb06LQgBdAARRABRwaIHdJtwLc3cm3BTwldGJ3KiCCnfkHHVqIiAlQ6fyD1WLYkishyW5VZ4h7rcMDBSIAgILbJgH9FLRL8LZh3i7A24cIkJP8o0AKZ1cn4OxlAsHYtQnoJ4rtSMAnoiCiy5mY99tssNyVMhHJZbOYTUYDAFZQOCBuAAAAMAIAnQEqDgAQAAOAWiWwAuzlAAYvRiRUpPAA/tOhVQ5i8NEhP5dgzg3f+7/DJGbaY/NXMMQfS7keFVnd98/mUcpYMk3RuoF0ls56JZtkSsjHuRaGHEuGjfjFs9W5bWjXd+DEhXujAPEXaogAAAA=",
+    "benefits": [
+      "Hydration support",
+      "Electrolyte replenishment",
+      "Electrolyte balance"
+    ],
+    "moq": "",
+    "spec": "30 packets / 150 g, 5 g",
+    "specDetail": "Lemon lime flavor",
+    "description": ""
   },
   {
     "id": "p-electrolyte-effervescent-tablets-tablet",
@@ -316,7 +498,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 488,
     "h": 1840,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRqgAAABXRUJQVlA4WAoAAAAQAAAAAwAADwAAQUxQSDEAAAABb6CgjSQ1dgzPL5AiIr5sZFQJOdgMagEAYUBiCiGUTCZO92QKIaL/kXJc2FQfLAoAAFZQOCBQAAAAUAIAnQEqBAAQAAOAWiWwAnRH/4HojcSb9XAAAP6U/bkjkCvQbEGlaIAacDqpN2gAG18duw6xsaTUeiDJx6Iv9M5T3/hT5Z5QucNsLcNgAAA="
+    "blur": "data:image/webp;base64,UklGRqgAAABXRUJQVlA4WAoAAAAQAAAAAwAADwAAQUxQSDEAAAABb6CgjSQ1dgzPL5AiIr5sZFQJOdgMagEAYUBiCiGUTCZO92QKIaL/kXJc2FQfLAoAAFZQOCBQAAAAUAIAnQEqBAAQAAOAWiWwAnRH/4HojcSb9XAAAP6U/bkjkCvQbEGlaIAacDqpN2gAG18duw6xsaTUeiDJx6Iv9M5T3/hT5Z5QucNsLcNgAAA=",
+    "benefits": [
+      "Hydration support",
+      "Electrolyte replenishment",
+      "Energy support"
+    ],
+    "moq": "",
+    "spec": "20 tablets",
+    "specDetail": "Electrolyte tablet formula",
+    "description": ""
   },
   {
     "id": "p-multivitamin-gummy",
@@ -330,7 +521,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 761,
     "h": 1075,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRsYAAABXRUJQVlA4WAoAAAAQAAAACgAADwAAQUxQSFIAAAABcBvbtlJVhlRJC5RARkZO5O6u8RX8SwURMQFqUTdt2zRlqgz87EWEdAUyCya+IlsG44OWMd0Qh9uLYX7R/tf0otkQ6Yo4pPzsyHqQVU2bO7oAVlA4IE4AAAAwAgCdASoLABAAA4BaJbAC7AEfbOf1iMTfYAD+9PGiZR0pYRm0ZGHVKaWc1EwHnviU3YLLhM3zlDEIu6a4B3kcdp18xgvK/ZSm6+fSwAA="
+    "blur": "data:image/webp;base64,UklGRsYAAABXRUJQVlA4WAoAAAAQAAAACgAADwAAQUxQSFIAAAABcBvbtlJVhlRJC5RARkZO5O6u8RX8SwURMQFqUTdt2zRlqgz87EWEdAUyCya+IlsG44OWMd0Qh9uLYX7R/tf0otkQ6Yo4pPzsyHqQVU2bO7oAVlA4IE4AAAAwAgCdASoLABAAA4BaJbAC7AEfbOf1iMTfYAD+9PGiZR0pYRm0ZGHVKaWc1EwHnviU3YLLhM3zlDEIu6a4B3kcdp18xgvK/ZSm6+fSwAA=",
+    "benefits": [
+      "Mood & Brain Function",
+      "Bone & Health",
+      "Immune Function"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-vitamin-c-gummy-2",
@@ -344,7 +544,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 759,
     "h": 1075,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRtoAAABXRUJQVlA4WAoAAAAQAAAACgAADwAAQUxQSFgAAAABcFvbthL1RUqLVEFMyCIncneHcfd5D9cKImIC6KQoiyLP04g6V8NWgoDdPwplhVUXKpWvYIApK+zByn1X/VjtHyM267qPKN+AvQD7vBo2SM6O0ryMDZYAVlA4IFwAAAAQAgCdASoLABAAA4BaJbACdAEOjnmq/oYcAP704gZqibcVtA4eWeQ+MzkmzinnLnXkkftlBr1g/Xf8nBzNHhnMNYtu/yf3kwxy9XxF5qv1u4vP+bGBNgNYrwAAAA=="
+    "blur": "data:image/webp;base64,UklGRtoAAABXRUJQVlA4WAoAAAAQAAAACgAADwAAQUxQSFgAAAABcFvbthL1RUqLVEFMyCIncneHcfd5D9cKImIC6KQoiyLP04g6V8NWgoDdPwplhVUXKpWvYIApK+zByn1X/VjtHyM267qPKN+AvQD7vBo2SM6O0ryMDZYAVlA4IFwAAAAQAgCdASoLABAAA4BaJbACdAEOjnmq/oYcAP704gZqibcVtA4eWeQ+MzkmzinnLnXkkftlBr1g/Xf8nBzNHhnMNYtu/yf3kwxy9XxF5qv1u4vP+bGBNgNYrwAAAA==",
+    "benefits": [
+      "Support Immune Cells and Immune Function",
+      "Provide Antioxidant Protection",
+      "Highly Bioavailable Ascorbic Acid"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-vitamin-d3-gummy",
@@ -358,7 +567,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 759,
     "h": 1075,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRtwAAABXRUJQVlA4WAoAAAAQAAAACgAADwAAQUxQSFUAAAABcFvbthIVRkiNVEFMyCL3yN1dxv29N24VRMQE8EXdNE1dFSm3pNdugYCPFzRaQnoEMmWCF0JDz5HCwxvD9o32vzZvNAfApwBDTa9tVvKzsm4yR2QAAFZQOCBgAAAAMAIAnQEqCwAQAAOAWiWQAuwBEP0k2vPFhaQA/vTijt12nymSQHTLP0U+lJ5wRREjhk/zAIWkmxfRcNcHHR/ZBQ1jiAEclcBYsy0ydiOJcq4F8vzziCTtx8ij1lG0DgAA"
+    "blur": "data:image/webp;base64,UklGRtwAAABXRUJQVlA4WAoAAAAQAAAACgAADwAAQUxQSFUAAAABcFvbthIVRkiNVEFMyCL3yN1dxv29N24VRMQE8EXdNE1dFSm3pNdugYCPFzRaQnoEMmWCF0JDz5HCwxvD9o32vzZvNAfApwBDTa9tVvKzsm4yR2QAAFZQOCBgAAAAMAIAnQEqCwAQAAOAWiWQAuwBEP0k2vPFhaQA/vTijt12nymSQHTLP0U+lJ5wRREjhk/zAIWkmxfRcNcHHR/ZBQ1jiAEclcBYsy0ydiOJcq4F8vzziCTtx8ij1lG0DgAA",
+    "benefits": [
+      "Bone & Immune Support",
+      "Grassfed & Grass Finished",
+      "Promote Health & Balance"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-ashwagandha-gummy",
@@ -372,7 +590,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 551,
     "h": 1076,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRtgAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSGAAAAABcFzbttLgFUCPzJiRpCa3YTr4KcHd3eW+b6+IiJgAJxWLRS9z3amUUm4ip4P/H10nLhNA9aQjISVkZw2SkrCdSEuuZtx6zm2X3H7FHTbccceddgARcL5J9pWLwXzeFyVWUDggUgAAAHABAJ0BKggAEAADgFoliAACmejkAPa/dHyo5PXuXgy78Y51AdWoSXjFf5utz3fwccsMZqqSsLe1cvEwtNXzrda3eeRt6DTdOfMiyKhGVA5AAAA="
+    "blur": "data:image/webp;base64,UklGRtgAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSGAAAAABcFzbttLgFUCPzJiRpCa3YTr4KcHd3eW+b6+IiJgAJxWLRS9z3amUUm4ip4P/H10nLhNA9aQjISVkZw2SkrCdSEuuZtx6zm2X3H7FHTbccceddgARcL5J9pWLwXzeFyVWUDggUgAAAHABAJ0BKggAEAADgFoliAACmejkAPa/dHyo5PXuXgy78Y51AdWoSXjFf5utz3fwccsMZqqSsLe1cvEwtNXzrda3eeRt6DTdOfMiyKhGVA5AAAA=",
+    "benefits": [
+      "Support Relax",
+      "Relieve Stress",
+      "Improve Sleep"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-probiotics-gummy",
@@ -386,7 +613,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 761,
     "h": 1075,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRsgAAABXRUJQVlA4WAoAAAAQAAAACgAADwAAQUxQSFMAAAABcBvbtlI1hlVJCbRARkRO5u6u8RXsawURMQFa2bRd2zZVpo782osJ6Q5kFUx8R7ZNxhd6zvRAHO1vjMsb3X/Nb7Q7It0Rx4xfu4oR5lXbFa4hAABWUDggTgAAABACAJ0BKgsAEAADgFoloAAC7RvYWv5M4+AA/vTijt14ms4qLfuvne32kxUnoGhNWdc4LEnjEdvx5KdKuW3t4bSa9ofFf+S8ZFXXlgigAA=="
+    "blur": "data:image/webp;base64,UklGRsgAAABXRUJQVlA4WAoAAAAQAAAACgAADwAAQUxQSFMAAAABcBvbtlI1hlVJCbRARkRO5u6u8RXsawURMQFa2bRd2zZVpo782osJ6Q5kFUx8R7ZNxhd6zvRAHO1vjMsb3X/Nb7Q7It0Rx4xfu4oR5lXbFa4hAABWUDggTgAAABACAJ0BKgsAEAADgFoloAAC7RvYWv5M4+AA/vTijt14ms4qLfuvne32kxUnoGhNWdc4LEnjEdvx5KdKuW3t4bSa9ofFf+S8ZFXXlgigAA==",
+    "benefits": [
+      "Support Immune Health",
+      "Broad Bodily Support",
+      "Support Digestive And Mood Health"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-omega-dha-gummy",
@@ -400,7 +636,15 @@ export const CATALOG: CatalogProduct[] = [
     "w": 761,
     "h": 1075,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRsQAAABXRUJQVlA4WAoAAAAQAAAACgAADwAAQUxQSFMAAAABcBvbtlI1hlVJCZRASERO5u6u8RXsawURMQFa2bRt2zZVpo782osJ6Q5kFUx8R7ZNxhd6zvRAHO1vjMsb3X/Nb7Q7It0Rx5Rfu4oR5FXbFq4hAABWUDggSgAAADACAJ0BKgsAEAADgFolsALsAR9s5+oFQtsAAP708aJlHSlhGbRkYYXGreBMRsY9mA5rztAE8YlW+4D6YkAa5AYecLhjMiZU+AAA"
+    "blur": "data:image/webp;base64,UklGRsQAAABXRUJQVlA4WAoAAAAQAAAACgAADwAAQUxQSFMAAAABcBvbtlI1hlVJCZRASERO5u6u8RXsawURMQFa2bRt2zZVpo782osJ6Q5kFUx8R7ZNxhd6zvRAHO1vjMsb3X/Nb7Q7It0Rx5Rfu4oR5FXbFq4hAABWUDggSgAAADACAJ0BKgsAEAADgFolsALsAR9s5+oFQtsAAP708aJlHSlhGbRkYYXGreBMRsY9mA5rztAE8YlW+4D6YkAa5AYecLhjMiZU+AAA",
+    "benefits": [
+      "Supports Healthy Brain",
+      "Function & Heart Health"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-sea-moss-gummy",
@@ -414,7 +658,15 @@ export const CATALOG: CatalogProduct[] = [
     "w": 551,
     "h": 1076,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRtwAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSGAAAAABcFzbttLgFUCPzJiRpCa3YTr4KcHd3eW+b6+IiJgAJxWLRS9z3amUUm4ip4P/H10nLhNA9aQjISVkZw2SkrCdSEuuZtx6zm2X3H7FHTbccceddgARcL5J9pWLwXzeFyVWUDggVgAAANABAJ0BKggAEAADgFolsALsAPNV2eooAPa/dHypQbWpyzefDQ9Uxj1vxEOVbB/zQruHIIDqhyksk3fgApTntySCC0lJ1PdLODND3Phri92ACFViTgAA"
+    "blur": "data:image/webp;base64,UklGRtwAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSGAAAAABcFzbttLgFUCPzJiRpCa3YTr4KcHd3eW+b6+IiJgAJxWLRS9z3amUUm4ip4P/H10nLhNA9aQjISVkZw2SkrCdSEuuZtx6zm2X3H7FHTbccceddgARcL5J9pWLwXzeFyVWUDggVgAAANABAJ0BKggAEAADgFolsALsAPNV2eooAPa/dHypQbWpyzefDQ9Uxj1vxEOVbB/zQruHIIDqhyksk3fgApTntySCC0lJ1PdLODND3Phri92ACFViTgAA",
+    "benefits": [
+      "Boost Immune System",
+      "Promote Skin & Joint Support"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-super-greens-gummy",
@@ -428,7 +680,17 @@ export const CATALOG: CatalogProduct[] = [
     "w": 551,
     "h": 1076,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRt4AAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSGAAAAABcFzbttLgFUCPzJiRpCa3YTr4KcHd3eW+b6+IiJgAJxWLRS9z3amUUm4ip4P/H10nLhNA9aQjISVkZw2SkrCdSEuuZtx6zm2X3H7FHTbccceddgARcL5J9pWLwXzeFyVWUDggWAAAABACAJ0BKggAEAADgFolsAJ0AR9tBFW13MAA9r90fKlDP/cvCamsIhLTKzyXzxr5dLIxnjyrhxSTo3EBBZ7aJIh6cTfnwd8GCJ3Ta64rke+2cbIKeqaOAAA="
+    "blur": "data:image/webp;base64,UklGRt4AAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSGAAAAABcFzbttLgFUCPzJiRpCa3YTr4KcHd3eW+b6+IiJgAJxWLRS9z3amUUm4ip4P/H10nLhNA9aQjISVkZw2SkrCdSEuuZtx6zm2X3H7FHTbccceddgARcL5J9pWLwXzeFyVWUDggWAAAABACAJ0BKggAEAADgFolsAJ0AR9tBFW13MAA9r90fKlDP/cvCamsIhLTKzyXzxr5dLIxnjyrhxSTo3EBBZ7aJIh6cTfnwd8GCJ3Ta64rke+2cbIKeqaOAAA=",
+    "benefits": [
+      "Boost Immune Health",
+      "Great Source Of Phytonutrients",
+      "Increase Healthy Digestion",
+      "Help Energy Levels"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-vitamin-b12-gummy",
@@ -442,7 +704,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 759,
     "h": 1075,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRtAAAABXRUJQVlA4WAoAAAAQAAAACgAADwAAQUxQSFQAAAABcBvbtlI1RkiNVEFMyJBr5u4aud57+S4VRMQE8FlZ1VVV5jHX02s7Q8DHE/WakB6BDJnghVDRcyR/faOb3qj/a3yjWgGfAnQlvbZYyUuKqkotkQFWUDggVgAAABACAJ0BKgsAEAADgFolsAJ0fwAYEOHHu+AA/vTiBmqJ46mhVBWGCxhn663lQvEgnEBrKvF7DgXAzRZjjVqJqfRl6CQIrFt4+MYI+2BZc70COfh86mAA"
+    "blur": "data:image/webp;base64,UklGRtAAAABXRUJQVlA4WAoAAAAQAAAACgAADwAAQUxQSFQAAAABcBvbtlI1RkiNVEFMyJBr5u4aud57+S4VRMQE8FlZ1VVV5jHX02s7Q8DHE/WakB6BDJnghVDRcyR/faOb3qj/a3yjWgGfAnQlvbZYyUuKqkotkQFWUDggVgAAABACAJ0BKgsAEAADgFolsAJ0fwAYEOHHu+AA/vTiBmqJ46mhVBWGCxhn663lQvEgnEBrKvF7DgXAzRZjjVqJqfRl6CQIrFt4+MYI+2BZc70COfh86mAA",
+    "benefits": [
+      "Cellular Energy",
+      "Supports Heart Health",
+      "Promotes Nervous System Health"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-sambucus-elderberry-gummy",
@@ -456,7 +727,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 761,
     "h": 1075,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRtAAAABXRUJQVlA4WAoAAAAQAAAACgAADwAAQUxQSFQAAAABcFvbthIVhlRJC5RARkQD7u7OWPxk3CqIiAlQ23Eax2HoamXh13FOSI9AZsPEj8iewfhCq5meEGeXN7bjG/N/Hd6YLoj0iLhV/DqU9aTuhqkJdQFWUDggVgAAAPABAJ0BKgsAEAADgFolAF2AIh/A89kleAD+9OKO3XjaCv/Eftm7cXa+PiVu3AS/E4QaJqQhDiKX7CKOuPoPpXEr3oirKnQxTrrThGZC+RqbhgBqAAAA"
+    "blur": "data:image/webp;base64,UklGRtAAAABXRUJQVlA4WAoAAAAQAAAACgAADwAAQUxQSFQAAAABcFvbthIVhlRJC5RARkQD7u7OWPxk3CqIiAlQ23Eax2HoamXh13FOSI9AZsPEj8iewfhCq5meEGeXN7bjG/N/Hd6YLoj0iLhV/DqU9aTuhqkJdQFWUDggVgAAAPABAJ0BKgsAEAADgFolAF2AIh/A89kleAD+9OKO3XjaCv/Eftm7cXa+PiVu3AS/E4QaJqQhDiKX7CKOuPoPpXEr3oirKnQxTrrThGZC+RqbhgBqAAAA",
+    "benefits": [
+      "Immune Support",
+      "Great for Adults And Children",
+      "With Vitamin C and Zinc"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-coq10-gummies-gummy",
@@ -470,7 +750,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 551,
     "h": 1075,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRuYAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFsAAAABcFzbtprESkiTPk1THpwWPiW4+wxmue8ijx4iYgKswBwOs9R2diR59qwBug5Ty88FYOEPCBJsLhBScNryh4eddjxo55N2PWu365+b9rgDIsDjSfWVmcV+PzcZAFZQOCBkAAAA0AEAnQEqCAAQAAOAWiWwAuwBDmhwAMAA9r90fKjk9e5eHzoSrhsGxWBKXV4K15X9KOt2Ynx3v0454xqN6ieSDnCTbL96GZJrO6nVQQ3CAb3LpxMoBN19Z3/taZwGiVb90QAAAA=="
+    "blur": "data:image/webp;base64,UklGRuYAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFsAAAABcFzbtprESkiTPk1THpwWPiW4+wxmue8ijx4iYgKswBwOs9R2diR59qwBug5Ty88FYOEPCBJsLhBScNryh4eddjxo55N2PWu365+b9rgDIsDjSfWVmcV+PzcZAFZQOCBkAAAA0AEAnQEqCAAQAAOAWiWwAuwBDmhwAMAA9r90fKjk9e5eHzoSrhsGxWBKXV4K15X9KOt2Ynx3v0454xqN6ieSDnCTbL96GZJrO6nVQQ3CAb3LpxMoBN19Z3/taZwGiVb90QAAAA==",
+    "benefits": [
+      "CoQ10 For Heart Health",
+      "Antioxidant",
+      "Essential For Energy Production"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-prebiotic-fiber-gummy",
@@ -484,7 +773,15 @@ export const CATALOG: CatalogProduct[] = [
     "w": 759,
     "h": 1075,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRtAAAABXRUJQVlA4WAoAAAAQAAAACgAADwAAQUxQSFUAAAABcGPbttJMjJYpMgp6Oha9du7+rYJ48t6L2wgiYgLMYWacMza2xkKv0wEBHy8YCkJ6BIpcghcWo+dI5eENtX2D/9fmDbYHfAqgGL1OdKfoJsb7xNYAAFZQOCBUAAAAMAIAnQEqCwAQAAOAWiWwAnR/ABmS7MwdtYAA/vTxTBu8IcFCqg7RCG7Fr/Q68UzYoxV8LLsZHqHfVJ0PoS5vf8a+g2V33FZ9Zbaqn7jJEFWsSLgA"
+    "blur": "data:image/webp;base64,UklGRtAAAABXRUJQVlA4WAoAAAAQAAAACgAADwAAQUxQSFUAAAABcGPbttJMjJYpMgp6Oha9du7+rYJ48t6L2wgiYgLMYWacMza2xkKv0wEBHy8YCkJ6BIpcghcWo+dI5eENtX2D/9fmDbYHfAqgGL1OdKfoJsb7xNYAAFZQOCBUAAAAMAIAnQEqCwAQAAOAWiWwAnR/ABmS7MwdtYAA/vTxTBu8IcFCqg7RCG7Fr/Q68UzYoxV8LLsZHqHfVJ0PoS5vf8a+g2V33FZ9Zbaqn7jJEFWsSLgA",
+    "benefits": [
+      "Digestive Support",
+      "Support Healthy Digestion"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-6-in-1-mushroom-coffee-150-g-powder",
@@ -498,7 +795,15 @@ export const CATALOG: CatalogProduct[] = [
     "w": 800,
     "h": 1259,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRvQAAABXRUJQVlA4WAoAAAAQAAAACQAADwAAQUxQSGgAAAABgCPbtmmrf09NsW0jdGhmZsrQ9rdP+t7Z++v0ISImYEI+CSHki8xfkflxjxQAgOLLEQEREfB+xdqPkf437/1HcdRgdUt4+3PDcoKVDbHiHlbQzHIo6RUA4Ep1QmTKOIP96+fX234oAFZQOCBmAAAAEAIAnQEqCgAQAAOAWiWwAnQA3abjC6j0AADZ6DbMPCqy0zYm6VnyVbkg1UROneTJxSQyyx1OHJfksvh2R4WQabYv4TGNWdJAy84yL80xrbQhPrbaVn5zvCvPJ43aC89Sa9NoLwAA"
+    "blur": "data:image/webp;base64,UklGRvQAAABXRUJQVlA4WAoAAAAQAAAACQAADwAAQUxQSGgAAAABgCPbtmmrf09NsW0jdGhmZsrQ9rdP+t7Z++v0ISImYEI+CSHki8xfkflxjxQAgOLLEQEREfB+xdqPkf437/1HcdRgdUt4+3PDcoKVDbHiHlbQzHIo6RUA4Ep1QmTKOIP96+fX234oAFZQOCBmAAAAEAIAnQEqCgAQAAOAWiWwAnQA3abjC6j0AADZ6DbMPCqy0zYm6VnyVbkg1UROneTJxSQyyx1OHJfksvh2R4WQabYv4TGNWdJAy84yL80xrbQhPrbaVn5zvCvPJ43aC89Sa9NoLwAA",
+    "benefits": [
+      "Focus support",
+      "Energy support"
+    ],
+    "moq": "",
+    "spec": "150 g",
+    "specDetail": "6 functional mushrooms / Original coffee flavor",
+    "description": "Mushroom coffee in a stand-up pouch."
   },
   {
     "id": "p-shilajit-resin-other",
@@ -512,7 +817,12 @@ export const CATALOG: CatalogProduct[] = [
     "w": 657,
     "h": 622,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRuoAAABXRUJQVlA4WAoAAAAQAAAADwAADgAAQUxQSF8AAAAFcBvbtqqc837qlioVMMS0xFACDRFZF+60wBC73OxJBxExAePe3wNJkIR85/0C+pd7KdT4q8OtSy1MOrFoqRVM1owMVnC1VoEJfRMJDFbiQ4u7fwz9xWCYfAiAAESuIwBWUDggZAAAABACAJ0BKhAADwADgFollALsAPAZ+A5W4AAA/t44BHzi0z+i02H7kpktamDanfA9vO7sNB5dDc3nlAvTdotylSZWWtpt4teWT9erCkrA2uXX+XiCYuwGJSKDT5/4d6pnmBomAAA="
+    "blur": "data:image/webp;base64,UklGRuoAAABXRUJQVlA4WAoAAAAQAAAADwAADgAAQUxQSF8AAAAFcBvbtqqc837qlioVMMS0xFACDRFZF+60wBC73OxJBxExAePe3wNJkIR85/0C+pd7KdT4q8OtSy1MOrFoqRVM1owMVnC1VoEJfRMJDFbiQ4u7fwz9xWCYfAiAAESuIwBWUDggZAAAABACAJ0BKhAADwADgFollALsAPAZ+A5W4AAA/t44BHzi0z+i02H7kpktamDanfA9vO7sNB5dDc3nlAvTdotylSZWWtpt4teWT9erCkrA2uXX+XiCYuwGJSKDT5/4d6pnmBomAAA=",
+    "benefits": [],
+    "moq": "",
+    "spec": "",
+    "specDetail": "",
+    "description": "Sourced from the untouched heights of the Himalayan mountains."
   },
   {
     "id": "p-lion-s-mane-powder",
@@ -526,7 +836,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 625,
     "h": 1063,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRroAAABXRUJQVlA4WAoAAAAQAAAACAAADwAAQUxQSD4AAAABYFTbtpKwLKKwqPatAO4y+wS49z10RoCImIAsFOMyFj43+m4MISKgjyqqKnp8xR8hRYSMi76viWvXfWlsClZQOCBWAAAA8AEAnQEqCQAQAAOAWiWUAALnXqXqJmoAAP7h9GlKSG1pq2yhN3dF152WgHOYC3WqeQyljiIkQFfZFbgplpWnGQCcGr4PLzLJNciAidtYqMjdDPDr6AA="
+    "blur": "data:image/webp;base64,UklGRroAAABXRUJQVlA4WAoAAAAQAAAACAAADwAAQUxQSD4AAAABYFTbtpKwLKKwqPatAO4y+wS49z10RoCImIAsFOMyFj43+m4MISKgjyqqKnp8xR8hRYSMi76viWvXfWlsClZQOCBWAAAA8AEAnQEqCQAQAAOAWiWUAALnXqXqJmoAAP7h9GlKSG1pq2yhN3dF152WgHOYC3WqeQyljiIkQFfZFbgplpWnGQCcGr4PLzLJNciAidtYqMjdDPDr6AA=",
+    "benefits": [
+      "Improve Execution & Concentration",
+      "Improve Focus",
+      "Improve Overall Health"
+    ],
+    "moq": "2000 bottles",
+    "spec": "453.6g/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-super-greens-powder",
@@ -540,7 +859,15 @@ export const CATALOG: CatalogProduct[] = [
     "w": 625,
     "h": 1062,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRrYAAABXRUJQVlA4WAoAAAAQAAAACAAADwAAQUxQSEAAAAABcBXJthppDSlhY5wIYGaOgAtZ+lsBETEBahS3Q5tEls3ffQeBiACjnYmZie9f1/84EIkI8Wr5+yQE5TgPpa8AVlA4IFAAAAAQAgCdASoJABAAA4BaJZQCw7EO/9OhDRcAAP7h9GlKSG1pq2yhV3boCrh4WrS3kXHRp1mmc2MEbLvWE14/buqaJmOY0PigPqcgyECoANQAAA=="
+    "blur": "data:image/webp;base64,UklGRrYAAABXRUJQVlA4WAoAAAAQAAAACAAADwAAQUxQSEAAAAABcBXJthppDSlhY5wIYGaOgAtZ+lsBETEBahS3Q5tEls3ffQeBiACjnYmZie9f1/84EIkI8Wr5+yQE5TgPpa8AVlA4IFAAAAAQAgCdASoJABAAA4BaJZQCw7EO/9OhDRcAAP7h9GlKSG1pq2yhV3boCrh4WrS3kXHRp1mmc2MEbLvWE14/buqaJmOY0PigPqcgyECoANQAAA==",
+    "benefits": [
+      "Immune Support",
+      "Clearer Skin"
+    ],
+    "moq": "2000 bottles",
+    "spec": "300g/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-omega-3-capsule",
@@ -554,7 +881,15 @@ export const CATALOG: CatalogProduct[] = [
     "w": 800,
     "h": 1003,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRuIAAABXRUJQVlA4WAoAAAAQAAAADAAADwAAQUxQSHEAAAABuS5E9D8MjiLZVp1734fQOhKigKxnHwkMIpjpfj4azo2YgAmYHjAqMH8ZFTPB3lCfACfOMlR1GXXwQ9FA5V8CfXuC/AH6eIG+fphpyIiXP4H6B+bQG6GnO0OqSsbwgUFC1AYJYeZm2noSEc/8+M3DCgBWUDggSgAAABACAJ0BKg0AEAADgFolqALsARAT+FmKJbAA/vHpmH0/6kjuFTWe5vnkzULVZgGzFCzMCfJJd4iAv5wFzVJDhxVnjrxNcs0HgAAA"
+    "blur": "data:image/webp;base64,UklGRuIAAABXRUJQVlA4WAoAAAAQAAAADAAADwAAQUxQSHEAAAABuS5E9D8MjiLZVp1734fQOhKigKxnHwkMIpjpfj4azo2YgAmYHjAqMH8ZFTPB3lCfACfOMlR1GXXwQ9FA5V8CfXuC/AH6eIG+fphpyIiXP4H6B+bQG6GnO0OqSsbwgUFC1AYJYeZm2noSEc/8+M3DCgBWUDggSgAAABACAJ0BKg0AEAADgFolqALsARAT+FmKJbAA/vHpmH0/6kjuFTWe5vnkzULVZgGzFCzMCfJJd4iAv5wFzVJDhxVnjrxNcs0HgAAA",
+    "benefits": [
+      "Immune Support",
+      "Supports Strong Bones"
+    ],
+    "moq": "5000 bags",
+    "spec": "300 counts/bag",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-vitamin-c-zinc-effervescent-tablets-tablet",
@@ -568,7 +903,15 @@ export const CATALOG: CatalogProduct[] = [
     "w": 486,
     "h": 1839,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRqAAAABXRUJQVlA4WAoAAAAQAAAAAwAADwAAQUxQSDMAAAABZ6CokSQ1uAzHIO9+FxHx6SKic6E3FYoBAI08YgohlExujN7X2IYQ0f8oedw49NM4lAAAVlA4IEYAAABwAgCdASoEABAAA4BaJbACdLoAyv8DcQq6RYZgAP7rHE/jP9MIC92r1PyfFuLlmoMQ5Dw/ZO29ZsCK0mm9M1Zkk6FEAAAA"
+    "blur": "data:image/webp;base64,UklGRqAAAABXRUJQVlA4WAoAAAAQAAAAAwAADwAAQUxQSDMAAAABZ6CokSQ1uAzHIO9+FxHx6SKic6E3FYoBAI08YgohlExujN7X2IYQ0f8oedw49NM4lAAAVlA4IEYAAABwAgCdASoEABAAA4BaJbACdLoAyv8DcQq6RYZgAP7rHE/jP9MIC92r1PyfFuLlmoMQ5Dw/ZO29ZsCK0mm9M1Zkk6FEAAAA",
+    "benefits": [
+      "Immune support",
+      "Antioxidant support"
+    ],
+    "moq": "",
+    "spec": "20 tablets, 1,000 mg",
+    "specDetail": "With 10 mg zinc",
+    "description": ""
   },
   {
     "id": "p-ashwagandha-liquid-drops",
@@ -582,7 +925,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 353,
     "h": 1075,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRrAAAABXRUJQVlA4WAoAAAAQAAAABAAADwAAQUxQSEoAAAABYFtr24uvkkNlCscQjikYUcsAqlRSWUD1/38ph1eeISKCPOYSBfCJIoQkt+gcytFIWoXaTrAi4zjQvwQOjD/Di2NHL3BgiBnjKVZQOCBAAAAAsAEAnQEqBQAQAAOAWiWUAuwA81VCEgD+8YmHsbf9icTr/f7NXxe/9UyR+2d/OH7Px4aeipeI4JlNfIjVQAAAAA=="
+    "blur": "data:image/webp;base64,UklGRrAAAABXRUJQVlA4WAoAAAAQAAAABAAADwAAQUxQSEoAAAABYFtr24uvkkNlCscQjikYUcsAqlRSWUD1/38ph1eeISKCPOYSBfCJIoQkt+gcytFIWoXaTrAi4zjQvwQOjD/Di2NHL3BgiBnjKVZQOCBAAAAAsAEAnQEqBQAQAAOAWiWUAuwA81VCEgD+8YmHsbf9icTr/f7NXxe/9UyR+2d/OH7Px4aeipeI4JlNfIjVQAAAAA==",
+    "benefits": [
+      "Support Relax",
+      "Relieve Stress",
+      "Improve Sleep"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60ml/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-super-mushroom-liquid-drops",
@@ -596,7 +948,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 353,
     "h": 1075,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRrAAAABXRUJQVlA4WAoAAAAQAAAABAAADwAAQUxQSEoAAAABYFtr24uvkkNlCscQjikYUcsAqlRSWUD1/38ph1eeISKCPOYSBfCJIoQkt+gcytFIWoXaTrAi4zjQvwQOjD/Di2NHL3BgiBnjKVZQOCBAAAAA0AEAnQEqBQAQAAOAWiWMAuwA83nYbEAA/vGMpDxIFvHZzMdhni1FQksTT1rQydr0bdG7Ziq5YX/HoVtEWYgAAA=="
+    "blur": "data:image/webp;base64,UklGRrAAAABXRUJQVlA4WAoAAAAQAAAABAAADwAAQUxQSEoAAAABYFtr24uvkkNlCscQjikYUcsAqlRSWUD1/38ph1eeISKCPOYSBfCJIoQkt+gcytFIWoXaTrAi4zjQvwQOjD/Di2NHL3BgiBnjKVZQOCBAAAAA0AEAnQEqBQAQAAOAWiWMAuwA83nYbEAA/vGMpDxIFvHZzMdhni1FQksTT1rQydr0bdG7Ziq5YX/HoVtEWYgAAA==",
+    "benefits": [
+      "Support Healthy Immune System",
+      "Support Healthy Cognition",
+      "Support Healthy Brain Circulation"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60ml/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-men-s-multivitamin-tablets-tablet",
@@ -610,7 +971,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 800,
     "h": 1554,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRtAAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFUAAAABcBvbtqoMNOHuUKb14d6HRQw9uDyJ8HNPcl8PETEBsdXJPE7bVIVqM3cWQG7FSI//P8fRKUACyyeFFL6NZp3mQjZgAlbzoQcgAtgn1U9rdzDmuO8CAFZQOCBUAAAA8AEAnQEqCAAQAAOAWiWgAnQBDwRq1h4AAP72DFyyQFwW8+QS/e7jX2xdBrpAWbKdAyj/jDwfKTFwft1IrV0K7Cb0TA/pnQNo9EcTFoOV4aG+w4AA"
+    "blur": "data:image/webp;base64,UklGRtAAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFUAAAABcBvbtqoMNOHuUKb14d6HRQw9uDyJ8HNPcl8PETEBsdXJPE7bVIVqM3cWQG7FSI//P8fRKUACyyeFFL6NZp3mQjZgAlbzoQcgAtgn1U9rdzDmuO8CAFZQOCBUAAAA8AEAnQEqCAAQAAOAWiWgAnQBDwRq1h4AAP72DFyyQFwW8+QS/e7jX2xdBrpAWbKdAyj/jDwfKTFwft1IrV0K7Cb0TA/pnQNo9EcTFoOV4aG+w4AA",
+    "benefits": [
+      "Energy & stamina",
+      "Immune support",
+      "Muscle support"
+    ],
+    "moq": "",
+    "spec": "60 tablets",
+    "specDetail": "Multivitamin tablet formula",
+    "description": ""
   },
   {
     "id": "p-women-s-multivitamin-tablets-tablet",
@@ -624,7 +994,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 800,
     "h": 1554,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRrwAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFQAAAABcBvbtqrM/024O5Rpfbj3wZAx9OBO5Jx7ErSDiJgAbbTY7xZjK+HLorcUQDahUuPzybbaBUhgeKaQwuvu1eHw6vi307s9IAIcLnx5K01m+/18WgVWUDggQgAAALABAJ0BKggAEAADgFolAABc7VzOEgAA/vYMXNVLLiBmPnmfEpru+3GtaiHXjPLvF0BG46Mx0cBwR25v/ifmIsAAAA=="
+    "blur": "data:image/webp;base64,UklGRrwAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFQAAAABcBvbtqrM/024O5Rpfbj3wZAx9OBO5Jx7ErSDiJgAbbTY7xZjK+HLorcUQDahUuPzybbaBUhgeKaQwuvu1eHw6vi307s9IAIcLnx5K01m+/18WgVWUDggQgAAALABAJ0BKggAEAADgFolAABc7VzOEgAA/vYMXNVLLiBmPnmfEpru+3GtaiHXjPLvF0BG46Mx0cBwR25v/ifmIsAAAA==",
+    "benefits": [
+      "Hair, skin & nails",
+      "Immune support",
+      "Bone support"
+    ],
+    "moq": "",
+    "spec": "60 tablets",
+    "specDetail": "Multivitamin tablet formula",
+    "description": ""
   },
   {
     "id": "p-vitamin-d3-k2-softgels-softgel",
@@ -638,7 +1017,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 800,
     "h": 1464,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRuAAAABXRUJQVlA4WAoAAAAQAAAACAAADwAAQUxQSFkAAAABcFvbthLhFlE1tAG5RdABtDHu7vruHZcOImIC3KI7XU67petv+LzxvRoCQeUaAa+8MjQSCklhvgFIApsxX3A6fTN/t5i8m/5jDAEgmO34+hA1B7P5bNCIAQBWUDggYAAAAFACAJ0BKgkAEAADgFoloAJ0fwAYlOYPlqH0AADMnLCc2wFCOKe+SvkRF0/BLcaYRQRJa2774ROQgEIi+CjZ47iEmk2vvbKEUKCCsg+wWZcGEbQH+yvrliyLTht5bHQAAA=="
+    "blur": "data:image/webp;base64,UklGRuAAAABXRUJQVlA4WAoAAAAQAAAACAAADwAAQUxQSFkAAAABcFvbthLhFlE1tAG5RdABtDHu7vruHZcOImIC3KI7XU67petv+LzxvRoCQeUaAa+8MjQSCklhvgFIApsxX3A6fTN/t5i8m/5jDAEgmO34+hA1B7P5bNCIAQBWUDggYAAAAFACAJ0BKgkAEAADgFoloAJ0fwAYlOYPlqH0AADMnLCc2wFCOKe+SvkRF0/BLcaYRQRJa2774ROQgEIi+CjZ47iEmk2vvbKEUKCCsg+wWZcGEbQH+yvrliyLTht5bHQAAA==",
+    "benefits": [
+      "Immune support",
+      "Bone strength",
+      "Heart health"
+    ],
+    "moq": "",
+    "spec": "60 softgels, 5,000 IU",
+    "specDetail": "With vitamin K2 as MK-7",
+    "description": ""
   },
   {
     "id": "p-turmeric-curcumin-capsule",
@@ -652,7 +1040,15 @@ export const CATALOG: CatalogProduct[] = [
     "w": 554,
     "h": 1061,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRsgAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFQAAAABYFpr25L//FtikQGof6TTWcQGse7u8T/fh+sEETEBRAmiKFQJNZZlWUxKNOQcGWEVLAvUerPgsuAy13jArloOS38xlL8pABAB2mQ5bQTLiyPfFQFWUDggTgAAABACAJ0BKggAEAADgFolAE6AIu+bK8syjwAA/BMiFyyM/iN/oTR6Nwxdh5z5UnW5g3JR7jszGc/RJFtCbaIaImH+WXsaPszQnL4wKOAAAA=="
+    "blur": "data:image/webp;base64,UklGRsgAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFQAAAABYFpr25L//FtikQGof6TTWcQGse7u8T/fh+sEETEBRAmiKFQJNZZlWUxKNOQcGWEVLAvUerPgsuAy13jArloOS38xlL8pABAB2mQ5bQTLiyPfFQFWUDggTgAAABACAJ0BKggAEAADgFolAE6AIu+bK8syjwAA/BMiFyyM/iN/oTR6Nwxdh5z5UnW5g3JR7jszGc/RJFtCbaIaImH+WXsaPszQnL4wKOAAAA==",
+    "benefits": [
+      "Immune System Support",
+      "Encourage Proper Joint"
+    ],
+    "moq": "2000 bottles",
+    "spec": "90 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-sea-moss-capsules-capsule",
@@ -666,7 +1062,12 @@ export const CATALOG: CatalogProduct[] = [
     "w": 456,
     "h": 800,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRuQAAABXRUJQVlA4WAoAAAAQAAAACAAADwAAQUxQSGMAAAABcFTbttrke0gspGpQBAlibhVkVBBBszDp+HA/e4iICSDx9d987wNC1tJekWDGKShfBuFeQAKHKJFCSilkUnEHLzMJKSVkWnqKylP56trTNJ7W19WCA+Cib6W7m75/VVd+HkMAVlA4IFoAAADwAQCdASoJABAAA4BaJYwC7AD0Zj9ATIAA/vWBmX+sPQCYC0DDjVsa2KMVk3Lg/Vp35Lm3l+4VLLNbglbeYM3O/5Ixx3ID3g/PPoJL/fGuBudiwpCFUDEe0gA="
+    "blur": "data:image/webp;base64,UklGRuQAAABXRUJQVlA4WAoAAAAQAAAACAAADwAAQUxQSGMAAAABcFTbttrke0gspGpQBAlibhVkVBBBszDp+HA/e4iICSDx9d987wNC1tJekWDGKShfBuFeQAKHKJFCSilkUnEHLzMJKSVkWnqKylP56trTNJ7W19WCA+Cib6W7m75/VVd+HkMAVlA4IFoAAADwAQCdASoJABAAA4BaJYwC7AD0Zj9ATIAA/vWBmX+sPQCYC0DDjVsa2KMVk3Lg/Vp35Lm3l+4VLLNbglbeYM3O/5Ixx3ID3g/PPoJL/fGuBudiwpCFUDEe0gA=",
+    "benefits": [],
+    "moq": "",
+    "spec": "",
+    "specDetail": "",
+    "description": "Includes 15 ingredients such as Turmeric Curcumin Capsules, Bladderwrack capsules, Burdock roots, Chlorophyll and more!"
   },
   {
     "id": "p-melatonin-gummy",
@@ -680,7 +1081,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 571,
     "h": 1050,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRtwAAABXRUJQVlA4WAoAAAAQAAAACAAADwAAQUxQSF8AAAABcFpr29qEaRVcBaeKyhJRcT3VOACpKuaq+jbvF8YJImIC+Gh7uB43IaN9s+pHZBL86YeYsVeEDDTT9xmyLEO2/oCyLCM8nllNdn013MaGlIhS3N5Z/T2Y7o6383biAABWUDggVgAAABACAJ0BKgkAEAADgFolmAJ0ARAS7FcTzsAA/vAaOuwcgL8KLIX78dM3t95AU5t2yYMlENcMP1Qgp5CKDRSJVg1mZcE945sSsAnm2M6Zq2emJ8/lQAAA"
+    "blur": "data:image/webp;base64,UklGRtwAAABXRUJQVlA4WAoAAAAQAAAACAAADwAAQUxQSF8AAAABcFpr29qEaRVcBaeKyhJRcT3VOACpKuaq+jbvF8YJImIC+Gh7uB43IaN9s+pHZBL86YeYsVeEDDTT9xmyLEO2/oCyLCM8nllNdn013MaGlIhS3N5Z/T2Y7o6383biAABWUDggVgAAABACAJ0BKgkAEAADgFolmAJ0ARAS7FcTzsAA/vAaOuwcgL8KLIX78dM3t95AU5t2yYMlENcMP1Qgp5CKDRSJVg1mZcE945sSsAnm2M6Zq2emJ8/lQAAA",
+    "benefits": [
+      "Promotes Relaxation",
+      "Wake Up Refreshed",
+      "Support Quality Sleep"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-shilajit-gummy",
@@ -694,7 +1104,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 551,
     "h": 1076,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRtwAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSGAAAAABcFzbttLgFUCPzJiRpCa3YTr4KcHd3eW+b6+IiJgAJxWLRS9z3amUUm4ip4P/H10nLhNA9aQjISVkZw2SkrCdSEuuZtx6zm2X3H7FHTbccceddgARcL5J9pWLwXzeFyVWUDggVgAAAPABAJ0BKggAEAADgFolpAAPjM7TbgpqAAD8O7HncZafI4HkIAl+Ev92bd330l1YDfLi92EAm/V12gZ+ijpODb/ftzD4Qy5Ptvs0HI0ZwLi/bup8jAAA"
+    "blur": "data:image/webp;base64,UklGRtwAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSGAAAAABcFzbttLgFUCPzJiRpCa3YTr4KcHd3eW+b6+IiJgAJxWLRS9z3amUUm4ip4P/H10nLhNA9aQjISVkZw2SkrCdSEuuZtx6zm2X3H7FHTbccceddgARcL5J9pWLwXzeFyVWUDggVgAAAPABAJ0BKggAEAADgFolpAAPjM7TbgpqAAD8O7HncZafI4HkIAl+Ev92bd330l1YDfLi92EAm/V12gZ+ijpODb/ftzD4Qy5Ptvs0HI0ZwLi/bup8jAAA",
+    "benefits": [
+      "Promote Healthy Metabolism",
+      "Promote Brain Health",
+      "Support Immune Function"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-maca-gummies-gummy",
@@ -708,7 +1127,14 @@ export const CATALOG: CatalogProduct[] = [
     "w": 551,
     "h": 1076,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRtgAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSGAAAAABcFzbttLgFUCPzJiRpCa3YTr4KcHd3eW+b6+IiJgAJxWLRS9z3amUUm4ip4P/H10nLhNA9aQjISVkZw2SkrCdSEuuZtx6zm2X3H7FHTbccceddgARcL5J9pWLwXzeFyVWUDggUgAAALABAJ0BKggAEAADgFolkAJ0APNSugAA9r90fKlBtanLN58ND1TGPXRsauP0u7YjwcbJcS9lA13oWKo/gX2fXaaNOb5kIH3J3wEDXS02W69UQAA="
+    "blur": "data:image/webp;base64,UklGRtgAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSGAAAAABcFzbttLgFUCPzJiRpCa3YTr4KcHd3eW+b6+IiJgAJxWLRS9z3amUUm4ip4P/H10nLhNA9aQjISVkZw2SkrCdSEuuZtx6zm2X3H7FHTbccceddgARcL5J9pWLwXzeFyVWUDggUgAAALABAJ0BKggAEAADgFolkAJ0APNSugAA9r90fKlBtanLN58ND1TGPXRsauP0u7YjwcbJcS9lA13oWKo/gX2fXaaNOb5kIH3J3wEDXS02W69UQAA=",
+    "benefits": [
+      "Overall Health And Mood Support"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-moringa-leaf-capsule",
@@ -722,7 +1148,15 @@ export const CATALOG: CatalogProduct[] = [
     "w": 554,
     "h": 1061,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRsIAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFQAAAABYFpr25L//FtikQGof6TTWcQGse7u8T/fh+sEETEBRAmiKFQJNZZlWUxKNOQcGWEVLAvUerPgsuAy13jArloOS38xlL8pABAB2mQ5bQTLiyPfFQFWUDggSAAAABACAJ0BKggAEAADgFoljALsAPRmpVNIL0gA/BMiFyyQNQxBl9NaRWb7aor6vnZJDISvBGjpIZoymjWQlsxgt6m1qH62o70AAA=="
+    "blur": "data:image/webp;base64,UklGRsIAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFQAAAABYFpr25L//FtikQGof6TTWcQGse7u8T/fh+sEETEBRAmiKFQJNZZlWUxKNOQcGWEVLAvUerPgsuAy13jArloOS38xlL8pABAB2mQ5bQTLiyPfFQFWUDggSAAAABACAJ0BKggAEAADgFoljALsAPRmpVNIL0gA/BMiFyyQNQxBl9NaRWb7aor6vnZJDISvBGjpIZoymjWQlsxgt6m1qH62o70AAA==",
+    "benefits": [
+      "Support Healthy Energy Levels",
+      "Support Healthy Joints"
+    ],
+    "moq": "2000 bottles",
+    "spec": "120 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-ashwagandha-capsule",
@@ -736,7 +1170,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 554,
     "h": 1061,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRsYAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFQAAAABYFpr25L//FtikQGof6TTWcQGse7u8T/fh+sEETEBRAmiKFQJNZZlWUxKNOQcGWEVLAvUerPgsuAy13jArloOS38xlL8pABAB2mQ5bQTLiyPfFQFWUDggTAAAAPABAJ0BKggAEAADgFollAACm2oI5/kJiAD8EyIXLIz+JO7LdJ+TkEHnH9Oy/bKTlKDs3i06KZtd+MWSqs1Suiuf1NAw9Z09gNO4AAA="
+    "blur": "data:image/webp;base64,UklGRsYAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFQAAAABYFpr25L//FtikQGof6TTWcQGse7u8T/fh+sEETEBRAmiKFQJNZZlWUxKNOQcGWEVLAvUerPgsuAy13jArloOS38xlL8pABAB2mQ5bQTLiyPfFQFWUDggTAAAAPABAJ0BKggAEAADgFollAACm2oI5/kJiAD8EyIXLIz+JO7LdJ+TkEHnH9Oy/bKTlKDs3i06KZtd+MWSqs1Suiuf1NAw9Z09gNO4AAA=",
+    "benefits": [
+      "Support Relax",
+      "Relieve Stress",
+      "Improve Sleep"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-shilajit-liquid-drops",
@@ -750,7 +1193,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 353,
     "h": 1075,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRqgAAABXRUJQVlA4WAoAAAAQAAAABAAADwAAQUxQSEoAAAABYFtr24uvkkNlCscQjikYUcsAqlRSWUD1/38ph1eeISKCPOYSBfCJIoQkt+gcytFIWoXaTrAi4zjQvwQOjD/Di2NHL3BgiBnjKVZQOCA4AAAAcAEAnQEqBQAQAAOAWiWkAAKZ40AA/vMCDL7cqv+5W+u0Roh3Vm2aVseE+x93gL+5r9vh9Mo7gAA="
+    "blur": "data:image/webp;base64,UklGRqgAAABXRUJQVlA4WAoAAAAQAAAABAAADwAAQUxQSEoAAAABYFtr24uvkkNlCscQjikYUcsAqlRSWUD1/38ph1eeISKCPOYSBfCJIoQkt+gcytFIWoXaTrAi4zjQvwQOjD/Di2NHL3BgiBnjKVZQOCA4AAAAcAEAnQEqBQAQAAOAWiWkAAKZ40AA/vMCDL7cqv+5W+u0Roh3Vm2aVseE+x93gL+5r9vh9Mo7gAA=",
+    "benefits": [
+      "Promote Healthy Metabolism",
+      "Promote Brain Health",
+      "Support Immune Function"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60ml/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-whey-protein-chocolate-powder",
@@ -764,7 +1216,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 625,
     "h": 1062,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRrYAAABXRUJQVlA4WAoAAAAQAAAACAAADwAAQUxQSEAAAAABcBXJthppDSlhY5wIYGaOgAtZ+lsBETEBahS3Q5tEls3ffQeBiACjnYmZie9f1/84EIkI8Wr5+yQE5TgPpa8AVlA4IFAAAACQAQCdASoJABAAA4BaJQAAXOsqIiAA/uH0aUpIbWmrbKFmpQ7rXEjyYi3bF2l6+i2G5a5zP8pKIsHT2yb6Q0vEMl7tv3IA02qEBzcAQQAAAA=="
+    "blur": "data:image/webp;base64,UklGRrYAAABXRUJQVlA4WAoAAAAQAAAACAAADwAAQUxQSEAAAAABcBXJthppDSlhY5wIYGaOgAtZ+lsBETEBahS3Q5tEls3ffQeBiACjnYmZie9f1/84EIkI8Wr5+yQE5TgPpa8AVlA4IFAAAACQAQCdASoJABAAA4BaJQAAXOsqIiAA/uH0aUpIbWmrbKFmpQ7rXEjyYi3bF2l6+i2G5a5zP8pKIsHT2yb6Q0vEMl7tv3IA02qEBzcAQQAAAA==",
+    "benefits": [
+      "Support Muscle Recovery",
+      "Workout Support",
+      "Helps Build And Maintain Muscle"
+    ],
+    "moq": "2000 bottles",
+    "spec": "453.6g/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-fiber-gummies-gummy",
@@ -778,7 +1239,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 551,
     "h": 1076,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRtgAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSGAAAAABcFzbttLgFUCPzJiRpCa3YTr4KcHd3eW+b6+IiJgAJxWLRS9z3amUUm4ip4P/H10nLhNA9aQjISVkZw2SkrCdSEuuZtx6zm2X3H7FHTbccceddgARcL5J9pWLwXzeFyVWUDggUgAAAPABAJ0BKggAEAADgFolqAJ0AR9tBI1ogAD2v3R8qUG1qcs69rPwCIjXbghLx5jQ6QrKkc/ckKsoHbh71R8LQ29MZrCyRBf4c4ve3vOFoFhqAAA="
+    "blur": "data:image/webp;base64,UklGRtgAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSGAAAAABcFzbttLgFUCPzJiRpCa3YTr4KcHd3eW+b6+IiJgAJxWLRS9z3amUUm4ip4P/H10nLhNA9aQjISVkZw2SkrCdSEuuZtx6zm2X3H7FHTbccceddgARcL5J9pWLwXzeFyVWUDggUgAAAPABAJ0BKggAEAADgFolqAJ0AR9tBI1ogAD2v3R8qUG1qcs69rPwCIjXbghLx5jQ6QrKkc/ckKsoHbh71R8LQ29MZrCyRBf4c4ve3vOFoFhqAAA=",
+    "benefits": [
+      "Regularity Support",
+      "Gut Flora Support",
+      "Digestion Support"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-anti-aging-gummy",
@@ -792,7 +1262,15 @@ export const CATALOG: CatalogProduct[] = [
     "w": 551,
     "h": 1076,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRtwAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSGAAAAABcFzbttLgFUCPzJiRpCa3YTr4KcHd3eW+b6+IiJgAJxWLRS9z3amUUm4ip4P/H10nLhNA9aQjISVkZw2SkrCdSEuuZtx6zm2X3H7FHTbccceddgARcL5J9pWLwXzeFyVWUDggVgAAANABAJ0BKggAEAADgFolqAJ0AR9qgRsAAPa/dHypQbWpyzr2sJm4Tzp2L0eWsJf+l/ite23CdnWYP4FKM6HsTZI/eZnH4cV06kdcViygdUQ/EI0rMAAA"
+    "blur": "data:image/webp;base64,UklGRtwAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSGAAAAABcFzbttLgFUCPzJiRpCa3YTr4KcHd3eW+b6+IiJgAJxWLRS9z3amUUm4ip4P/H10nLhNA9aQjISVkZw2SkrCdSEuuZtx6zm2X3H7FHTbccceddgARcL5J9pWLwXzeFyVWUDggVgAAANABAJ0BKggAEAADgFolqAJ0AR9qgRsAAPa/dHypQbWpyzr2sJm4Tzp2L0eWsJf+l/ite23CdnWYP4FKM6HsTZI/eZnH4cV06kdcViygdUQ/EI0rMAAA",
+    "benefits": [
+      "Antioxidant Effect",
+      "Skin Care & Elasticity Support"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-l-carnitine-gummy",
@@ -806,7 +1284,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 551,
     "h": 1076,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRtYAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSGAAAAABcFzbttLgFUCPzJiRpCa3YTr4KcHd3eW+b6+IiJgAJxWLRS9z3amUUm4ip4P/H10nLhNA9aQjISVkZw2SkrCdSEuuZtx6zm2X3H7FHTbccceddgARcL5J9pWLwXzeFyVWUDggUAAAABACAJ0BKggAEAADgFolsAJ0AR9uT+VIluAA9r90fKlDP/cvCamsIhLTKzyXze4gv9xcwpHcq1ShaoziFjOImXwdXWzUJoowQn/O5PLGSQAA"
+    "blur": "data:image/webp;base64,UklGRtYAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSGAAAAABcFzbttLgFUCPzJiRpCa3YTr4KcHd3eW+b6+IiJgAJxWLRS9z3amUUm4ip4P/H10nLhNA9aQjISVkZw2SkrCdSEuuZtx6zm2X3H7FHTbccceddgARcL5J9pWLwXzeFyVWUDggUAAAABACAJ0BKggAEAADgFolsAJ0AR9uT+VIluAA9r90fKlDP/cvCamsIhLTKzyXze4gv9xcwpHcq1ShaoziFjOImXwdXWzUJoowQn/O5PLGSQAA",
+    "benefits": [
+      "Support Energy & Focus",
+      "Brain Support Supplement",
+      "Immune Health"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-vitamin-c-gummy",
@@ -820,7 +1307,17 @@ export const CATALOG: CatalogProduct[] = [
     "w": 551,
     "h": 1076,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRtwAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSGAAAAABcFzbttLgFUCPzJiRpCa3YTr4KcHd3eW+b6+IiJgAJxWLRS9z3amUUm4ip4P/H10nLhNA9aQjISVkZw2SkrCdSEuuZtx6zm2X3H7FHTbccceddgARcL5J9pWLwXzeFyVWUDggVgAAAPABAJ0BKggAEAADgFolsAJ0AR9q39k0AAD2v3R8qUG1qcs69rPwCIjXbghLx5jpWrldxvx0006/Z2BumgvYSdUtcvwens66eeLki/tONgpZa4gsgAAA"
+    "blur": "data:image/webp;base64,UklGRtwAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSGAAAAABcFzbttLgFUCPzJiRpCa3YTr4KcHd3eW+b6+IiJgAJxWLRS9z3amUUm4ip4P/H10nLhNA9aQjISVkZw2SkrCdSEuuZtx6zm2X3H7FHTbccceddgARcL5J9pWLwXzeFyVWUDggVgAAAPABAJ0BKggAEAADgFolsAJ0AR9q39k0AAD2v3R8qUG1qcs69rPwCIjXbghLx5jpWrldxvx0006/Z2BumgvYSdUtcvwens66eeLki/tONgpZa4gsgAAA",
+    "benefits": [
+      "500 mg of Vitamin C Per Serving",
+      "Support Immune Cells and Immune Function",
+      "Provide Antioxidant Protection",
+      "Highly Bioavailable Ascorbic Acid"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-multivitamins-gummy",
@@ -834,7 +1331,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 551,
     "h": 1076,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRuAAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSGAAAAABcFzbttLgFUCPzJiRpCa3YTr4KcHd3eW+b6+IiJgAJxWLRS9z3amUUm4ip4P/H10nLhNA9aQjISVkZw2SkrCdSEuuZtx6zm2X3H7FHTbccceddgARcL5J9pWLwXzeFyVWUDggWgAAAJABAJ0BKggAEAADgFoloAJ0APNMoAD2v3R8qUG1qcs3nw0PVMY9dGsrGvuzjV+BSxEfOXTcjRuDz5S8dFD5H2spkiDB91xAOKw6rztdcMPmDz4LLf5N+iYAAA=="
+    "blur": "data:image/webp;base64,UklGRuAAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSGAAAAABcFzbttLgFUCPzJiRpCa3YTr4KcHd3eW+b6+IiJgAJxWLRS9z3amUUm4ip4P/H10nLhNA9aQjISVkZw2SkrCdSEuuZtx6zm2X3H7FHTbccceddgARcL5J9pWLwXzeFyVWUDggWgAAAJABAJ0BKggAEAADgFoloAJ0APNMoAD2v3R8qUG1qcs3nw0PVMY9dGsrGvuzjV+BSxEfOXTcjRuDz5S8dFD5H2spkiDB91xAOKw6rztdcMPmDz4LLf5N+iYAAA==",
+    "benefits": [
+      "Immune Health Support",
+      "Enhanced Energy Support",
+      "Mood Support"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-tongkat-ali-gummy",
@@ -848,7 +1354,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 551,
     "h": 1076,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRtoAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSGAAAAABcFzbttLgFUCPzJiRpCa3YTr4KcHd3eW+b6+IiJgAJxWLRS9z3amUUm4ip4P/H10nLhNA9aQjISVkZw2SkrCdSEuuZtx6zm2X3H7FHTbccceddgARcL5J9pWLwXzeFyVWUDggVAAAALABAJ0BKggAEAADgFoliAJ0AQ5g10AA9r8T1Uf+53pXvVa0a4x+6NfLxaDS6BEPiBFj2fO1D96tjHNJoPtIee3MWMWH25jO0nucRYKIAsVDnYOAAA=="
+    "blur": "data:image/webp;base64,UklGRtoAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSGAAAAABcFzbttLgFUCPzJiRpCa3YTr4KcHd3eW+b6+IiJgAJxWLRS9z3amUUm4ip4P/H10nLhNA9aQjISVkZw2SkrCdSEuuZtx6zm2X3H7FHTbccceddgARcL5J9pWLwXzeFyVWUDggVAAAALABAJ0BKggAEAADgFoliAJ0AQ5g10AA9r8T1Uf+53pXvVa0a4x+6NfLxaDS6BEPiBFj2fO1D96tjHNJoPtIee3MWMWH25jO0nucRYKIAsVDnYOAAA==",
+    "benefits": [
+      "Reduce Stress Impact on The Body",
+      "Contribute to muscle growth",
+      "Strengthen The Immune System"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-probiotic-gummy",
@@ -862,7 +1377,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 551,
     "h": 1076,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRtQAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSGAAAAABcFzbttLgFUCPzJiRpCa3YTr4KcHd3eW+b6+IiJgAJxWLRS9z3amUUm4ip4P/H10nLhNA9aQjISVkZw2SkrCdSEuuZtx6zm2X3H7FHTbccceddgARcL5J9pWLwXzeFyVWUDggTgAAAPABAJ0BKggAEAADgFolsAJ0AR9uTyBaAAD2v3R8qUG1qcs69rPwCIjXbghLQ+FnLv49UNxcHpHycMvYX815/u6dgVmgeFjF6Dn3rKAAAA=="
+    "blur": "data:image/webp;base64,UklGRtQAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSGAAAAABcFzbttLgFUCPzJiRpCa3YTr4KcHd3eW+b6+IiJgAJxWLRS9z3amUUm4ip4P/H10nLhNA9aQjISVkZw2SkrCdSEuuZtx6zm2X3H7FHTbccceddgARcL5J9pWLwXzeFyVWUDggTgAAAPABAJ0BKggAEAADgFolsAJ0AR9uTyBaAAD2v3R8qUG1qcs69rPwCIjXbghLQ+FnLv49UNxcHpHycMvYX815/u6dgVmgeFjF6Dn3rKAAAA==",
+    "benefits": [
+      "Support Immune Health",
+      "Broad Bodily Support",
+      "Support Digestive And Mood Health"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-mullein-gummy",
@@ -876,7 +1400,15 @@ export const CATALOG: CatalogProduct[] = [
     "w": 551,
     "h": 1076,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRtgAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSGAAAAABcFzbttLgFUCPzJiRpCa3YTr4KcHd3eW+b6+IiJgAJxWLRS9z3amUUm4ip4P/H10nLhNA9aQjISVkZw2SkrCdSEuuZtx6zm2X3H7FHTbccceddgARcL5J9pWLwXzeFyVWUDggUgAAABACAJ0BKggAEAADgFolsAJ0AR9uBJpXegAA9r90fKlBtanLOvawmbhPOnYvRfVheMtDcKm/LO5Is+IOqs+sKLHkvss6Ntl9HhG52JkpOUYgAAA="
+    "blur": "data:image/webp;base64,UklGRtgAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSGAAAAABcFzbttLgFUCPzJiRpCa3YTr4KcHd3eW+b6+IiJgAJxWLRS9z3amUUm4ip4P/H10nLhNA9aQjISVkZw2SkrCdSEuuZtx6zm2X3H7FHTbccceddgARcL5J9pWLwXzeFyVWUDggUgAAABACAJ0BKggAEAADgFolsAJ0AR9uBJpXegAA9r90fKlBtanLOvawmbhPOnYvRfVheMtDcKm/LO5Is+IOqs+sKLHkvss6Ntl9HhG52JkpOUYgAAA=",
+    "benefits": [
+      "Support Immune System",
+      "Boost Respiratory Health"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-turmeric-ginger-gummy",
@@ -890,7 +1422,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 551,
     "h": 1076,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRuAAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSGAAAAABcFzbttLgFUCPzJiRpCa3YTr4KcHd3eW+b6+IiJgAJxWLRS9z3amUUm4ip4P/H10nLhNA9aQjISVkZw2SkrCdSEuuZtx6zm2X3H7FHTbccceddgARcL5J9pWLwXzeFyVWUDggWgAAAPABAJ0BKggAEAADgFolsAJ0fwAVr7FUkAD2v3R8qUG1qcs3nw0PVMY9dGzLsmaR/J0XYV5NY9cOeeQ5uRSveveOa63LeqiyXgJ7PPiT0FlxUhUss3OoawwAAA=="
+    "blur": "data:image/webp;base64,UklGRuAAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSGAAAAABcFzbttLgFUCPzJiRpCa3YTr4KcHd3eW+b6+IiJgAJxWLRS9z3amUUm4ip4P/H10nLhNA9aQjISVkZw2SkrCdSEuuZtx6zm2X3H7FHTbccceddgARcL5J9pWLwXzeFyVWUDggWgAAAPABAJ0BKggAEAADgFolsAJ0fwAVr7FUkAD2v3R8qUG1qcs3nw0PVMY9dGzLsmaR/J0XYV5NY9cOeeQ5uRSveveOa63LeqiyXgJ7PPiT0FlxUhUss3OoawwAAA==",
+    "benefits": [
+      "Immune Support",
+      "Support Healthy Skin",
+      "Support Joint Health"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-caffeine-gummy",
@@ -904,7 +1445,15 @@ export const CATALOG: CatalogProduct[] = [
     "w": 551,
     "h": 1075,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRuIAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSGAAAAABcFvbthIBoefUR0hECZTC5JNNAe6Tu2vkLvfd5NFDREyAmfR3m3Zk2EeSnJhWGf8/ikZYEoCFoEaQf2YPCCkYX0lSOLhro5zJQ5u9tPlHW+SsvhARYE39kPZn2/W4HQNWUDggXAAAAFACAJ0BKggAEAADgFolsAJ0fwAVzF/7vtlUAAD9xM5Aq9vVS0kGUHPHeM7KlBSjyHIntRyUbCTqaf7OESCIoalUVcbKmg8VxxB7J2Z8PLDx15ncT2j3cMi5FwAA"
+    "blur": "data:image/webp;base64,UklGRuIAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSGAAAAABcFvbthIBoefUR0hECZTC5JNNAe6Tu2vkLvfd5NFDREyAmfR3m3Zk2EeSnJhWGf8/ikZYEoCFoEaQf2YPCCkYX0lSOLhro5zJQ5u9tPlHW+SsvhARYE39kPZn2/W4HQNWUDggXAAAAFACAJ0BKggAEAADgFolsAJ0fwAVzF/7vtlUAAD9xM5Aq9vVS0kGUHPHeM7KlBSjyHIntRyUbCTqaf7OESCIoalUVcbKmg8VxxB7J2Z8PLDx15ncT2j3cMi5FwAA",
+    "benefits": [
+      "Promotes Attention",
+      "Supports Long-Term Memory"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-beet-root-gummy",
@@ -918,7 +1467,15 @@ export const CATALOG: CatalogProduct[] = [
     "w": 551,
     "h": 1076,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRuYAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSGAAAAABcFzbttLgFUCPzJiRpCa3YTr4KcHd3eW+b6+IiJgAJxWLRS9z3amUUm4ip4P/H10nLhNA9aQjISVkZw2SkrCdSEuuZtx6zm2X3H7FHTbccceddgARcL5J9pWLwXzeFyVWUDggYAAAANABAJ0BKggAEAADgFolsAJ0R/+BtlNoAPa/dHyo5PXuXgy78Y51AdWoSXq538zq1YLjy8Lwd4AYOMH3cpH6LzxUYmbR2fgRvln+mpeVONb3IDbOE7sLflq/JTwQv7boAA=="
+    "blur": "data:image/webp;base64,UklGRuYAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSGAAAAABcFzbttLgFUCPzJiRpCa3YTr4KcHd3eW+b6+IiJgAJxWLRS9z3amUUm4ip4P/H10nLhNA9aQjISVkZw2SkrCdSEuuZtx6zm2X3H7FHTbccceddgARcL5J9pWLwXzeFyVWUDggYAAAANABAJ0BKggAEAADgFolsAJ0R/+BtlNoAPa/dHyo5PXuXgy78Y51AdWoSXq538zq1YLjy8Lwd4AYOMH3cpH6LzxUYmbR2fgRvln+mpeVONb3IDbOE7sLflq/JTwQv7boAA==",
+    "benefits": [
+      "Support Healthy Circulation",
+      "Increase Nitric Oxide"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-omega-3-dha-gummy",
@@ -932,7 +1489,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 551,
     "h": 1076,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRt4AAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSGAAAAABcFzbttLgFUCPzJiRpCa3YTr4KcHd3eW+b6+IiJgAJxWLRS9z3amUUm4ip4P/H10nLhNA9aQjISVkZw2SkrCdSEuuZtx6zm2X3H7FHTbccceddgARcL5J9pWLwXzeFyVWUDggWAAAANABAJ0BKggAEAADgFolsAJ0AQ8FDcUIAPa/dHypQz/3Lw+dEvACxkKrTC+b3EGCwuhUywU9ykELmU1s3XGKLTBaPMOKgY44Bb/3654J2ooLlW0mkWGoAAA="
+    "blur": "data:image/webp;base64,UklGRt4AAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSGAAAAABcFzbttLgFUCPzJiRpCa3YTr4KcHd3eW+b6+IiJgAJxWLRS9z3amUUm4ip4P/H10nLhNA9aQjISVkZw2SkrCdSEuuZtx6zm2X3H7FHTbccceddgARcL5J9pWLwXzeFyVWUDggWAAAANABAJ0BKggAEAADgFolsAJ0AQ8FDcUIAPa/dHypQz/3Lw+dEvACxkKrTC+b3EGCwuhUywU9ykELmU1s3XGKLTBaPMOKgY44Bb/3654J2ooLlW0mkWGoAAA=",
+    "benefits": [
+      "Support Healthy Brain",
+      "Function & Heart Health",
+      "Support Healthy Eyes, Brain & Bones"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-super-mushroom-gummy",
@@ -946,7 +1512,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 551,
     "h": 1076,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRt4AAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSGAAAAABcFzbttLgFUCPzJiRpCa3YTr4KcHd3eW+b6+IiJgAJxWLRS9z3amUUm4ip4P/H10nLhNA9aQjISVkZw2SkrCdSEuuZtx6zm2X3H7FHTbccceddgARcL5J9pWLwXzeFyVWUDggWAAAAPABAJ0BKggAEAADgFolsAJ0fwAVr71cgAD2v3R8qUG1qcs3nw0PVMY9dGzLsmZ7d8yZJTR85q0bRFg9VmEGu3yRkRQef9BvjLMAYRgbgU4jgxo80qAAAAA="
+    "blur": "data:image/webp;base64,UklGRt4AAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSGAAAAABcFzbttLgFUCPzJiRpCa3YTr4KcHd3eW+b6+IiJgAJxWLRS9z3amUUm4ip4P/H10nLhNA9aQjISVkZw2SkrCdSEuuZtx6zm2X3H7FHTbccceddgARcL5J9pWLwXzeFyVWUDggWAAAAPABAJ0BKggAEAADgFolsAJ0fwAVr71cgAD2v3R8qUG1qcs3nw0PVMY9dGzLsmZ7d8yZJTR85q0bRFg9VmEGu3yRkRQef9BvjLMAYRgbgU4jgxo80qAAAAA=",
+    "benefits": [
+      "Support Healthy Immune System",
+      "Support Healthy Cognition",
+      "Support Healthy Brain Circulation"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-keto-acv-gummy",
@@ -960,7 +1535,14 @@ export const CATALOG: CatalogProduct[] = [
     "w": 551,
     "h": 1076,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRuAAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSGAAAAABcFzbttLgFUCPzJiRpCa3YTr4KcHd3eW+b6+IiJgAJxWLRS9z3amUUm4ip4P/H10nLhNA9aQjISVkZw2SkrCdSEuuZtx6zm2X3H7FHTbccceddgARcL5J9pWLwXzeFyVWUDggWgAAALABAJ0BKggAEAADgFolsALsAPNVyjAA9r90fKlBtapR6c+Gh6pjHro1lWU57d2P8xQvgwS8IBgznfeG3Uj38iivmyytWYZIMWFC99XgswUiJ1DKf8EaKLAAAA=="
+    "blur": "data:image/webp;base64,UklGRuAAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSGAAAAABcFzbttLgFUCPzJiRpCa3YTr4KcHd3eW+b6+IiJgAJxWLRS9z3amUUm4ip4P/H10nLhNA9aQjISVkZw2SkrCdSEuuZtx6zm2X3H7FHTbccceddgARcL5J9pWLwXzeFyVWUDggWgAAALABAJ0BKggAEAADgFolsALsAPNVyjAA9r90fKlBtapR6c+Gh6pjHro1lWU57d2P8xQvgwS8IBgznfeG3Uj38iivmyytWYZIMWFC99XgswUiJ1DKf8EaKLAAAA==",
+    "benefits": [
+      "Boosts Energy"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-calcium-magnesium-zinc-gummy",
@@ -974,7 +1556,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 551,
     "h": 1076,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRtwAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSGAAAAABcFzbttLgFUCPzJiRpCa3YTr4KcHd3eW+b6+IiJgAJxWLRS9z3amUUm4ip4P/H10nLhNA9aQjISVkZw2SkrCdSEuuZtx6zm2X3H7FHTbccceddgARcL5J9pWLwXzeFyVWUDggVgAAAJABAJ0BKggAEAADgFolsAJ0APNOHAD2v3R8qUG1qcs3nw0PVMY9dGsqynPbzByBUIcuzE4NjtnPi+q+h8GKraZ03dE8sKFyUBIQSeiK2G57R+43QAAA"
+    "blur": "data:image/webp;base64,UklGRtwAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSGAAAAABcFzbttLgFUCPzJiRpCa3YTr4KcHd3eW+b6+IiJgAJxWLRS9z3amUUm4ip4P/H10nLhNA9aQjISVkZw2SkrCdSEuuZtx6zm2X3H7FHTbccceddgARcL5J9pWLwXzeFyVWUDggVgAAAJABAJ0BKggAEAADgFolsAJ0APNOHAD2v3R8qUG1qcs3nw0PVMY9dGsqynPbzByBUIcuzE4NjtnPi+q+h8GKraZ03dE8sKFyUBIQSeiK2G57R+43QAAA",
+    "benefits": [
+      "Support Bones & Teeth",
+      "Support Muscle Health",
+      "Immune Booster"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-activated-charcoal-gummy",
@@ -988,7 +1579,14 @@ export const CATALOG: CatalogProduct[] = [
     "w": 551,
     "h": 1076,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRtoAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSGAAAAABcFzbttLgFUCPzJiRpCa3YTr4KcHd3eW+b6+IiJgAJxWLRS9z3amUUm4ip4P/H10nLhNA9aQjISVkZw2SkrCdSEuuZtx6zm2X3H7FHTbccceddgARcL5J9pWLwXzeFyVWUDggVAAAABACAJ0BKggAEAADgFolpAAPjk7TbrTqTgAA9r90eqcy9aachzxZckRBcbGgpuiRX4f7x/fNy4okFI3kx25sn/wcq+1iRbuXScUC9ePnYifxahYAAA=="
+    "blur": "data:image/webp;base64,UklGRtoAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSGAAAAABcFzbttLgFUCPzJiRpCa3YTr4KcHd3eW+b6+IiJgAJxWLRS9z3amUUm4ip4P/H10nLhNA9aQjISVkZw2SkrCdSEuuZtx6zm2X3H7FHTbccceddgARcL5J9pWLwXzeFyVWUDggVAAAABACAJ0BKggAEAADgFolpAAPjk7TbrTqTgAA9r90eqcy9aachzxZckRBcbGgpuiRX4f7x/fNy4okFI3kx25sn/wcq+1iRbuXScUC9ePnYifxahYAAA==",
+    "benefits": [
+      "Gut & Oral Health"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-black-seed-oil-gummy",
@@ -1002,7 +1600,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 551,
     "h": 1076,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRtgAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSGAAAAABcFzbttLgFUCPzJiRpCa3YTr4KcHd3eW+b6+IiJgAJxWLRS9z3amUUm4ip4P/H10nLhNA9aQjISVkZw2SkrCdSEuuZtx6zm2X3H7FHTbccceddgARcL5J9pWLwXzeFyVWUDggUgAAAJABAJ0BKggAEAADgFolpAACmfxpAAD2v3R6qMDZ5R6c+GiAIJZ+kqeFMz2qwrYiz/jH8ylGEh492IZCmmpL1gSbJK3BRNZJpjSTZpDDhWwmAAA="
+    "blur": "data:image/webp;base64,UklGRtgAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSGAAAAABcFzbttLgFUCPzJiRpCa3YTr4KcHd3eW+b6+IiJgAJxWLRS9z3amUUm4ip4P/H10nLhNA9aQjISVkZw2SkrCdSEuuZtx6zm2X3H7FHTbccceddgARcL5J9pWLwXzeFyVWUDggUgAAAJABAJ0BKggAEAADgFolpAACmfxpAAD2v3R6qMDZ5R6c+GiAIJZ+kqeFMz2qwrYiz/jH8ylGEh492IZCmmpL1gSbJK3BRNZJpjSTZpDDhWwmAAA=",
+    "benefits": [
+      "Cardiovascular Health",
+      "Joint Comfort & Mobility",
+      "Radiant Hair & Skin"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-berberine-gummy",
@@ -1016,7 +1623,15 @@ export const CATALOG: CatalogProduct[] = [
     "w": 551,
     "h": 1076,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRuIAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSGAAAAABcFzbttLgFUCPzJiRpCa3YTr4KcHd3eW+b6+IiJgAJxWLRS9z3amUUm4ip4P/H10nLhNA9aQjISVkZw2SkrCdSEuuZtx6zm2X3H7FHTbccceddgARcL5J9pWLwXzeFyVWUDggXAAAALABAJ0BKggAEAADgFolsALsAPMuhVAA9r90fKlBtapR6c+Gh6pjHro1lWU5+adj7FM9uy//wboHBkd3BV/LNniebiJ5EKyGbeSyjxFxK5ttkYnQn5QJ2PnFAAAA"
+    "blur": "data:image/webp;base64,UklGRuIAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSGAAAAABcFzbttLgFUCPzJiRpCa3YTr4KcHd3eW+b6+IiJgAJxWLRS9z3amUUm4ip4P/H10nLhNA9aQjISVkZw2SkrCdSEuuZtx6zm2X3H7FHTbccceddgARcL5J9pWLwXzeFyVWUDggXAAAALABAJ0BKggAEAADgFolsALsAPMuhVAA9r90fKlBtapR6c+Gh6pjHro1lWU5+adj7FM9uy//wboHBkd3BV/LNniebiJ5EKyGbeSyjxFxK5ttkYnQn5QJ2PnFAAAA",
+    "benefits": [
+      "Highly Efficient",
+      "Wholesome and Flavorful"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-soursop-gummy",
@@ -1030,7 +1645,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 551,
     "h": 1076,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRtwAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSGAAAAABcFzbttLgFUCPzJiRpCa3YTr4KcHd3eW+b6+IiJgAJxWLRS9z3amUUm4ip4P/H10nLhNA9aQjISVkZw2SkrCdSEuuZtx6zm2X3H7FHTbccceddgARcL5J9pWLwXzeFyVWUDggVgAAADACAJ0BKggAEAADgFolsAJ0AR9ua+fgLPq8APa/dHypQbWpyzr2sJm4Tzp2L0dwYzYuOYmdBmfzghVHOW+1uis3VUAhZ+z4AqUWXtssd+8GW71mwAAA"
+    "blur": "data:image/webp;base64,UklGRtwAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSGAAAAABcFzbttLgFUCPzJiRpCa3YTr4KcHd3eW+b6+IiJgAJxWLRS9z3amUUm4ip4P/H10nLhNA9aQjISVkZw2SkrCdSEuuZtx6zm2X3H7FHTbccceddgARcL5J9pWLwXzeFyVWUDggVgAAADACAJ0BKggAEAADgFolsAJ0AR9ua+fgLPq8APa/dHypQbWpyzr2sJm4Tzp2L0dwYzYuOYmdBmfzghVHOW+1uis3VUAhZ+z4AqUWXtssd+8GW71mwAAA",
+    "benefits": [
+      "Antioxidant Properties",
+      "Aid Digestion",
+      "Boost Immunity"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-biotin-gummy",
@@ -1044,7 +1668,17 @@ export const CATALOG: CatalogProduct[] = [
     "w": 551,
     "h": 1075,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRtYAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFsAAAABcFzbtprESkiTPk1THpwWPiW4+wxmue8ijx4iYgKswBwOs9R2diR59qwBug5Ty88FYOEPCBJsLhBScNryh4eddjxo55N2PWu365+b9rgDIsDjSfWVmcV+PzcZAFZQOCBUAAAA8AEAnQEqCAAQAAOAWiWwAnQA9JV1dXwAAPa/dHypQbWpyzkfzwxzqA6tQp5D0agQuwU/sA8Csf3swR5OVAR08sJJhWT2bODIbsu5mN784QKXb4AA"
+    "blur": "data:image/webp;base64,UklGRtYAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFsAAAABcFzbtprESkiTPk1THpwWPiW4+wxmue8ijx4iYgKswBwOs9R2diR59qwBug5Ty88FYOEPCBJsLhBScNryh4eddjxo55N2PWu365+b9rgDIsDjSfWVmcV+PzcZAFZQOCBUAAAA8AEAnQEqCAAQAAOAWiWwAnQA9JV1dXwAAPa/dHypQbWpyzkfzwxzqA6tQp5D0agQuwU/sA8Csf3swR5OVAR08sJJhWT2bODIbsu5mN784QKXb4AA",
+    "benefits": [
+      "Nourish Skin",
+      "Enhance Hair",
+      "Support Joints",
+      "Strengthen Nails"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-liver-detox-gummy",
@@ -1058,7 +1692,12 @@ export const CATALOG: CatalogProduct[] = [
     "w": 551,
     "h": 1075,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRuAAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFsAAAABcFzbtprESkiTPk1THpwWPiW4+wxmue8ijx4iYgKswBwOs9R2diR59qwBug5Ty88FYOEPCBJsLhBScNryh4eddjxo55N2PWu365+b9rgDIsDjSfWVmcV+PzcZAFZQOCBeAAAA8AEAnQEqCAAQAAOAWiWwAnQBDvlibnZAAPa/dHyo5PXuXh86Eq4bBsVgTyFRF+AHpN4A76VTfSOcqBWKIGLqruSsbeZYGYJ6Ew9TH0Y+qv7forYsvfJo/u1Z9FOAAA=="
+    "blur": "data:image/webp;base64,UklGRuAAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFsAAAABcFzbtprESkiTPk1THpwWPiW4+wxmue8ijx4iYgKswBwOs9R2diR59qwBug5Ty88FYOEPCBJsLhBScNryh4eddjxo55N2PWu365+b9rgDIsDjSfWVmcV+PzcZAFZQOCBeAAAA8AEAnQEqCAAQAAOAWiWwAnQBDvlibnZAAPa/dHyo5PXuXh86Eq4bBsVgTyFRF+AHpN4A76VTfSOcqBWKIGLqruSsbeZYGYJ6Ew9TH0Y+qv7forYsvfJo/u1Z9FOAAA==",
+    "benefits": [],
+    "moq": "2000 bottles",
+    "spec": "60 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-complex-b-vitamin-c-gummy",
@@ -1072,7 +1711,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 761,
     "h": 1075,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRtQAAABXRUJQVlA4WAoAAAAQAAAACgAADwAAQUxQSFMAAAABcBvbtlI1hlVJCbRARkRO5u6u8RXsawURMQFa2bRd2zZVpo782osJ6Q5kFUx8R7ZNxhd6zvRAHO1vjMsb3X/Nb7Q7It0Rx4xfu4oR5lXbFa4hAABWUDggWgAAADACAJ0BKgsAEAADgFolsALsAQ+FEBrsKd0AAP704o7kGk8z0u1UTfLtfYtN5BHJuauglgXn+EaexpwkDMz2opUa6Edn3YDRsQyeyGlX2zTTPnzWVH44VEPYAA=="
+    "blur": "data:image/webp;base64,UklGRtQAAABXRUJQVlA4WAoAAAAQAAAACgAADwAAQUxQSFMAAAABcBvbtlI1hlVJCbRARkRO5u6u8RXsawURMQFa2bRd2zZVpo782osJ6Q5kFUx8R7ZNxhd6zvRAHO1vjMsb3X/Nb7Q7It0Rx4xfu4oR5lXbFa4hAABWUDggWgAAADACAJ0BKgsAEAADgFolsALsAQ+FEBrsKd0AAP704o7kGk8z0u1UTfLtfYtN5BHJuauglgXn+EaexpwkDMz2opUa6Edn3YDRsQyeyGlX2zTTPnzWVH44VEPYAA==",
+    "benefits": [
+      "Cellular Energy",
+      "Energy Metabolism",
+      "Immune Support"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-biotin-gummy-2",
@@ -1086,7 +1734,17 @@ export const CATALOG: CatalogProduct[] = [
     "w": 759,
     "h": 1075,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRtQAAABXRUJQVlA4WAoAAAAQAAAACgAADwAAQUxQSFUAAAABcFvbthIVRkiNVEFMyCL3yN1dxv29N24VRMQE8EXdNE1dFSm3pNdugYCPFzRaQnoEMmWCF0JDz5HCwxvD9o32vzZvNAfApwBDTa9tVvKzsm4yR2QAAFZQOCBYAAAA8AEAnQEqCwAQAAOAWiWwAuwBDo6lHYTgAP704o7kGk8z0uQxd8ZuEvHAmESox0+udq5WM6jnvEVbzEY9SsDJjxbreR6h09uPYjmLjPSFVbNv+8YyUbDgAA=="
+    "blur": "data:image/webp;base64,UklGRtQAAABXRUJQVlA4WAoAAAAQAAAACgAADwAAQUxQSFUAAAABcFvbthIVRkiNVEFMyCL3yN1dxv29N24VRMQE8EXdNE1dFSm3pNdugYCPFzRaQnoEMmWCF0JDz5HCwxvD9o32vzZvNAfApwBDTa9tVvKzsm4yR2QAAFZQOCBYAAAA8AEAnQEqCwAQAAOAWiWwAuwBDo6lHYTgAP704o7kGk8z0uQxd8ZuEvHAmESox0+udq5WM6jnvEVbzEY9SsDJjxbreR6h09uPYjmLjPSFVbNv+8YyUbDgAA==",
+    "benefits": [
+      "Nourish Skin",
+      "Enhance Hair",
+      "Support Joints",
+      "Strengthen Nails"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-immune-support-gummy",
@@ -1100,7 +1758,15 @@ export const CATALOG: CatalogProduct[] = [
     "w": 759,
     "h": 1075,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRs4AAABXRUJQVlA4WAoAAAAQAAAACgAADwAAQUxQSFUAAAABcGPbttJMjJYpMgp6Oha9du7+rYJ48t6L2wgiYgLMYWacMza2xkKv0wEBHy8YCkJ6BIpcghcWo+dI5eENtX2D/9fmDbYHfAqgGL1OdKfoJsb7xNYAAFZQOCBSAAAAEAIAnQEqCwAQAAOAWiUAXYAj7Zz54MDCAAD+9PGiZRyOttwoCuwhWBM6xiD5b4LUIcYhyjuHzhof1/em1rzYNNE0BWzkJzmkCouQ7fHsQUAAAA=="
+    "blur": "data:image/webp;base64,UklGRs4AAABXRUJQVlA4WAoAAAAQAAAACgAADwAAQUxQSFUAAAABcGPbttJMjJYpMgp6Oha9du7+rYJ48t6L2wgiYgLMYWacMza2xkKv0wEBHy8YCkJ6BIpcghcWo+dI5eENtX2D/9fmDbYHfAqgGL1OdKfoJsb7xNYAAFZQOCBSAAAAEAIAnQEqCwAQAAOAWiUAXYAj7Zz54MDCAAD+9PGiZRyOttwoCuwhWBM6xiD5b4LUIcYhyjuHzhof1/em1rzYNNE0BWzkJzmkCouQ7fHsQUAAAA==",
+    "benefits": [
+      "With Elderberry",
+      "Vitamin C And Zinc"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-phosphatidyl-serine-ps-gummy",
@@ -1114,7 +1780,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 761,
     "h": 1075,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRtAAAABXRUJQVlA4WAoAAAAQAAAACgAADwAAQUxQSFMAAAABcBvbtlI1hlRJC5RARkQBRO7uHl/BvlYQEROglk3btk1dZsrAr72IkO5AZsHEd2TLYHyh5UwPxNH+xri80f3X/Ea7I9IdcUz5tSPrQV41be7qAgBWUDggVgAAAPABAJ0BKgsAEAADgFolqALsAQ6L+Oig4AD+9OKO5BpRBRsPH+AK/Aizn0vxpZT5XCupejtLhEW6GUIWnXDVmiy4YF7gnCMyF8jVEs/bUrjgN8hNUQAA"
+    "blur": "data:image/webp;base64,UklGRtAAAABXRUJQVlA4WAoAAAAQAAAACgAADwAAQUxQSFMAAAABcBvbtlI1hlRJC5RARkQBRO7uHl/BvlYQEROglk3btk1dZsrAr72IkO5AZsHEd2TLYHyh5UwPxNH+xri80f3X/Ea7I9IdcUz5tSPrQV41be7qAgBWUDggVgAAAPABAJ0BKgsAEAADgFolqALsAQ6L+Oig4AD+9OKO5BpRBRsPH+AK/Aizn0vxpZT5XCupejtLhEW6GUIWnXDVmiy4YF7gnCMyF8jVEs/bUrjgN8hNUQAA",
+    "benefits": [
+      "Focus",
+      "Concentration",
+      "Mental Acuity"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-melatonin-gummy-3",
@@ -1128,7 +1803,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 759,
     "h": 1075,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRswAAABXRUJQVlA4WAoAAAAQAAAACgAADwAAQUxQSFQAAAABcBvbtlI1RkiNVEFMyJBr5u4aud57+S4VRMQE8FlZ1VVV5jHX02s7Q8DHE/WakB6BDJnghVDRcyR/faOb3qj/a3yjWgGfAnQlvbZYyUuKqkotkQFWUDggUgAAABACAJ0BKgsAEAADgFoliAAC6N5Y8V/A1AAA/vTiND2dPiOyTJrPD6bEu1newoR12ZbKkU4aFodgBwH5aBBCHTMA5Gs1ZgDfQfodhSAIc0LgAAA="
+    "blur": "data:image/webp;base64,UklGRswAAABXRUJQVlA4WAoAAAAQAAAACgAADwAAQUxQSFQAAAABcBvbtlI1RkiNVEFMyJBr5u4aud57+S4VRMQE8FlZ1VVV5jHX02s7Q8DHE/WakB6BDJnghVDRcyR/faOb3qj/a3yjWgGfAnQlvbZYyUuKqkotkQFWUDggUgAAABACAJ0BKgsAEAADgFoliAAC6N5Y8V/A1AAA/vTiND2dPiOyTJrPD6bEu1newoR12ZbKkU4aFodgBwH5aBBCHTMA5Gs1ZgDfQfodhSAIc0LgAAA=",
+    "benefits": [
+      "Promote Relaxation",
+      "Wake Up Refreshed",
+      "Support Quality Sleep"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-iron-gummy",
@@ -1142,7 +1826,14 @@ export const CATALOG: CatalogProduct[] = [
     "w": 759,
     "h": 1075,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRsgAAABXRUJQVlA4WAoAAAAQAAAACgAADwAAQUxQSFUAAAABcFvbthIVRkiNVEFMyCL3yN1dxv29N24VRMQE8EXdNE1dFSm3pNdugYCPFzRaQnoEMmWCF0JDz5HCwxvD9o32vzZvNAfApwBDTa9tVvKzsm4yR2QAAFZQOCBMAAAA0AEAnQEqCwAQAAOAWiWQAuwBDo3eoMAA/vTijuREFLUVRniVoRriirozZ0WqQe8fyDsVBKPBe7R+CoOjDFWd0HBGkUZU+wvVCgAAAA=="
+    "blur": "data:image/webp;base64,UklGRsgAAABXRUJQVlA4WAoAAAAQAAAACgAADwAAQUxQSFUAAAABcFvbthIVRkiNVEFMyCL3yN1dxv29N24VRMQE8EXdNE1dFSm3pNdugYCPFzRaQnoEMmWCF0JDz5HCwxvD9o32vzZvNAfApwBDTa9tVvKzsm4yR2QAAFZQOCBMAAAA0AEAnQEqCwAQAAOAWiWQAuwBDo3eoMAA/vTijuREFLUVRniVoRriirozZ0WqQe8fyDsVBKPBe7R+CoOjDFWd0HBGkUZU+wvVCgAAAA==",
+    "benefits": [
+      "Support Immune Cells and Immune Function"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-shilajit-capsule",
@@ -1156,7 +1847,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 554,
     "h": 1061,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRrwAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFQAAAABYFpr25L//FtikQGof6TTWcQGse7u8T/fh+sEETEBRAmiKFQJNZZlWUxKNOQcGWEVLAvUerPgsuAy13jArloOS38xlL8pABAB2mQ5bQTLiyPfFQFWUDggQgAAAPABAJ0BKggAEAADgFolnAAC52lVUOaIKAD2sc97dAy4PU7vYM/d1hM3jy6a9a0d086yanBS0RLj4X7jFu1WTp7AAA=="
+    "blur": "data:image/webp;base64,UklGRrwAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFQAAAABYFpr25L//FtikQGof6TTWcQGse7u8T/fh+sEETEBRAmiKFQJNZZlWUxKNOQcGWEVLAvUerPgsuAy13jArloOS38xlL8pABAB2mQ5bQTLiyPfFQFWUDggQgAAAPABAJ0BKggAEAADgFolnAAC52lVUOaIKAD2sc97dAy4PU7vYM/d1hM3jy6a9a0d086yanBS0RLj4X7jFu1WTp7AAA==",
+    "benefits": [
+      "Contain 85 Trace Minerals",
+      "Sourced From The Himalayan Mountains",
+      "Raw & Pure Form"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-liver-detox-capsule",
@@ -1170,7 +1870,15 @@ export const CATALOG: CatalogProduct[] = [
     "w": 554,
     "h": 1061,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRsIAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFQAAAABYFpr25L//FtikQGof6TTWcQGse7u8T/fh+sEETEBRAmiKFQJNZZlWUxKNOQcGWEVLAvUerPgsuAy13jArloOS38xlL8pABAB2mQ5bQTLiyPfFQFWUDggSAAAAPABAJ0BKggAEAADgFolnAAC/7ly9sH3vAD8EyIXLIz+I3+hNHo3C/wKkTDxat6gNp0EhkPrET3/LCGBPJ2tB9AE0bpXVsAAAA=="
+    "blur": "data:image/webp;base64,UklGRsIAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFQAAAABYFpr25L//FtikQGof6TTWcQGse7u8T/fh+sEETEBRAmiKFQJNZZlWUxKNOQcGWEVLAvUerPgsuAy13jArloOS38xlL8pABAB2mQ5bQTLiyPfFQFWUDggSAAAAPABAJ0BKggAEAADgFolnAAC/7ly9sH3vAD8EyIXLIz+I3+hNHo3C/wKkTDxat6gNp0EhkPrET3/LCGBPJ2tB9AE0bpXVsAAAA==",
+    "benefits": [
+      "Support Powerful Antioxidant",
+      "Support Overall Well-Being and Life Balance"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-ceylon-cinnamon-capsule",
@@ -1184,7 +1892,15 @@ export const CATALOG: CatalogProduct[] = [
     "w": 554,
     "h": 1061,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRsAAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFQAAAABYFpr25L//FtikQGof6TTWcQGse7u8T/fh+sEETEBRAmiKFQJNZZlWUxKNOQcGWEVLAvUerPgsuAy13jArloOS38xlL8pABAB2mQ5bQTLiyPfFQFWUDggRgAAALABAJ0BKggAEAADgFolAE6AHo8FmUwA/BMiFyyQNQxBl9OY4185vjq+eGbaJXPxCdxhGEtF6bC7Kh52+iPoRtZfaDLEAAA="
+    "blur": "data:image/webp;base64,UklGRsAAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFQAAAABYFpr25L//FtikQGof6TTWcQGse7u8T/fh+sEETEBRAmiKFQJNZZlWUxKNOQcGWEVLAvUerPgsuAy13jArloOS38xlL8pABAB2mQ5bQTLiyPfFQFWUDggRgAAALABAJ0BKggAEAADgFolAE6AHo8FmUwA/BMiFyyQNQxBl9OY4185vjq+eGbaJXPxCdxhGEtF6bC7Kh52+iPoRtZfaDLEAAA=",
+    "benefits": [
+      "Encourage Proper joint",
+      "Immune System Support"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-tudca-capsule",
@@ -1198,7 +1914,14 @@ export const CATALOG: CatalogProduct[] = [
     "w": 554,
     "h": 1061,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRsYAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFQAAAABYFpr25L//FtikQGof6TTWcQGse7u8T/fh+sEETEBRAmiKFQJNZZlWUxKNOQcGWEVLAvUerPgsuAy13jArloOS38xlL8pABAB2mQ5bQTLiyPfFQFWUDggTAAAANABAJ0BKggAEAADgFollAJ0APNV4aq4APwTIhcsjP4k7st0n5OQQec+VJ1vlgiRfzwSTTzzHcDsorEQqWmWMenbumJeYljm+bN2oAA="
+    "blur": "data:image/webp;base64,UklGRsYAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFQAAAABYFpr25L//FtikQGof6TTWcQGse7u8T/fh+sEETEBRAmiKFQJNZZlWUxKNOQcGWEVLAvUerPgsuAy13jArloOS38xlL8pABAB2mQ5bQTLiyPfFQFWUDggTAAAANABAJ0BKggAEAADgFollAJ0APNV4aq4APwTIhcsjP4k7st0n5OQQec+VJ1vlgiRfzwSTTzzHcDsorEQqWmWMenbumJeYljm+bN2oAA=",
+    "benefits": [
+      "Enhance Digestion Gut Health"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-tongkat-ali-capsule",
@@ -1212,7 +1935,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 554,
     "h": 1061,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRsQAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFQAAAABYFpr25L//FtikQGof6TTWcQGse7u8T/fh+sEETEBRAmiKFQJNZZlWUxKNOQcGWEVLAvUerPgsuAy13jArloOS38xlL8pABAB2mQ5bQTLiyPfFQFWUDggSgAAABACAJ0BKggAEAADgFoljAAPi67B1Yt6FPAA/BMiFyucovnEWQpgJK2Rg0IEVdC2QSIPWYpT/hqQucqSQKvYA82RqWQE9j7eAoAA"
+    "blur": "data:image/webp;base64,UklGRsQAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFQAAAABYFpr25L//FtikQGof6TTWcQGse7u8T/fh+sEETEBRAmiKFQJNZZlWUxKNOQcGWEVLAvUerPgsuAy13jArloOS38xlL8pABAB2mQ5bQTLiyPfFQFWUDggSgAAABACAJ0BKggAEAADgFoljAAPi67B1Yt6FPAA/BMiFyucovnEWQpgJK2Rg0IEVdC2QSIPWYpT/hqQucqSQKvYA82RqWQE9j7eAoAA",
+    "benefits": [
+      "Support Healthy Aging",
+      "Support Healthy Energy",
+      "Super Antioxidants"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-myo-d-chiro-inositol-capsule",
@@ -1226,7 +1958,15 @@ export const CATALOG: CatalogProduct[] = [
     "w": 554,
     "h": 1061,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRsAAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFQAAAABYFpr25L//FtikQGof6TTWcQGse7u8T/fh+sEETEBRAmiKFQJNZZlWUxKNOQcGWEVLAvUerPgsuAy13jArloOS38xlL8pABAB2mQ5bQTLiyPfFQFWUDggRgAAAPABAJ0BKggAEAADgFollALsAPRmxbRVFAD8EyIXLJA1DEGX01pFZvtqivoc0RbPDP9mWFToOz1J1vJ1HD/t4GUF6f9gAAA="
+    "blur": "data:image/webp;base64,UklGRsAAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFQAAAABYFpr25L//FtikQGof6TTWcQGse7u8T/fh+sEETEBRAmiKFQJNZZlWUxKNOQcGWEVLAvUerPgsuAy13jArloOS38xlL8pABAB2mQ5bQTLiyPfFQFWUDggRgAAAPABAJ0BKggAEAADgFollALsAPRmxbRVFAD8EyIXLJA1DEGX01pFZvtqivoc0RbPDP9mWFToOz1J1vJ1HD/t4GUF6f9gAAA=",
+    "benefits": [
+      "Healthy Cycles",
+      "Overall Balance"
+    ],
+    "moq": "2000 bottles",
+    "spec": "120 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-grassfed-beef-organ-complex-capsule",
@@ -1240,7 +1980,15 @@ export const CATALOG: CatalogProduct[] = [
     "w": 554,
     "h": 1061,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRsQAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFQAAAABYFpr25L//FtikQGof6TTWcQGse7u8T/fh+sEETEBRAmiKFQJNZZlWUxKNOQcGWEVLAvUerPgsuAy13jArloOS38xlL8pABAB2mQ5bQTLiyPfFQFWUDggSgAAABACAJ0BKggAEAADgFoljALsARd7whkR2YAA/BMiFyyM/iN/oTR6Nwv8Cq3qphijceZ11DxsYMO+XS3Js1poRnJpm1HTtXiegWAA"
+    "blur": "data:image/webp;base64,UklGRsQAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFQAAAABYFpr25L//FtikQGof6TTWcQGse7u8T/fh+sEETEBRAmiKFQJNZZlWUxKNOQcGWEVLAvUerPgsuAy13jArloOS38xlL8pABAB2mQ5bQTLiyPfFQFWUDggSgAAABACAJ0BKggAEAADgFoljALsARd7whkR2YAA/BMiFyyM/iN/oTR6Nwv8Cq3qphijceZ11DxsYMO+XS3Js1poRnJpm1HTtXiegWAA",
+    "benefits": [
+      "Grassfed & Grass Finished",
+      "Promote Health & Balance"
+    ],
+    "moq": "2000 bottles",
+    "spec": "120 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-alpha-brain-capsule",
@@ -1254,7 +2002,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 554,
     "h": 1061,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRsYAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFQAAAABYFpr25L//FtikQGof6TTWcQGse7u8T/fh+sEETEBRAmiKFQJNZZlWUxKNOQcGWEVLAvUerPgsuAy13jArloOS38xlL8pABAB2mQ5bQTLiyPfFQFWUDggTAAAADACAJ0BKggAEAADgFoljAJ0ARd+t+a8dtMkAPwTIhcsjP4jf6E0ejcMXYeID0hzJ4D3Fcw7KW5UFOBhl/F7xi29Y88glIwy/zWAAAA="
+    "blur": "data:image/webp;base64,UklGRsYAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFQAAAABYFpr25L//FtikQGof6TTWcQGse7u8T/fh+sEETEBRAmiKFQJNZZlWUxKNOQcGWEVLAvUerPgsuAy13jArloOS38xlL8pABAB2mQ5bQTLiyPfFQFWUDggTAAAADACAJ0BKggAEAADgFoljAJ0ARd+t+a8dtMkAPwTIhcsjP4jf6E0ejcMXYeID0hzJ4D3Fcw7KW5UFOBhl/F7xi29Y88glIwy/zWAAAA=",
+    "benefits": [
+      "Brain Support",
+      "Memory & Focus Aid",
+      "Choline Level Maintenance"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-simply-fruits-capsule",
@@ -1268,7 +2025,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 554,
     "h": 1061,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRsgAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFQAAAABYFpr25L//FtikQGof6TTWcQGse7u8T/fh+sEETEBRAmiKFQJNZZlWUxKNOQcGWEVLAvUerPgsuAy13jArloOS38xlL8pABAB2mQ5bQTLiyPfFQFWUDggTgAAAPABAJ0BKggAEAADgFolAF2AHpLfxRx5QAD8EyIXLIz+JO7LdJ+TkEHNq3UxHVZJTMbpXZ+Qewtv/Z6rzhlWiKiD0Pe/ZRQY2gOgoCiAAA=="
+    "blur": "data:image/webp;base64,UklGRsgAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFQAAAABYFpr25L//FtikQGof6TTWcQGse7u8T/fh+sEETEBRAmiKFQJNZZlWUxKNOQcGWEVLAvUerPgsuAy13jArloOS38xlL8pABAB2mQ5bQTLiyPfFQFWUDggTgAAAPABAJ0BKggAEAADgFolAF2AHpLfxRx5QAD8EyIXLIz+JO7LdJ+TkEHNq3UxHVZJTMbpXZ+Qewtv/Z6rzhlWiKiD0Pe/ZRQY2gOgoCiAAA==",
+    "benefits": [
+      "Support Natural Energy",
+      "Support A Healthy Immune System",
+      "Support Overall Well-Being"
+    ],
+    "moq": "2000 bottles",
+    "spec": "90 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-simply-veggies-capsule",
@@ -1282,7 +2048,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 554,
     "h": 1061,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRsQAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFQAAAABYFpr25L//FtikQGof6TTWcQGse7u8T/fh+sEETEBRAmiKFQJNZZlWUxKNOQcGWEVLAvUerPgsuAy13jArloOS38xlL8pABAB2mQ5bQTLiyPfFQFWUDggSgAAAPABAJ0BKggAEAADgFolAE6AIu94R1YIDAD8EyIXLIz+I3+hNHo3DF2HnPmxCp6IkZkAMvxoxKc4dWSLR5+iS8tdOmSPN3vJIAAA"
+    "blur": "data:image/webp;base64,UklGRsQAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFQAAAABYFpr25L//FtikQGof6TTWcQGse7u8T/fh+sEETEBRAmiKFQJNZZlWUxKNOQcGWEVLAvUerPgsuAy13jArloOS38xlL8pABAB2mQ5bQTLiyPfFQFWUDggSgAAAPABAJ0BKggAEAADgFolAE6AIu94R1YIDAD8EyIXLIz+I3+hNHo3DF2HnPmxCp6IkZkAMvxoxKc4dWSLR5+iS8tdOmSPN3vJIAAA",
+    "benefits": [
+      "Support A Balanced Diet",
+      "Support Energy And Vitality",
+      "Support Antioxidants"
+    ],
+    "moq": "2000 bottles",
+    "spec": "90 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-oregano-oil-capsule",
@@ -1296,7 +2071,15 @@ export const CATALOG: CatalogProduct[] = [
     "w": 554,
     "h": 1061,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRr4AAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFQAAAABYFpr25L//FtikQGof6TTWcQGse7u8T/fh+sEETEBRAmiKFQJNZZlWUxKNOQcGWEVLAvUerPgsuAy13jArloOS38xlL8pABAB2mQ5bQTLiyPfFQFWUDggRAAAANABAJ0BKggAEAADgFoljAACm3mSbdZYAPwTIhcskDUMQZfTWkVm+2qLPZibH4GlqVs0IiDuwL/uzfHeAOlwOQ+AIAAA"
+    "blur": "data:image/webp;base64,UklGRr4AAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFQAAAABYFpr25L//FtikQGof6TTWcQGse7u8T/fh+sEETEBRAmiKFQJNZZlWUxKNOQcGWEVLAvUerPgsuAy13jArloOS38xlL8pABAB2mQ5bQTLiyPfFQFWUDggRAAAANABAJ0BKggAEAADgFoljAACm3mSbdZYAPwTIhcskDUMQZfTWkVm+2qLPZibH4GlqVs0IiDuwL/uzfHeAOlwOQ+AIAAA",
+    "benefits": [
+      "Gut Health",
+      "Immune Support"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-nad-capsule-capsule",
@@ -1310,7 +2093,15 @@ export const CATALOG: CatalogProduct[] = [
     "w": 554,
     "h": 1061,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRsIAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFQAAAABYFpr25L//FtikQGof6TTWcQGse7u8T/fh+sEETEBRAmiKFQJNZZlWUxKNOQcGWEVLAvUerPgsuAy13jArloOS38xlL8pABAB2mQ5bQTLiyPfFQFWUDggSAAAALABAJ0BKggAEAADgFolnAACm2hJ3QAA/BMiFyyM/iTuy3Sfk4juCxwvV68KKR22ZkCKzUpdFM4Wpv9qcRQ7NDxMJlIyXwgAAA=="
+    "blur": "data:image/webp;base64,UklGRsIAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFQAAAABYFpr25L//FtikQGof6TTWcQGse7u8T/fh+sEETEBRAmiKFQJNZZlWUxKNOQcGWEVLAvUerPgsuAy13jArloOS38xlL8pABAB2mQ5bQTLiyPfFQFWUDggSAAAALABAJ0BKggAEAADgFolnAACm2hJ3QAA/BMiFyyM/iTuy3Sfk4juCxwvV68KKR22ZkCKzUpdFM4Wpv9qcRQ7NDxMJlIyXwgAAA==",
+    "benefits": [
+      "High Potency Formula",
+      "Support Energy Metabolism"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-resveratrol-capsule",
@@ -1324,7 +2115,14 @@ export const CATALOG: CatalogProduct[] = [
     "w": 554,
     "h": 1061,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRsgAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFQAAAABYFpr25L//FtikQGof6TTWcQGse7u8T/fh+sEETEBRAmiKFQJNZZlWUxKNOQcGWEVLAvUerPgsuAy13jArloOS38xlL8pABAB2mQ5bQTLiyPfFQFWUDggTgAAANABAJ0BKggAEAADgFollAACmmAA3ewAAPwTIhcsjP4k7st0n5NndFAuFaEcIu8f2hgCra3akpei44jueBdAVFD4zf8cvTmVpXZzQYAAAA=="
+    "blur": "data:image/webp;base64,UklGRsgAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFQAAAABYFpr25L//FtikQGof6TTWcQGse7u8T/fh+sEETEBRAmiKFQJNZZlWUxKNOQcGWEVLAvUerPgsuAy13jArloOS38xlL8pABAB2mQ5bQTLiyPfFQFWUDggTgAAANABAJ0BKggAEAADgFollAACmmAA3ewAAPwTIhcsjP4k7st0n5NndFAuFaEcIu8f2hgCra3akpei44jueBdAVFD4zf8cvTmVpXZzQYAAAA==",
+    "benefits": [
+      "Immune Function Boost"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-quercetin-capsule",
@@ -1338,7 +2136,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 554,
     "h": 1061,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRsgAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFQAAAABYFpr25L//FtikQGof6TTWcQGse7u8T/fh+sEETEBRAmiKFQJNZZlWUxKNOQcGWEVLAvUerPgsuAy13jArloOS38xlL8pABAB2mQ5bQTLiyPfFQFWUDggTgAAABACAJ0BKggAEAADgFollAJ0ARd7wdwGqyAA/BMiFyyM/iN/oTR6Nwxdh5z+GAoWaxdEZbMx7dqrRpOf+Opax/FbRCvzFHK9Fr3ItQAAAA=="
+    "blur": "data:image/webp;base64,UklGRsgAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFQAAAABYFpr25L//FtikQGof6TTWcQGse7u8T/fh+sEETEBRAmiKFQJNZZlWUxKNOQcGWEVLAvUerPgsuAy13jArloOS38xlL8pABAB2mQ5bQTLiyPfFQFWUDggTgAAABACAJ0BKggAEAADgFollAJ0ARd7wdwGqyAA/BMiFyyM/iN/oTR6Nwxdh5z+GAoWaxdEZbMx7dqrRpOf+Opax/FbRCvzFHK9Fr3ItQAAAA==",
+    "benefits": [
+      "Promote Antioxidant Immune Health",
+      "Support Cardiovascular Healthy",
+      "Support Overall Health And Well Being"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-maca-capsules-capsule",
@@ -1352,7 +2159,14 @@ export const CATALOG: CatalogProduct[] = [
     "w": 554,
     "h": 1061,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRsYAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFQAAAABYFpr25L//FtikQGof6TTWcQGse7u8T/fh+sEETEBRAmiKFQJNZZlWUxKNOQcGWEVLAvUerPgsuAy13jArloOS38xlL8pABAB2mQ5bQTLiyPfFQFWUDggTAAAAFACAJ0BKggAEAADgFoljALsARd+4+T9TlrAAAD8EyIXLIz+I3+hNHo3DF2HW0BaJ6jThkBVhPaRKr0IAtPNazzBgwi7py2C2n+GiAA="
+    "blur": "data:image/webp;base64,UklGRsYAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFQAAAABYFpr25L//FtikQGof6TTWcQGse7u8T/fh+sEETEBRAmiKFQJNZZlWUxKNOQcGWEVLAvUerPgsuAy13jArloOS38xlL8pABAB2mQ5bQTLiyPfFQFWUDggTAAAAFACAJ0BKggAEAADgFoljALsARd+4+T9TlrAAAD8EyIXLIz+I3+hNHo3DF2HW0BaJ6jThkBVhPaRKr0IAtPNazzBgwi7py2C2n+GiAA=",
+    "benefits": [
+      "Overall Health And Mood Support"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-lutein-eye-protection-capsule",
@@ -1366,7 +2180,12 @@ export const CATALOG: CatalogProduct[] = [
     "w": 554,
     "h": 1061,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRsgAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFQAAAABYFpr25L//FtikQGof6TTWcQGse7u8T/fh+sEETEBRAmiKFQJNZZlWUxKNOQcGWEVLAvUerPgsuAy13jArloOS38xlL8pABAB2mQ5bQTLiyPfFQFWUDggTgAAAPABAJ0BKggAEAADgFollALsAPPbisTzAAD8EyIXLIz+JO7LdJ+TiPSvBKs8H4oCnr4Qg7U7aZIHIIRmN6VaTB3qHseAm1fi8glIxK6AAA=="
+    "blur": "data:image/webp;base64,UklGRsgAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFQAAAABYFpr25L//FtikQGof6TTWcQGse7u8T/fh+sEETEBRAmiKFQJNZZlWUxKNOQcGWEVLAvUerPgsuAy13jArloOS38xlL8pABAB2mQ5bQTLiyPfFQFWUDggTgAAAPABAJ0BKggAEAADgFollALsAPPbisTzAAD8EyIXLIz+JO7LdJ+TiPSvBKs8H4oCnr4Qg7U7aZIHIIRmN6VaTB3qHseAm1fi8glIxK6AAA==",
+    "benefits": [],
+    "moq": "2000 bottles",
+    "spec": "60 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-lion-s-mane-capsule",
@@ -1380,7 +2199,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 554,
     "h": 1061,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRsAAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFQAAAABYFpr25L//FtikQGof6TTWcQGse7u8T/fh+sEETEBRAmiKFQJNZZlWUxKNOQcGWEVLAvUerPgsuAy13jArloOS38xlL8pABAB2mQ5bQTLiyPfFQFWUDggRgAAABACAJ0BKggAEAADgFollAAC/7LlTX9xogAA/BMiFyyM/iN/oTR6Nwv8Cq6bdhilh0WjhAji5ksdAMEYD54BIpypktQDgAA="
+    "blur": "data:image/webp;base64,UklGRsAAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFQAAAABYFpr25L//FtikQGof6TTWcQGse7u8T/fh+sEETEBRAmiKFQJNZZlWUxKNOQcGWEVLAvUerPgsuAy13jArloOS38xlL8pABAB2mQ5bQTLiyPfFQFWUDggRgAAABACAJ0BKggAEAADgFollAAC/7LlTX9xogAA/BMiFyyM/iN/oTR6Nwv8Cq6bdhilh0WjhAji5ksdAMEYD54BIpypktQDgAA=",
+    "benefits": [
+      "Improve Execution & Concentration",
+      "Improve Focus",
+      "Improve Overall Health"
+    ],
+    "moq": "2000 bottles",
+    "spec": "120 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-prostate-support-capsule",
@@ -1394,7 +2222,14 @@ export const CATALOG: CatalogProduct[] = [
     "w": 554,
     "h": 1061,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRsoAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFQAAAABYFpr25L//FtikQGof6TTWcQGse7u8T/fh+sEETEBRAmiKFQJNZZlWUxKNOQcGWEVLAvUerPgsuAy13jArloOS38xlL8pABAB2mQ5bQTLiyPfFQFWUDggUAAAADACAJ0BKggAEAADgFoljAJ0ARSlRmtMcDMAAPwTIhcsjP6L50yYKTY3XHKTRckgcwdOe7o0WAmC91ZTmt+t57u8Mua5nVsu0/iUzzmsh0IA"
+    "blur": "data:image/webp;base64,UklGRsoAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFQAAAABYFpr25L//FtikQGof6TTWcQGse7u8T/fh+sEETEBRAmiKFQJNZZlWUxKNOQcGWEVLAvUerPgsuAy13jArloOS38xlL8pABAB2mQ5bQTLiyPfFQFWUDggUAAAADACAJ0BKggAEAADgFoljAJ0ARSlRmtMcDMAAPwTIhcsjP6L50yYKTY3XHKTRckgcwdOe7o0WAmC91ZTmt+t57u8Mua5nVsu0/iUzzmsh0IA",
+    "benefits": [
+      "With Antioxidant Vitamin E"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-urolithin-a-capsule",
@@ -1408,7 +2243,15 @@ export const CATALOG: CatalogProduct[] = [
     "w": 554,
     "h": 1061,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRsQAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFQAAAABYFpr25L//FtikQGof6TTWcQGse7u8T/fh+sEETEBRAmiKFQJNZZlWUxKNOQcGWEVLAvUerPgsuAy13jArloOS38xlL8pABAB2mQ5bQTLiyPfFQFWUDggSgAAAJABAJ0BKggAEAADgFoljALsAPNI6AD8EyIXLIz+JO7LdJ+TiO6KBbRVq0OzGIdzKzj0jSqm7x1VQ5uNjpWj28vUG3hc9kstQAAA"
+    "blur": "data:image/webp;base64,UklGRsQAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFQAAAABYFpr25L//FtikQGof6TTWcQGse7u8T/fh+sEETEBRAmiKFQJNZZlWUxKNOQcGWEVLAvUerPgsuAy13jArloOS38xlL8pABAB2mQ5bQTLiyPfFQFWUDggSgAAAJABAJ0BKggAEAADgFoljALsAPNI6AD8EyIXLIz+JO7LdJ+TiO6KBbRVq0OzGIdzKzj0jSqm7x1VQ5uNjpWj28vUG3hc9kstQAAA",
+    "benefits": [
+      "Support Cellular Energy Production",
+      "Cell Recovery & Energy Boost"
+    ],
+    "moq": "5000 bottles",
+    "spec": "120 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-black-seed-oil-capsule",
@@ -1422,7 +2265,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 554,
     "h": 1061,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRsYAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFQAAAABYFpr25L//FtikQGof6TTWcQGse7u8T/fh+sEETEBRAmiKFQJNZZlWUxKNOQcGWEVLAvUerPgsuAy13jArloOS38xlL8pABAB2mQ5bQTLiyPfFQFWUDggTAAAAPABAJ0BKggAEAADgFollAACnYzTjkp0AAD8EyIXLIz+JO7LdJ+TZtGw/MhQTLmM3P5RLscVXYVPiRSXwudTsPL6a8G8xjwjfrfQAAA="
+    "blur": "data:image/webp;base64,UklGRsYAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFQAAAABYFpr25L//FtikQGof6TTWcQGse7u8T/fh+sEETEBRAmiKFQJNZZlWUxKNOQcGWEVLAvUerPgsuAy13jArloOS38xlL8pABAB2mQ5bQTLiyPfFQFWUDggTAAAAPABAJ0BKggAEAADgFollAACnYzTjkp0AAD8EyIXLIz+JO7LdJ+TZtGw/MhQTLmM3P5RLscVXYVPiRSXwudTsPL6a8G8xjwjfrfQAAA=",
+    "benefits": [
+      "Joint Comfort & Flexibility",
+      "Healthy Hair & Skin Radiance",
+      "Maintain Vitality"
+    ],
+    "moq": "5000 bottles",
+    "spec": "120 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-vitamin-d3-k2-capsule",
@@ -1436,7 +2288,15 @@ export const CATALOG: CatalogProduct[] = [
     "w": 554,
     "h": 1061,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRr4AAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFQAAAABYFpr25L//FtikQGof6TTWcQGse7u8T/fh+sEETEBRAmiKFQJNZZlWUxKNOQcGWEVLAvUerPgsuAy13jArloOS38xlL8pABAB2mQ5bQTLiyPfFQFWUDggRAAAAPABAJ0BKggAEAADgFolAF2AHoLehMBy0AD8EyIXLJABW09GhMqqiBfx8h5Te6h9V/2S2tBlhPJ3kXhZpZqNTmDonxgA"
+    "blur": "data:image/webp;base64,UklGRr4AAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFQAAAABYFpr25L//FtikQGof6TTWcQGse7u8T/fh+sEETEBRAmiKFQJNZZlWUxKNOQcGWEVLAvUerPgsuAy13jArloOS38xlL8pABAB2mQ5bQTLiyPfFQFWUDggRAAAAPABAJ0BKggAEAADgFolAF2AHoLehMBy0AD8EyIXLJABW09GhMqqiBfx8h5Te6h9V/2S2tBlhPJ3kXhZpZqNTmDonxgA",
+    "benefits": [
+      "Grassfed & Grass Finished",
+      "Promote Health & Balance"
+    ],
+    "moq": "5000 bottles",
+    "spec": "180 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-multivitamin-with-fruits-veggies-capsule",
@@ -1450,7 +2310,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 548,
     "h": 1058,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRsAAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFAAAAABcBvbtlI9aNO1CcipgUYYCvGQeSnufLkXlxIiYgKIHlOaGIRxlmVZHJaY+PuhRewclgUye1pOPz0ecByW0+G1/r0eABGhq5fTWnJ9mvoeB1ZQOCBKAAAAEAIAnQEqCAAQAAOAWiWMAnQBH25aBPN0qAD2vmnByV4cypci6zvCo62Eness5pFTvYHdkh1KY4rAB2ayYphEnLnTq9PJl3HAAAA="
+    "blur": "data:image/webp;base64,UklGRsAAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFAAAAABcBvbtlI9aNO1CcipgUYYCvGQeSnufLkXlxIiYgKIHlOaGIRxlmVZHJaY+PuhRewclgUye1pOPz0ecByW0+G1/r0eABGhq5fTWnJ9mvoeB1ZQOCBKAAAAEAIAnQEqCAAQAAOAWiWMAnQBH25aBPN0qAD2vmnByV4cypci6zvCo62Eness5pFTvYHdkh1KY4rAB2ayYphEnLnTq9PJl3HAAAA=",
+    "benefits": [
+      "Support Natural Energy",
+      "Promote Overall Health",
+      "Enhanced With Superfoods"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-probiotic-capsule",
@@ -1464,7 +2333,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 554,
     "h": 1061,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRsAAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFQAAAABYFpr25L//FtikQGof6TTWcQGse7u8T/fh+sEETEBRAmiKFQJNZZlWUxKNOQcGWEVLAvUerPgsuAy13jArloOS38xlL8pABAB2mQ5bQTLiyPfFQFWUDggRgAAABACAJ0BKggAEAADgFoljALsARd7wkXuDqAA/BMiFyyM/iN/oTR6Nwxdh5x/TslXqshxK2X77k0C1N/ebf7IPmnt2aVAAAA="
+    "blur": "data:image/webp;base64,UklGRsAAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFQAAAABYFpr25L//FtikQGof6TTWcQGse7u8T/fh+sEETEBRAmiKFQJNZZlWUxKNOQcGWEVLAvUerPgsuAy13jArloOS38xlL8pABAB2mQ5bQTLiyPfFQFWUDggRgAAABACAJ0BKggAEAADgFoljALsARd7wkXuDqAA/BMiFyyM/iN/oTR6Nwxdh5x/TslXqshxK2X77k0C1N/ebf7IPmnt2aVAAAA=",
+    "benefits": [
+      "Support Digestive And Mood health",
+      "Support Immune Health",
+      "Helps Maintain Digestive Health"
+    ],
+    "moq": "2000 bottles",
+    "spec": "30 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-beet-root-capsule",
@@ -1478,7 +2356,14 @@ export const CATALOG: CatalogProduct[] = [
     "w": 554,
     "h": 1061,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRsoAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFQAAAABYFpr25L//FtikQGof6TTWcQGse7u8T/fh+sEETEBRAmiKFQJNZZlWUxKNOQcGWEVLAvUerPgsuAy13jArloOS38xlL8pABAB2mQ5bQTLiyPfFQFWUDggUAAAALABAJ0BKggAEAADgFollAKwAPOClDAA/BMiFyyM/iTuy3Sfk2d0U0s2Lns7rpKAPXh2KbE3JxYP0jKC6EXEmaoYBnobh3E+k4daoc1QgAAA"
+    "blur": "data:image/webp;base64,UklGRsoAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFQAAAABYFpr25L//FtikQGof6TTWcQGse7u8T/fh+sEETEBRAmiKFQJNZZlWUxKNOQcGWEVLAvUerPgsuAy13jArloOS38xlL8pABAB2mQ5bQTLiyPfFQFWUDggUAAAALABAJ0BKggAEAADgFollAKwAPOClDAA/BMiFyyM/iTuy3Sfk2d0U0s2Lns7rpKAPXh2KbE3JxYP0jKC6EXEmaoYBnobh3E+k4daoc1QgAAA",
+    "benefits": [
+      "Support Athletic Performance"
+    ],
+    "moq": "2000 bottles",
+    "spec": "90 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-sodium-butyrate-capsule",
@@ -1492,7 +2377,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 548,
     "h": 1058,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRsQAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFAAAAABcBvbtlI9aNO1CcipgUYYCvGQeSnufLkXlxIiYgKIHlOaGIRxlmVZHJaY+PuhRewclgUye1pOPz0ecByW0+G1/r0eABGhq5fTWnJ9mvoeB1ZQOCBOAAAAEAIAnQEqCAAQAAOAWiUAVgAj7cZ+UKMUAAD2vmnByV4cypci6zvCo65H+23ewoPdy2EkV5wub+Gn5/nFmf57R4yaHBGlVpZUKLO8AAAA"
+    "blur": "data:image/webp;base64,UklGRsQAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFAAAAABcBvbtlI9aNO1CcipgUYYCvGQeSnufLkXlxIiYgKIHlOaGIRxlmVZHJaY+PuhRewclgUye1pOPz0ecByW0+G1/r0eABGhq5fTWnJ9mvoeB1ZQOCBOAAAAEAIAnQEqCAAQAAOAWiUAVgAj7cZ+UKMUAAD2vmnByV4cypci6zvCo65H+23ewoPdy2EkV5wub+Gn5/nFmf57R4yaHBGlVpZUKLO8AAAA",
+    "benefits": [
+      "Microbiome Support",
+      "Improve Digestion",
+      "Promotes Healthy DHA"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-cayenne-pepper-capsule",
@@ -1506,7 +2400,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 554,
     "h": 1061,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRsgAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFQAAAABYFpr25L//FtikQGof6TTWcQGse7u8T/fh+sEETEBRAmiKFQJNZZlWUxKNOQcGWEVLAvUerPgsuAy13jArloOS38xlL8pABAB2mQ5bQTLiyPfFQFWUDggTgAAAJABAJ0BKggAEAADgFolAF2AHmkdAAD8EyIXLIz+JO7LdJ+TiPT9buJgOEXeQdpSy9OVoCQ/c4p6YVjBgmUOKK0dp//vSbYid+MDOVwAAA=="
+    "blur": "data:image/webp;base64,UklGRsgAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFQAAAABYFpr25L//FtikQGof6TTWcQGse7u8T/fh+sEETEBRAmiKFQJNZZlWUxKNOQcGWEVLAvUerPgsuAy13jArloOS38xlL8pABAB2mQ5bQTLiyPfFQFWUDggTgAAAJABAJ0BKggAEAADgFolAF2AHmkdAAD8EyIXLIz+JO7LdJ+TiPT9buJgOEXeQdpSy9OVoCQ/c4p6YVjBgmUOKK0dp//vSbYid+MDOVwAAA==",
+    "benefits": [
+      "5 In 1 Premium Ingredients",
+      "Improve Overall Well-Being",
+      "Support Body Healthy"
+    ],
+    "moq": "2000 bottles",
+    "spec": "120 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-glutathione-capsule",
@@ -1520,7 +2423,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 548,
     "h": 1059,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRsIAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFYAAAABcFzbttJ8KJOZ92BTq0D7gEZ0yvpT3CHJe3HrICImgCgFpYVEmPB6vV5dlhh4PqNKnBquV6jM0/XltuETTtv15bS+mt9M/1sAEBHG8fqy56OElknMAVZQOCBGAAAAUAIAnQEqCAAQAAOAWiWUArCBMRmTCsN+QjUAAPa+acHJcEy4pblGoso8Ga7x5kJOmH5zsWuRli6B0P7LEYoWKLfAocgAAA=="
+    "blur": "data:image/webp;base64,UklGRsIAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFYAAAABcFzbttJ8KJOZ92BTq0D7gEZ0yvpT3CHJe3HrICImgCgFpYVEmPB6vV5dlhh4PqNKnBquV6jM0/XltuETTtv15bS+mt9M/1sAEBHG8fqy56OElknMAVZQOCBGAAAAUAIAnQEqCAAQAAOAWiWUArCBMRmTCsN+QjUAAPa+acHJcEy4pblGoso8Ga7x5kJOmH5zsWuRli6B0P7LEYoWKLfAocgAAA==",
+    "benefits": [
+      "Reduced Active Form",
+      "Strengthens Gut Health",
+      "Promotes Youthful Skin"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60 counts/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-vitamin-d3-k2-capsule-2",
@@ -1534,7 +2446,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 800,
     "h": 1003,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRuoAAABXRUJQVlA4WAoAAAAQAAAADAAADwAAQUxQSHoAAAABuS5E9D8MbmvbVqIvODEd0AARtZPSAouIGlzGB+fWcH/EBChM24Zx0t1LsrGFxAWpmT+pkogIQKnBitKVlVT7Im9I/PsRVsItCU8PRHrBfLxBvj7g+mUB09sXfjE4EfI0W5DS5XPBByq261axCYtCzhOyacrqx8weSlZQOCBKAAAA8AEAnQEqDQAQAAOAWiWwAALqeJTtYuAAAP7v4u8v0ob2mlAoC+ujN3fP0uvEqD7Qk3xAoAh+7v//KHwImuWaNX//6qO1h8hNAAA="
+    "blur": "data:image/webp;base64,UklGRuoAAABXRUJQVlA4WAoAAAAQAAAADAAADwAAQUxQSHoAAAABuS5E9D8MbmvbVqIvODEd0AARtZPSAouIGlzGB+fWcH/EBChM24Zx0t1LsrGFxAWpmT+pkogIQKnBitKVlVT7Im9I/PsRVsItCU8PRHrBfLxBvj7g+mUB09sXfjE4EfI0W5DS5XPBByq261axCYtCzhOyacrqx8weSlZQOCBKAAAA8AEAnQEqDQAQAAOAWiWwAALqeJTtYuAAAP7v4u8v0ob2mlAoC+ujN3fP0uvEqD7Qk3xAoAh+7v//KHwImuWaNX//6qO1h8hNAAA=",
+    "benefits": [
+      "Grassfed & Grass Finished",
+      "Promotes Health & Balance",
+      "10000IU D3+200mcg K2-MK7"
+    ],
+    "moq": "5000 bags",
+    "spec": "300 counts/bag",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-vegan-omega-3-capsule",
@@ -1548,7 +2469,15 @@ export const CATALOG: CatalogProduct[] = [
     "w": 800,
     "h": 1003,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRtwAAABXRUJQVlA4WAoAAAAQAAAADAAADwAAQUxQSHEAAAABuS5E9D/gNrZtVTkHl5gOaMB7J6UEi+jB4fm73y8tREzABBwuCSKRAfUV6GZlAZR7L4UCtRXoLiHqAEoSKEC3Y4D2D89TRQEUOgrgCNB6kcpxVJ6nsr6EENQoCGEUeoagtWcIxMnRxNxQXw8kkWFcAQBWUDggRAAAABACAJ0BKg0AEAADgFolsALsARAUqXyBdEAA/u/i7y/ShvaaOwJBamHZE+RD3EDqKDtYpaWdndeJryhzQjh8p6YsAAAA"
+    "blur": "data:image/webp;base64,UklGRtwAAABXRUJQVlA4WAoAAAAQAAAADAAADwAAQUxQSHEAAAABuS5E9D/gNrZtVTkHl5gOaMB7J6UEi+jB4fm73y8tREzABBwuCSKRAfUV6GZlAZR7L4UCtRXoLiHqAEoSKEC3Y4D2D89TRQEUOgrgCNB6kcpxVJ6nsr6EENQoCGEUeoagtWcIxMnRxNxQXw8kkWFcAQBWUDggRAAAABACAJ0BKg0AEAADgFolsALsARAUqXyBdEAA/u/i7y/ShvaaOwJBamHZE+RD3EDqKDtYpaWdndeJryhzQjh8p6YsAAAA",
+    "benefits": [
+      "Algae OIL+ DHA+ DPA",
+      "Supports Your Heart, Brain, Joints, Eyes"
+    ],
+    "moq": "5000 bags",
+    "spec": "180 counts/bag",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-urolithin-a-capsule-2",
@@ -1562,7 +2491,15 @@ export const CATALOG: CatalogProduct[] = [
     "w": 800,
     "h": 1003,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRuQAAABXRUJQVlA4WAoAAAAQAAAADAAADwAAQUxQSHMAAAABuS5E9D/gKJJt1Tn3Q3AdCTGA2rOOBAYRTA/P56shYgImYH2KhCAqiFQhcTUzAcqVl0JBtBXETSBEB4jAgwJ0G3+gNX5UjqELFAUwIih0AFgeaI0/lWWpfr6ISDQKRH+UyEFrIge0tTEwlkulCoH39XMAAFZQOCBKAAAAEAIAnQEqDQAQAAOAWiWwAuwBEBQhbuD6AAD+7+LvL9KHCejzpYxxYXxBJ6ziRAPN6pUM5vY6VLl+rjXREeusKLZfAa//nQCQAAA="
+    "blur": "data:image/webp;base64,UklGRuQAAABXRUJQVlA4WAoAAAAQAAAADAAADwAAQUxQSHMAAAABuS5E9D/gKJJt1Tn3Q3AdCTGA2rOOBAYRTA/P56shYgImYH2KhCAqiFQhcTUzAcqVl0JBtBXETSBEB4jAgwJ0G3+gNX5UjqELFAUwIih0AFgeaI0/lWWpfr6ISDQKRH+UyEFrIge0tTEwlkulCoH39XMAAFZQOCBKAAAAEAIAnQEqDQAQAAOAWiWwAuwBEBQhbuD6AAD+7+LvL9KHCejzpYxxYXxBJ6ziRAPN6pUM5vY6VLl+rjXREeusKLZfAa//nQCQAAA=",
+    "benefits": [
+      "Supports Cellular Energy Production",
+      "Cell Recovery & Energy Boost"
+    ],
+    "moq": "5000 bags",
+    "spec": "300 counts/bag",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-glutathione-capsule-2",
@@ -1576,7 +2513,17 @@ export const CATALOG: CatalogProduct[] = [
     "w": 800,
     "h": 1003,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRuAAAABXRUJQVlA4WAoAAAAQAAAADAAADwAAQUxQSHgAAAABuS5E9D/guLZtpXnf0CktUIHVzpgS4kkRuMvDX1qImACFadsw7ja9JOpCDLOYLRgJcT8eByAilFssmDMLJjFhmAsMMxmBBbg00GkBKno0gw7NgNStGa1HJK0/ukfSqCCEmNMnQo0Fp5wtp4DFTcxkUwQBTSa1xhNWUDggQgAAAPABAJ0BKg0AEAADgFolkAAC6niUfrrQAAD+7+LvL9KG4vN/CqDI5hxkM0MddGmsahwj6fI4L57xf+hjH7GzJwZAAA=="
+    "blur": "data:image/webp;base64,UklGRuAAAABXRUJQVlA4WAoAAAAQAAAADAAADwAAQUxQSHgAAAABuS5E9D/guLZtpXnf0CktUIHVzpgS4kkRuMvDX1qImACFadsw7ja9JOpCDLOYLRgJcT8eByAilFssmDMLJjFhmAsMMxmBBbg00GkBKno0gw7NgNStGa1HJK0/ukfSqCCEmNMnQo0Fp5wtp4DFTcxkUwQBTSa1xhNWUDggQgAAAPABAJ0BKg0AEAADgFolkAAC6niUfrrQAAD+7+LvL9KG4vN/CqDI5hxkM0MddGmsahwj6fI4L57xf+hjH7GzJwZAAA==",
+    "benefits": [
+      "Youthful Skin",
+      "Immune System",
+      "Energy & Brain",
+      "Antioxidant"
+    ],
+    "moq": "5000 bags",
+    "spec": "180 counts/bag",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-krill-oil-capsule",
@@ -1590,7 +2537,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 800,
     "h": 1004,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRugAAABXRUJQVlA4WAoAAAAQAAAADAAADwAAQUxQSHMAAAABuS5E9D/gqrZtVdnX3nvILxGooLlJQASXDs/dzkFPhogJmID9JaJoAwIAmvG0sgDCnRRjCrAfSmiggALaF1EGPZA2arKKqNOS9YD9YdAYgLTVEzUaolZLVCsRQpQvRkiFaA781BwgRweBOcvQ2KhXqlwAAFZQOCBOAAAA8AEAnQEqDQAQAAOAWiWoAALqeFxAUFQAAP7x6Zh9P+pEjIldQbDuqLdQlKmzx4YIdPFbPANr4j8olVfrnF/9pcYZmdL/ku30uGwHEAAA"
+    "blur": "data:image/webp;base64,UklGRugAAABXRUJQVlA4WAoAAAAQAAAADAAADwAAQUxQSHMAAAABuS5E9D/gqrZtVdnX3nvILxGooLlJQASXDs/dzkFPhogJmID9JaJoAwIAmvG0sgDCnRRjCrAfSmiggALaF1EGPZA2arKKqNOS9YD9YdAYgLTVEzUaolZLVCsRQpQvRkiFaA781BwgRweBOcvQ2KhXqlwAAFZQOCBOAAAA8AEAnQEqDQAQAAOAWiWoAALqeFxAUFQAAP7x6Zh9P+pEjIldQbDuqLdQlKmzx4YIdPFbPANr4j8olVfrnF/9pcYZmdL/ku30uGwHEAAA",
+    "benefits": [
+      "With Phospholipid & Astaxanthin",
+      "Supports Healthy Joints & Mobility",
+      "Supports Healthy Heart, Brain & Immune Support"
+    ],
+    "moq": "5000 bags",
+    "spec": "180 counts/bag",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-vitamin-d3-capsule",
@@ -1604,7 +2560,15 @@ export const CATALOG: CatalogProduct[] = [
     "w": 800,
     "h": 1003,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRuIAAABXRUJQVlA4WAoAAAAQAAAADAAADwAAQUxQSHIAAAABuS5E9D/guLZtJ7mPHMaUQAWglu7YFrI2kbM+LvnZQsQETMB8riZEhWrCQ46DQgaMMxe1mhiqiSMlYASEUmB9ezJ9/PFm+lFQG6nBSwWsHz+mtxfT14fp6YGIRK9G9EQOHww6fEBLC5GUz+OoKfXwtAFWUDggSgAAABACAJ0BKg0AEAADgFolsALsARAUGqTdj4AA/u/i7y/Sht2ViIqBCIB0b4HvUCXqlRqYz9YviavW8dog/zAHaGj/KkwCvMP64AAA"
+    "blur": "data:image/webp;base64,UklGRuIAAABXRUJQVlA4WAoAAAAQAAAADAAADwAAQUxQSHIAAAABuS5E9D/guLZtJ7mPHMaUQAWglu7YFrI2kbM+LvnZQsQETMB8riZEhWrCQ46DQgaMMxe1mhiqiSMlYASEUmB9ezJ9/PFm+lFQG6nBSwWsHz+mtxfT14fp6YGIRK9G9EQOHww6fEBLC5GUz+OoKfXwtAFWUDggSgAAABACAJ0BKg0AEAADgFolsALsARAUGqTdj4AA/u/i7y/Sht2ViIqBCIB0b4HvUCXqlRqYz9YviavW8dog/zAHaGj/KkwCvMP64AAA",
+    "benefits": [
+      "High-Potency Formula For Bone",
+      "Immune Health"
+    ],
+    "moq": "5000 bags",
+    "spec": "300 counts/bag",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-omega-3-dha-liquid-drops",
@@ -1618,7 +2582,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 353,
     "h": 1074,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRrYAAABXRUJQVlA4WAoAAAAQAAAABAAADwAAQUxQSEcAAAAJcFvbthIdXFKvAiKLKI0OaMQrgDZoQmcid2shIiaAoM9GXNsFDx89p7AOC9PelMAoo0vYpUjEAsCbyJ/3G3fuAgLCMM3zAABWUDggSAAAANABAJ0BKgUAEAADgFolkALsAPN52GxAAP7xjKQ+uXrI9SLTzTiuGOubjjMgCjvREBe3zszWEzP2In2B5ZZSeNkFDV9MfW5AAA=="
+    "blur": "data:image/webp;base64,UklGRrYAAABXRUJQVlA4WAoAAAAQAAAABAAADwAAQUxQSEcAAAAJcFvbthIdXFKvAiKLKI0OaMQrgDZoQmcid2shIiaAoM9GXNsFDx89p7AOC9PelMAoo0vYpUjEAsCbyJ/3G3fuAgLCMM3zAABWUDggSAAAANABAJ0BKgUAEAADgFolkALsAPN52GxAAP7xjKQ+uXrI9SLTzTiuGOubjjMgCjvREBe3zszWEzP2In2B5ZZSeNkFDV9MfW5AAA==",
+    "benefits": [
+      "Support Healthy Brain",
+      "Function & Heart Health",
+      "Support Healthy Eyes, Brain & Bones"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60ml/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-milk-thistle-liquid-drops",
@@ -1632,7 +2605,14 @@ export const CATALOG: CatalogProduct[] = [
     "w": 353,
     "h": 1075,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRrAAAABXRUJQVlA4WAoAAAAQAAAABAAADwAAQUxQSEoAAAABYFtr24uvkkNlCscQjikYUcsAqlRSWUD1/38ph1eeISKCPOYSBfCJIoQkt+gcytFIWoXaTrAi4zjQvwQOjD/Di2NHL3BgiBnjKVZQOCBAAAAA8AEAnQEqBQAQAAOAWiWMAuwA835O59gAAP7xjKQ8SBbx2cuyCXUmGecNjfHvcTuSW2d1ijHF0Z6ZxvDuMVvYAA=="
+    "blur": "data:image/webp;base64,UklGRrAAAABXRUJQVlA4WAoAAAAQAAAABAAADwAAQUxQSEoAAAABYFtr24uvkkNlCscQjikYUcsAqlRSWUD1/38ph1eeISKCPOYSBfCJIoQkt+gcytFIWoXaTrAi4zjQvwQOjD/Di2NHL3BgiBnjKVZQOCBAAAAA8AEAnQEqBQAQAAOAWiWMAuwA835O59gAAP7xjKQ8SBbx2cuyCXUmGecNjfHvcTuSW2d1ijHF0Z6ZxvDuMVvYAA==",
+    "benefits": [
+      "Powerful Antioxidants"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60ml/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-berberine-liquid-drops",
@@ -1646,7 +2626,15 @@ export const CATALOG: CatalogProduct[] = [
     "w": 353,
     "h": 1074,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRrQAAABXRUJQVlA4WAoAAAAQAAAABAAADwAAQUxQSEcAAAAJcFvbthIdXFKvAiKLKI0OaMQrgDZoQmcid2shIiaAoM9GXNsFDx89p7AOC9PelMAoo0vYpUjEAsCbyJ/3G3fuAgLCMM3zAABWUDggRgAAAPABAJ0BKgUAEAADgFoljALsAPN//DW9AAD+8YykPrl6yPUi0804rhjrm46qWr+WH+8eFuO0gPR2Mb1E4RnvGdtWoaygAAA="
+    "blur": "data:image/webp;base64,UklGRrQAAABXRUJQVlA4WAoAAAAQAAAABAAADwAAQUxQSEcAAAAJcFvbthIdXFKvAiKLKI0OaMQrgDZoQmcid2shIiaAoM9GXNsFDx89p7AOC9PelMAoo0vYpUjEAsCbyJ/3G3fuAgLCMM3zAABWUDggRgAAAPABAJ0BKgUAEAADgFoljALsAPN//DW9AAD+8YykPrl6yPUi0804rhjrm46qWr+WH+8eFuO0gPR2Mb1E4RnvGdtWoaygAAA=",
+    "benefits": [
+      "Highly Efficient",
+      "Wholesome and Flavorful"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60ml/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-soursop-graviola-liquid-drops",
@@ -1660,7 +2648,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 353,
     "h": 1074,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRq4AAABXRUJQVlA4WAoAAAAQAAAABAAADwAAQUxQSEcAAAAJcFvbthIdXFKvAiKLKI0OaMQrgDZoQmcid2shIiaAoM9GXNsFDx89p7AOC9PelMAoo0vYpUjEAsCbyJ/3G3fuAgLCMM3zAABWUDggQAAAAJABAJ0BKgUAEAADgFolAABTS/+aAAD+8UnNBT3ibnJ5TAjnDRcV+s9ekmzZmp311T758sy8ZfLfv08RtB8SLgA="
+    "blur": "data:image/webp;base64,UklGRq4AAABXRUJQVlA4WAoAAAAQAAAABAAADwAAQUxQSEcAAAAJcFvbthIdXFKvAiKLKI0OaMQrgDZoQmcid2shIiaAoM9GXNsFDx89p7AOC9PelMAoo0vYpUjEAsCbyJ/3G3fuAgLCMM3zAABWUDggQAAAAJABAJ0BKgUAEAADgFolAABTS/+aAAD+8UnNBT3ibnJ5TAjnDRcV+s9ekmzZmp311T758sy8ZfLfv08RtB8SLgA=",
+    "benefits": [
+      "Antioxidant Properties",
+      "Aid Digestion",
+      "Boost Immunity"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60ml/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-melatonin-liquid-drops",
@@ -1674,7 +2671,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 353,
     "h": 1075,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRrYAAABXRUJQVlA4WAoAAAAQAAAABAAADwAAQUxQSEoAAAABYFtr24uvkkNlCscQjikYUcsAqlRSWUD1/38ph1eeISKCPOYSBfCJIoQkt+gcytFIWoXaTrAi4zjQvwQOjD/Di2NHL3BgiBnjKVZQOCBGAAAA0AEAnQEqBQAQAAOAWiWcAuwA83vZMVgA/vGMpDxIFvHZzMdhni1FQg/e9qGZOyfOb2ZXHJYyBXaa/7fcADOMgDCwAefgAA=="
+    "blur": "data:image/webp;base64,UklGRrYAAABXRUJQVlA4WAoAAAAQAAAABAAADwAAQUxQSEoAAAABYFtr24uvkkNlCscQjikYUcsAqlRSWUD1/38ph1eeISKCPOYSBfCJIoQkt+gcytFIWoXaTrAi4zjQvwQOjD/Di2NHL3BgiBnjKVZQOCBGAAAA0AEAnQEqBQAQAAOAWiWcAuwA83vZMVgA/vGMpDxIFvHZzMdhni1FQg/e9qGZOyfOb2ZXHJYyBXaa/7fcADOMgDCwAefgAA==",
+    "benefits": [
+      "Promote Relaxation",
+      "Wake Up Refreshed",
+      "Support Quality Sleep"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60ml/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-vitamin-d3-k2-liquid-drops",
@@ -1688,7 +2694,15 @@ export const CATALOG: CatalogProduct[] = [
     "w": 353,
     "h": 1075,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRrQAAABXRUJQVlA4WAoAAAAQAAAABAAADwAAQUxQSEoAAAABYFtr24uvkkNlCscQjikYUcsAqlRSWUD1/38ph1eeISKCPOYSBfCJIoQkt+gcytFIWoXaTrAi4zjQvwQOjD/Di2NHL3BgiBnjKVZQOCBEAAAA0AEAnQEqBQAQAAOAWiWIAuwA83vR+RAA/vGMpD67fnrtr+53dlMLe/Du3atFJtWdQ8prGaK+y2zgBfM2eWNiCgALIAA="
+    "blur": "data:image/webp;base64,UklGRrQAAABXRUJQVlA4WAoAAAAQAAAABAAADwAAQUxQSEoAAAABYFtr24uvkkNlCscQjikYUcsAqlRSWUD1/38ph1eeISKCPOYSBfCJIoQkt+gcytFIWoXaTrAi4zjQvwQOjD/Di2NHL3BgiBnjKVZQOCBEAAAA0AEAnQEqBQAQAAOAWiWIAuwA83vR+RAA/vGMpD67fnrtr+53dlMLe/Du3atFJtWdQ8prGaK+y2zgBfM2eWNiCgALIAA=",
+    "benefits": [
+      "Grassfed & Grass Finished",
+      "Promote Health & Balance"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60ml/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-d3-k2-liquid-drops",
@@ -1702,7 +2716,15 @@ export const CATALOG: CatalogProduct[] = [
     "w": 354,
     "h": 1075,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRrYAAABXRUJQVlA4WAoAAAAQAAAABAAADwAAQUxQSEkAAAABYBvb2oxvRrarQi7WgALEOjRCo4S1ApH0X5Fuz66FiAgKWUAUIyJKkZDZY/CpQmfYLTq7wIJSY8c43hN2zH+TxoZxxI4p41zkAFZQOCBGAAAAEAIAnQEqBQAQAAOAWiUAXYj/8DcAq3IUIAD+8UnK0YTfb7yuDQJxuIEbGt6jL2dm4nwbpNblmTOTNP/5uRTgHziOkDwAAA=="
+    "blur": "data:image/webp;base64,UklGRrYAAABXRUJQVlA4WAoAAAAQAAAABAAADwAAQUxQSEkAAAABYBvb2oxvRrarQi7WgALEOjRCo4S1ApH0X5Fuz66FiAgKWUAUIyJKkZDZY/CpQmfYLTq7wIJSY8c43hN2zH+TxoZxxI4p41zkAFZQOCBGAAAAEAIAnQEqBQAQAAOAWiUAXYj/8DcAq3IUIAD+8UnK0YTfb7yuDQJxuIEbGt6jL2dm4nwbpNblmTOTNP/5uRTgHziOkDwAAA==",
+    "benefits": [
+      "Grassfed & Grass Finished",
+      "Promote Health & Balance"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60ml/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-mullein-liquid-drops",
@@ -1716,7 +2738,15 @@ export const CATALOG: CatalogProduct[] = [
     "w": 353,
     "h": 1075,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRrYAAABXRUJQVlA4WAoAAAAQAAAABAAADwAAQUxQSEoAAAABYFtr24uvkkNlCscQjikYUcsAqlRSWUD1/38ph1eeISKCPOYSBfCJIoQkt+gcytFIWoXaTrAi4zjQvwQOjD/Di2NHL3BgiBnjKVZQOCBGAAAAsAEAnQEqBQAQAAOAWiUAXYAebzqoQAD+8YykPEgW8dlJDdM8WoqEFke4O243uZgbPwftiOFz2mWI7GDQBqvkSMv+6JgAAA=="
+    "blur": "data:image/webp;base64,UklGRrYAAABXRUJQVlA4WAoAAAAQAAAABAAADwAAQUxQSEoAAAABYFtr24uvkkNlCscQjikYUcsAqlRSWUD1/38ph1eeISKCPOYSBfCJIoQkt+gcytFIWoXaTrAi4zjQvwQOjD/Di2NHL3BgiBnjKVZQOCBGAAAAsAEAnQEqBQAQAAOAWiUAXYAebzqoQAD+8YykPEgW8dlJDdM8WoqEFke4O243uZgbPwftiOFz2mWI7GDQBqvkSMv+6JgAAA==",
+    "benefits": [
+      "Support Immune System",
+      "Boost Respiratory Health"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60ml/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-lingo-leap-liquid-drops",
@@ -1730,7 +2760,15 @@ export const CATALOG: CatalogProduct[] = [
     "w": 354,
     "h": 1075,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRrgAAABXRUJQVlA4WAoAAAAQAAAABAAADwAAQUxQSEkAAAABYBvb2oxvRrarQi7WgALEOjRCo4S1ApH0X5Fuz66FiAgKWUAUIyJKkZDZY/CpQmfYLTq7wIJSY8c43hN2zH+TxoZxxI4p41zkAFZQOCBIAAAAEAIAnQEqBQAQAAOAWiUAXYj/8DcYOJr9gAD+8UnNBHFQZaOUjxr6JZrHlAAZp1lgp72Zva5wlB7+Jrvoy1FbsHHprVzMGcAA"
+    "blur": "data:image/webp;base64,UklGRrgAAABXRUJQVlA4WAoAAAAQAAAABAAADwAAQUxQSEkAAAABYBvb2oxvRrarQi7WgALEOjRCo4S1ApH0X5Fuz66FiAgKWUAUIyJKkZDZY/CpQmfYLTq7wIJSY8c43hN2zH+TxoZxxI4p41zkAFZQOCBIAAAAEAIAnQEqBQAQAAOAWiUAXYj/8DcYOJr9gAD+8UnNBHFQZaOUjxr6JZrHlAAZp1lgp72Zva5wlB7+Jrvoy1FbsHHprVzMGcAA",
+    "benefits": [
+      "Nervous System Support",
+      "Supports Brain Health & Communication Skills"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60ml/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-detoxzee-liquid-drops",
@@ -1744,7 +2782,15 @@ export const CATALOG: CatalogProduct[] = [
     "w": 354,
     "h": 1075,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRrYAAABXRUJQVlA4WAoAAAAQAAAABAAADwAAQUxQSEkAAAABYBvb2oxvRrarQi7WgALEOjRCo4S1ApH0X5Fuz66FiAgKWUAUIyJKkZDZY/CpQmfYLTq7wIJSY8c43hN2zH+TxoZxxI4p41zkAFZQOCBGAAAAMAIAnQEqBQAQAAOAWiUAXYj/8Dca+dw5wAAA/vFJytG0uH8f32Buqsnv4WnBmOvpSS4TtgeilCjZ601q5mFAJPRnUaAAAA=="
+    "blur": "data:image/webp;base64,UklGRrYAAABXRUJQVlA4WAoAAAAQAAAABAAADwAAQUxQSEkAAAABYBvb2oxvRrarQi7WgALEOjRCo4S1ApH0X5Fuz66FiAgKWUAUIyJKkZDZY/CpQmfYLTq7wIJSY8c43hN2zH+TxoZxxI4p41zkAFZQOCBGAAAAMAIAnQEqBQAQAAOAWiUAXYj/8Dca+dw5wAAA/vFJytG0uH8f32Buqsnv4WnBmOvpSS4TtgeilCjZ601q5mFAJPRnUaAAAA==",
+    "benefits": [
+      "Supports Natural Defenses",
+      "With B12 + D3 to Help Maintain Immune Health"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60ml/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-maca-liquid-drops",
@@ -1758,7 +2804,14 @@ export const CATALOG: CatalogProduct[] = [
     "w": 353,
     "h": 1075,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRq4AAABXRUJQVlA4WAoAAAAQAAAABAAADwAAQUxQSEoAAAABYFtr24uvkkNlCscQjikYUcsAqlRSWUD1/38ph1eeISKCPOYSBfCJIoQkt+gcytFIWoXaTrAi4zjQvwQOjD/Di2NHL3BgiBnjKVZQOCA+AAAA8AEAnQEqBQAQAAOAWiWMAuwA84Kj4ZEAAP7xjKQ+u3567dyP3e14mcXTy6FJ2E0aD1XGdZ5o3k86eADwAAA="
+    "blur": "data:image/webp;base64,UklGRq4AAABXRUJQVlA4WAoAAAAQAAAABAAADwAAQUxQSEoAAAABYFtr24uvkkNlCscQjikYUcsAqlRSWUD1/38ph1eeISKCPOYSBfCJIoQkt+gcytFIWoXaTrAi4zjQvwQOjD/Di2NHL3BgiBnjKVZQOCA+AAAA8AEAnQEqBQAQAAOAWiWMAuwA84Kj4ZEAAP7xjKQ+u3567dyP3e14mcXTy6FJ2E0aD1XGdZ5o3k86eADwAAA=",
+    "benefits": [
+      "Overall Health And Mood Support"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60ml/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-cordyceps-liquid-drops",
@@ -1772,7 +2825,17 @@ export const CATALOG: CatalogProduct[] = [
     "w": 353,
     "h": 1075,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRq4AAABXRUJQVlA4WAoAAAAQAAAABAAADwAAQUxQSEoAAAABYFtr24uvkkNlCscQjikYUcsAqlRSWUD1/38ph1eeISKCPOYSBfCJIoQkt+gcytFIWoXaTrAi4zjQvwQOjD/Di2NHL3BgiBnjKVZQOCA+AAAAsAEAnQEqBQAQAAOAWiWMAuwA83u1EAD+8YykPEgW8dlJDdM8WoqEjlB5IERu8L/llxn07SZvbVNDscoAAAA="
+    "blur": "data:image/webp;base64,UklGRq4AAABXRUJQVlA4WAoAAAAQAAAABAAADwAAQUxQSEoAAAABYFtr24uvkkNlCscQjikYUcsAqlRSWUD1/38ph1eeISKCPOYSBfCJIoQkt+gcytFIWoXaTrAi4zjQvwQOjD/Di2NHL3BgiBnjKVZQOCA+AAAAsAEAnQEqBQAQAAOAWiWMAuwA83u1EAD+8YykPEgW8dlJDdM8WoqEjlB5IERu8L/llxn07SZvbVNDscoAAAA=",
+    "benefits": [
+      "Gut Health",
+      "Energy & Stamina",
+      "Immune Support",
+      "Overall Vitality"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60ml/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-echinacea-goldenseal-liquid-drops",
@@ -1786,7 +2849,15 @@ export const CATALOG: CatalogProduct[] = [
     "w": 354,
     "h": 1075,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRrIAAABXRUJQVlA4WAoAAAAQAAAABAAADwAAQUxQSEkAAAABYBvb2oxvRrarQi7WgALEOjRCo4S1ApH0X5Fuz66FiAgKWUAUIyJKkZDZY/CpQmfYLTq7wIJSY8c43hN2zH+TxoZxxI4p41zkAFZQOCBCAAAA0AEAnQEqBQAQAAOAWiWMAuwA9EcIGJ4A/vFJytGE32+8rg0CcbiBHU5e3OoX7Fm98Xb9TtXCCnfKWYAwsqouLwAA"
+    "blur": "data:image/webp;base64,UklGRrIAAABXRUJQVlA4WAoAAAAQAAAABAAADwAAQUxQSEkAAAABYBvb2oxvRrarQi7WgALEOjRCo4S1ApH0X5Fuz66FiAgKWUAUIyJKkZDZY/CpQmfYLTq7wIJSY8c43hN2zH+TxoZxxI4p41zkAFZQOCBCAAAA0AEAnQEqBQAQAAOAWiWMAuwA9EcIGJ4A/vFJytGE32+8rg0CcbiBHU5e3OoX7Fm98Xb9TtXCCnfKWYAwsqouLwAA",
+    "benefits": [
+      "Immune Guard",
+      "Lung Support"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60ml/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-genius-liquid-drops",
@@ -1800,7 +2871,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 354,
     "h": 1075,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRrQAAABXRUJQVlA4WAoAAAAQAAAABAAADwAAQUxQSEkAAAABYBvb2oxvRrarQi7WgALEOjRCo4S1ApH0X5Fuz66FiAgKWUAUIyJKkZDZY/CpQmfYLTq7wIJSY8c43hN2zH+TxoZxxI4p41zkAFZQOCBEAAAAkAEAnQEqBQAQAAOAWiUAAFNMpOAAAP7xSc0EbPDRAP57xKpFOPhn9Up8yf8bZwhGTsijElVzAJwjavfRkGgmcdQAAAA="
+    "blur": "data:image/webp;base64,UklGRrQAAABXRUJQVlA4WAoAAAAQAAAABAAADwAAQUxQSEkAAAABYBvb2oxvRrarQi7WgALEOjRCo4S1ApH0X5Fuz66FiAgKWUAUIyJKkZDZY/CpQmfYLTq7wIJSY8c43hN2zH+TxoZxxI4p41zkAFZQOCBEAAAAkAEAnQEqBQAQAAOAWiUAAFNMpOAAAP7xSc0EbPDRAP57xKpFOPhn9Up8yf8bZwhGTsijElVzAJwjavfRkGgmcdQAAAA=",
+    "benefits": [
+      "Boost Focus And Brain Health",
+      "Enhance Memory And Overall Health",
+      "Improve Tranquility And Energy"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60ml/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-lion-s-mane-liquid-drops",
@@ -1814,7 +2894,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 353,
     "h": 1075,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRrQAAABXRUJQVlA4WAoAAAAQAAAABAAADwAAQUxQSEoAAAABYFtr24uvkkNlCscQjikYUcsAqlRSWUD1/38ph1eeISKCPOYSBfCJIoQkt+gcytFIWoXaTrAi4zjQvwQOjD/Di2NHL3BgiBnjKVZQOCBEAAAA0AEAnQEqBQAQAAOAWiWcAAKaejEdgAAA/vGMpD67fnrtryg4yIv80rvEqiU3wUbewfhXuwXj+m+drt0AbIJcABqAAAA="
+    "blur": "data:image/webp;base64,UklGRrQAAABXRUJQVlA4WAoAAAAQAAAABAAADwAAQUxQSEoAAAABYFtr24uvkkNlCscQjikYUcsAqlRSWUD1/38ph1eeISKCPOYSBfCJIoQkt+gcytFIWoXaTrAi4zjQvwQOjD/Di2NHL3BgiBnjKVZQOCBEAAAA0AEAnQEqBQAQAAOAWiWcAAKaejEdgAAA/vGMpD67fnrtryg4yIv80rvEqiU3wUbewfhXuwXj+m+drt0AbIJcABqAAAA=",
+    "benefits": [
+      "Improve Execution & Concentration",
+      "Improve Focus",
+      "Improve Overall Health"
+    ],
+    "moq": "2000 bottles",
+    "spec": "60ml/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-amino-acid-powder",
@@ -1828,7 +2917,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 625,
     "h": 1063,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRrQAAABXRUJQVlA4WAoAAAAQAAAACAAADwAAQUxQSD4AAAABYFTbtpKwLKKwqPatAO4y+wS49z10RoCImIAsFOMyFj43+m4MISKgjyqqKnp8xR8hRYSMi76viWvXfWlsClZQOCBQAAAA0AEAnQEqCQAQAAOAWiWUAUwAPRADMxAA/uH0aUpIbWmrbKFnM+kTtTOsFt5Ku8NZvXFxlMHkRtR9G7m7dVdRnYdH6pA3bDsuSMU7gpFBZAA="
+    "blur": "data:image/webp;base64,UklGRrQAAABXRUJQVlA4WAoAAAAQAAAACAAADwAAQUxQSD4AAAABYFTbtpKwLKKwqPatAO4y+wS49z10RoCImIAsFOMyFj43+m4MISKgjyqqKnp8xR8hRYSMi76viWvXfWlsClZQOCBQAAAA0AEAnQEqCQAQAAOAWiWUAUwAPRADMxAA/uH0aUpIbWmrbKFnM+kTtTOsFt5Ku8NZvXFxlMHkRtR9G7m7dVdRnYdH6pA3bDsuSMU7gpFBZAA=",
+    "benefits": [
+      "Maximize Energy And Recovery",
+      "Energy Hydration",
+      "Helps Support Energy & Focus"
+    ],
+    "moq": "2000 bottles",
+    "spec": "285g/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-pre-workout-powder",
@@ -1842,7 +2940,15 @@ export const CATALOG: CatalogProduct[] = [
     "w": 625,
     "h": 1063,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRsIAAABXRUJQVlA4WAoAAAAQAAAACAAADwAAQUxQSD4AAAABYFTbtpKwLKKwqPatAO4y+wS49z10RoCImIAsFOMyFj43+m4MISKgjyqqKnp8xR8hRYSMi76viWvXfWlsClZQOCBeAAAAMAIAnQEqCQAQAAOAWiWUAnSCIxgbqoO83IAA/uH0aUpIbWmrbKFw/OnAiW3e0ntzk9Cg80mmvd5juJH/HVxoWWjMC3sVXiyPSHWz9o5BhIm4P4lUwBk2fCQKfAPAAA=="
+    "blur": "data:image/webp;base64,UklGRsIAAABXRUJQVlA4WAoAAAAQAAAACAAADwAAQUxQSD4AAAABYFTbtpKwLKKwqPatAO4y+wS49z10RoCImIAsFOMyFj43+m4MISKgjyqqKnp8xR8hRYSMi76viWvXfWlsClZQOCBeAAAAMAIAnQEqCQAQAAOAWiWUAnSCIxgbqoO83IAA/uH0aUpIbWmrbKFw/OnAiW3e0ntzk9Cg80mmvd5juJH/HVxoWWjMC3sVXiyPSHWz9o5BhIm4P4lUwBk2fCQKfAPAAA==",
+    "benefits": [
+      "Energy Boost",
+      "Supports Moisturizing"
+    ],
+    "moq": "2000 bottles",
+    "spec": "492g/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-whey-protein-vanilla-powder",
@@ -1856,7 +2962,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 625,
     "h": 1062,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRrYAAABXRUJQVlA4WAoAAAAQAAAACAAADwAAQUxQSEAAAAABcBXJthppDSlhY5wIYGaOgAtZ+lsBETEBahS3Q5tEls3ffQeBiACjnYmZie9f1/84EIkI8Wr5+yQE5TgPpa8AVlA4IFAAAACQAQCdASoJABAAA4BaJQAAXOs0MwAA/uH0aUpIbWmrbKFmpQ7rXEjyYi3bF2d7ogoRDIjNfRWMw28+TEcM7TPFpff7tv3IA02qEBzcAQQAAA=="
+    "blur": "data:image/webp;base64,UklGRrYAAABXRUJQVlA4WAoAAAAQAAAACAAADwAAQUxQSEAAAAABcBXJthppDSlhY5wIYGaOgAtZ+lsBETEBahS3Q5tEls3ffQeBiACjnYmZie9f1/84EIkI8Wr5+yQE5TgPpa8AVlA4IFAAAACQAQCdASoJABAAA4BaJQAAXOs0MwAA/uH0aUpIbWmrbKFmpQ7rXEjyYi3bF2d7ogoRDIjNfRWMw28+TEcM7TPFpff7tv3IA02qEBzcAQQAAA==",
+    "benefits": [
+      "Support Muscle Recovery",
+      "Workout Support",
+      "Helps Build And Maintain Muscle"
+    ],
+    "moq": "2000 bottles",
+    "spec": "453.6g/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-beet-root-powder",
@@ -1870,7 +2985,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 625,
     "h": 1062,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRroAAABXRUJQVlA4WAoAAAAQAAAACAAADwAAQUxQSEAAAAABcBXJthppDSlhY5wIYGaOgAtZ+lsBETEBahS3Q5tEls3ffQeBiACjnYmZie9f1/84EIkI8Wr5+yQE5TgPpa8AVlA4IFQAAACwAQCdASoJABAAA4BaJYwAAudR//XAAP7h9GlKSG1pq2yhV3bxxjWIiiWwYpOuH0I90v0ceHhA7ffu9sXKioV4wyiZidQ0gN2jowlIAzotAvoBAAA="
+    "blur": "data:image/webp;base64,UklGRroAAABXRUJQVlA4WAoAAAAQAAAACAAADwAAQUxQSEAAAAABcBXJthppDSlhY5wIYGaOgAtZ+lsBETEBahS3Q5tEls3ffQeBiACjnYmZie9f1/84EIkI8Wr5+yQE5TgPpa8AVlA4IFQAAACwAQCdASoJABAAA4BaJYwAAudR//XAAP7h9GlKSG1pq2yhV3bxxjWIiiWwYpOuH0I90v0ceHhA7ffu9sXKioV4wyiZidQ0gN2jowlIAzotAvoBAAA=",
+    "benefits": [
+      "Increase Nitric Oxide",
+      "Boost Energy",
+      "Support Healthy Blood Flow"
+    ],
+    "moq": "2000 bottles",
+    "spec": "210g/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-matcha-powder",
@@ -1884,7 +3008,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 625,
     "h": 1062,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRroAAABXRUJQVlA4WAoAAAAQAAAACAAADwAAQUxQSEAAAAABcBXJthppDSlhY5wIYGaOgAtZ+lsBETEBahS3Q5tEls3ffQeBiACjnYmZie9f1/84EIkI8Wr5+yQE5TgPpa8AVlA4IFQAAADwAQCdASoJABAAA4BaJZQCw7EO/9EyQPAA/uH0aUpIbWmrbKFXdoMd+r/KJk6q4mSRA7nZx5+g93OFNN3pqhXjCVU54MHtmEAsB5BkIdPPCATAAAA="
+    "blur": "data:image/webp;base64,UklGRroAAABXRUJQVlA4WAoAAAAQAAAACAAADwAAQUxQSEAAAAABcBXJthppDSlhY5wIYGaOgAtZ+lsBETEBahS3Q5tEls3ffQeBiACjnYmZie9f1/84EIkI8Wr5+yQE5TgPpa8AVlA4IFQAAADwAQCdASoJABAAA4BaJZQCw7EO/9EyQPAA/uH0aUpIbWmrbKFXdoMd+r/KJk6q4mSRA7nZx5+g93OFNN3pqhXjCVU54MHtmEAsB5BkIdPPCATAAAA=",
+    "benefits": [
+      "Support Cognitive",
+      "Enhance Focus",
+      "Enhance Energy"
+    ],
+    "moq": "2000 bottles",
+    "spec": "680g/bottle",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-vitamin-c-1000-mg-effervescent-tablets-tablet",
@@ -1898,7 +3031,15 @@ export const CATALOG: CatalogProduct[] = [
     "w": 487,
     "h": 1837,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRqQAAABXRUJQVlA4WAoAAAAQAAAAAwAADwAAQUxQSDIAAAABZ6CgjSQ1dnzP6I8iIj5tRHRKdJpCMQCgkUdMIYSSyY3R+xrbECL6HyWPG4d+GocSAFZQOCBMAAAA8AEAnQEqBAAQAAOAWiWwAnQA9K7HgklAAP7gzGVViHKZSvof4GcSmOcZytgNZLj2U6wg/TCLiyIvrgulOSMbGa2k04mWb3GlgAAAAA=="
+    "blur": "data:image/webp;base64,UklGRqQAAABXRUJQVlA4WAoAAAAQAAAAAwAADwAAQUxQSDIAAAABZ6CgjSQ1dnzP6I8iIj5tRHRKdJpCMQCgkUdMIYSSyY3R+xrbECL6HyWPG4d+GocSAFZQOCBMAAAA8AEAnQEqBAAQAAOAWiWwAnQA9K7HgklAAP7gzGVViHKZSvof4GcSmOcZytgNZLj2U6wg/TCLiyIvrgulOSMbGa2k04mWb3GlgAAAAA==",
+    "benefits": [
+      "Immune support",
+      "Antioxidant support"
+    ],
+    "moq": "",
+    "spec": "tube packaging, 1,000 mg",
+    "specDetail": "Orange flavor",
+    "description": ""
   },
   {
     "id": "p-calcium-nicotinic-acid-effervescent-tablets-tablet",
@@ -1912,7 +3053,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 487,
     "h": 1840,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRqAAAABXRUJQVlA4WAoAAAAQAAAAAwAADwAAQUxQSDMAAAABb6CgjSQ1luNntMcRER8nAIBhwFUUqiFboQAuy0W4aJkkkUbfT6QQIvof6WfNUT+KrQAAVlA4IEYAAADwAQCdASoEABAAA4BaJbACdAEO/k2Eh8AA/rIu4zSxd31Ua2A2vbJWeOHmj7uQ96mYw/7b7Pvse7tPiBUEvjcOtkCyAAAA"
+    "blur": "data:image/webp;base64,UklGRqAAAABXRUJQVlA4WAoAAAAQAAAAAwAADwAAQUxQSDMAAAABb6CgjSQ1luNntMcRER8nAIBhwFUUqiFboQAuy0W4aJkkkUbfT6QQIvof6WfNUT+KrQAAVlA4IEYAAADwAQCdASoEABAAA4BaJbACdAEO/k2Eh8AA/rIu4zSxd31Ua2A2vbJWeOHmj7uQ96mYw/7b7Pvse7tPiBUEvjcOtkCyAAAA",
+    "benefits": [
+      "Bone health",
+      "Muscle function",
+      "Energy metabolism"
+    ],
+    "moq": "",
+    "spec": "20 tablets",
+    "specDetail": "With nicotinic acid",
+    "description": ""
   },
   {
     "id": "p-multivitamin-minerals-effervescent-tablets-tablet",
@@ -1926,7 +3076,15 @@ export const CATALOG: CatalogProduct[] = [
     "w": 487,
     "h": 1842,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRpgAAABXRUJQVlA4WAoAAAAQAAAAAwAADwAAQUxQSDIAAAABZ6CokSQ1t4x3v7OHERGfFiI6Je3pMBOAxS/LIoikiRRi+LeJpkJE/2P7ilAKPyFMAFZQOCBAAAAAEAIAnQEqBAAQAAOAWiWIAuwBDwgw+EiBAADiN3NcgVq2sMS4OjHNw57h23wTow8/vV7wpd7sCBs/q4BengAAAA=="
+    "blur": "data:image/webp;base64,UklGRpgAAABXRUJQVlA4WAoAAAAQAAAAAwAADwAAQUxQSDIAAAABZ6CokSQ1t4x3v7OHERGfFiI6Je3pMBOAxS/LIoikiRRi+LeJpkJE/2P7ilAKPyFMAFZQOCBAAAAAEAIAnQEqBAAQAAOAWiWIAuwBDwgw+EiBAADiN3NcgVq2sMS4OjHNw57h23wTow8/vV7wpd7sCBs/q4BengAAAA==",
+    "benefits": [
+      "Daily nutritional support",
+      "Vitamin & mineral intake"
+    ],
+    "moq": "",
+    "spec": "20 tablets",
+    "specDetail": "Vitamin and mineral formula",
+    "description": ""
   },
   {
     "id": "p-glutathione-vitamin-c-effervescent-tablets-tablet",
@@ -1940,7 +3098,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 487,
     "h": 1840,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRqIAAABXRUJQVlA4WAoAAAAQAAAAAwAADwAAQUxQSDEAAAABX6CgjSQ1l8NnfnscEfFhAlgIsIpAMQA0EEcsIYSSyV6z2P9yHEJE/6Pi3Bx9mqMEAFZQOCBKAAAA8AEAnQEqBAAQAAOAWiUAToj/8Dz/CF9AAP7XcbR5v3puftSKJ2pbF4ey/1WSyalO8PPspZUmZ35jynAR0CSXvBOH9C1Pq8DrRAA="
+    "blur": "data:image/webp;base64,UklGRqIAAABXRUJQVlA4WAoAAAAQAAAAAwAADwAAQUxQSDEAAAABX6CgjSQ1l8NnfnscEfFhAlgIsIpAMQA0EEcsIYSSyV6z2P9yHEJE/6Pi3Bx9mqMEAFZQOCBKAAAA8AEAnQEqBAAQAAOAWiUAToj/8Dz/CF9AAP7XcbR5v3puftSKJ2pbF4ey/1WSyalO8PPspZUmZ35jynAR0CSXvBOH9C1Pq8DrRAA=",
+    "benefits": [
+      "Immune support",
+      "Antioxidant support",
+      "Collagen support"
+    ],
+    "moq": "",
+    "spec": "tube packaging",
+    "specDetail": "Strawberry flavor",
+    "description": ""
   },
   {
     "id": "p-l-carnitine-effervescent-tablets-tablet",
@@ -1954,7 +3121,14 @@ export const CATALOG: CatalogProduct[] = [
     "w": 489,
     "h": 1839,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRqAAAABXRUJQVlA4WAoAAAAQAAAAAwAADwAAQUxQSDQAAAABb6AmAJA2yYZrBQSNiPg8yKgSspgKRZGkRkLQtBKQgpNTDu8rlmIhov9R+qQxPPg3hpMAVlA4IEYAAADQAQCdASoEABAAA4BaJagCdAEO/fuCAAD+AZTRv9g35KnUa71PFum7SCxl1VoTKw/ZZDZnGzW/TYMVWEPoIwpBqVkECAAA"
+    "blur": "data:image/webp;base64,UklGRqAAAABXRUJQVlA4WAoAAAAQAAAAAwAADwAAQUxQSDQAAAABb6AmAJA2yYZrBQSNiPg8yKgSspgKRZGkRkLQtBKQgpNTDu8rlmIhov9R+qQxPPg3hpMAVlA4IEYAAADQAQCdASoEABAAA4BaJagCdAEO/fuCAAD+AZTRv9g35KnUa71PFum7SCxl1VoTKw/ZZDZnGzW/TYMVWEPoIwpBqVkECAAA",
+    "benefits": [
+      "Energy production"
+    ],
+    "moq": "",
+    "spec": "20 tablets",
+    "specDetail": "L-carnitine tablet formula",
+    "description": ""
   },
   {
     "id": "p-one-daily-multivitamin-tablets-tablet",
@@ -1968,7 +3142,15 @@ export const CATALOG: CatalogProduct[] = [
     "w": 800,
     "h": 1563,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRrwAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFIAAAABYFtbW5NzWEIr7ViOreh0AmoGoKY152z5hwZ0hYiYgMTW01DZVHJQ5gMh0pAJzQCsRYnIjFi8TMzEzxya1tAS2SLrryW2IBABzg8Hb2Wc984oVlA4IEQAAAAQAgCdASoIABAAA4BaJZgC7AEPAjkSw+MAAP72DI9dv4oy+i8996gfjKwbbjj+qQAx5kPr+gK4gAfEPoz/rwLl/uuQAA=="
+    "blur": "data:image/webp;base64,UklGRrwAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFIAAAABYFtbW5NzWEIr7ViOreh0AmoGoKY152z5hwZ0hYiYgMTW01DZVHJQ5gMh0pAJzQCsRYnIjFi8TMzEzxya1tAS2SLrryW2IBABzg8Hb2Wc984oVlA4IEQAAAAQAgCdASoIABAAA4BaJZgC7AEPAjkSw+MAAP72DI9dv4oy+i8996gfjKwbbjj+qQAx5kPr+gK4gAfEPoz/rwLl/uuQAA==",
+    "benefits": [
+      "Daily nutritional support",
+      "Vitamin & mineral intake"
+    ],
+    "moq": "",
+    "spec": "60 tablets",
+    "specDetail": "Daily multivitamin formula",
+    "description": ""
   },
   {
     "id": "p-vitamin-b-complex-tablets-tablet",
@@ -1982,7 +3164,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 769,
     "h": 1610,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRs4AAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFYAAAABcBvbtlLhpNYfdENEBVCNtaC5u9uXi0MLESEgSQwaQ2pjUfQmzfgrwBrxiLp+PquCiO76/6+ukK6wrrDG6XopKa4r7/I3+U36Ll3/AP+HFbKX1FVkSVZQOCBSAAAAkAIAnQEqCAAQAAOAWiWIAnR/Bif4H4WgG33p18gA/omAfbykuzfEmbsO3RzJJ31rWAmLqrHqwBO3tbLMpyzI+1A5TFtJk1sMgr5TaXS+owAAAA=="
+    "blur": "data:image/webp;base64,UklGRs4AAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFYAAAABcBvbtlLhpNYfdENEBVCNtaC5u9uXi0MLESEgSQwaQ2pjUfQmzfgrwBrxiLp+PquCiO76/6+ukK6wrrDG6XopKa4r7/I3+U36Ll3/AP+HFbKX1FVkSVZQOCBSAAAAkAIAnQEqCAAQAAOAWiWIAnR/Bif4H4WgG33p18gA/omAfbykuzfEmbsO3RzJJ31rWAmLqrHqwBO3tbLMpyzI+1A5TFtJk1sMgr5TaXS+owAAAA==",
+    "benefits": [
+      "Energy support",
+      "Brain support",
+      "Immune support"
+    ],
+    "moq": "",
+    "spec": "60 tablets",
+    "specDetail": "B-complex tablet formula",
+    "description": ""
   },
   {
     "id": "p-vitamin-c-1000-mg-tablets-tablet",
@@ -1996,7 +3187,15 @@ export const CATALOG: CatalogProduct[] = [
     "w": 800,
     "h": 1567,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRtAAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFsAAAABcFvbthJhTbhEVhqLslikDjXYxJQw7m7v4dBCREwAly8P+2XGmvWgpq4RAJcy49b/f+3QAUJdQ+29a6xrrB/Hod156DByGjnOOoyd4I/4h/2rHrzb6aKqFqkFAFZQOCBOAAAA8AEAnQEqCAAQAAOAWiWwAnQBDrtqw1oAAP704CSoOxVuRb7CDR5FgQRTG21yK6X1KC1zbgOy2J578za63uu5Ijb7nsfI/3CAmkMAWQAA"
+    "blur": "data:image/webp;base64,UklGRtAAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFsAAAABcFvbthJhTbhEVhqLslikDjXYxJQw7m7v4dBCREwAly8P+2XGmvWgpq4RAJcy49b/f+3QAUJdQ+29a6xrrB/Hod156DByGjnOOoyd4I/4h/2rHrzb6aKqFqkFAFZQOCBOAAAA8AEAnQEqCAAQAAOAWiWwAnQBDrtqw1oAAP704CSoOxVuRb7CDR5FgQRTG21yK6X1KC1zbgOy2J578za63uu5Ijb7nsfI/3CAmkMAWQAA",
+    "benefits": [
+      "Immune support",
+      "Antioxidant support"
+    ],
+    "moq": "",
+    "spec": "90 tablets, 1,000 mg",
+    "specDetail": "Vitamin C tablet formula",
+    "description": ""
   },
   {
     "id": "p-vitamin-d3-5000-iu-softgels-softgel",
@@ -2010,7 +3209,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 800,
     "h": 1534,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRr4AAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSE0AAAABcBTZthopSTxEALOCyIug7yHMw8zv3s1fjYKImAC/7adp7Kyc2jh7CCAP21QQgTIUhRSqG0GCt4PucNQd/2cPAQT7F7Wvolz2+6UsAABWUDggSgAAABACAJ0BKggAEAADgFolmAJ0ART5Je5oBEwA/uswuHlKs2sP1T0R767GdbxCdBsitTsw7dQWhbgeNm9zZ+6bDCMi5fLgLF9jAAAA"
+    "blur": "data:image/webp;base64,UklGRr4AAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSE0AAAABcBTZthopSTxEALOCyIug7yHMw8zv3s1fjYKImAC/7adp7Kyc2jh7CCAP21QQgTIUhRSqG0GCt4PucNQd/2cPAQT7F7Wvolz2+6UsAABWUDggSgAAABACAJ0BKggAEAADgFolmAJ0ART5Je5oBEwA/uswuHlKs2sP1T0R767GdbxCdBsitTsw7dQWhbgeNm9zZ+6bDCMi5fLgLF9jAAAA",
+    "benefits": [
+      "Immune support",
+      "Bone & teeth health",
+      "Muscle health"
+    ],
+    "moq": "",
+    "spec": "60 softgels, 5,000 IU",
+    "specDetail": "Vitamin D3 softgel formula",
+    "description": ""
   },
   {
     "id": "p-iron-20-mg-capsules-capsule",
@@ -2024,7 +3232,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 800,
     "h": 1554,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRsgAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFMAAAABcBvbtqrM/024+2/zA4W49mERQw/uZH7uSV5EBRExAcZsd73slk5GZRXsBZBTrLX5+7GvDwESmD4ppPB1U90eqvvfPG6ACHB7UfmuV5vrdbtuAQBWUDggTgAAABACAJ0BKggAEAADgFolsAJ0R/+B6AIunQAA/vTgIz+jAq1ZaPNtCTw99aQDuflgJliIqZSCm/jg2a5CLyEIWCxI5F3PaEmxJrGwfjiAAA=="
+    "blur": "data:image/webp;base64,UklGRsgAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFMAAAABcBvbtqrM/024+2/zA4W49mERQw/uZH7uSV5EBRExAcZsd73slk5GZRXsBZBTrLX5+7GvDwESmD4ppPB1U90eqvvfPG6ACHB7UfmuV5vrdbtuAQBWUDggTgAAABACAJ0BKggAEAADgFolsAJ0R/+B6AIunQAA/vTgIz+jAq1ZaPNtCTw99aQDuflgJliIqZSCm/jg2a5CLyEIWCxI5F3PaEmxJrGwfjiAAA==",
+    "benefits": [
+      "Red blood cell formation",
+      "Energy metabolism",
+      "Women's health"
+    ],
+    "moq": "",
+    "spec": "60 capsules, 20 mg",
+    "specDetail": "Daily iron formula",
+    "description": ""
   },
   {
     "id": "p-calcium-magnesium-zinc-with-d3-tablets-tablet",
@@ -2038,7 +3255,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 800,
     "h": 1485,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRuoAAABXRUJQVlA4WAoAAAAQAAAACAAADwAAQUxQSFkAAAABcGLbttpMI+CiohnqOqN2jszcOlDMIO8N4wgiYgKUxfn6uJ83as1PrgtLguBW1vqED06sgw/f9+EfH6Dv+8Tz6if491vKo1r3C0ASuH385H+jtbu/bvtOEwBWUDggagAAAFACAJ0BKgkAEAADgFolkAJ0fwYn+BjJtI3uAAD+82Bro5bNnlQoKyzxmJGwRucEXVB7NpPBG+lkpWdaVUl7dKTFy9XryGgRUaCBs1Xf47zImwhUHbNhc/8Ig4LgM6L1mn6NVc+vswwAAAA="
+    "blur": "data:image/webp;base64,UklGRuoAAABXRUJQVlA4WAoAAAAQAAAACAAADwAAQUxQSFkAAAABcGLbttpMI+CiohnqOqN2jszcOlDMIO8N4wgiYgKUxfn6uJ83as1PrgtLguBW1vqED06sgw/f9+EfH6Dv+8Tz6if491vKo1r3C0ASuH385H+jtbu/bvtOEwBWUDggagAAAFACAJ0BKgkAEAADgFolkAJ0fwYn+BjJtI3uAAD+82Bro5bNnlQoKyzxmJGwRucEXVB7NpPBG+lkpWdaVUl7dKTFy9XryGgRUaCBs1Xf47zImwhUHbNhc/8Ig4LgM6L1mn6NVc+vswwAAAA=",
+    "benefits": [
+      "Bone support",
+      "Muscle support",
+      "Joint health"
+    ],
+    "moq": "",
+    "spec": "60 tablets",
+    "specDetail": "Minerals with vitamin D3",
+    "description": ""
   },
   {
     "id": "p-glucosamine-chondroitin-msm-tablets-tablet",
@@ -2052,7 +3278,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 800,
     "h": 1508,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRuAAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFcAAAABcFvbthIRQ8iiG6vEi9SIyKEGh4hxl/vGtYKImADOHcZxsFlhf7lcLlue8el8JodRCgIoE7sLLhdcqgXociEsJpeHy+zF/G9mI0AEzBeXp0srbCdjGagAVlA4IGIAAABQAgCdASoIABAAA4BaJYgCdEf/geiSh0Un05AA/ie5QUmqrGuOIEPHk63X6/n9RYSY0ONPO94RoqunFMDc2ceNj2G95PXNSf3ZVqRNvcl4hoUzK8cQsmJ1UUHKoQtfU7PoAA=="
+    "blur": "data:image/webp;base64,UklGRuAAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFcAAAABcFvbthIRQ8iiG6vEi9SIyKEGh4hxl/vGtYKImADOHcZxsFlhf7lcLlue8el8JodRCgIoE7sLLhdcqgXociEsJpeHy+zF/G9mI0AEzBeXp0srbCdjGagAVlA4IGIAAABQAgCdASoIABAAA4BaJYgCdEf/geiSh0Un05AA/ie5QUmqrGuOIEPHk63X6/n9RYSY0ONPO94RoqunFMDc2ceNj2G95PXNSf3ZVqRNvcl4hoUzK8cQsmJ1UUHKoQtfU7PoAA==",
+    "benefits": [
+      "Joint health",
+      "Cartilage health",
+      "Comfort & mobility"
+    ],
+    "moq": "",
+    "spec": "60 tablets, 60 days supply",
+    "specDetail": "Three-ingredient formula",
+    "description": ""
   },
   {
     "id": "p-omega-3-fish-oil-softgels-softgel",
@@ -2066,7 +3301,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 800,
     "h": 1504,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRugAAABXRUJQVlA4WAoAAAAQAAAACAAADwAAQUxQSFoAAAABcBvbtlJhGZ1QIgVQhMS0wNAJRBC6y9dzcOsgIiZAsMOkzCNHkeJp+1IFHSBgCJoJTqSl+ROmacIU9H9O08R/U087U9EclI/UR8VRTpAEi2Haf7lJXjd1kXhWUDggaAAAADACAJ0BKgkAEAADgFolkAJ0AR9upnrHPXUAAP4GF3cjqaHsttN1zav3PKtl05Ut+QLIBmdRWWPmN4ANCdWdT3/3p5DN0zSVIUlOuZj0R9PzpeTeqtffdxRQZSJSH6AeeYUM1LorgAAA"
+    "blur": "data:image/webp;base64,UklGRugAAABXRUJQVlA4WAoAAAAQAAAACAAADwAAQUxQSFoAAAABcBvbtlJhGZ1QIgVQhMS0wNAJRBC6y9dzcOsgIiZAsMOkzCNHkeJp+1IFHSBgCJoJTqSl+ROmacIU9H9O08R/U087U9EclI/UR8VRTpAEi2Haf7lJXjd1kXhWUDggaAAAADACAJ0BKgkAEAADgFolkAJ0AR9upnrHPXUAAP4GF3cjqaHsttN1zav3PKtl05Ut+QLIBmdRWWPmN4ANCdWdT3/3p5DN0zSVIUlOuZj0R9PzpeTeqtffdxRQZSJSH6AeeYUM1LorgAAA",
+    "benefits": [
+      "Heart health",
+      "Brain & eye health",
+      "Joint health"
+    ],
+    "moq": "",
+    "spec": "60 softgels, 1,000 mg",
+    "specDetail": "EPA 180 mg + DHA 120 mg",
+    "description": ""
   },
   {
     "id": "p-coq10-softgels-softgel",
@@ -2080,7 +3324,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 800,
     "h": 1456,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRuAAAABXRUJQVlA4WAoAAAAQAAAACAAADwAAQUxQSFkAAAABcFzbtpOQMzZNGRSgY63AZSHknOe8e81aQkRMgHMpx3Usz/Zh4+saOjcIBFdbj7hzZ6QfKSSFpw0gCcwz37DpP/Tth/kP/aeu/lRBAAjahe+3OG2mZWqSGABWUDggYAAAABACAJ0BKgkAEAADgFolkAJ0AQtOnpE+5RgAzJxP+etvwBSF/biW9iyfzW5k+Rbw/tfaoD+9rFgAc2JC2uSLKAlimrcjTwPLrBfubNcUmX/CJI8CBgDG1y675Op6UoAAAA=="
+    "blur": "data:image/webp;base64,UklGRuAAAABXRUJQVlA4WAoAAAAQAAAACAAADwAAQUxQSFkAAAABcFzbtpOQMzZNGRSgY63AZSHknOe8e81aQkRMgHMpx3Usz/Zh4+saOjcIBFdbj7hzZ6QfKSSFpw0gCcwz37DpP/Tth/kP/aeu/lRBAAjahe+3OG2mZWqSGABWUDggYAAAABACAJ0BKgkAEAADgFolkAJ0AQtOnpE+5RgAzJxP+etvwBSF/biW9iyfzW5k+Rbw/tfaoD+9rFgAc2JC2uSLKAlimrcjTwPLrBfubNcUmX/CJI8CBgDG1y675Op6UoAAAA==",
+    "benefits": [
+      "Cardiovascular health",
+      "Heart function",
+      "Cellular energy"
+    ],
+    "moq": "",
+    "spec": "60 softgels, 5 mg",
+    "specDetail": "Coenzyme Q10 formula",
+    "description": ""
   },
   {
     "id": "p-pumpkin-seed-oil-softgels-softgel",
@@ -2094,7 +3347,14 @@ export const CATALOG: CatalogProduct[] = [
     "w": 800,
     "h": 1556,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRsQAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFcAAAABcFzbtpMs6AJGOdYJlURDIS5nFGHWJyOz990JoYWImAB7e5DrYWNlHIy9swJ6csyK/z9LYw2QwOJFJZUPGbr0Q7eRfkTm3YduN0AVuLw5+Cy6nciuywEAVlA4IEYAAADQAQCdASoIABAAA4BaJQBdgB6OVZ4kAAD+9OThrQKo1um/yBmcObpeLtzjR5g0Nesx/s+LFKHncM2mrho+DxbVClfRFwAA"
+    "blur": "data:image/webp;base64,UklGRsQAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFcAAAABcFzbtpMs6AJGOdYJlURDIS5nFGHWJyOz990JoYWImAB7e5DrYWNlHIy9swJ6csyK/z9LYw2QwOJFJZUPGbr0Q7eRfkTm3YduN0AVuLw5+Cy6nciuywEAVlA4IEYAAADQAQCdASoIABAAA4BaJQBdgB6OVZ4kAAD+9OThrQKo1um/yBmcObpeLtzjR5g0Nesx/s+LFKHncM2mrho+DxbVClfRFwAA",
+    "benefits": [
+      "Men's wellness"
+    ],
+    "moq": "",
+    "spec": "60 softgels, 500 mg",
+    "specDetail": "Pumpkin seed oil softgels",
+    "description": ""
   },
   {
     "id": "p-garlic-extract-softgels-softgel",
@@ -2108,7 +3368,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 800,
     "h": 1556,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRtIAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFYAAAABcNva2tMItoAKUSHmhElyGATRMUTG/qBy9vteQ1ghIibAbga5DbXlc9dzZwV0csyE/z8jowJIoHhTSeVj3btte3KwHci1de9+B1SB5c3dZ9h2Il0bAFZQOCBWAAAAMAIAnQEqCAAQAAOAWiWYAnR/ABXEn+0ZV0AA/vCspavacVuzyC+6yCKBs/HfFWFrCnI9pBEH/5OMd1LGu3KzDoKijN5CEevHX0Yk/U7H7Q4HhUSFuAA="
+    "blur": "data:image/webp;base64,UklGRtIAAABXRUJQVlA4WAoAAAAQAAAABwAADwAAQUxQSFYAAAABcNva2tMItoAKUSHmhElyGATRMUTG/qBy9vteQ1ghIibAbga5DbXlc9dzZwV0csyE/z8jowJIoHhTSeVj3btte3KwHci1de9+B1SB5c3dZ9h2Il0bAFZQOCBWAAAAMAIAnQEqCAAQAAOAWiWYAnR/ABXEn+0ZV0AA/vCspavacVuzyC+6yCKBs/HfFWFrCnI9pBEH/5OMd1LGu3KzDoKijN5CEevHX0Yk/U7H7Q4HhUSFuAA=",
+    "benefits": [
+      "Immune support",
+      "Antioxidant support",
+      "Heart health"
+    ],
+    "moq": "",
+    "spec": "60 softgels, 200 mg",
+    "specDetail": "Garlic extract softgels",
+    "description": ""
   },
   {
     "id": "p-maca-ashwagandha-capsules-capsule",
@@ -2122,7 +3391,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 800,
     "h": 1485,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRtAAAABXRUJQVlA4WAoAAAAQAAAACAAADwAAQUxQSFkAAAABcGLbttpMI+CiohnqOqN2jszcOlDMIO8N4wgiYgKUxfn6uJ83as1PrgtLguBW1vqED06sgw/f9+EfH6Dv+8Tz6if491vKo1r3K0ASuH795H+jtbu/bvtOEwBWUDggUAAAANABAJ0BKgkAEAADgFolkAJ0ANvsJPuAAP7xtoMGGvPuorHLTMAmr981emOFYySpF7S1j3Z0zLUwvXVHZOnD4JFQTRZS8VlegBXiM24GIhoA"
+    "blur": "data:image/webp;base64,UklGRtAAAABXRUJQVlA4WAoAAAAQAAAACAAADwAAQUxQSFkAAAABcGLbttpMI+CiohnqOqN2jszcOlDMIO8N4wgiYgKUxfn6uJ83as1PrgtLguBW1vqED06sgw/f9+EfH6Dv+8Tz6if491vKo1r3K0ASuH795H+jtbu/bvtOEwBWUDggUAAAANABAJ0BKgkAEAADgFolkAJ0ANvsJPuAAP7xtoMGGvPuorHLTMAmr981emOFYySpF7S1j3Z0zLUwvXVHZOnD4JFQTRZS8VlegBXiM24GIhoA",
+    "benefits": [
+      "Energy support",
+      "Stress balance",
+      "Men's wellness"
+    ],
+    "moq": "",
+    "spec": "60 capsules, 300 mg",
+    "specDetail": "With 100 mg maca",
+    "description": ""
   },
   {
     "id": "p-energy-gel-gel-sachet-facility-b",
@@ -2136,7 +3414,17 @@ export const CATALOG: CatalogProduct[] = [
     "w": 258,
     "h": 522,
     "lowRes": false,
-    "blur": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAABQAgCdASoIABAAA4BaJbACdAYtfmwqgV/QN4AA/vIPiPir/qD1KenQSG6KRTb1fGT3FHleJYR04Y1oZEthioX2yT8NvAr8wygoZh8PoEfbZAqqTn1ka2LXsqWQWRoLE8Hls1PRtoBeyvEltbFHAAAA"
+    "blur": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAABQAgCdASoIABAAA4BaJbACdAYtfmwqgV/QN4AA/vIPiPir/qD1KenQSG6KRTb1fGT3FHleJYR04Y1oZEthioX2yT8NvAr8wygoZh8PoEfbZAqqTn1ka2LXsqWQWRoLE8Hls1PRtoBeyvEltbFHAAAA",
+    "benefits": [
+      "25g Carbs / Serving",
+      "Fast Energy Release",
+      "Single-Serving Format",
+      "Multiple Flavor Options"
+    ],
+    "moq": "",
+    "spec": "40g/sachet",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-pre-workout-powder-facility-b",
@@ -2150,7 +3438,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 84,
     "h": 108,
     "lowRes": true,
-    "blur": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAAAwAgCdASoMABAAA4BaJYwC7AYvNSTJiJ7BwAD+5l7Lt6aTpWJdsu1PFsV9UTv8+C3Bj60PXZMSEAeioGrntEMOxPIRubENQNNZTKpAzrDxh4Ct6CrnV3PWZURRLPyrK4yCfYtdhSjYukSQAAA="
+    "blur": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAAAwAgCdASoMABAAA4BaJYwC7AYvNSTJiJ7BwAD+5l7Lt6aTpWJdsu1PFsV9UTv8+C3Bj60PXZMSEAeioGrntEMOxPIRubENQNNZTKpAzrDxh4Ct6CrnV3PWZURRLPyrK4yCfYtdhSjYukSQAAA=",
+    "benefits": [
+      "Energy",
+      "Focus",
+      "Endurance"
+    ],
+    "moq": "",
+    "spec": "",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-clear-whey-protein-powder-facility-b",
@@ -2164,7 +3461,17 @@ export const CATALOG: CatalogProduct[] = [
     "w": 130,
     "h": 222,
     "lowRes": true,
-    "blur": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAAAQAgCdASoJABAAA4BaJbACdEf/gcD2nx/gAM3zvWgzIem5WlyFsn0jdeozPxRKHWWAbt1kIMRvXWC/sJOWojRwhr+XzpEAgPZ+XcMvlxh5ilRjErmfeVs7qNgYwAzyuNwsYYAA"
+    "blur": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAAAQAgCdASoJABAAA4BaJbACdEf/gcD2nx/gAM3zvWgzIem5WlyFsn0jdeozPxRKHWWAbt1kIMRvXWC/sJOWojRwhr+XzpEAgPZ+XcMvlxh5ilRjErmfeVs7qNgYwAzyuNwsYYAA",
+    "benefits": [
+      "20g Protein Per Serving",
+      "0g Sugar Per Serving",
+      "100% Whey Protein Isolate",
+      "Refreshing Protein Drink"
+    ],
+    "moq": "",
+    "spec": "",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-whey-protein-powder-facility-b",
@@ -2178,7 +3485,17 @@ export const CATALOG: CatalogProduct[] = [
     "w": 290,
     "h": 378,
     "lowRes": true,
-    "blur": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAABQAgCdASoMABAAA4BaJYwCdAYvha/3htxxMQAA/vCL3Ii7h1feq36eT2+v6n7i50YISkhlruqOtKssw73WLethfm7fiuM9Vpk1LVA8PJQ88BjU5XnreOIvAPK0XCRoD2WpBhk2pgmd+5S67b+8inMu/dwAAA=="
+    "blur": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAABQAgCdASoMABAAA4BaJYwCdAYvha/3htxxMQAA/vCL3Ii7h1feq36eT2+v6n7i50YISkhlruqOtKssw73WLethfm7fiuM9Vpk1LVA8PJQ88BjU5XnreOIvAPK0XCRoD2WpBhk2pgmd+5S67b+8inMu/dwAAA==",
+    "benefits": [
+      "Supports Muscle Growth & Recovery",
+      "24g Protein",
+      "5.5g BCAAs",
+      "Low Sugar"
+    ],
+    "moq": "",
+    "spec": "",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-creatine-monohydrate-powder-powder-facility-b",
@@ -2192,7 +3509,17 @@ export const CATALOG: CatalogProduct[] = [
     "w": 210,
     "h": 296,
     "lowRes": true,
-    "blur": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAABQAgCdASoLABAAA4BaJbACdAYuluIeza1OrvAA/vPtJRaeefsJEBKX+unovUlUEJhfK0dA0lhRhmXrWqFzEr2xmY4jr8W4K+ugv/ePaCrcKNeYA1V/+g5z00kbl3+OBgAAAA=="
+    "blur": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAABQAgCdASoLABAAA4BaJbACdAYuluIeza1OrvAA/vPtJRaeefsJEBKX+unovUlUEJhfK0dA0lhRhmXrWqFzEr2xmY4jr8W4K+ugv/ePaCrcKNeYA1V/+g5z00kbl3+OBgAAAA==",
+    "benefits": [
+      "Fine Texture",
+      "Easy Mixing",
+      "Pure Creatine",
+      "Boost Strength & Performance"
+    ],
+    "moq": "",
+    "spec": "100 servings, 5g creatine/serving",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-collagen-gummies-gummy-facility-b",
@@ -2206,7 +3533,17 @@ export const CATALOG: CatalogProduct[] = [
     "w": 260,
     "h": 377,
     "lowRes": true,
-    "blur": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAADwAQCdASoLABAAA4BaJbACdADb8XCLLAAA/rgMwvg3FZ1KUb8DqaCTd9LxiC+mcSdlvKpKqhe/dzxvHd8Y+qKMmsuvGFfdy3J0Pv0oJA0dN5bm8tEMTP5b5DXHZ17sQ0JfrYAA"
+    "blur": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAADwAQCdASoLABAAA4BaJbACdADb8XCLLAAA/rgMwvg3FZ1KUb8DqaCTd9LxiC+mcSdlvKpKqhe/dzxvHd8Y+qKMmsuvGFfdy3J0Pv0oJA0dN5bm8tEMTP5b5DXHZ17sQ0JfrYAA",
+    "benefits": [
+      "Healthy Skin",
+      "Strong Hair",
+      "Strong Nails",
+      "Joint Support"
+    ],
+    "moq": "",
+    "spec": "60 gummies",
+    "specDetail": "",
+    "description": "Collagen Gummies make wellness enjoyable."
   },
   {
     "id": "p-bcaa-2-1-1-powder-facility-b",
@@ -2220,7 +3557,12 @@ export const CATALOG: CatalogProduct[] = [
     "w": 52,
     "h": 97,
     "lowRes": true,
-    "blur": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAACwAQCdASoJABAAA4BaJQBOgBsysGAAAP7vl2mp63q4CSYluc1QMITBAClLMzP2wdwK62mEjTY3PPY4Jm3ZsQfbC7N3cjCvGY28uZSE8DRNAgAA"
+    "blur": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAACwAQCdASoJABAAA4BaJQBOgBsysGAAAP7vl2mp63q4CSYluc1QMITBAClLMzP2wdwK62mEjTY3PPY4Jm3ZsQfbC7N3cjCvGY28uZSE8DRNAgAA",
+    "benefits": [],
+    "moq": "",
+    "spec": "",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-electrolyte-drink-mix-stick-packs-stick-pack-facility-b",
@@ -2234,7 +3576,17 @@ export const CATALOG: CatalogProduct[] = [
     "w": 245,
     "h": 265,
     "lowRes": true,
-    "blur": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAAAwAgCdASoPABAAA4BaJYgAD5IPuarDi03fgAD+SrOH4Rcu73J3hOkjji3lSxpI03Hh2X5DVjVtNiEYT1PjbrXvzvyVPd5gWas+zcsmHvX0GNbN/EYlDGIiDqq3MVX55xW2WHEiRRHFF5wYdeMIxy59vuub/TOCfjChb++PZl0435GoAAA="
+    "blur": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAAAwAgCdASoPABAAA4BaJYgAD5IPuarDi03fgAD+SrOH4Rcu73J3hOkjji3lSxpI03Hh2X5DVjVtNiEYT1PjbrXvzvyVPd5gWas+zcsmHvX0GNbN/EYlDGIiDqq3MVX55xW2WHEiRRHFF5wYdeMIxy59vuub/TOCfjChb++PZl0435GoAAA=",
+    "benefits": [
+      "Sodium for Hydration",
+      "Potassium for Muscle Function",
+      "Magnesium for Performance",
+      "Sugar Free"
+    ],
+    "moq": "",
+    "spec": "20 sticks",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-creatine-gummies-gummy-facility-b",
@@ -2248,7 +3600,14 @@ export const CATALOG: CatalogProduct[] = [
     "w": 72,
     "h": 136,
     "lowRes": true,
-    "blur": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADwAQCdASoIABAAA4BaJYwC7ADygfyRQYAA/rgyHqIyV8uG6tc7OkD77/llFwQI9Tv0HatyGr/BtW1dWlPT6dvnJ/jvndaf4xxbxgkKK4xAAA=="
+    "blur": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADwAQCdASoIABAAA4BaJYwC7ADygfyRQYAA/rgyHqIyV8uG6tc7OkD77/llFwQI9Tv0HatyGr/BtW1dWlPT6dvnJ/jvndaf4xxbxgkKK4xAAA==",
+    "benefits": [
+      "Strength & Power"
+    ],
+    "moq": "",
+    "spec": "",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-multivitamin-gummies-gummy-facility-b",
@@ -2262,7 +3621,14 @@ export const CATALOG: CatalogProduct[] = [
     "w": 78,
     "h": 124,
     "lowRes": true,
-    "blur": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAAAQAgCdASoKABAAA4BaJbACdAELX9nEALLgAP7whzmJCnw6R4GJ4Eu9P7sSTyFXroBxUnnS6hYDdP7ZcYjHrNGzLM34BDBYu+vZo3owj7VLRt7gxcPPCipCfgnawrBeqotMHZ9AAAA="
+    "blur": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAAAQAgCdASoKABAAA4BaJbACdAELX9nEALLgAP7whzmJCnw6R4GJ4Eu9P7sSTyFXroBxUnnS6hYDdP7ZcYjHrNGzLM34BDBYu+vZo3owj7VLRt7gxcPPCipCfgnawrBeqotMHZ9AAAA=",
+    "benefits": [
+      "Daily Wellness"
+    ],
+    "moq": "",
+    "spec": "",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-electrolyte-powder-powder-facility-b",
@@ -2276,7 +3642,16 @@ export const CATALOG: CatalogProduct[] = [
     "w": 76,
     "h": 114,
     "lowRes": true,
-    "blur": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAABQAgCdASoLABAAA4BaJbACdAEQ0tu9j3jMfYAA/uthfPuq2iC33RpZr0FWZxXsGcZUH9GKpBlhWi7vt0054tKUyVn2rFPKGvco4CSvkDogVCLozxFBpD6Mg2KSCXlAAAA="
+    "blur": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAABQAgCdASoLABAAA4BaJbACdAEQ0tu9j3jMfYAA/uthfPuq2iC33RpZr0FWZxXsGcZUH9GKpBlhWi7vt0054tKUyVn2rFPKGvco4CSvkDogVCLozxFBpD6Mg2KSCXlAAAA=",
+    "benefits": [
+      "Rapid Hydration & Recovery",
+      "Advanced Hydration Formula",
+      "Zero Sugar"
+    ],
+    "moq": "",
+    "spec": "30 servings",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-magnesium-glycinate-tablets-240-mg-tablet-facility-b",
@@ -2290,7 +3665,14 @@ export const CATALOG: CatalogProduct[] = [
     "w": 68,
     "h": 112,
     "lowRes": true,
-    "blur": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAAAQAgCdASoKABAAA4BaJQBOgCKuDe1RGW9wAPl9EBt7ndySZiRI0fOuwEK17dJPPt3z/KK7or6lzrKC6ON/QZGrS48uNxzS596JzHl5ebjXlwcXsBcJ0GH+omWgP7ZDTDGH47l3b27BA0mAAAA="
+    "blur": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAAAQAgCdASoKABAAA4BaJQBOgCKuDe1RGW9wAPl9EBt7ndySZiRI0fOuwEK17dJPPt3z/KK7or6lzrKC6ON/QZGrS48uNxzS596JzHl5ebjXlwcXsBcJ0GH+omWgP7ZDTDGH47l3b27BA0mAAAA=",
+    "benefits": [
+      "Support Relaxation"
+    ],
+    "moq": "",
+    "spec": "240 mg",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-omega-3-fish-oil-softgels-softgel-facility-b",
@@ -2304,7 +3686,14 @@ export const CATALOG: CatalogProduct[] = [
     "w": 76,
     "h": 130,
     "lowRes": true,
-    "blur": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAAAQAgCdASoJABAAA4BaJYgCdEf/gee9WUPoAP7wFo+uSfWDly/SMRp3kXVI1xB2MxjIqkEv28cCVeewTg9G5yX7R1JYITypyNUkA5782VpsNjjbSAA="
+    "blur": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAAAQAgCdASoJABAAA4BaJYgCdEf/gee9WUPoAP7wFo+uSfWDly/SMRp3kXVI1xB2MxjIqkEv28cCVeewTg9G5yX7R1JYITypyNUkA5782VpsNjjbSAA=",
+    "benefits": [
+      "Heart & Joint Health"
+    ],
+    "moq": "",
+    "spec": "150 softgels, 4,200 mg",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-women-s-probiotic-capsules-capsule-facility-b",
@@ -2318,7 +3707,15 @@ export const CATALOG: CatalogProduct[] = [
     "w": 72,
     "h": 104,
     "lowRes": true,
-    "blur": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAABQAgCdASoLABAAA4BaJagC7AYu5kk6ArZeCagA/vPgpLBbUlIWQfPWFJumt4gVSKM7PjLFCozR/jwiLICdPCCSMODHOGrcqOvbXCSai2V6nKI4C/ErPNNML4gp4MAA"
+    "blur": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAABQAgCdASoLABAAA4BaJagC7AYu5kk6ArZeCagA/vPgpLBbUlIWQfPWFJumt4gVSKM7PjLFCozR/jwiLICdPCCSMODHOGrcqOvbXCSai2V6nKI4C/ErPNNML4gp4MAA",
+    "benefits": [
+      "Gut Health",
+      "Daily Support"
+    ],
+    "moq": "",
+    "spec": "50B CFUs",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-electrolyte-effervescent-tablets-effervescent-facility-b",
@@ -2332,7 +3729,14 @@ export const CATALOG: CatalogProduct[] = [
     "w": 26,
     "h": 92,
     "lowRes": true,
-    "blur": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADQAQCdASoFABAAA4BaJaACdADzgR3mAAD+YWRHf/bUfTOM4lXSU1ZJ8qdUhugjULLGKdxpY9xhau73Xbd4hlkBjzOMaV521B4yhagA"
+    "blur": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADQAQCdASoFABAAA4BaJaACdADzgR3mAAD+YWRHf/bUfTOM4lXSU1ZJ8qdUhugjULLGKdxpY9xhau73Xbd4hlkBjzOMaV521B4yhagA",
+    "benefits": [
+      "Daily Hydration"
+    ],
+    "moq": "",
+    "spec": "",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-matcha-green-tea-powder-powder-facility-b",
@@ -2346,7 +3750,17 @@ export const CATALOG: CatalogProduct[] = [
     "w": 92,
     "h": 114,
     "lowRes": true,
-    "blur": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAAAwAgCdASoNABAAA4BaJbACdAEQ+pRvAdguAAD5c/qPt/Zhbj5IPuUr2OUPqVrRCM89+bgJSNX8fC8z0Mr3K2s6XzOQhYnagTjciKoqs3xkHcnfHN5PweK+Fnja+1vs5qbRdFID6EWeJea2Yc0TvUtsSM7AAA=="
+    "blur": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAAAwAgCdASoNABAAA4BaJbACdAEQ+pRvAdguAAD5c/qPt/Zhbj5IPuUr2OUPqVrRCM89+bgJSNX8fC8z0Mr3K2s6XzOQhYnagTjciKoqs3xkHcnfHN5PweK+Fnja+1vs5qbRdFID6EWeJea2Yc0TvUtsSM7AAA==",
+    "benefits": [
+      "Clean Energy",
+      "Natural Energy",
+      "Antioxidant",
+      "Focus & Clarity"
+    ],
+    "moq": "",
+    "spec": "100g",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-melatonin-gummies-gummy-facility-b",
@@ -2360,7 +3774,14 @@ export const CATALOG: CatalogProduct[] = [
     "w": 72,
     "h": 128,
     "lowRes": true,
-    "blur": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAABQAgCdASoJABAAA4BaJQBdg7QATi1b6xAeUCAA/pwiHWpA+10ilP6xjXQtEIfnM30WK5TJUCdGywTEJv/tijMPB6us7Vy7boRYckdtGfPcQuwzWjAAAA=="
+    "blur": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAABQAgCdASoJABAAA4BaJQBdg7QATi1b6xAeUCAA/pwiHWpA+10ilP6xjXQtEIfnM30WK5TJUCdGywTEJv/tijMPB6us7Vy7boRYckdtGfPcQuwzWjAAAA==",
+    "benefits": [
+      "Rest & Recharge"
+    ],
+    "moq": "",
+    "spec": "",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-collagen-jelly-stick-jelly-stick-facility-b",
@@ -2374,7 +3795,14 @@ export const CATALOG: CatalogProduct[] = [
     "w": 46,
     "h": 122,
     "lowRes": true,
-    "blur": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADwAQCdASoGABAAA4BaJbACdAD0kF+Hs4AA/vO/+VTarZ/Fegy5wRnCTEjTsGzl51N7AYln8G+6GE5TMhX623gQeU3OxIAA"
+    "blur": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADwAQCdASoGABAAA4BaJbACdAD0kF+Hs4AA/vO/+VTarZ/Fegy5wRnCTEjTsGzl51N7AYln8G+6GE5TMhX623gQeU3OxIAA",
+    "benefits": [
+      "Beauty Nutrition in a Fun Format"
+    ],
+    "moq": "",
+    "spec": "",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-immunity-shot-liquid-shot-facility-b",
@@ -2388,7 +3816,14 @@ export const CATALOG: CatalogProduct[] = [
     "w": 54,
     "h": 126,
     "lowRes": true,
-    "blur": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAAAQAgCdASoHABAAA4BaJbACdAERHpppDfaSAP7uWJCd+ylyfJQJ2MJORNTjW13DDTpiYJ3Y3cAser6/Qy66rk/xSFfGwmN6F9WK/QyPzb2AxK41R4qk4dgmrtLvySzPLRAAAA=="
+    "blur": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAAAQAgCdASoHABAAA4BaJbACdAERHpppDfaSAP7uWJCd+ylyfJQJ2MJORNTjW13DDTpiYJ3Y3cAser6/Qy66rk/xSFfGwmN6F9WK/QyPzb2AxK41R4qk4dgmrtLvySzPLRAAAA==",
+    "benefits": [
+      "Daily Immune Support"
+    ],
+    "moq": "",
+    "spec": "",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-energy-shot-liquid-shot-facility-b",
@@ -2402,7 +3837,15 @@ export const CATALOG: CatalogProduct[] = [
     "w": 48,
     "h": 132,
     "lowRes": true,
-    "blur": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAQAgCdASoGABAAA4BaJQBOiP/wPuOnJqsoAP7olKjogbGCznc1zCIgenFZGKfyARPeR+g8QaI++sDVkY9xGenhWzJ5EwUX21Cfct5P7FPFmaFEUWhtF0vd8mSEnAAA"
+    "blur": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAQAgCdASoGABAAA4BaJQBOiP/wPuOnJqsoAP7olKjogbGCznc1zCIgenFZGKfyARPeR+g8QaI++sDVkY9xGenhWzJ5EwUX21Cfct5P7FPFmaFEUWhtF0vd8mSEnAAA",
+    "benefits": [
+      "Fast Energy",
+      "Small Format"
+    ],
+    "moq": "",
+    "spec": "",
+    "specDetail": "",
+    "description": ""
   },
   {
     "id": "p-energy-jelly-jelly-pouch-facility-b",
@@ -2416,7 +3859,14 @@ export const CATALOG: CatalogProduct[] = [
     "w": 46,
     "h": 124,
     "lowRes": true,
-    "blur": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAADwAQCdASoGABAAA4BaJbACdAEf+/ruTfAA/sp8+UrPfYZwnZKT1sc+dhmaFsIYpm9tccuxqF0vLT9NPDkn2fSK0y8oZl1XANHFa9eb2TLDf+TeEl3Kmv3qC1EUcAAA"
+    "blur": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAADwAQCdASoGABAAA4BaJbACdAEf+/ruTfAA/sp8+UrPfYZwnZKT1sc+dhmaFsIYpm9tccuxqF0vLT9NPDkn2fSK0y8oZl1XANHFa9eb2TLDf+TeEl3Kmv3qC1EUcAAA",
+    "benefits": [
+      "Functional Nutrition, Made Fun"
+    ],
+    "moq": "",
+    "spec": "",
+    "specDetail": "",
+    "description": ""
   }
 ];
 

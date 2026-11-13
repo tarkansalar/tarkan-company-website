@@ -10,6 +10,7 @@ import {
   type CatalogProduct,
 } from "../data/catalog-meta";
 import Icon, { type IconName } from "./Icon";
+import ProductDialog, { moqLine } from "./ProductDialog";
 
 // Full list (all non-sensitive products) is a static JSON route, fetched once
 // when the carousel nears the viewport or a filter is used. Until then the
@@ -60,60 +61,105 @@ const SIZES =
 const BATCH = 12;
 const STEP = 4;
 
-const Card = memo(function Card({ p, index, total }: { p: CatalogProduct; index: number; total: number }) {
+const Card = memo(function Card({
+  p,
+  index,
+  total,
+  onOpen,
+}: {
+  p: CatalogProduct;
+  index: number;
+  total: number;
+  onOpen: (p: CatalogProduct) => void;
+}) {
+  const benefits = p.benefits.slice(0, 3);
+  const moq = moqLine(p);
   return (
     <li
       aria-label={`${index + 1} of ${total}: ${p.name}`}
       // Cards per screen: ~1.2 on small phones, 2 on large phones (>= 390px),
       // 3 on tablets (md), 4 on desktop (lg). The 16px terms are the gaps.
-      className="group snap-start shrink-0 w-[84%] min-[390px]:w-[calc((100%-16px)/2)] md:w-[calc((100%-32px)/3)] lg:w-[calc((100%-48px)/4)] [contain:layout_paint]"
+      // The track is a flex row, so every card stretches to the tallest one;
+      // name / benefits are clamped and the MOQ line sits at the bottom.
+      className="flex snap-start shrink-0 w-[84%] min-[390px]:w-[calc((100%-16px)/2)] md:w-[calc((100%-32px)/3)] lg:w-[calc((100%-48px)/4)] [contain:layout_paint]"
     >
-      <div className="relative aspect-[4/5] overflow-hidden rounded-3xl bg-[radial-gradient(80%_60%_at_50%_30%,#ffffff_0%,#fdf0f6_70%,#fbe4ef_100%)] ring-1 ring-[#fb6ba8]/10 shadow-[0_24px_48px_-32px_rgba(251,107,168,0.55),0_2px_6px_-2px_rgba(40,40,40,0.06)]">
-        {p.lowRes ? (
-          // Small source image: shown near its own size instead of stretched.
-          <div className="absolute inset-0 flex items-center justify-center p-10">
+      <button
+        type="button"
+        aria-haspopup="dialog"
+        onClick={() => onOpen(p)}
+        className="group flex w-full flex-col rounded-3xl text-left focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#fb6ba8] cursor-pointer"
+      >
+        <div className="relative w-full aspect-[4/5] overflow-hidden rounded-3xl bg-[radial-gradient(80%_60%_at_50%_30%,#ffffff_0%,#fdf0f6_70%,#fbe4ef_100%)] ring-1 ring-[#fb6ba8]/10 shadow-[0_24px_48px_-32px_rgba(251,107,168,0.55),0_2px_6px_-2px_rgba(40,40,40,0.06)] transition-[box-shadow] duration-300 group-hover:shadow-[0_28px_56px_-28px_rgba(251,107,168,0.75),0_2px_6px_-2px_rgba(40,40,40,0.06)]">
+          {p.lowRes ? (
+            // Small source image: shown near its own size instead of stretched.
+            <div className="absolute inset-0 flex items-center justify-center p-10">
+              <Image
+                loader={variantLoader}
+                src={p.stem}
+                alt={`${p.name}, ${p.label}`}
+                width={p.w}
+                height={p.h}
+                loading="lazy"
+                sizes="200px"
+                placeholder="blur"
+                blurDataURL={p.blur}
+                style={{ width: Math.min(p.w * 1.6, 200), height: "auto", maxHeight: "100%" }}
+                className="object-contain drop-shadow-[0_18px_22px_rgba(40,40,40,0.18)] transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.04]"
+              />
+            </div>
+          ) : (
             <Image
               loader={variantLoader}
               src={p.stem}
               alt={`${p.name}, ${p.label}`}
-              width={p.w}
-              height={p.h}
+              fill
               loading="lazy"
-              sizes="200px"
+              sizes={SIZES}
               placeholder="blur"
               blurDataURL={p.blur}
-              style={{ width: Math.min(p.w * 1.6, 200), height: "auto", maxHeight: "100%" }}
-              className="object-contain drop-shadow-[0_18px_22px_rgba(40,40,40,0.18)] transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.04]"
+              className="object-contain p-7 sm:p-8 drop-shadow-[0_18px_22px_rgba(40,40,40,0.18)] transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.04]"
             />
-          </div>
-        ) : (
-          <Image
-            loader={variantLoader}
-            src={p.stem}
-            alt={`${p.name}, ${p.label}`}
-            fill
-            loading="lazy"
-            sizes={SIZES}
-            placeholder="blur"
-            blurDataURL={p.blur}
-            className="object-contain p-7 sm:p-8 drop-shadow-[0_18px_22px_rgba(40,40,40,0.18)] transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.04]"
-          />
-        )}
-        {p.tag && (
-          <span className="absolute top-3.5 left-3.5 rounded-full bg-[#282828] px-2.5 py-1 text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.12em] text-white">
-            {p.tag}
+          )}
+          {p.tag && (
+            <span className="absolute top-3.5 left-3.5 rounded-full bg-[#282828] px-2.5 py-1 text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.12em] text-white">
+              {p.tag}
+            </span>
+          )}
+          <span className="absolute top-3.5 right-3.5 max-w-[70%] truncate rounded-full bg-white/90 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-[#c93d78]">
+            {p.category}
           </span>
+          <span
+            aria-hidden="true"
+            className="absolute bottom-3.5 right-3.5 inline-flex items-center gap-1 rounded-full bg-white/95 px-2.5 py-1 text-[11px] font-semibold text-[#282828] opacity-0 translate-y-1 transition-[opacity,transform] duration-200 group-hover:opacity-100 group-hover:translate-y-0 group-focus-visible:opacity-100 group-focus-visible:translate-y-0"
+          >
+            Details
+            <Icon name="arrowRight" className="h-3.5 w-3.5 text-[#fb6ba8]" />
+          </span>
+        </div>
+        <h3 className="mt-4 line-clamp-2 min-h-[2.7em] text-[16px] sm:text-[17px] font-semibold leading-[1.35] text-[#282828] transition-colors duration-200 group-hover:text-[#c93d78]">
+          {p.name}
+        </h3>
+        <p className="mt-1 truncate text-[13px] sm:text-sm leading-[1.5] text-[#282828]/70">
+          {p.label}
+          <span className="text-[#282828]/45"> · </span>
+          {`Facility ${p.facility}`}
+        </p>
+        {benefits.length > 0 && (
+          <ul className="mt-2.5 space-y-1">
+            {benefits.map((b) => (
+              <li key={b} className="flex items-center gap-1.5 text-[13px] leading-[1.4] text-[#282828]/85">
+                <Icon name="check" className="h-3.5 w-3.5 shrink-0 text-[#fb6ba8] [stroke-width:2.5]" />
+                <span className="truncate">{b}</span>
+              </li>
+            ))}
+          </ul>
         )}
-        <span className="absolute top-3.5 right-3.5 max-w-[70%] truncate rounded-full bg-white/90 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-[#c93d78]">
-          {p.category}
-        </span>
-      </div>
-      <h3 className="mt-4 text-[16px] sm:text-[17px] font-semibold leading-[1.35] text-[#282828]">{p.name}</h3>
-      <p className="mt-1 text-[13px] sm:text-sm leading-[1.5] text-[#282828]/70">
-        {p.label}
-        <span className="text-[#282828]/45"> · </span>
-        {`Facility ${p.facility}`}
-      </p>
+        {moq && (
+          <p className="mt-auto pt-2.5 truncate text-[12px] font-medium leading-[1.4] text-[#282828]/55 tabular-nums">
+            {moq}
+          </p>
+        )}
+      </button>
     </li>
   );
 });
@@ -165,6 +211,8 @@ export default function ProductCarousel() {
   const [atStart, setAtStart] = useState(true);
   const [atEnd, setAtEnd] = useState(false);
   const [catalog, setCatalog] = useState<CatalogProduct[] | null>(null);
+  const [open, setOpen] = useState<CatalogProduct | null>(null);
+  const closeDialog = useCallback(() => setOpen(null), []);
   const rootRef = useRef<HTMLDivElement>(null);
   const trackRef = useRef<HTMLUListElement>(null);
   const sentinelRef = useRef<HTMLLIElement>(null);
@@ -322,7 +370,7 @@ export default function ProductCarousel() {
           className="-mx-6 px-6 lg:mx-0 lg:px-0 flex gap-4 overflow-x-auto overscroll-x-contain snap-x snap-mandatory scroll-px-6 lg:scroll-px-0 pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden rounded-3xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#fb6ba8]"
         >
           {shown.map((p, i) => (
-            <Card key={p.id} p={p} index={i} total={total} />
+            <Card key={p.id} p={p} index={i} total={total} onOpen={setOpen} />
           ))}
           {mounted < items.length && <li ref={sentinelRef} aria-hidden="true" className="shrink-0 w-px" />}
         </ul>
@@ -361,6 +409,8 @@ export default function ProductCarousel() {
           </button>
         </div>
       </div>
+
+      <ProductDialog product={open} onClose={closeDialog} />
     </div>
   );
 }
