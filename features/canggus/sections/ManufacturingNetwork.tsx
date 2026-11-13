@@ -3,6 +3,7 @@ import SectionIntro from "../components/SectionIntro";
 import Icon, { IconTile } from "../components/Icon";
 import { CANGGUS_ASSET_BASE } from "../data/catalog";
 import { FACILITIES, NETWORK_STATS, PRODUCTION_GALLERY } from "../data/network";
+import { Blob } from "../components/Visuals";
 
 // "Our manufacturing network": several factories, anonymised as Facility A/B/C.
 // Data: features/canggus/data/network.ts (sourced from canggus/manifest.json).
@@ -15,10 +16,7 @@ export default function ManufacturingNetwork() {
       aria-labelledby="manufacturing-title"
       className="relative overflow-hidden py-20 lg:py-32 bg-[#1f1f1f] text-white"
     >
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -top-48 -left-40 h-[520px] w-[520px] rounded-full bg-[#fb6ba8]/15 blur-3xl"
-      />
+      <Blob strong className="-top-56 -left-48 h-[480px] w-[480px]" />
       <div className="relative max-w-7xl mx-auto px-6 lg:px-12">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-end">
           <div id="manufacturing-title">
@@ -51,7 +49,9 @@ export default function ManufacturingNetwork() {
           {FACILITIES.map((f) => (
             <li
               key={f.id}
-              className="flex flex-col overflow-hidden rounded-3xl bg-white/[0.04] ring-1 ring-white/10 shadow-[0_30px_60px_-40px_rgba(0,0,0,0.8)]"
+              data-reveal=""
+              data-tilt="5"
+              className="cg-tilt flex flex-col overflow-hidden rounded-3xl bg-[linear-gradient(160deg,rgba(255,255,255,0.09),rgba(255,255,255,0.02))] ring-1 ring-white/12 cg-card-shadow-dark"
             >
               <div className="relative aspect-[16/10] overflow-hidden">
                 <Image
@@ -87,7 +87,11 @@ export default function ManufacturingNetwork() {
           </h3>
           <ul className="mt-6 grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
             {PRODUCTION_GALLERY.map((g) => (
-              <li key={g.src} className="relative aspect-[4/3] overflow-hidden rounded-2xl sm:rounded-3xl group">
+              <li
+                key={g.src}
+                data-tilt="7"
+                className="cg-tilt relative aspect-[4/3] overflow-hidden rounded-2xl sm:rounded-3xl group ring-1 ring-white/10 cg-card-shadow-dark"
+              >
                 {/* Caption below is the visible label; alt stays empty to avoid reading it twice. */}
                 <Image
                   src={`${CANGGUS_ASSET_BASE}${g.src}`}

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { greatVibes, montserrat } from "@/features/canggus/fonts";
+import "@/features/canggus/visual.css";
 import Header from "@/features/canggus/components/Header";
+import Fx from "@/features/canggus/components/Fx";
 import Hero from "@/features/canggus/sections/Hero";
 import TrustStrip from "@/features/canggus/sections/TrustStrip";
 import Audience from "@/features/canggus/sections/Audience";
@@ -36,7 +38,8 @@ export const metadata: Metadata = {
 export default function CanggusPage() {
   return (
     <div
-      className={`${montserrat.variable} ${greatVibes.variable} relative min-h-screen bg-white text-[#282828] font-[family-name:var(--font-cg-sans)] antialiased selection:bg-[#fb6ba8] selection:text-white`}
+      data-cg-root
+      className={`${montserrat.variable} ${greatVibes.variable} relative min-h-screen overflow-x-clip bg-white text-[#282828] font-[family-name:var(--font-cg-sans)] antialiased selection:bg-[#fb6ba8] selection:text-white`}
     >
       <Header />
       <main>
@@ -60,6 +63,7 @@ export default function CanggusPage() {
         <FinalCta />
       </main>
       <Footer />
+      <Fx />
     </div>
   );
 }

@@ -1,10 +1,17 @@
 "use client";
 
+import Image from "next/image";
 import { useMemo, useState } from "react";
 import { STANDARDS, type Standard } from "../data/certifications";
+import { CANGGUS_ASSET_BASE } from "../data/catalog-meta";
+import { FACILITIES } from "../data/network";
 import Icon from "./Icon";
 
 const FACILITY_IDS = ["A", "B", "C"] as const;
+// Facility filter chips show a small photo of that facility (manifest canggus/factory/).
+const FACILITY_THUMB: Record<string, { src: string; alt: string }> = Object.fromEntries(
+  FACILITIES.map((f) => [f.label.replace("Facility ", ""), { src: f.photo.src, alt: f.photo.alt }]),
+);
 type FacilityFilter = "All" | (typeof FACILITY_IDS)[number];
 
 const GROUPS = Array.from(new Set(STANDARDS.map((s) => s.group)));
@@ -81,7 +88,20 @@ export default function StandardsGrid() {
                   : "border-[#282828]/12 bg-white text-[#282828] hover:border-[#fb6ba8] hover:text-[#e0558f]"
               }`}
             >
-              <Icon name={c.id === "All" ? "network" : "factory"} className="h-4 w-4 text-[#fb6ba8]" />
+              {c.id !== "All" && FACILITY_THUMB[c.id] ? (
+                <span className="relative -ml-2 h-8 w-8 shrink-0 overflow-hidden rounded-full ring-2 ring-white">
+                  <Image
+                    src={`${CANGGUS_ASSET_BASE}${FACILITY_THUMB[c.id].src}`}
+                    alt=""
+                    fill
+                    loading="lazy"
+                    sizes="32px"
+                    className="object-cover"
+                  />
+                </span>
+              ) : (
+                <Icon name="network" className="h-4 w-4 text-[#fb6ba8]" />
+              )}
               {c.label}
               <span className={`text-xs font-medium ${active ? "text-white/70" : "text-[#282828]/65"}`}>{c.count}</span>
             </button>
@@ -106,7 +126,8 @@ export default function StandardsGrid() {
                   return (
                     <li
                       key={s.id}
-                      className="flex flex-col items-center rounded-3xl bg-white px-3 py-6 sm:px-4 text-center ring-1 ring-[#282828]/8 shadow-[0_24px_48px_-36px_rgba(40,40,40,0.35)]"
+                      data-tilt="8"
+                      className="cg-tilt flex flex-col items-center rounded-3xl bg-white px-3 py-6 sm:px-4 text-center ring-1 ring-[#282828]/8 shadow-[0_24px_48px_-36px_rgba(40,40,40,0.35)]"
                     >
                       <Emblem s={s} verified={verified} />
                       <p className="mt-4 text-[14px] sm:text-[15px] font-bold leading-[1.3] text-[#282828]">{s.label}</p>

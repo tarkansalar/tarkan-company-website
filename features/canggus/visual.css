@@ -1,0 +1,107 @@
+/* /canggus 3D visual layer. CSS only: perspective + transform, opacity.
+   Only transform and opacity are animated (compositor friendly).
+   Every class is prefixed cg- and only used inside the /canggus wrapper.
+
+   Layer budget: an idle card carries NO transform, and the float animation
+   only runs on desktop. Otherwise every card/product becomes its own
+   compositor layer and scrolling on a throttled phone spends 100+ ms in
+   layerize/commit (measured). */
+
+/* Pointer tilt (desktop with a fine pointer only; Fx.tsx sets --rx/--ry and
+   .is-tilting on the hovered card). Static, no transform, everywhere else. */
+.cg-tilt {
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.cg-tilt.is-tilting {
+  transform: perspective(1100px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+  transition-duration: 0.15s;
+}
+
+/* Gentle float for product cut-outs: hero only, desktop only. Other
+   compositions stay static (shadow + slight angle give the depth): ~30
+   permanently animated images made scrolling heavier at 4x CPU. */
+@media (min-width: 1024px) and (hover: hover) and (pointer: fine) {
+  .cg-float-now .cg-float {
+    animation: cg-float 7s ease-in-out infinite;
+    animation-delay: var(--d, 0s);
+  }
+}
+@keyframes cg-float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -10px, 0);
+  }
+}
+
+/* Soft layered shadow under a floating product: two stacked radial
+   gradients (contact shadow + wide ambient). No CSS filter on the product
+   images: drop-shadow() on many transparent images was expensive to paint. */
+.cg-floor {
+  background:
+    radial-gradient(closest-side, rgba(40, 40, 40, 0.34), rgba(40, 40, 40, 0) 70%),
+    radial-gradient(closest-side, rgba(251, 107, 168, 0.22), rgba(251, 107, 168, 0) 100%);
+}
+.cg-floor-dark {
+  background:
+    radial-gradient(closest-side, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0) 70%),
+    radial-gradient(closest-side, rgba(251, 107, 168, 0.25), rgba(251, 107, 168, 0) 100%);
+}
+
+/* Layered soft shadow for cards: a tight contact shadow + one soft, tinted
+   ambient layer. Blur kept <= 36px: the earlier 4-layer 60-80px blur version
+   caused 100-250 ms raster tasks while scrolling at 4x CPU (measured A/B). */
+.cg-card-shadow {
+  box-shadow:
+    0 1px 0 rgba(40, 40, 40, 0.06),
+    0 16px 24px -14px rgba(120, 40, 80, 0.34);
+}
+.cg-card-shadow-dark {
+  box-shadow:
+    0 1px 0 rgba(0, 0, 0, 0.3),
+    0 18px 24px -14px rgba(0, 0, 0, 0.7);
+}
+
+/* Scroll reveal (Fx.tsx adds .cg-fx on the page root, .is-in per block).
+   2D translate only; after the transition the element has no transform. */
+.cg-fx [data-reveal] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--rd, 0s);
+}
+.cg-fx [data-reveal].is-in {
+  opacity: 1;
+  transform: none;
+}
+/* Revealed card that is also tiltable: the tilt wins while hovered. */
+.cg-fx .cg-tilt[data-reveal].is-in.is-tilting {
+  transform: perspective(1100px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+  transition-duration: 0.7s, 0.15s;
+  transition-delay: 0s;
+}
+
+/* Lightbox */
+.cg-dialog::backdrop {
+  background: rgba(20, 20, 20, 0.78);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cg-float-now .cg-float {
+    animation: none;
+  }
+  .cg-fx [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .cg-tilt,
+  .cg-tilt.is-tilting {
+    transform: none;
+    transition: none;
+  }
+}

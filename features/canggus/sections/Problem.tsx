@@ -1,5 +1,7 @@
 import SectionIntro from "../components/SectionIntro";
 import { IconTile, type IconName } from "../components/Icon";
+import { Blob, PhotoStack } from "../components/Visuals";
+import { PH } from "../data/visuals";
 
 const PROBLEMS: { icon: IconName; text: string }[] = [
   { icon: "package", text: "High minimums that force you to over-order" },
@@ -10,32 +12,48 @@ const PROBLEMS: { icon: IconName; text: string }[] = [
 
 export default function Problem() {
   return (
-    <section className="py-20 lg:py-32">
-      <div className="max-w-6xl mx-auto px-6 lg:px-12">
+    <section className="relative overflow-hidden py-20 lg:py-32">
+      <Blob className="-right-48 top-10 h-[480px] w-[480px]" />
+      <div className="relative max-w-6xl mx-auto px-6 lg:px-12">
         <SectionIntro
           eyebrow="The problem"
           title="Your customers are already spending money on supplements. Just not with you."
         />
         <div className="mt-10 grid lg:grid-cols-2 gap-10 lg:gap-16">
-          <div className="space-y-5 text-[17px] leading-[1.7] text-[#282828]/80">
-            <p>
-              They trust you with their training, recovery, health and longevity goals. But when
-              they need magnesium, creatine, collagen or electrolytes, they leave and buy from
-              somewhere else.
-            </p>
-            <p className="font-semibold text-[#282828]">Most solutions create new problems:</p>
+          <div>
+            <div className="space-y-5 text-[17px] leading-[1.7] text-[#282828]/80">
+              <p>
+                They trust you with their training, recovery, health and longevity goals. But when
+                they need magnesium, creatine, collagen or electrolytes, they leave and buy from
+                somewhere else.
+              </p>
+              <p className="font-semibold text-[#282828]">Most solutions create new problems:</p>
+            </div>
+            {/* Interchangeable capsules and tablets (manifest canggus/process/) */}
+            <PhotoStack
+              photos={[PH.pillsScatter, PH.tabletsMixed, PH.softgelsAmber]}
+              sizes="(min-width: 1024px) 360px, 75vw"
+              className="mt-10 hidden lg:block aspect-[16/12] w-full max-w-[460px]"
+            />
           </div>
           <ul className="space-y-3">
             {PROBLEMS.map((p) => (
               <li
                 key={p.text}
-                className="flex items-center gap-4 rounded-2xl border border-[#282828]/10 p-5 text-[16px] leading-[1.55] text-[#282828]"
+                data-tilt="4"
+                className="cg-tilt flex items-center gap-4 rounded-2xl bg-white/80 ring-1 ring-[#282828]/8 p-5 text-[16px] leading-[1.55] text-[#282828] shadow-[0_1px_2px_rgba(40,40,40,0.04),0_18px_36px_-26px_rgba(40,40,40,0.35)]"
               >
                 <IconTile name={p.icon} />
                 {p.text}
               </li>
             ))}
           </ul>
+          {/* Phone/tablet: the same photos after the list */}
+          <PhotoStack
+            photos={[PH.pillsScatter, PH.tabletsMixed, PH.softgelsAmber]}
+            sizes="75vw"
+            className="lg:hidden mx-auto aspect-[16/12] w-full max-w-[420px]"
+          />
         </div>
         <div className="mt-14 space-y-5 text-[17px] sm:text-lg leading-[1.7] text-[#282828]/80 max-w-3xl">
           <p>

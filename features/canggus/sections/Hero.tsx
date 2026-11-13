@@ -1,5 +1,7 @@
 import CtaButton from "../components/CtaButton";
 import AssetPlaceholder from "../components/AssetPlaceholder";
+import { Blob, FloatingProducts } from "../components/Visuals";
+import { VP } from "../data/visuals";
 
 export default function Hero() {
   return (
@@ -48,11 +50,25 @@ export default function Hero() {
             </div>
           </div>
 
-          <div>
-            {/* [ASET] Founder VSL - video slot placeholder */}
-            <AssetPlaceholder
-              label="Founder VSL - video slot"
-              className="aspect-video lg:aspect-[4/5] w-full shadow-[0_30px_60px_-30px_rgba(40,40,40,0.35)]"
+          <div className="relative mx-auto w-full max-w-[560px] lg:max-w-none pb-10 sm:pb-16 lg:pb-16">
+            <Blob strong className="-right-24 -top-24 h-[420px] w-[420px]" />
+            {/* [ASET] Founder VSL - video slot placeholder, framed as a 3D glass card */}
+            <div data-tilt="5" className="cg-tilt relative">
+              <div className="rounded-[30px] bg-white/70 p-2 ring-1 ring-white cg-card-shadow">
+                <AssetPlaceholder label="Founder VSL - video slot" className="aspect-video lg:aspect-[4/5] w-full" />
+              </div>
+            </div>
+            {/* Real products from the catalog, floating in front of the slot */}
+            <FloatingProducts
+              eager
+              disc={false}
+              sizes="(min-width: 1024px) 130px, (min-width: 640px) 120px, 26vw"
+              className="pointer-events-none absolute inset-x-0 bottom-0 h-[52%] lg:h-[40%]"
+              items={[
+                { p: VP.collagenGummy, pos: "left-[2%] bottom-[2%] w-[15%] sm:w-[17%] lg:left-[-2%] lg:w-[24%]", d: 0, r: -6, z: 2 },
+                { p: VP.magnesiumDrops, pos: "left-[18%] bottom-[0%] w-[8%] sm:w-[9%] lg:left-[19%] lg:w-[13%]", d: 1.2, r: 3, z: 3 },
+                { p: VP.electrolyte, pos: "right-[2%] bottom-[4%] w-[18%] sm:w-[20%] lg:right-0 lg:w-[28%]", d: 2.1, r: 5, z: 2 },
+              ]}
             />
           </div>
         </div>

@@ -1,6 +1,8 @@
 import type { ReactNode } from "react";
 import SectionIntro from "../components/SectionIntro";
 import Icon from "../components/Icon";
+import { Blob, FloatingProducts, PhotoCard } from "../components/Visuals";
+import { PH, VP } from "../data/visuals";
 
 // Answers only reuse sentences from copy-lp.md / revisi-instruksi.md.
 // Everything the copy does not cover is marked [TUAN ISI].
@@ -74,15 +76,36 @@ const FAQS: { q: string; a: ReactNode }[] = [
 
 export default function Faq() {
   return (
-    <section className="py-20 lg:py-32 bg-[#fdf7fa]">
-      <div className="max-w-4xl mx-auto px-6 lg:px-12">
-        <SectionIntro eyebrow="Questions" title="Frequently asked questions" />
-        <div className="mt-12 space-y-3">
+    <section className="relative overflow-hidden py-20 lg:py-32 bg-[#fdf7fa]">
+      <Blob className="-left-48 bottom-0 h-[480px] w-[480px]" />
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-12 grid lg:grid-cols-[0.75fr_1.25fr] gap-10 lg:gap-16 items-start">
+        <div className="lg:sticky lg:top-28">
+          <SectionIntro eyebrow="Questions" title="Frequently asked questions" />
+          {/* Real catalog products + QC lab photo (manifest) */}
+          <div className="relative mt-10 mx-auto w-full max-w-[400px]">
+            <PhotoCard
+              photo={PH.qcLab}
+              sizes="(min-width: 1024px) 360px, 80vw"
+              rotate="rotate-[3deg]"
+              className="w-[82%] ml-auto"
+            />
+            <FloatingProducts
+              disc={false}
+              sizes="(min-width: 1024px) 110px, 26vw"
+              className="pointer-events-none absolute -left-2 -bottom-10 h-[80%] w-[60%]"
+              items={[
+                { p: VP.magnesiumGummy, pos: "left-0 bottom-0 w-[46%]", d: 0.6, r: -7, z: 2 },
+                { p: VP.magnesiumDrops, pos: "left-[44%] bottom-[-2%] w-[24%]", d: 1.7, r: 4, z: 3 },
+              ]}
+            />
+          </div>
+        </div>
+        <div className="space-y-3 lg:pt-4">
           {FAQS.map((f, i) => (
             <details
               key={f.q}
               open={i === 0}
-              className="group rounded-3xl bg-white px-6 sm:px-8 shadow-[0_12px_40px_-30px_rgba(40,40,40,0.5)]"
+              className="group rounded-3xl bg-white/90 px-6 sm:px-8 ring-1 ring-white shadow-[0_1px_2px_rgba(40,40,40,0.04),0_18px_44px_-30px_rgba(40,40,40,0.5)]"
             >
               <summary className="flex cursor-pointer list-none items-center justify-between gap-6 rounded-xl py-6 text-[17px] sm:text-lg font-semibold leading-[1.4] text-[#282828] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#fb6ba8] [&::-webkit-details-marker]:hidden">
                 {f.q}
