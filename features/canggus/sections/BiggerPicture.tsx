@@ -12,7 +12,7 @@ export default function BiggerPicture() {
         <div className="mt-10 space-y-5 text-[17px] sm:text-lg leading-[1.75] text-[#282828]/80">
           <p>
             As your brand gains traction, we can expand the range, develop exclusive formulations,
-            and build a complete product line around the customers you already have — with
+            and build a complete product line around the customers you already have - with
             positioning that continues to protect you from pure price comparison.
           </p>
           <p>

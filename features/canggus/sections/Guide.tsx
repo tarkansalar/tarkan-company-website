@@ -1,5 +1,6 @@
 import SectionIntro from "../components/SectionIntro";
 import AssetPlaceholder from "../components/AssetPlaceholder";
+import { IconTile } from "../components/Icon";
 
 const CREDENTIALS = [
   "Over 15 years owning and operating manufacturing facilities in China",
@@ -14,7 +15,7 @@ export default function Guide() {
   return (
     <section className="py-20 lg:py-32">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 grid lg:grid-cols-[0.8fr_1.2fr] gap-12 lg:gap-20 items-start">
-        <div className="lg:sticky lg:top-10">
+        <div className="lg:sticky lg:top-28">
           {/* [ASET] Founder portrait */}
           <AssetPlaceholder label="Founder portrait" className="aspect-[4/5] w-full max-w-md" />
         </div>
@@ -29,7 +30,7 @@ export default function Guide() {
           <ul className="mt-8 divide-y divide-[#282828]/10 border-y border-[#282828]/10">
             {CREDENTIALS.map((c) => (
               <li key={c} className="flex gap-4 py-4 text-[16px] leading-[1.55] text-[#282828]">
-                <span aria-hidden="true" className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#fb6ba8]" />
+                <IconTile name="check" size="sm" />
                 {c}
               </li>
             ))}
@@ -41,13 +42,13 @@ export default function Guide() {
             </p>
             <p>
               Most private-label offers stop at “here’s a formula, put your logo on it.” We go
-              further: we help you develop products with clearer positioning — including distinct
+              further: we help you develop products with clearer positioning - including distinct
               men’s and women’s versions, unique combinations, and packaging that supports a
               stronger brand story.
             </p>
             <p className="text-[#282828] font-semibold">
-              That combination — direct factory access through volume + real product development
-              and positioning — is what makes this different.
+              That combination - direct factory access through volume + real product development
+              and positioning - is what makes this different.
             </p>
           </div>
         </div>

@@ -7,6 +7,7 @@ import Audience from "@/features/canggus/sections/Audience";
 import Problem from "@/features/canggus/sections/Problem";
 import Opportunity from "@/features/canggus/sections/Opportunity";
 import Guide from "@/features/canggus/sections/Guide";
+import ManufacturingNetwork from "@/features/canggus/sections/ManufacturingNetwork";
 import Advantage from "@/features/canggus/sections/Advantage";
 import Products from "@/features/canggus/sections/Products";
 import Plan from "@/features/canggus/sections/Plan";
@@ -43,6 +44,7 @@ export default function CanggusPage() {
         <Problem />
         <Opportunity />
         <Guide />
+        <ManufacturingNetwork />
         <Advantage />
         <Products />
         <Plan />

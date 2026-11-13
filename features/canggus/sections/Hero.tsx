@@ -28,7 +28,7 @@ export default function Hero() {
                 go somewhere else.
               </p>
               <p className="font-semibold text-[#282828]">
-                Build your own supplement brand with products that stand apart — backed by direct
+                Build your own supplement brand with products that stand apart - backed by direct
                 factory relationships, manufacturing experience and product development designed
                 around your customers.
               </p>

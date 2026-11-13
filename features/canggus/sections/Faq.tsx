@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import SectionIntro from "../components/SectionIntro";
+import Icon from "../components/Icon";
 
 // Answers only reuse sentences from copy-lp.md / revisi-instruksi.md.
 // Everything the copy does not cover is marked [TUAN ISI].
@@ -26,7 +27,7 @@ const FAQS: { q: string; a: ReactNode }[] = [
     a: (
       <>
         <p>
-          If the product is easy to compare, price becomes the only conversation — and you lose.
+          If the product is easy to compare, price becomes the only conversation - and you lose.
         </p>
         <p className="mt-4">
           We help develop products with clearer distinction through formulations, ingredient
@@ -56,7 +57,7 @@ const FAQS: { q: string; a: ReactNode }[] = [
     ),
   },
   {
-    q: "What do the first 3–6 months usually look like?",
+    q: "What do the first 3-6 months usually look like?",
     a: (
       <>
         <p>
@@ -87,9 +88,9 @@ export default function Faq() {
                 {f.q}
                 <span
                   aria-hidden="true"
-                  className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#fdf0f6] text-xl text-[#fb6ba8] transition-transform duration-200 group-open:rotate-45"
+                  className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#fdf0f6] ring-1 ring-[#fb6ba8]/15 text-[#fb6ba8] transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] group-open:rotate-180"
                 >
-                  +
+                  <Icon name="chevronDown" className="h-5 w-5" />
                 </span>
               </summary>
               <div className="pb-7 text-[16px] leading-[1.7] text-[#282828]/75">{f.a}</div>

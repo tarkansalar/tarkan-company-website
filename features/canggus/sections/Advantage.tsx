@@ -1,4 +1,5 @@
 import SectionIntro from "../components/SectionIntro";
+import { IconTile, type IconName } from "../components/Icon";
 
 const ADVANTAGES = [
   {
@@ -11,13 +12,13 @@ const ADVANTAGES = [
   },
 ];
 
-const YOU_GET = [
-  "Direct access to carefully selected, quality-focused factories",
-  "Stronger pricing through established relationships and combined volumes",
-  "Product development support focused on distinction (not just label changes)",
-  "Men’s and women’s formulation options where it makes commercial sense",
-  "Branding, packaging and label design coordination",
-  "Full production management and delivery",
+const YOU_GET: { icon: IconName; text: string }[] = [
+  { icon: "factory", text: "Direct access to carefully selected, quality-focused factories" },
+  { icon: "handshake", text: "Stronger pricing through established relationships and combined volumes" },
+  { icon: "flask", text: "Product development support focused on distinction (not just label changes)" },
+  { icon: "users", text: "Men’s and women’s formulation options where it makes commercial sense" },
+  { icon: "palette", text: "Branding, packaging and label design coordination" },
+  { icon: "truck", text: "Full production management and delivery" },
 ];
 
 export default function Advantage() {
@@ -53,11 +54,9 @@ export default function Advantage() {
           <h3 className="text-2xl lg:text-3xl font-bold text-[#282828]">You get:</h3>
           <ul className="grid sm:grid-cols-2 gap-x-10 gap-y-4">
             {YOU_GET.map((y) => (
-              <li key={y} className="flex gap-3 text-[16px] leading-[1.55] text-[#282828]">
-                <span aria-hidden="true" className="text-[#fb6ba8] font-bold">
-                  &#10003;
-                </span>
-                {y}
+              <li key={y.text} className="flex items-center gap-4 text-[16px] leading-[1.55] text-[#282828]">
+                <IconTile name={y.icon} />
+                {y.text}
               </li>
             ))}
           </ul>
@@ -66,7 +65,7 @@ export default function Advantage() {
           <p>
             The goal is not to sell you the same product everyone else has at a slightly better
             cost. The goal is to help you launch products that members cannot easily replace with a
-            cheaper alternative — while still giving you commercial conditions strong enough to
+            cheaper alternative - while still giving you commercial conditions strong enough to
             compete.
           </p>
           <p className="font-semibold text-[#282828]">
