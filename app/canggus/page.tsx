@@ -9,6 +9,8 @@ import Opportunity from "@/features/canggus/sections/Opportunity";
 import Guide from "@/features/canggus/sections/Guide";
 import ManufacturingNetwork from "@/features/canggus/sections/ManufacturingNetwork";
 import Advantage from "@/features/canggus/sections/Advantage";
+import Certifications from "@/features/canggus/sections/Certifications";
+import HowProductionWorks from "@/features/canggus/sections/HowProductionWorks";
 import Products from "@/features/canggus/sections/Products";
 import Plan from "@/features/canggus/sections/Plan";
 import BiggerPicture from "@/features/canggus/sections/BiggerPicture";
@@ -43,9 +45,14 @@ export default function CanggusPage() {
         <Audience />
         <Problem />
         <Opportunity />
+        {/* Order (Tuan 13 Nov): Guide -> Manufacturing -> Certifications ->
+            How Production Works -> Products -> Plan. Advantage moved up so
+            that chain stays unbroken. */}
+        <Advantage />
         <Guide />
         <ManufacturingNetwork />
-        <Advantage />
+        <Certifications />
+        <HowProductionWorks />
         <Products />
         <Plan />
         <BiggerPicture />

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import SectionIntro from "../components/SectionIntro";
 import Icon, { IconTile } from "../components/Icon";
-import { CANGGUS_ASSET_BASE, CERTIFICATE } from "../data/catalog";
+import { CANGGUS_ASSET_BASE } from "../data/catalog";
 import { FACILITIES, NETWORK_STATS, PRODUCTION_GALLERY } from "../data/network";
 
 // "Our manufacturing network": several factories, anonymised as Facility A/B/C.
@@ -106,41 +106,6 @@ export default function ManufacturingNetwork() {
           </ul>
         </div>
 
-        {/* Certificate strip: only certificates with a current document */}
-        <div className="mt-16 grid lg:grid-cols-[auto_1fr] gap-6 lg:gap-10 items-center rounded-3xl bg-white text-[#282828] p-6 sm:p-8 lg:p-10">
-          <div className="relative mx-auto lg:mx-0 h-44 w-[124px] sm:h-52 sm:w-[146px] overflow-hidden rounded-xl ring-1 ring-[#282828]/10 shadow-[0_20px_40px_-24px_rgba(40,40,40,0.5)] rotate-[-2deg]">
-            <Image
-              src={`${CANGGUS_ASSET_BASE}${CERTIFICATE.file}`}
-              alt="FSSC 22000 certificate of conformity (Facility A)"
-              fill
-              loading="lazy"
-              sizes="150px"
-              className="object-cover object-top"
-            />
-          </div>
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#fb6ba8]">Certification</p>
-            <ul className="mt-4 flex flex-wrap gap-3">
-              <li className="inline-flex items-center gap-3 rounded-2xl bg-[#fdf7fa] px-4 py-3 ring-1 ring-[#fb6ba8]/15">
-                <IconTile name="shieldCheck" />
-                <span className="flex flex-col leading-tight">
-                  <span className="text-[17px] font-bold">FSSC 22000</span>
-                  <span className="text-xs text-[#282828]/70">ISO 22000:2018 + ISO/TS 22002-1</span>
-                </span>
-              </li>
-              <li className="inline-flex items-center gap-3 rounded-2xl bg-[#fdf7fa] px-4 py-3 ring-1 ring-[#fb6ba8]/15">
-                <IconTile name="clock" />
-                <span className="flex flex-col leading-tight">
-                  <span className="text-[17px] font-bold">Valid until 27 Aug 2027</span>
-                  <span className="text-xs text-[#282828]/70">Facility A</span>
-                </span>
-              </li>
-            </ul>
-            <p className="mt-4 text-sm leading-[1.6] text-[#282828]/70">
-              Issued by {CERTIFICATE.issuer}.
-            </p>
-          </div>
-        </div>
       </div>
     </section>
   );

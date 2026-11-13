@@ -10,7 +10,7 @@ const ITEMS: { icon: IconName; text: string }[] = [
 export default function TrustStrip() {
   return (
     <section aria-label="Experience" className="border-y border-[#282828]/10 bg-white">
-      <ul className="max-w-7xl mx-auto px-6 lg:px-12 py-8 grid grid-cols-2 lg:grid-cols-4 gap-x-5 gap-y-6">
+      <ul className="max-w-7xl mx-auto px-6 lg:px-12 py-8 grid grid-cols-1 min-[360px]:grid-cols-2 lg:grid-cols-4 gap-x-5 gap-y-6">
         {ITEMS.map((t) => (
           <li
             key={t.text}

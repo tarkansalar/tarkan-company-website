@@ -11,7 +11,8 @@ export default function SectionIntro({ eyebrow, title, align = "left", invert = 
   const center = align === "center" ? "text-center mx-auto" : "";
   return (
     <div className={`max-w-3xl ${center}`}>
-      <p className="font-[family-name:var(--font-cg-script)] text-[#fb6ba8] text-[34px] sm:text-[42px] leading-none mb-4">
+      {/* Pink script eyebrow: its size is set here only, for every section. */}
+      <p className="font-[family-name:var(--font-cg-script)] text-[#fb6ba8] text-[40px] min-[360px]:text-[44px] sm:text-[52px] lg:text-[62px] leading-[1.05] mb-4 lg:mb-5">
         {eyebrow}
       </p>
       <h2

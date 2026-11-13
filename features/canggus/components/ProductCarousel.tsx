@@ -1,69 +1,296 @@
 "use client";
 
-import Image from "next/image";
-import { useCallback, useEffect, useMemo, useRef, useState, type KeyboardEvent } from "react";
-import { CANGGUS_ASSET_BASE, CATALOG, PRODUCT_CATEGORIES } from "../data/catalog";
+import Image, { type ImageLoader } from "next/image";
+import { memo, startTransition, useCallback, useEffect, useMemo, useRef, useState, type KeyboardEvent } from "react";
+import {
+  CANGGUS_ASSET_BASE,
+  CATALOG_COUNTS,
+  CATALOG_HEAD,
+  PRODUCT_CATEGORIES,
+  PRODUCT_FORMATS,
+  type CatalogProduct,
+} from "../data/catalog-meta";
+
+// Full list (all non-sensitive products) is a static JSON route, fetched once
+// when the carousel nears the viewport or a filter is used. Until then the
+// first cards (CATALOG_HEAD) render, so first-load JS stays small.
+const CATALOG_URL = "/canggus/catalog.json";
+
+function countFor(category: string, format: string) {
+  let n = 0;
+  for (const c of PRODUCT_CATEGORIES) {
+    if (category !== "All" && c !== category) continue;
+    for (const f of PRODUCT_FORMATS) {
+      if (format !== "All" && f !== format) continue;
+      n += CATALOG_COUNTS[c][f];
+    }
+  }
+  return n;
+}
 import Icon, { type IconName } from "./Icon";
 
-type Filter = "All" | (typeof PRODUCT_CATEGORIES)[number];
+type Category = "All" | (typeof PRODUCT_CATEGORIES)[number];
+type Format = "All" | (typeof PRODUCT_FORMATS)[number];
 
-const FILTERS: { label: Filter; icon: IconName }[] = [
-  { label: "All", icon: "grid" },
-  { label: "Creatine", icon: "zap" },
-  { label: "Magnesium", icon: "atom" },
-  { label: "Collagen", icon: "sparkles" },
-  { label: "Electrolytes & Hydration", icon: "droplet" },
-  { label: "Gummies", icon: "candy" },
-  { label: "Functional Wellness", icon: "leaf" },
-];
+const CATEGORY_ICON: Record<string, IconName> = {
+  All: "grid",
+  Creatine: "zap",
+  Magnesium: "atom",
+  Collagen: "sparkles",
+  "Electrolytes & Hydration": "droplet",
+  Gummies: "candy",
+  "Functional Wellness": "leaf",
+  "Protein & Sports Nutrition": "dumbbell",
+};
+const FORMAT_ICON: Record<string, IconName> = {
+  All: "grid",
+  Gummies: "candy",
+  Capsules: "pill",
+  Softgels: "bean",
+  Drops: "droplet",
+  Powder: "layers",
+  Tablets: "tablets",
+  Other: "package",
+};
 
-// Scroll-snap carousel: native swipe on touch, arrows + dots on desktop,
-// arrow keys / Home / End when the track has focus. Images are lazy loaded
-// by next/image (only the first visible cards are in the viewport anyway).
+// Backend ships two resized variants per product: <stem>-sm.webp (max 400 px
+// wide) and <stem>-md.webp (max 800 px wide). Serve them straight from the
+// public bucket: sm for 1x phones, md for wider slots and retina.
+const variantLoader: ImageLoader = ({ src, width }) =>
+  `${CANGGUS_ASSET_BASE}${src}-${width <= 400 ? "sm" : "md"}.webp`;
+
+const SIZES =
+  "(min-width: 1280px) 280px, (min-width: 1024px) 22vw, (min-width: 768px) 30vw, (min-width: 480px) 45vw, 70vw";
+
+// Cards are mounted in batches: the first BATCH on load, then STEP more cards
+// whenever the end of the track comes within ~1.5 screens. Images inside the
+// mounted cards are native lazy, so only cards near the viewport download.
+const BATCH = 12;
+const STEP = 4;
+
+const Card = memo(function Card({ p, index, total }: { p: CatalogProduct; index: number; total: number }) {
+  return (
+    <li
+      aria-label={`${index + 1} of ${total}: ${p.name}`}
+      className="group snap-start shrink-0 w-[70%] min-[480px]:w-[46%] md:w-[31%] lg:w-[calc((100%-48px)/4)] [contain:layout_paint]"
+    >
+      <div className="relative aspect-[4/5] overflow-hidden rounded-3xl bg-[radial-gradient(80%_60%_at_50%_30%,#ffffff_0%,#fdf0f6_70%,#fbe4ef_100%)] ring-1 ring-[#fb6ba8]/10 shadow-[0_24px_48px_-32px_rgba(251,107,168,0.55),0_2px_6px_-2px_rgba(40,40,40,0.06)]">
+        {p.lowRes ? (
+          // Small source image: shown near its own size instead of stretched.
+          <div className="absolute inset-0 flex items-center justify-center p-10">
+            <Image
+              loader={variantLoader}
+              src={p.stem}
+              alt={`${p.name}, ${p.label}`}
+              width={p.w}
+              height={p.h}
+              loading="lazy"
+              sizes="200px"
+              placeholder="blur"
+              blurDataURL={p.blur}
+              style={{ width: Math.min(p.w * 1.6, 200), height: "auto", maxHeight: "100%" }}
+              className="object-contain drop-shadow-[0_18px_22px_rgba(40,40,40,0.18)] transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.04]"
+            />
+          </div>
+        ) : (
+          <Image
+            loader={variantLoader}
+            src={p.stem}
+            alt={`${p.name}, ${p.label}`}
+            fill
+            loading="lazy"
+            sizes={SIZES}
+            placeholder="blur"
+            blurDataURL={p.blur}
+            className="object-contain p-7 sm:p-8 drop-shadow-[0_18px_22px_rgba(40,40,40,0.18)] transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.04]"
+          />
+        )}
+        {p.tag && (
+          <span className="absolute top-3.5 left-3.5 rounded-full bg-[#282828] px-2.5 py-1 text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.12em] text-white">
+            {p.tag}
+          </span>
+        )}
+        <span className="absolute top-3.5 right-3.5 max-w-[70%] truncate rounded-full bg-white/90 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-[#c93d78]">
+          {p.category}
+        </span>
+      </div>
+      <h3 className="mt-4 text-[16px] sm:text-[17px] font-semibold leading-[1.35] text-[#282828]">{p.name}</h3>
+      <p className="mt-1 text-[13px] sm:text-sm leading-[1.5] text-[#282828]/70">
+        {p.label}
+        <span className="text-[#282828]/45"> · </span>
+        {`Facility ${p.facility}`}
+      </p>
+    </li>
+  );
+});
+
+function Chip({
+  active,
+  disabled,
+  icon,
+  label,
+  count,
+  onClick,
+}: {
+  active: boolean;
+  disabled: boolean;
+  icon: IconName;
+  label: string;
+  count: number;
+  onClick: () => void;
+}) {
+  return (
+    <button
+      type="button"
+      aria-pressed={active}
+      disabled={disabled}
+      onClick={onClick}
+      className={`inline-flex min-h-11 shrink-0 items-center gap-2 rounded-full border px-4 py-2.5 text-sm font-semibold transition-[background-color,border-color,color,transform,opacity] duration-200 active:scale-[0.97] disabled:opacity-40 disabled:pointer-events-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#fb6ba8] ${
+        active
+          ? "border-[#282828] bg-[#282828] text-white"
+          : "border-[#282828]/12 bg-white text-[#282828] hover:border-[#fb6ba8] hover:text-[#e0558f]"
+      }`}
+    >
+      <Icon name={icon} className="h-4 w-4 text-[#fb6ba8]" />
+      {label}
+      <span className={`text-xs font-medium ${active ? "text-white/70" : "text-[#282828]/65"}`}>{count}</span>
+    </button>
+  );
+}
+
+const CHIP_ROW =
+  "-mx-6 px-6 flex gap-2.5 overflow-x-auto pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden lg:mx-0 lg:px-0 lg:flex-wrap";
+
+// Scroll-snap carousel: native swipe on touch, arrows on desktop, arrow keys /
+// Home / End when the track has focus.
 export default function ProductCarousel() {
-  const [filter, setFilter] = useState<Filter>("All");
-  const [page, setPage] = useState(0);
-  const [pages, setPages] = useState(1);
-  const [progress, setProgress] = useState(0);
+  const [category, setCategory] = useState<Category>("All");
+  const [format, setFormat] = useState<Format>("All");
+  const [mounted, setMounted] = useState(BATCH);
+  const [first, setFirst] = useState(0);
+  const [perView, setPerView] = useState(4);
+  const [atStart, setAtStart] = useState(true);
+  const [atEnd, setAtEnd] = useState(false);
+  const [catalog, setCatalog] = useState<CatalogProduct[] | null>(null);
+  const rootRef = useRef<HTMLDivElement>(null);
   const trackRef = useRef<HTMLUListElement>(null);
+  const sentinelRef = useRef<HTMLLIElement>(null);
+  const frame = useRef(0);
+  const loading = useRef(false);
+
+  const load = useCallback(() => {
+    if (loading.current) return;
+    loading.current = true;
+    fetch(CATALOG_URL)
+      .then((r) => (r.ok ? r.json() : Promise.reject(r.status)))
+      .then((list: CatalogProduct[]) => setCatalog(list))
+      .catch(() => {
+        loading.current = false;
+      });
+  }, []);
+
+  // Fetch the full list once the carousel is within ~1 screen of the viewport
+  useEffect(() => {
+    const el = rootRef.current;
+    if (!el || catalog) return;
+    const io = new IntersectionObserver((e) => e.some((x) => x.isIntersecting) && load(), {
+      rootMargin: "100% 0px 100% 0px",
+    });
+    io.observe(el);
+    return () => io.disconnect();
+  }, [catalog, load]);
 
   const items = useMemo(
-    () => (filter === "All" ? CATALOG : CATALOG.filter((p) => p.category === filter)),
-    [filter],
+    () =>
+      (catalog ?? CATALOG_HEAD).filter(
+        (p) => (category === "All" || p.category === category) && (format === "All" || p.format === format),
+      ),
+    [catalog, category, format],
   );
 
+  // Exact counts come from the generated count table, so the chips are right
+  // before the full list has arrived.
+  const categoryCounts = useMemo(() => {
+    const c: Record<string, number> = { All: countFor("All", format) };
+    for (const k of PRODUCT_CATEGORIES) c[k] = countFor(k, format);
+    return c;
+  }, [format]);
+
+  const formatCounts = useMemo(() => {
+    const c: Record<string, number> = { All: countFor(category, "All") };
+    for (const k of PRODUCT_FORMATS) c[k] = countFor(category, k);
+    return c;
+  }, [category]);
+
+  const pickCategory = (c: Category) => {
+    load();
+    setCategory(c);
+  };
+  const pickFormat = (f: Format) => {
+    load();
+    setFormat(f);
+  };
+
+  // Read scroll position at most once per frame; only set state on change.
   const measure = useCallback(() => {
-    const el = trackRef.current;
-    if (!el) return;
-    const max = el.scrollWidth - el.clientWidth;
-    const total = max <= 2 ? 1 : Math.ceil(el.scrollWidth / el.clientWidth - 0.05);
-    setPages(total);
-    const ratio = max <= 0 ? 1 : el.scrollLeft / max;
-    setProgress(ratio);
-    setPage(max <= 0 ? 0 : Math.min(total - 1, Math.round(ratio * (total - 1))));
+    cancelAnimationFrame(frame.current);
+    frame.current = requestAnimationFrame(() => {
+      const el = trackRef.current;
+      if (!el) return;
+      const card = el.firstElementChild as HTMLElement | null;
+      const step = card ? card.offsetWidth + 16 : el.clientWidth;
+      const max = el.scrollWidth - el.clientWidth;
+      setFirst(Math.round(el.scrollLeft / step));
+      setPerView(Math.max(1, Math.round(el.clientWidth / step)));
+      setAtStart(el.scrollLeft <= 2);
+      setAtEnd(el.scrollLeft >= max - 2);
+    });
   }, []);
+
+  // Reset on filter change (not when the full list arrives)
+  useEffect(() => {
+    setMounted(BATCH);
+    trackRef.current?.scrollTo({ left: 0 });
+    measure();
+  }, [category, format, measure]);
+
+  useEffect(() => {
+    measure();
+  }, [items, measure]);
 
   useEffect(() => {
     const el = trackRef.current;
     if (!el) return;
-    el.scrollTo({ left: 0 });
-    measure();
     const ro = new ResizeObserver(measure);
     ro.observe(el);
-    return () => ro.disconnect();
-  }, [items, measure]);
+    return () => {
+      ro.disconnect();
+      cancelAnimationFrame(frame.current);
+    };
+  }, [measure]);
+
+  // Mount the next batch when the end sentinel nears the visible track
+  useEffect(() => {
+    const root = trackRef.current;
+    const target = sentinelRef.current;
+    if (!root || !target || mounted >= items.length) return;
+    const io = new IntersectionObserver(
+      (entries) => {
+        // Transition: React renders the new cards in small slices, so a swipe
+        // never waits on one long task.
+        if (entries.some((e) => e.isIntersecting))
+          startTransition(() => setMounted((n) => Math.min(items.length, n + STEP)));
+      },
+      { root, rootMargin: "0px 150% 0px 0px" },
+    );
+    io.observe(target);
+    return () => io.disconnect();
+  }, [items.length, mounted]);
 
   const scrollByPage = (dir: 1 | -1) => {
     const el = trackRef.current;
     if (!el) return;
     el.scrollBy({ left: dir * el.clientWidth * 0.9, behavior: "smooth" });
-  };
-
-  const goToPage = (i: number) => {
-    const el = trackRef.current;
-    if (!el) return;
-    const max = el.scrollWidth - el.clientWidth;
-    el.scrollTo({ left: pages <= 1 ? 0 : (max * i) / (pages - 1), behavior: "smooth" });
   };
 
   const onKeyDown = (e: KeyboardEvent<HTMLUListElement>) => {
@@ -82,49 +309,52 @@ export default function ProductCarousel() {
       el.scrollTo({ left: 0, behavior: "smooth" });
     } else if (e.key === "End") {
       e.preventDefault();
-      el.scrollTo({ left: el.scrollWidth, behavior: "smooth" });
+      setMounted(items.length);
+      requestAnimationFrame(() => el.scrollTo({ left: el.scrollWidth, behavior: "smooth" }));
     }
   };
 
-  const atStart = progress <= 0.001;
-  const atEnd = progress >= 0.999 || pages <= 1;
+  const shown = items.slice(0, mounted);
+  const total = countFor(category, format);
+  const from = total ? Math.min(first + 1, total) : 0;
+  const to = Math.min(first + perView, total);
+  const progress = total ? Math.min(1, to / total) : 1;
 
   return (
-    <div className="mt-12 lg:mt-14">
-      {/* Filter chips: scroll sideways on phones, wrap on desktop */}
-      <div
-        role="group"
-        aria-label="Filter product examples by category"
-        className="-mx-6 px-6 flex gap-2.5 overflow-x-auto pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden lg:mx-0 lg:px-0 lg:flex-wrap"
-      >
-        {FILTERS.map((f) => {
-          const active = f.label === filter;
-          const count = f.label === "All" ? CATALOG.length : CATALOG.filter((p) => p.category === f.label).length;
-          return (
-            <button
-              key={f.label}
-              type="button"
-              aria-pressed={active}
-              onClick={() => setFilter(f.label)}
-              className={`inline-flex shrink-0 items-center gap-2 rounded-full border px-4 py-2.5 text-sm font-semibold transition-[background-color,border-color,color,transform] duration-200 active:scale-[0.97] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#fb6ba8] ${
-                active
-                  ? "border-[#282828] bg-[#282828] text-white"
-                  : "border-[#282828]/12 bg-white text-[#282828] hover:border-[#fb6ba8] hover:text-[#e0558f]"
-              }`}
-            >
-              <Icon name={f.icon} className={`h-4 w-4 ${active ? "text-[#fb6ba8]" : "text-[#fb6ba8]"}`} />
-              {f.label}
-              <span className={`text-xs font-medium ${active ? "text-white/70" : "text-[#282828]/65"}`}>
-                {count}
-              </span>
-            </button>
-          );
-        })}
+    <div ref={rootRef} className="mt-12 lg:mt-14">
+      <div className="space-y-3">
+        <div role="group" aria-label="Filter product examples by category" className={CHIP_ROW}>
+          {(["All", ...PRODUCT_CATEGORIES] as Category[]).map((c) => (
+            <Chip
+              key={c}
+              active={c === category}
+              disabled={c !== category && !categoryCounts[c]}
+              icon={CATEGORY_ICON[c]}
+              label={c}
+              count={categoryCounts[c] ?? 0}
+              onClick={() => pickCategory(c)}
+            />
+          ))}
+        </div>
+        <div role="group" aria-label="Filter product examples by format" className={`${CHIP_ROW} items-center`}>
+          <span className="shrink-0 pr-1 text-xs font-semibold uppercase tracking-[0.18em] text-[#282828]/60">Format</span>
+          {(["All", ...PRODUCT_FORMATS] as Format[]).map((f) => (
+            <Chip
+              key={f}
+              active={f === format}
+              disabled={f !== format && !formatCounts[f]}
+              icon={FORMAT_ICON[f]}
+              label={f === "All" ? "All formats" : f}
+              count={formatCounts[f] ?? 0}
+              onClick={() => pickFormat(f)}
+            />
+          ))}
+        </div>
       </div>
 
       <div className="relative mt-8">
         <p className="sr-only" aria-live="polite">
-          {`Showing ${items.length} ${filter === "All" ? "" : `${filter} `}product examples`}
+          {`Showing ${total} product examples${category === "All" ? "" : ` in ${category}`}${format === "All" ? "" : `, format ${format}`}`}
         </p>
         <ul
           ref={trackRef}
@@ -132,38 +362,12 @@ export default function ProductCarousel() {
           onScroll={measure}
           onKeyDown={onKeyDown}
           aria-label="Product examples carousel. Use the left and right arrow keys to scroll."
-          className="-mx-6 px-6 lg:mx-0 lg:px-0 flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-px-6 lg:scroll-px-0 pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden rounded-3xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#fb6ba8]"
+          className="-mx-6 px-6 lg:mx-0 lg:px-0 flex gap-4 overflow-x-auto overscroll-x-contain snap-x snap-mandatory scroll-px-6 lg:scroll-px-0 pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden rounded-3xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#fb6ba8]"
         >
-          {items.map((p, i) => (
-            <li
-              key={p.id}
-              aria-label={`${i + 1} of ${items.length}: ${p.name}`}
-              className="group snap-start shrink-0 w-[70%] min-[480px]:w-[46%] md:w-[31%] lg:w-[calc((100%-48px)/4)]"
-            >
-              <div className="relative aspect-[4/5] overflow-hidden rounded-3xl bg-[radial-gradient(80%_60%_at_50%_30%,#ffffff_0%,#fdf0f6_70%,#fbe4ef_100%)] ring-1 ring-[#fb6ba8]/10 shadow-[0_24px_48px_-32px_rgba(251,107,168,0.55),0_2px_6px_-2px_rgba(40,40,40,0.06)]">
-                <Image
-                  src={`${CANGGUS_ASSET_BASE}${p.src}`}
-                  alt={`${p.name}, ${p.format}`}
-                  fill
-                  loading="lazy"
-                  sizes="(min-width: 1280px) 280px, (min-width: 1024px) 22vw, (min-width: 768px) 30vw, (min-width: 480px) 45vw, 70vw"
-                  className="object-contain p-7 sm:p-8 drop-shadow-[0_18px_22px_rgba(40,40,40,0.18)] transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.04]"
-                />
-                {p.tag && (
-                  <span className="absolute top-3.5 left-3.5 rounded-full bg-[#282828] px-2.5 py-1 text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.12em] text-white">
-                    {p.tag}
-                  </span>
-                )}
-                <span className="absolute top-3.5 right-3.5 rounded-full bg-white/85 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-[#e0558f] backdrop-blur-sm">
-                  {p.category}
-                </span>
-              </div>
-              <h3 className="mt-4 text-[16px] sm:text-[17px] font-semibold leading-[1.35] text-[#282828]">
-                {p.name}
-              </h3>
-              <p className="mt-1 text-[13px] sm:text-sm leading-[1.5] text-[#282828]/70">{p.format}</p>
-            </li>
+          {shown.map((p, i) => (
+            <Card key={p.id} p={p} index={i} total={total} />
           ))}
+          {mounted < items.length && <li ref={sentinelRef} aria-hidden="true" className="shrink-0 w-px" />}
         </ul>
 
         {/* Arrows: desktop only (phones swipe) */}
@@ -179,7 +383,7 @@ export default function ProductCarousel() {
         <button
           type="button"
           onClick={() => scrollByPage(1)}
-          disabled={atEnd}
+          disabled={atEnd && mounted >= items.length && items.length >= total}
           aria-label="Next products"
           className="hidden md:flex absolute -right-5 top-[calc(50%-48px)] -translate-y-1/2 h-12 w-12 items-center justify-center rounded-full bg-white text-[#282828] ring-1 ring-[#282828]/10 shadow-[0_12px_30px_-12px_rgba(40,40,40,0.35)] transition-[opacity,transform,color] duration-200 hover:text-[#fb6ba8] hover:scale-105 active:scale-95 disabled:pointer-events-none disabled:opacity-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#fb6ba8]"
         >
@@ -187,35 +391,18 @@ export default function ProductCarousel() {
         </button>
       </div>
 
-      {/* Progress: thin bar on phones, dots on desktop */}
-      <div className="mt-4 md:hidden h-1 rounded-full bg-[#282828]/8 overflow-hidden" aria-hidden="true">
-        <div
-          className="h-full rounded-full bg-[#fb6ba8] origin-left transition-transform duration-200"
-          style={{
-            transform: `scaleX(${pages <= 1 ? 1 : Math.max(0.12, progress)})`,
-          }}
-        />
-      </div>
-      {pages > 1 && (
-        <div className="mt-4 hidden md:flex justify-center gap-1" role="group" aria-label="Carousel pages">
-          {Array.from({ length: pages }).map((_, i) => (
-            <button
-              key={i}
-              type="button"
-              onClick={() => goToPage(i)}
-              aria-label={`Go to page ${i + 1} of ${pages}`}
-              aria-current={i === page ? "true" : undefined}
-              className="group/dot flex h-6 min-w-6 items-center justify-center focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#fb6ba8] rounded-full"
-            >
-              <span
-                className={`block h-2 rounded-full transition-[width,background-color] duration-300 ${
-                  i === page ? "w-7 bg-[#fb6ba8]" : "w-2 bg-[#282828]/20 group-hover/dot:bg-[#fb6ba8]/50"
-                }`}
-              />
-            </button>
-          ))}
+      {/* Progress: position in the filtered list */}
+      <div className="mt-4 flex items-center gap-4">
+        <div className="h-1 flex-1 rounded-full bg-[#282828]/8 overflow-hidden" aria-hidden="true">
+          <div
+            className="h-full rounded-full bg-[#fb6ba8] origin-left transition-transform duration-200"
+            style={{ transform: `scaleX(${Math.max(0.04, progress)})` }}
+          />
         </div>
-      )}
+        <p className="shrink-0 text-[13px] font-semibold tabular-nums text-[#282828]/70">
+          {total ? `${from}-${to} of ${total}` : "0 of 0"}
+        </p>
+      </div>
     </div>
   );
 }

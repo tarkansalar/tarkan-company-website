@@ -37,7 +37,8 @@ export default function Header({
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-sm border-b border-[#fb6ba8]/20">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 py-4 flex justify-between items-center gap-4">
+      {/* px-4 / gap-3 below 360px so logo + CTA fit a 320px screen */}
+      <div className="max-w-7xl mx-auto px-4 min-[360px]:px-6 lg:px-12 py-4 flex justify-between items-center gap-3 min-[360px]:gap-4">
         <a
           href={homeHref}
           className="flex h-12 items-center rounded transition-opacity duration-200 hover:opacity-85 active:opacity-70 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#fb6ba8]"
@@ -60,7 +61,7 @@ export default function Header({
           <Icon name="calendar" className="h-3.5 w-3.5 lg:h-4 lg:w-4" />
           <span className="sm:hidden">{CTA_LABEL_SHORT}</span>
           <span className="hidden sm:inline">{CTA_LABEL}</span>
-          <Icon name="arrowRight" className="h-3.5 w-3.5 lg:h-4 lg:w-4" />
+          <Icon name="arrowRight" className="hidden min-[360px]:block h-3.5 w-3.5 lg:h-4 lg:w-4" />
         </a>
       </div>
     </header>
