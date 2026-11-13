@@ -91,6 +91,15 @@ html:has([data-cg-root]) {
   scroll-padding-top: 96px;
 }
 
+/* Text selection: pink on /canggus and its legal pages. The global
+   ::selection in app/globals.css (neon, main LP) is not touched; this
+   wrapper-scoped rule is more specific, so it wins only inside .cg-root. */
+.cg-root ::selection,
+.cg-root::selection {
+  background: #fb6ba8;
+  color: #fff;
+}
+
 /* Lightbox */
 .cg-dialog::backdrop {
   background: rgba(20, 20, 20, 0.78);

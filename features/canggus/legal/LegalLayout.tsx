@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import Link from "next/link";
 import { greatVibes, montserrat } from "../fonts";
+import "../visual.css";
 import Header from "../components/Header";
 import Footer from "../sections/Footer";
 import Icon from "../components/Icon";
@@ -25,7 +26,7 @@ const HOME = "/canggus";
 export default function CanggusLegalLayout({ title, lastUpdated, intro, children }: Props) {
   return (
     <div
-      className={`${montserrat.variable} ${greatVibes.variable} relative min-h-screen bg-white text-[#282828] font-[family-name:var(--font-cg-sans)] antialiased selection:bg-[#fb6ba8] selection:text-white`}
+      className={`cg-root ${montserrat.variable} ${greatVibes.variable} relative min-h-screen bg-white text-[#282828] font-[family-name:var(--font-cg-sans)] antialiased`}
     >
       <Header homeHref={HOME} />
       <main>

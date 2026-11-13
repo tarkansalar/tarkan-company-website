@@ -95,8 +95,11 @@ export default function Faq() {
   return (
     <section className="relative overflow-hidden py-20 lg:py-32 bg-[#fdf7fa]">
       <Blob className="-left-48 bottom-0 h-[480px] w-[480px]" />
-      <div className="relative max-w-7xl mx-auto px-6 lg:px-12 grid lg:grid-cols-[0.75fr_1.25fr] gap-10 lg:gap-16 items-start">
-        <div className="lg:sticky lg:top-28">
+      {/* Both columns centred (Tuan 13 Nov, "no empty space"); the lab photo is
+          portrait on desktop so the left column is about as tall as the list
+          with the first answer open. */}
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-12 grid lg:grid-cols-[0.75fr_1.25fr] gap-10 lg:gap-16 items-center">
+        <div>
           <SectionIntro eyebrow="Questions" title="Frequently asked questions" />
           {/* Real catalog products + QC lab photo (manifest) */}
           <div className="relative mt-10 mx-auto w-full max-w-[400px]">
@@ -104,6 +107,7 @@ export default function Faq() {
               photo={PH.qcLab}
               sizes="(min-width: 1024px) 360px, 80vw"
               rotate="rotate-[3deg]"
+              aspect="aspect-[16/10] lg:aspect-[4/5]"
               className="w-[82%] ml-auto"
             />
             <FloatingProducts

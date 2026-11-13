@@ -49,7 +49,7 @@ export default function Certifications() {
                 alt={`${CERT.label} certificate of conformity (${CERT.facility})`}
                 w={954}
                 h={1428}
-                status={certStatus}
+                verified={certStatus.valid}
               />
             </div>
           </div>
@@ -107,7 +107,7 @@ export default function Certifications() {
           ))}
         </ul>
 
-        {/* Every certificate scan (valid and expired, honestly labelled), above the logo grid */}
+        {/* Every certificate scan (no date labels), above the logo grid */}
         <CertificateGallery />
 
         <h3 className="mt-14 lg:mt-16 text-xs font-semibold uppercase tracking-[0.22em] text-[#e0558f]">

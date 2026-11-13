@@ -17,7 +17,9 @@ import {
 // contact are from Tuan (13 Nov 2026). Not stated on purpose (unknown):
 // managing director, commercial register number, VAT ID, phone.
 export const metadata: Metadata = {
-  title: "Terms of Service · Canggus",
+  title: "Terms of Service | Canggu’s",
+  openGraph: { title: "Terms of Service | Canggu’s" },
+  twitter: { title: "Terms of Service | Canggu’s" },
   description:
     "Terms for using the Canggus private label supplement partnership page and booking a call with Canggus.",
   // noindex, same as /canggus, until Tuan approves the page

@@ -7,30 +7,26 @@ import {
   CATALOG_COUNTS,
   CATALOG_HEAD,
   PRODUCT_CATEGORIES,
-  PRODUCT_FORMATS,
   type CatalogProduct,
 } from "../data/catalog-meta";
+import Icon, { type IconName } from "./Icon";
 
 // Full list (all non-sensitive products) is a static JSON route, fetched once
 // when the carousel nears the viewport or a filter is used. Until then the
 // first cards (CATALOG_HEAD) render, so first-load JS stays small.
 const CATALOG_URL = "/canggus/catalog.json";
 
-function countFor(category: string, format: string) {
+type Category = "All" | (typeof PRODUCT_CATEGORIES)[number];
+
+// Products per category (every format summed), from the generated count table.
+function countFor(category: Category) {
   let n = 0;
   for (const c of PRODUCT_CATEGORIES) {
     if (category !== "All" && c !== category) continue;
-    for (const f of PRODUCT_FORMATS) {
-      if (format !== "All" && f !== format) continue;
-      n += CATALOG_COUNTS[c][f];
-    }
+    for (const v of Object.values(CATALOG_COUNTS[c])) n += v;
   }
   return n;
 }
-import Icon, { type IconName } from "./Icon";
-
-type Category = "All" | (typeof PRODUCT_CATEGORIES)[number];
-type Format = "All" | (typeof PRODUCT_FORMATS)[number];
 
 const CATEGORY_ICON: Record<string, IconName> = {
   All: "grid",
@@ -42,16 +38,12 @@ const CATEGORY_ICON: Record<string, IconName> = {
   "Functional Wellness": "leaf",
   "Protein & Sports Nutrition": "dumbbell",
 };
-const FORMAT_ICON: Record<string, IconName> = {
-  All: "grid",
-  Gummies: "candy",
-  Capsules: "pill",
-  Softgels: "bean",
-  Drops: "droplet",
-  Powder: "layers",
-  Tablets: "tablets",
-  Other: "package",
-};
+
+// Exact counts come from the generated count table, so the chips are right
+// before the full list has arrived.
+const CATEGORY_COUNTS: Record<string, number> = Object.fromEntries(
+  (["All", ...PRODUCT_CATEGORIES] as Category[]).map((c) => [c, countFor(c)]),
+);
 
 // Backend ships two resized variants per product: <stem>-sm.webp (max 400 px
 // wide) and <stem>-md.webp (max 800 px wide). Serve them straight from the
@@ -167,7 +159,6 @@ const CHIP_ROW =
 // Home / End when the track has focus.
 export default function ProductCarousel() {
   const [category, setCategory] = useState<Category>("All");
-  const [format, setFormat] = useState<Format>("All");
   const [mounted, setMounted] = useState(BATCH);
   const [first, setFirst] = useState(0);
   const [perView, setPerView] = useState(4);
@@ -204,33 +195,13 @@ export default function ProductCarousel() {
 
   const items = useMemo(
     () =>
-      (catalog ?? CATALOG_HEAD).filter(
-        (p) => (category === "All" || p.category === category) && (format === "All" || p.format === format),
-      ),
-    [catalog, category, format],
+      (catalog ?? CATALOG_HEAD).filter((p) => category === "All" || p.category === category),
+    [catalog, category],
   );
-
-  // Exact counts come from the generated count table, so the chips are right
-  // before the full list has arrived.
-  const categoryCounts = useMemo(() => {
-    const c: Record<string, number> = { All: countFor("All", format) };
-    for (const k of PRODUCT_CATEGORIES) c[k] = countFor(k, format);
-    return c;
-  }, [format]);
-
-  const formatCounts = useMemo(() => {
-    const c: Record<string, number> = { All: countFor(category, "All") };
-    for (const k of PRODUCT_FORMATS) c[k] = countFor(category, k);
-    return c;
-  }, [category]);
 
   const pickCategory = (c: Category) => {
     load();
     setCategory(c);
-  };
-  const pickFormat = (f: Format) => {
-    load();
-    setFormat(f);
   };
 
   // Read scroll position at most once per frame; only set state on change.
@@ -254,7 +225,7 @@ export default function ProductCarousel() {
     setMounted(BATCH);
     trackRef.current?.scrollTo({ left: 0 });
     measure();
-  }, [category, format, measure]);
+  }, [category, measure]);
 
   useEffect(() => {
     measure();
@@ -317,46 +288,30 @@ export default function ProductCarousel() {
   };
 
   const shown = items.slice(0, mounted);
-  const total = countFor(category, format);
+  const total = countFor(category);
   const from = total ? Math.min(first + 1, total) : 0;
   const to = Math.min(first + perView, total);
   const progress = total ? Math.min(1, to / total) : 1;
 
   return (
     <div ref={rootRef} className="mt-12 lg:mt-14">
-      <div className="space-y-3">
-        <div role="group" aria-label="Filter product examples by category" className={CHIP_ROW}>
-          {(["All", ...PRODUCT_CATEGORIES] as Category[]).map((c) => (
-            <Chip
-              key={c}
-              active={c === category}
-              disabled={c !== category && !categoryCounts[c]}
-              icon={CATEGORY_ICON[c]}
-              label={c}
-              count={categoryCounts[c] ?? 0}
-              onClick={() => pickCategory(c)}
-            />
-          ))}
-        </div>
-        <div role="group" aria-label="Filter product examples by format" className={`${CHIP_ROW} items-center`}>
-          <span className="shrink-0 pr-1 text-xs font-semibold uppercase tracking-[0.18em] text-[#282828]/60">Format</span>
-          {(["All", ...PRODUCT_FORMATS] as Format[]).map((f) => (
-            <Chip
-              key={f}
-              active={f === format}
-              disabled={f !== format && !formatCounts[f]}
-              icon={FORMAT_ICON[f]}
-              label={f === "All" ? "All formats" : f}
-              count={formatCounts[f] ?? 0}
-              onClick={() => pickFormat(f)}
-            />
-          ))}
-        </div>
+      <div role="group" aria-label="Filter product examples by category" className={CHIP_ROW}>
+        {(["All", ...PRODUCT_CATEGORIES] as Category[]).map((c) => (
+          <Chip
+            key={c}
+            active={c === category}
+            disabled={c !== category && !CATEGORY_COUNTS[c]}
+            icon={CATEGORY_ICON[c]}
+            label={c}
+            count={CATEGORY_COUNTS[c] ?? 0}
+            onClick={() => pickCategory(c)}
+          />
+        ))}
       </div>
 
       <div className="relative mt-8">
         <p className="sr-only" aria-live="polite">
-          {`Showing ${total} product examples${category === "All" ? "" : ` in ${category}`}${format === "All" ? "" : `, format ${format}`}`}
+          {`Showing ${total} product examples${category === "All" ? "" : ` in ${category}`}`}
         </p>
         <ul
           ref={trackRef}

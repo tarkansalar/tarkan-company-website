@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useMemo, useState } from "react";
+import { useMemo, useState, type ReactElement } from "react";
 import { STANDARDS, type Standard } from "../data/certifications";
 import { CANGGUS_ASSET_BASE } from "../data/catalog-meta";
 import { FACILITIES } from "../data/network";
@@ -23,13 +23,91 @@ const VerifiedDot = () => (
   </span>
 );
 
+// Five-pointed star, radius 1, centred on 0,0, one point straight up.
+const STAR =
+  "M0,-1 L0.2245,-0.309 L0.9511,-0.309 L0.3633,0.118 L0.5878,0.809 L0,0.382 L-0.5878,0.809 L-0.3633,0.118 L-0.9511,-0.309 L-0.2245,-0.309 Z";
+
+// Flag of the People's Republic of China, drawn to the official construction
+// sheet: 3:2 field on a 30 x 20 grid, red #EE1C25, yellow #FFFF00 stars. Big
+// star r=3 at (5,5); small stars r=1 at (10,2) (12,4) (12,7) (10,9), each
+// turned so one point aims at the big star's centre.
+function ChinaFlag({ label }: { label: string }) {
+  const small: [number, number, number][] = [
+    [10, 2, -120.96],
+    [12, 4, -98.13],
+    [12, 7, -74.05],
+    [10, 9, -51.34],
+  ];
+  return (
+    <svg
+      viewBox="0 0 30 20"
+      role="img"
+      aria-label={`Flag of China (${label})`}
+      className="block w-full h-auto rounded-[4px] shadow-[0_6px_14px_-8px_rgba(40,40,40,0.55)] ring-1 ring-black/5"
+    >
+      <rect width="30" height="20" fill="#EE1C25" />
+      <path d={STAR} fill="#FFFF00" transform="translate(5 5) scale(3)" />
+      {small.map(([x, y, r]) => (
+        <path key={`${x}-${y}`} d={STAR} fill="#FFFF00" transform={`translate(${x} ${y}) rotate(${r})`} />
+      ))}
+    </svg>
+  );
+}
+
+// Export qualification: globe with a cargo arrow leaving it (line style, dark
+// navy like the FDA logo). Drawn by Canggus, no third-party artwork.
+function ExportMark({ label }: { label: string }) {
+  return (
+    <svg
+      viewBox="0 0 88 88"
+      role="img"
+      aria-label={`Export icon: globe with outgoing arrow (${label})`}
+      fill="none"
+      stroke="#1d2b4f"
+      strokeWidth="3.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="block h-full w-full"
+    >
+      {/* globe */}
+      <circle cx="38" cy="48" r="26" />
+      <ellipse cx="38" cy="48" rx="11" ry="26" />
+      <path d="M12 48h52M16 35h44M16 61h44" />
+      {/* outgoing arrow, on a white halo so it reads over the globe */}
+      <path d="M44 42 L76 12" stroke="#ffffff" strokeWidth="11" />
+      <path d="M44 42 L76 12" />
+      <path d="M58 12 H76 V30" />
+      {/* cargo box at the arrow's base */}
+      <rect x="62" y="56" width="20" height="16" rx="2" fill="#ffffff" />
+      <path d="M62 62h20M72 56v6" />
+    </svg>
+  );
+}
+
+const DRAWN_BADGES: Record<string, (p: { label: string }) => ReactElement> = {
+  sc: ChinaFlag,
+  export: ExportMark,
+};
+
 // Real logo badge from manifest badges[] (transparent -sm.webp, 240 px), in a
 // fixed 88 px box so every logo reads the same size. Facility B logos are
 // low-res upscales, so the box never exceeds 96 px. Under a facility filter
 // the logo is that facility's own variant; under "All" it is the manifest
-// default (sharpest) variant. Standards without a logo (SC license, export
-// qualification) keep the drawn text seal.
+// default (sharpest) variant. The SC license and export qualification have no
+// catalog artwork: they get a Canggus-drawn inline SVG (Tuan 13 Nov) in the
+// same 88 px box. Any other standard without a logo keeps the text seal.
 function Emblem({ s, verified, facility }: { s: Standard; verified: boolean; facility: FacilityFilter }) {
+  const Drawn = DRAWN_BADGES[s.id];
+  if (Drawn) {
+    return (
+      <span className="relative flex h-[104px] w-[104px] shrink-0 items-center justify-center rounded-full bg-[radial-gradient(70%_70%_at_50%_30%,#ffffff_0%,#fdf6fa_80%,#fbeef5_100%)] ring-1 ring-[#fb6ba8]/15">
+        <span className="relative flex h-[80px] w-[80px] sm:h-[88px] sm:w-[88px] items-center justify-center">
+          <Drawn label={s.label} />
+        </span>
+        {verified && <VerifiedDot />}
+      </span>
+    );
+  }
   const logos = BADGE_LOGOS[s.id];
   const key = facility !== "All" && logos?.[facility] ? facility : DEFAULT_BADGE_FACILITY[s.id];
   const logo = key ? logos?.[key] : undefined;

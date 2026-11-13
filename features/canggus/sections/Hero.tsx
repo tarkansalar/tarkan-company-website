@@ -1,19 +1,19 @@
 import CtaButton from "../components/CtaButton";
 import { Blob, FloatingProducts } from "../components/Visuals";
-import { FOUNDER_PHOTO, FOUNDER_VSL_SRC, VP } from "../data/visuals";
-
-// Poster: founder photo resized + converted by the Next image optimizer
-// (same remotePatterns host as every other image), not the 500px PNG.
-const FOUNDER_POSTER = `/_next/image?url=${encodeURIComponent(FOUNDER_PHOTO.src)}&w=640&q=70`;
+import { FOUNDER_VSL_SRC, VP } from "../data/visuals";
 
 export default function Hero() {
   return (
     <section
       id="top"
-      className="relative overflow-hidden pt-28 pb-20 lg:pt-36 lg:pb-28 bg-[radial-gradient(60%_50%_at_85%_10%,rgba(251,107,168,0.16),transparent_70%),radial-gradient(50%_40%_at_0%_100%,rgba(251,107,168,0.10),transparent_70%)]"
+      className="relative overflow-hidden pt-28 pb-24 lg:pt-36 lg:pb-60 bg-[radial-gradient(60%_50%_at_85%_10%,rgba(251,107,168,0.16),transparent_70%),radial-gradient(50%_40%_at_0%_100%,rgba(251,107,168,0.10),transparent_70%)]"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="grid lg:grid-cols-[1.15fr_0.85fr] gap-14 lg:gap-16 items-center">
+        {/* Tuan 13 Nov: on desktop the video card is as tall as the text block.
+            The grid row is stretched (default), the right column is a size
+            container with no height of its own, so it takes the text column's
+            height; the card height = min(column height, column width x 16/9). */}
+        <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-14 lg:gap-16">
           <div>
             <p className="text-[11px] sm:text-xs font-semibold uppercase tracking-[0.22em] text-[#fb6ba8] mb-6">
               Private Label Supplement Partnership
@@ -53,42 +53,45 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="relative mx-auto w-full max-w-[560px] lg:max-w-none pb-10 sm:pb-16 lg:pb-16">
+          <div className="relative mx-auto w-full max-w-[420px] pb-32 lg:pb-0 lg:max-w-none lg:[container-type:size]">
             <Blob strong className="-right-24 -top-24 h-[420px] w-[420px]" />
             {/* Founder VSL (Teaser.mp4 from Tuan, public bucket URL, 1080x1920 = 9:16)
-                in a 3D glass card. No autoplay, preload="none" so the 10 MB file only
-                loads when the visitor presses play; the poster is the founder photo
-                through the Next image optimizer (small webp). */}
-            <div data-tilt="5" className="cg-tilt relative mx-auto w-[64%] max-w-[300px]">
-              <div className="rounded-[30px] bg-white/70 p-2 ring-1 ring-white cg-card-shadow">
-                <video
-                  controls
-                  playsInline
-                  preload="none"
-                  poster={FOUNDER_POSTER}
-                  aria-label="Founder video: Tarkan Salar introduces the Canggus private label partnership"
-                  className="block aspect-[9/16] w-full rounded-[24px] bg-[radial-gradient(70%_80%_at_50%_30%,#ffffff_0%,#fde3ef_55%,#f9c6dc_100%)] object-cover"
-                >
-                  <source src={FOUNDER_VSL_SRC} type="video/mp4" />
-                </video>
+                in a 3D glass card. Same as the main LP (blue-ocean-code Hero): no
+                poster image, src#t=1 + preload="metadata", so the cover is the video
+                frame at 1 s and the full file only streams when the visitor presses play.
+                Phone/tablet: full width up to 420px, after the text. */}
+            <div className="relative mx-auto w-full lg:absolute lg:inset-y-0 lg:left-1/2 lg:w-auto lg:-translate-x-1/2 lg:h-[min(100cqh,calc(100cqw*16/9))] lg:aspect-[9/16]">
+              <div data-tilt="5" className="cg-tilt relative lg:h-full">
+                <div className="rounded-[30px] bg-white/70 p-2 ring-1 ring-white cg-card-shadow lg:h-full">
+                  <video
+                    src={`${FOUNDER_VSL_SRC}#t=1`}
+                    controls
+                    playsInline
+                    preload="metadata"
+                    aria-label="Founder video: Tarkan Salar introduces the Canggus private label partnership"
+                    className="block aspect-[9/16] w-full lg:h-full lg:aspect-auto rounded-[24px] bg-[radial-gradient(70%_80%_at_50%_30%,#ffffff_0%,#fde3ef_55%,#f9c6dc_100%)] object-cover"
+                  />
+                </div>
+              </div>
+              {/* Real products from the catalog at the card's lower corners (~1.5x
+                  the old size). Positions are % of the card: the jars hang from the
+                  card's bottom edge (top of each jar touches the white frame), so
+                  the video's time, volume and fullscreen controls stay uncovered,
+                  and they stay inside the column so the section never clips them. */}
+              <div className="pointer-events-none absolute inset-0">
+              <FloatingProducts
+                eager
+                disc={false}
+                sizes="(min-width: 1024px) 130px, 24vw"
+                className="h-full w-full"
+                items={[
+                  { p: VP.collagenGummy, pos: "-left-[2%] -bottom-[23%] w-[21%]", d: 0, r: -6, z: 2 },
+                  { p: VP.magnesiumDrops, pos: "left-[16%] -bottom-[13%] w-[8%]", d: 1.2, r: 3, z: 3 },
+                  { p: VP.electrolyte, pos: "-right-[2%] -bottom-[20%] w-[21%]", d: 2.1, r: 5, z: 2 },
+                ]}
+              />
               </div>
             </div>
-            {/* Real products from the catalog, floating beside the card */}
-            <FloatingProducts
-              eager
-              disc={false}
-              sizes="(min-width: 1024px) 130px, (min-width: 640px) 120px, 26vw"
-              // The card is a narrow 9:16 column in the middle, so the products
-              // keep to the outer corners and stay clear of the video controls.
-              className="pointer-events-none absolute inset-x-0 bottom-0 h-[40%]"
-              items={[
-                // The card takes the middle 64% (max 300px), so every product
-                // stays inside the outer 18% on each side, off the video controls.
-                { p: VP.collagenGummy, pos: "left-[0%] bottom-[2%] w-[14%]", d: 0, r: -6, z: 2 },
-                { p: VP.magnesiumDrops, pos: "left-[10%] bottom-[0%] w-[6%]", d: 1.2, r: 3, z: 3 },
-                { p: VP.electrolyte, pos: "right-[0%] bottom-[4%] w-[15%]", d: 2.1, r: 5, z: 2 },
-              ]}
-            />
           </div>
         </div>
       </div>

@@ -58,22 +58,19 @@ export default function Products() {
 
         <ProductCarousel />
 
-        <p className="mt-10 text-center text-sm sm:text-[15px] leading-[1.6] text-[#282828]/70">
-          These are visual product-development examples, not a fixed catalogue.
-        </p>
-
         <div className="mt-20 lg:mt-28">
           <h3 className="text-xs font-semibold uppercase tracking-[0.22em] text-[#fb6ba8]">
             Current high-potential categories
           </h3>
-          {/* 1 -> 2 (md, last odd card full width) -> 3 (lg) -> 5 (xl) columns.
-              5 columns only from 1280px: at 1024px a 5th of the row is too
-              narrow for "longevity/wellness". */}
-          <ul className="mt-6 grid md:grid-cols-2 lg:grid-cols-6 xl:grid-cols-5 gap-4">
+          {/* Tuan 13 Nov: one row of 5 at >= lg (equal height, slightly smaller
+              type/padding up to xl so nothing is cut at 1024px); tablet 3 + 2
+              (6-track grid, cards span 2 then 3); phone 1 column. No card
+              ever spans a row alone. */}
+          <ul className="mt-6 grid md:grid-cols-6 lg:grid-cols-5 gap-4 lg:gap-3 xl:gap-4">
             {CATEGORIES.map((c) => (
               <li
                 key={c.title}
-                className="md:last:odd:col-span-2 lg:col-span-2 lg:[&:nth-child(n+4)]:col-span-3 xl:col-span-1 xl:[&:nth-child(n+4)]:col-span-1"
+                className="md:col-span-2 md:[&:nth-child(n+4)]:col-span-3 lg:col-span-1 lg:[&:nth-child(n+4)]:col-span-1"
               >
                 <div
                   data-tilt="7"
@@ -93,9 +90,9 @@ export default function Products() {
                     />
                     <IconTile name={c.icon} className="absolute left-5 top-5 bg-white" />
                   </div>
-                  <div className="p-6 pt-4">
-                    <h4 className="text-[16px] font-bold leading-[1.35] text-[#282828]">{c.title}</h4>
-                    <p className="mt-3 text-[14px] leading-[1.6] text-[#282828]/70">{c.body}</p>
+                  <div className="p-6 pt-4 lg:p-4 lg:pt-3 xl:p-5 xl:pt-4">
+                    <h4 className="text-[16px] lg:text-[15px] font-bold leading-[1.35] text-[#282828] [overflow-wrap:anywhere]">{c.title}</h4>
+                    <p className="mt-3 lg:mt-2 text-[14px] lg:text-[13px] leading-[1.6] text-[#282828]/70 [overflow-wrap:anywhere]">{c.body}</p>
                   </div>
                 </div>
               </li>

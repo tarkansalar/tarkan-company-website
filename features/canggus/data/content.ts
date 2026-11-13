@@ -4,8 +4,6 @@ export const CANGGUS_BOOKING_HREF =
   "https://api.leadconnectorhq.com/widget/booking/ob9bfXxgpYWxYmQUVBUc";
 
 export const CTA_LABEL = "Book Your Free 15-20 Minute Call";
-// Header on phones (< 640px): the full label does not fit next to the logo at 375px.
-export const CTA_LABEL_SHORT = "Book Your Free Call";
 
 // Contact details from Tuan (13 Nov 2026).
 export const CANGGUS_EMAIL = "tarkan@canggus.com";

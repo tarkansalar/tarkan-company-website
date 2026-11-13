@@ -18,7 +18,9 @@ import {
 // Tuan (13 Nov 2026). Not stated on purpose (unknown): managing director,
 // commercial register number, VAT ID, phone.
 export const metadata: Metadata = {
-  title: "Privacy Policy · Canggus",
+  title: "Privacy Policy | Canggu’s",
+  openGraph: { title: "Privacy Policy | Canggu’s" },
+  twitter: { title: "Privacy Policy | Canggu’s" },
   description:
     "How Canggus collects, uses and protects the information you share when you visit this page or book a call about a private label supplement partnership.",
   // noindex, same as /canggus, until Tuan approves the page

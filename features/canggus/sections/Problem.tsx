@@ -19,7 +19,9 @@ export default function Problem() {
           eyebrow="The problem"
           title="Your customers are already spending money on supplements. Just not with you."
         />
-        <div className="mt-10 grid lg:grid-cols-2 gap-10 lg:gap-16">
+        {/* items-center (Tuan 13 Nov, "no empty space"): the 4 cards sit level
+            with the middle of the text + photo column, not at its top. */}
+        <div className="mt-10 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           <div>
             <div className="space-y-5 text-[17px] leading-[1.7] text-[#282828]/80">
               <p>

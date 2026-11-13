@@ -21,7 +21,10 @@ import FinalCta from "@/features/canggus/sections/FinalCta";
 import Footer from "@/features/canggus/sections/Footer";
 
 export const metadata: Metadata = {
-  title: "Canggus · Private Label Supplement Partnership",
+  // Tab title = canggus.com exactly (Tuan 13 Nov), typographic apostrophe.
+  title: "Welcome to Canggu’s",
+  openGraph: { title: "Welcome to Canggu’s" },
+  twitter: { title: "Welcome to Canggu’s" },
   description:
     "Your customers already buy supplements. Build your own supplement brand with products that stand apart, backed by direct factory relationships, manufacturing experience and product development designed around your customers.",
   // noindex until Tuan approves the page
@@ -39,7 +42,7 @@ export default function CanggusPage() {
   return (
     <div
       data-cg-root
-      className={`${montserrat.variable} ${greatVibes.variable} relative min-h-screen overflow-x-clip bg-white text-[#282828] font-[family-name:var(--font-cg-sans)] antialiased selection:bg-[#fb6ba8] selection:text-white`}
+      className={`cg-root ${montserrat.variable} ${greatVibes.variable} relative min-h-screen overflow-x-clip bg-white text-[#282828] font-[family-name:var(--font-cg-sans)] antialiased`}
     >
       <Header />
       <main>

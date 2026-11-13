@@ -4,13 +4,11 @@ import Image from "next/image";
 import { useRef } from "react";
 import Icon from "./Icon";
 
-export type CertificateStatus = { valid: boolean; label: string };
-
 // Certificate scan as a tilted 3D document card. Click opens the full scan in
 // a native <dialog> (Esc / backdrop / close button to dismiss). The large
 // image is a plain lazy <img>, only requested when the dialog opens.
-// The status chip is honest: "Verified document" only for a document that is
-// still valid; an expired scan shows "Expired <date>" in a muted style.
+// Only a document that is still valid carries the small "Verified" mark; the
+// other scans show no status or date label (Tuan 13 Nov).
 export default function CertificateCard({
   src,
   fullSrc,
@@ -19,7 +17,7 @@ export default function CertificateCard({
   h,
   fullW,
   fullH,
-  status,
+  verified = false,
   size = "lg",
   sizes = "(min-width: 1024px) 300px, 60vw",
 }: {
@@ -30,7 +28,7 @@ export default function CertificateCard({
   h: number;
   fullW?: number;
   fullH?: number;
-  status: CertificateStatus;
+  verified?: boolean;
   size?: "lg" | "sm";
   sizes?: string;
 }) {
@@ -74,23 +72,22 @@ export default function CertificateCard({
                 fill
                 loading="lazy"
                 sizes={sizes}
-                className={`object-cover object-top ${status.valid ? "" : "saturate-[0.55]"}`}
+                className="object-cover object-top"
               />
               <span aria-hidden="true" className="absolute inset-0 bg-[linear-gradient(120deg,rgba(255,255,255,0)_35%,rgba(255,255,255,0.45)_50%,rgba(255,255,255,0)_65%)]" />
             </span>
           </span>
         </span>
-        <span
-          className={`absolute -top-3 left-3 z-10 inline-flex items-center gap-1.5 whitespace-nowrap rounded-full font-bold uppercase shadow-[0_10px_20px_-10px_rgba(0,0,0,0.6)] ${
-            big ? "px-3 py-1.5 text-[11px] tracking-[0.12em]" : "px-2.5 py-1 text-[10px] tracking-[0.06em]"
-          } ${status.valid ? "bg-[#282828] text-white" : "bg-white text-[#282828]/80 ring-1 ring-[#282828]/12"}`}
-        >
-          <Icon
-            name={status.valid ? "badgeCheck" : "clock"}
-            className={`h-3.5 w-3.5 ${status.valid ? "text-[#fb6ba8]" : "text-[#282828]/55"}`}
-          />
-          {status.valid ? "Verified" : "Expired"}
-        </span>
+        {verified && (
+          <span
+            className={`absolute -top-3 left-3 z-10 inline-flex items-center gap-1.5 whitespace-nowrap rounded-full bg-[#282828] font-bold uppercase text-white shadow-[0_10px_20px_-10px_rgba(0,0,0,0.6)] ${
+              big ? "px-3 py-1.5 text-[11px] tracking-[0.12em]" : "px-2.5 py-1 text-[10px] tracking-[0.06em]"
+            }`}
+          >
+            <Icon name="badgeCheck" className="h-3.5 w-3.5 text-[#fb6ba8]" />
+            Verified
+          </span>
+        )}
         <span
           className={`absolute z-10 inline-flex items-center justify-center rounded-full bg-white/90 text-[#282828] ring-1 ring-[#282828]/10 shadow-[0_10px_24px_-10px_rgba(40,40,40,0.5)] ${
             big ? "bottom-4 right-4 h-11 w-11" : "bottom-2.5 right-2.5 h-9 w-9"
@@ -117,14 +114,12 @@ export default function CertificateCard({
           >
             <Icon name="x" className="h-5 w-5" strokeWidth={2.25} />
           </button>
-          <p
-            className={`mb-2 inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold ${
-              status.valid ? "bg-[#282828] text-white" : "bg-[#f1f1f1] text-[#282828]/80"
-            }`}
-          >
-            <Icon name={status.valid ? "badgeCheck" : "clock"} className={`h-3.5 w-3.5 ${status.valid ? "text-[#fb6ba8]" : ""}`} />
-            {status.label}
-          </p>
+          {verified && (
+            <p className="mb-2 inline-flex items-center gap-1.5 rounded-full bg-[#282828] px-3 py-1 text-xs font-semibold text-white">
+              <Icon name="badgeCheck" className="h-3.5 w-3.5 text-[#fb6ba8]" />
+              Verified document
+            </p>
+          )}
           <div className="max-h-[calc(92vh-64px)] overflow-auto rounded-xl">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
