@@ -5,6 +5,7 @@ import { useMemo, useState } from "react";
 import { STANDARDS, type Standard } from "../data/certifications";
 import { CANGGUS_ASSET_BASE } from "../data/catalog-meta";
 import { FACILITIES } from "../data/network";
+import { BADGE_LOGOS, DEFAULT_BADGE_FACILITY } from "../data/badges";
 import Icon from "./Icon";
 
 const FACILITY_IDS = ["A", "B", "C"] as const;
@@ -16,9 +17,45 @@ type FacilityFilter = "All" | (typeof FACILITY_IDS)[number];
 
 const GROUPS = Array.from(new Set(STANDARDS.map((s) => s.group)));
 
-// Canggus-drawn emblem: no third-party logo artwork, just the standard's
-// name set in Montserrat inside a blush seal with a line icon.
-function Emblem({ s, verified }: { s: Standard; verified: boolean }) {
+const VerifiedDot = () => (
+  <span className="absolute -bottom-1 -right-1 flex h-7 w-7 items-center justify-center rounded-full bg-[#282828] text-white ring-4 ring-white">
+    <Icon name="check" className="h-3.5 w-3.5" strokeWidth={2.5} />
+  </span>
+);
+
+// Real logo badge from manifest badges[] (transparent -sm.webp, 240 px), in a
+// fixed 88 px box so every logo reads the same size. Facility B logos are
+// low-res upscales, so the box never exceeds 96 px. Under a facility filter
+// the logo is that facility's own variant; under "All" it is the manifest
+// default (sharpest) variant. Standards without a logo (SC license, export
+// qualification) keep the drawn text seal.
+function Emblem({ s, verified, facility }: { s: Standard; verified: boolean; facility: FacilityFilter }) {
+  const logos = BADGE_LOGOS[s.id];
+  const key = facility !== "All" && logos?.[facility] ? facility : DEFAULT_BADGE_FACILITY[s.id];
+  const logo = key ? logos?.[key] : undefined;
+  if (logo) {
+    return (
+      <span className="relative flex h-[104px] w-[104px] shrink-0 items-center justify-center rounded-full bg-[radial-gradient(70%_70%_at_50%_30%,#ffffff_0%,#fdf6fa_80%,#fbeef5_100%)] ring-1 ring-[#fb6ba8]/15">
+        <span className="relative block h-[80px] w-[80px] sm:h-[88px] sm:w-[88px]">
+          <Image
+            src={`${CANGGUS_ASSET_BASE}${logo.src}`}
+            alt={s.label}
+            fill
+            loading="lazy"
+            sizes="88px"
+            className="object-contain"
+          />
+        </span>
+        {verified && <VerifiedDot />}
+      </span>
+    );
+  }
+  return <TextSeal s={s} verified={verified} />;
+}
+
+// Canggus-drawn seal for standards that have no logo artwork in the catalogs:
+// the standard's name inside a blush seal with a line icon.
+function TextSeal({ s, verified }: { s: Standard; verified: boolean }) {
   return (
     <span
       aria-hidden="true"
@@ -129,7 +166,7 @@ export default function StandardsGrid() {
                       data-tilt="8"
                       className="cg-tilt flex flex-col items-center rounded-3xl bg-white px-3 py-6 sm:px-4 text-center ring-1 ring-[#282828]/8 shadow-[0_24px_48px_-36px_rgba(40,40,40,0.35)]"
                     >
-                      <Emblem s={s} verified={verified} />
+                      <Emblem s={s} verified={verified} facility={facility} />
                       <p className="mt-4 text-[14px] sm:text-[15px] font-bold leading-[1.3] text-[#282828]">{s.label}</p>
                       <ul className="mt-3 flex flex-wrap justify-center gap-1.5" aria-label={`Listed by ${shown.map((f) => `Facility ${f.facility}`).join(", ")}`}>
                         {shown.map((f) => (

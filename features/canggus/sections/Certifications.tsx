@@ -7,12 +7,16 @@ import { Blob } from "../components/Visuals";
 import { CANGGUS_ASSET_BASE } from "../data/catalog";
 import { STANDARDS, VERIFIED_CERTIFICATE as CERT } from "../data/certifications";
 import { PH } from "../data/visuals";
+import CertificateGallery from "../components/CertificateGallery";
+import { certificateStatus } from "../data/certificate-status";
 
 // "Certifications & Standards": every certification/standard listed per
 // partner facility in manifest.certifications[]. These belong to the partner
 // factories, not to Canggus, and the copy says so. Only FSSC 22000 at
-// Facility A is backed by a current document (marked "verified"); it is the
-// only scan shown. No third-party logos, no expired scans.
+// Facility A is backed by a current document (marked "verified").
+// Below the lab photos: a gallery of EVERY certificate scan in the manifest
+// (labelled "Valid until" or "Expired" per document), then the grid of real
+// logo badges per standard with Facility A/B/C chips (manifest v3 badges[]).
 //
 // Layout (Tuan 13 Nov): the FSSC 22000 scan sits at the TOP, level with the
 // section title (right column on desktop, directly below the title on
@@ -20,6 +24,7 @@ import { PH } from "../data/visuals";
 // The lab photo strip and the badge grid follow below.
 export default function Certifications() {
   const total = STANDARDS.length;
+  const certStatus = certificateStatus(CERT.valid_until);
   return (
     <section
       id="standards"
@@ -44,6 +49,7 @@ export default function Certifications() {
                 alt={`${CERT.label} certificate of conformity (${CERT.facility})`}
                 w={954}
                 h={1428}
+                status={certStatus}
               />
             </div>
           </div>
@@ -68,7 +74,7 @@ export default function Certifications() {
                 </li>
                 <li className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 ring-1 ring-[#fb6ba8]/15">
                   <Icon name="clock" className="h-4 w-4 text-[#fb6ba8]" />
-                  Valid until 27 Aug 2027
+                  {certStatus.label}
                 </li>
               </ul>
               <p className="mt-5 text-sm leading-[1.6] text-[#282828]/70">
@@ -101,6 +107,12 @@ export default function Certifications() {
           ))}
         </ul>
 
+        {/* Every certificate scan (valid and expired, honestly labelled), above the logo grid */}
+        <CertificateGallery />
+
+        <h3 className="mt-14 lg:mt-16 text-xs font-semibold uppercase tracking-[0.22em] text-[#e0558f]">
+          Logos as shown in each facility&apos;s catalog
+        </h3>
         <StandardsGrid />
       </div>
     </section>
