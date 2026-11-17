@@ -4,6 +4,7 @@ import { montserrat } from "../fonts";
 import "../visual.css";
 import Header from "../components/Header";
 import Footer from "../sections/Footer";
+import FloatingWhatsApp from "../components/FloatingWhatsApp";
 import Icon from "../components/Icon";
 import { EYEBROW } from "../components/eyebrow";
 import { CANGGUS_BOOKING_HREF } from "../data/content";
@@ -69,6 +70,7 @@ export default function CanggusLegalLayout({ title, lastUpdated, intro, children
         </section>
       </main>
       <Footer homeHref={HOME} />
+      <FloatingWhatsApp />
     </div>
   );
 }

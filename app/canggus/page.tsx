@@ -13,6 +13,7 @@ import Benefits from "@/features/canggus/sections/Benefits";
 import Principles from "@/features/canggus/sections/Principles";
 import FinalCta from "@/features/canggus/sections/FinalCta";
 import Footer from "@/features/canggus/sections/Footer";
+import FloatingWhatsApp from "@/features/canggus/components/FloatingWhatsApp";
 
 export const metadata: Metadata = {
   // Tab title = canggus.com exactly (Tuan 13 Nov), typographic apostrophe.
@@ -54,6 +55,7 @@ export default function CanggusPage() {
         <FinalCta />
       </main>
       <Footer />
+      <FloatingWhatsApp />
     </div>
   );
 }

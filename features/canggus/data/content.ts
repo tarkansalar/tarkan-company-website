@@ -3,6 +3,12 @@
 export const CANGGUS_BOOKING_HREF =
   "https://api.leadconnectorhq.com/widget/booking/ob9bfXxgpYWxYmQUVBUc";
 
+// Canggus WhatsApp from Tuan (17 Nov 2026): +49 163 7487881. Canggus only;
+// the main landing page keeps WHATSAPP_URL in lib/constants.ts.
+export const CANGGUS_WHATSAPP_URL = `https://wa.me/491637487881?text=${encodeURIComponent(
+  "Hi Tarkan, I'd like to learn more about Canggu's private label supplements.",
+)}`;
+
 export const CTA_LABEL = "Book Your Free 15-20 Minute Call";
 
 // Contact details from Tuan (13 Nov 2026).

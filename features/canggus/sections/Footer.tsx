@@ -69,7 +69,9 @@ function ConnectTile({
 export default function Footer({ homeHref = "#top" }: Props = {}) {
   return (
     <footer className="bg-black relative border-t border-[#fb6ba8]/15 text-white">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 pt-14 pb-8">
+      {/* Bottom padding clears the floating WhatsApp button (56px + 24/32px
+          inset) so the last footer line is never covered at the page end. */}
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 pt-14 pb-[calc(7rem+env(safe-area-inset-bottom))] lg:pb-32">
         {/* Brand + connect stack until lg so tablets get a full-width,
             tidy 2-column tile grid; side by side from lg (desktop as before). */}
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 mb-10">
