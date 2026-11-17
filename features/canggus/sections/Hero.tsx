@@ -29,7 +29,7 @@ export default function Hero() {
             No consulting, development or service fees. We earn through the purchasing advantage
             we create.
           </p>
-          <CtaButton label="Explore the opportunity" className="mt-8 w-full min-[400px]:w-auto" />
+          <CtaButton id="cg-hero-cta" label="Explore the opportunity" className="mt-8 w-full min-[400px]:w-auto" />
         </div>
 
         <div aria-hidden="true" className="relative mx-auto aspect-[5/4] w-full max-w-[460px]">

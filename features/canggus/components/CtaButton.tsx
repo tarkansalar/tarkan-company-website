@@ -1,12 +1,13 @@
 import { CANGGUS_BOOKING_HREF } from "../data/content";
 import Icon from "./Icon";
 
-type Props = { label: string; className?: string };
+type Props = { label: string; className?: string; id?: string };
 
 // Pink pill that opens the real booking page in a new tab.
-export default function CtaButton({ label, className = "" }: Props) {
+export default function CtaButton({ label, className = "", id }: Props) {
   return (
     <a
+      id={id}
       href={CANGGUS_BOOKING_HREF}
       target="_blank"
       rel="noopener"

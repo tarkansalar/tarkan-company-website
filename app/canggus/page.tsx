@@ -55,7 +55,7 @@ export default function CanggusPage() {
         <FinalCta />
       </main>
       <Footer />
-      <FloatingWhatsApp />
+      <FloatingWhatsApp avoidId="cg-hero-cta" />
     </div>
   );
 }
