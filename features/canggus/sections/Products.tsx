@@ -35,9 +35,6 @@ export default function Products() {
     <section id="products" className="py-16 lg:py-24 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <SectionIntro eyebrow="What’s trending" title="Creatine, magnesium, electrolytes and custom blends." />
-        <p className="mt-5 text-[17px] leading-[1.7] text-[#282828]/80">
-          Examples, not a fixed catalogue. Opportunities, not guaranteed successes.
-        </p>
         <ProductShowcase items={ITEMS} />
       </div>
     </section>
