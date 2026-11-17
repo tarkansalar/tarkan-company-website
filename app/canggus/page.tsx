@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { greatVibes, montserrat } from "@/features/canggus/fonts";
+import { montserrat } from "@/features/canggus/fonts";
 import "@/features/canggus/visual.css";
 import Header from "@/features/canggus/components/Header";
 import Hero from "@/features/canggus/sections/Hero";
@@ -37,7 +37,7 @@ export default function CanggusPage() {
   return (
     <div
       data-cg-root
-      className={`cg-root ${montserrat.variable} ${greatVibes.variable} relative min-h-screen overflow-x-clip bg-white text-[#282828] font-[family-name:var(--font-cg-sans)] antialiased`}
+      className={`cg-root ${montserrat.variable} relative min-h-screen overflow-x-clip bg-white text-[#282828] font-[family-name:var(--font-cg-sans)] antialiased`}
     >
       <Header />
       <main>

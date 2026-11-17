@@ -7,12 +7,12 @@ type Props = {
   invert?: boolean;
 };
 
-// Pink script eyebrow + bold heading. One size for every section.
+// Pink uppercase eyebrow (same style as the hero eyebrow) + bold heading. One size for every section.
 export default function SectionIntro({ eyebrow, title, align = "left", invert = false }: Props) {
   const center = align === "center" ? "text-center mx-auto" : "";
   return (
     <div className={`max-w-3xl ${center}`}>
-      <p className="font-[family-name:var(--font-cg-script)] text-[#fb6ba8] text-[34px] sm:text-[42px] lg:text-[48px] leading-[1.05] mb-2">
+      <p className="text-[11px] sm:text-xs font-semibold uppercase tracking-[0.22em] text-[#fb6ba8] mb-4">
         {eyebrow}
       </p>
       <h2

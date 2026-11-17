@@ -5,7 +5,7 @@ export default function FinalCta() {
   return (
     <section id="book" className="py-16 lg:py-24 bg-[#282828] text-white">
       <div className="max-w-4xl mx-auto px-6 lg:px-12 text-center">
-        <p className="font-[family-name:var(--font-cg-script)] text-[#fb6ba8] text-[34px] sm:text-[42px] leading-none">
+        <p className="text-[11px] sm:text-xs font-semibold uppercase tracking-[0.22em] text-[#fb6ba8]">
           Start with a conversation
         </p>
         <h2 className="mt-4 text-[clamp(1.75rem,1.1rem+2.6vw,3rem)] font-bold leading-[1.12] tracking-[-0.02em]">

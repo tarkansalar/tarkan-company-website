@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import Link from "next/link";
-import { greatVibes, montserrat } from "../fonts";
+import { montserrat } from "../fonts";
 import "../visual.css";
 import Header from "../components/Header";
 import Footer from "../sections/Footer";
@@ -26,7 +26,7 @@ const HOME = "/canggus";
 export default function CanggusLegalLayout({ title, lastUpdated, intro, children }: Props) {
   return (
     <div
-      className={`cg-root ${montserrat.variable} ${greatVibes.variable} relative min-h-screen bg-white text-[#282828] font-[family-name:var(--font-cg-sans)] antialiased`}
+      className={`cg-root ${montserrat.variable} relative min-h-screen bg-white text-[#282828] font-[family-name:var(--font-cg-sans)] antialiased`}
     >
       <Header homeHref={HOME} />
       <main>
@@ -45,7 +45,7 @@ export default function CanggusLegalLayout({ title, lastUpdated, intro, children
               />
               Back to Canggus
             </Link>
-            <p className="mt-10 font-[family-name:var(--font-cg-script)] text-[#fb6ba8] text-[34px] sm:text-[42px] leading-none">
+            <p className="mt-10 text-[11px] sm:text-xs font-semibold uppercase tracking-[0.22em] text-[#fb6ba8]">
               Canggus
             </p>
             <h1 className="mt-3 text-[34px] sm:text-5xl lg:text-[56px] font-extrabold uppercase leading-[1.06] tracking-[-0.02em] text-[#282828]">
