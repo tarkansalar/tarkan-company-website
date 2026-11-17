@@ -1,5 +1,6 @@
 import Image from "next/image";
 import CtaButton from "../components/CtaButton";
+import { EYEBROW } from "../components/eyebrow";
 import { HERO_PRODUCTS } from "../data/visuals";
 
 // Hook + one-line offer + fee model + CTA. Visual: one product per focus
@@ -13,7 +14,7 @@ export default function Hero() {
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-12 grid lg:grid-cols-[1.15fr_0.85fr] gap-12 lg:gap-16 items-center">
         <div>
-          <p className="text-[11px] sm:text-xs font-semibold uppercase tracking-[0.22em] text-[#fb6ba8] mb-5">
+          <p className={`${EYEBROW} mb-5`}>
             Private label supplements
           </p>
           <h1 className="text-[clamp(1.875rem,1rem+4vw,3.25rem)] font-extrabold uppercase leading-[1.06] tracking-[-0.02em] text-[#282828]">

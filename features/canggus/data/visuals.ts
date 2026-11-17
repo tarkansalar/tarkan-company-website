@@ -18,6 +18,43 @@ export const HERO_PRODUCTS = {
   electrolyte: product("electrolyte-powder", 625, 1062, "Electrolyte powder tub"),
 } as const;
 
+// Founder portrait supplied by Tuan (real photo, public bucket, not AI).
+// Restored from backup/canggus-long-v1 (Tarkan 17 Nov: keep the visuals).
+export const FOUNDER_PHOTO = {
+  src: `${CANGGUS_ASSET_BASE}img%201.png`,
+  w: 499,
+  h: 500,
+  alt: "Tarkan Salar, founder of Canggus",
+};
+
+export type VisualPhoto = { src: string; w: number; h: number; alt: string; caption: string };
+
+const photo = (path: string, w: number, h: number, caption: string, alt = caption): VisualPhoto => ({
+  src: `${CANGGUS_ASSET_BASE}canggus/${path}.webp`,
+  w,
+  h,
+  alt,
+  caption,
+});
+
+// Manufacturing network: one photo per facility, anonymised as Facility A/B/C
+// exactly like the long version (no names, addresses or factory logos).
+// Facility B only has a low-res collage (872 px): card size only.
+export const FACILITY_PHOTOS: VisualPhoto[] = [
+  photo("factory/facility-a-factory-campus-aerial", 1170, 780, "Facility A", "Facility A, factory campus"),
+  photo("factory/facility-b-clean-workshop-collage", 872, 354, "Facility B", "Facility B, clean workshop"),
+  photo("factory/facility-c-building-exterior", 1600, 1059, "Facility C", "Facility C, factory building"),
+];
+
+// Production photos: powder, capsule and sachet/packing lines only.
+// No gummy line, no gummy products (Tarkan 17 Nov).
+export const PRODUCTION_PHOTOS: VisualPhoto[] = [
+  photo("process/dosage-powder-pile", 1600, 1201, "Powders", "Powder blend"),
+  photo("process/dosage-hard-capsules", 1347, 1168, "Capsules", "Hard capsules"),
+  photo("factory/facility-c-production-line", 1600, 1045, "Production line", "Facility C, production line"),
+  photo("factory/facility-c-processing-equipment", 1600, 1007, "Clean room", "Facility C, clean processing room"),
+];
+
 // Founder VSL supplied by Tuan (13 Nov 2026). Public bucket URL, original file
 // (not re-encoded): 1080x1920 portrait, about 89 s, about 10 MB.
 export const FOUNDER_VSL_SRC =

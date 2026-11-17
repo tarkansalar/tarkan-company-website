@@ -5,6 +5,7 @@ import "../visual.css";
 import Header from "../components/Header";
 import Footer from "../sections/Footer";
 import Icon from "../components/Icon";
+import { EYEBROW } from "../components/eyebrow";
 import { CANGGUS_BOOKING_HREF } from "../data/content";
 
 // Canggus version of features/legal/components/LegalLayout.tsx (the old
@@ -45,7 +46,7 @@ export default function CanggusLegalLayout({ title, lastUpdated, intro, children
               />
               Back to Canggus
             </Link>
-            <p className="mt-10 text-[11px] sm:text-xs font-semibold uppercase tracking-[0.22em] text-[#fb6ba8]">
+            <p className={`mt-10 ${EYEBROW}`}>
               Canggus
             </p>
             <h1 className="mt-3 text-[34px] sm:text-5xl lg:text-[56px] font-extrabold uppercase leading-[1.06] tracking-[-0.02em] text-[#282828]">

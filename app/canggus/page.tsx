@@ -5,6 +5,7 @@ import Header from "@/features/canggus/components/Header";
 import Hero from "@/features/canggus/sections/Hero";
 import HowWeMakeMoney from "@/features/canggus/sections/HowWeMakeMoney";
 import WhyMe from "@/features/canggus/sections/WhyMe";
+import ManufacturingNetwork from "@/features/canggus/sections/ManufacturingNetwork";
 import Problem from "@/features/canggus/sections/Problem";
 import Products from "@/features/canggus/sections/Products";
 import StartSmall from "@/features/canggus/sections/StartSmall";
@@ -44,6 +45,7 @@ export default function CanggusPage() {
         <Hero />
         <HowWeMakeMoney />
         <WhyMe />
+        <ManufacturingNetwork />
         <Problem />
         <Products />
         <StartSmall />

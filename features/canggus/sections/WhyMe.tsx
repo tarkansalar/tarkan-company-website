@@ -1,9 +1,8 @@
 import Image from "next/image";
 import SectionIntro from "../components/SectionIntro";
 import { IconTile } from "../components/Icon";
-import { BADGE_LOGOS } from "../data/badges";
-import { CANGGUS_ASSET_BASE } from "../data/catalog-meta";
-import { BADGE_ROW, FOUNDER_VSL_SRC } from "../data/visuals";
+import FounderVideo from "../components/FounderVideo";
+import { FOUNDER_PHOTO } from "../data/visuals";
 
 // Founder points from brief v2, kept factual (no compliance claims).
 const POINTS = [
@@ -14,36 +13,40 @@ const POINTS = [
   "Involved in 50+ million manufactured products",
 ];
 
-const BADGE_NAMES: Record<string, string> = {
-  haccp: "HACCP",
-  gmp: "GMP",
-  cgmp: "cGMP",
-  iso22000: "ISO 22000",
-  iso9001: "ISO 9001",
-  halal: "Halal",
-};
-
+// Tarkan 17 Nov: the founder portrait is the main visual again (as in the
+// long version, static card, no tilt). The VSL stays, smaller: a 9:16 play
+// card on the portrait corner that opens the video in a dialog. The badge
+// logo row moved to the new ManufacturingNetwork section.
 export default function WhyMe() {
-  const badges = BADGE_ROW.map(([id, f]) => ({ id, logo: BADGE_LOGOS[id]?.[f] })).filter((b) => b.logo);
   return (
     <section id="why-me" className="py-16 lg:py-24">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 grid lg:grid-cols-[0.75fr_1.25fr] gap-10 lg:gap-16 items-center">
-        {/* Founder VSL (Teaser.mp4 from Tuan, 9:16). Cover = frame at 1 s,
-            the file only streams on play. */}
-        <div className="order-2 lg:order-1 mx-auto w-full max-w-[300px] lg:max-w-[340px]">
-          <div className="rounded-[28px] bg-white p-2 ring-1 ring-[#282828]/6 cg-card-shadow">
-            <video
-              src={`${FOUNDER_VSL_SRC}#t=1`}
-              controls
-              playsInline
-              preload="metadata"
-              aria-label="Founder video"
-              className="block aspect-[9/16] w-full rounded-[22px] bg-[#fde3ef] object-cover"
-            />
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 grid lg:grid-cols-[0.85fr_1.15fr] gap-12 lg:gap-16 items-center">
+        <div className="relative mx-auto w-full max-w-[340px] pr-8 pb-10 sm:max-w-[400px] lg:max-w-[460px]">
+          <div className="rotate-[-2deg] rounded-[30px] bg-white p-2 ring-1 ring-[#282828]/6 cg-card-shadow">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-[24px] bg-[radial-gradient(80%_60%_at_50%_35%,#ffffff_0%,#fde3ef_55%,#f9c6dc_100%)]">
+              <span
+                aria-hidden="true"
+                className="absolute left-1/2 top-[14%] h-[62%] aspect-square -translate-x-1/2 rounded-full border-2 border-dashed border-[#fb6ba8]/35"
+              />
+              <Image
+                src={FOUNDER_PHOTO.src}
+                alt={FOUNDER_PHOTO.alt}
+                width={FOUNDER_PHOTO.w}
+                height={FOUNDER_PHOTO.h}
+                loading="lazy"
+                sizes="(min-width: 1024px) 440px, (min-width: 400px) 380px, 85vw"
+                className="absolute bottom-0 left-1/2 w-[98%] max-w-none -translate-x-1/2 h-auto"
+              />
+            </div>
           </div>
+          <span
+            aria-hidden="true"
+            className="absolute -left-2 top-8 h-12 w-12 rounded-2xl bg-[#fb6ba8] -rotate-12 shadow-[0_18px_30px_-12px_rgba(251,107,168,0.8)]"
+          />
+          <FounderVideo className="absolute bottom-0 right-0 w-[32%] max-w-[140px] rotate-[3deg]" />
         </div>
 
-        <div className="order-1 lg:order-2">
+        <div>
           <SectionIntro eyebrow="Why me" title="I understand both sides." />
           <ul className="mt-8 divide-y divide-[#282828]/10 border-y border-[#282828]/10">
             {POINTS.map((p) => (
@@ -58,23 +61,6 @@ export default function WhyMe() {
             customers. <span className="font-semibold text-[#282828]">I know both.</span>
           </p>
           <p className="mt-3 text-sm font-semibold text-[#282828]">Tarkan Salar, Founder</p>
-
-          {/* One row of partner facility standard logos, no text (card t_7322a56f). */}
-          <ul className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-3">
-            {badges.map(({ id, logo }) => (
-              <li key={id}>
-                <Image
-                  src={`${CANGGUS_ASSET_BASE}${logo!.src}`}
-                  alt={`Partner facility standard: ${BADGE_NAMES[id] ?? id}`}
-                  width={logo!.w}
-                  height={logo!.h}
-                  loading="lazy"
-                  sizes="48px"
-                  className="h-10 w-auto sm:h-12 object-contain"
-                />
-              </li>
-            ))}
-          </ul>
         </div>
       </div>
     </section>

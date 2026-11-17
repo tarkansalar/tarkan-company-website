@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { EYEBROW } from "./eyebrow";
 
 type Props = {
   eyebrow: string;
@@ -12,7 +13,7 @@ export default function SectionIntro({ eyebrow, title, align = "left", invert = 
   const center = align === "center" ? "text-center mx-auto" : "";
   return (
     <div className={`max-w-3xl ${center}`}>
-      <p className="text-[11px] sm:text-xs font-semibold uppercase tracking-[0.22em] text-[#fb6ba8] mb-4">
+      <p className={`${EYEBROW} mb-4`}>
         {eyebrow}
       </p>
       <h2
