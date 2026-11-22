@@ -129,8 +129,8 @@ export default function Footer({ homeHref = "#top" }: Props = {}) {
               <ConnectTile
                 href={CANGGUS_INSTAGRAM}
                 label="Instagram"
-                value="@canggus.co"
-                ariaLabel="Canggus on Instagram (opens in a new tab)"
+                value="@tarkansalar"
+                ariaLabel="Tarkan Salar on Instagram (opens in a new tab)"
                 external
                 iconBg="bg-[linear-gradient(45deg,#f9a825,#e1306c,#833ab4)]"
               >
